@@ -1,0 +1,11 @@
+---
+title: "Software Engineering Best Practices"
+---
+
+### Clean Code
+
+ Clean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time. 
+
+### CI/CD 
+
+CI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.

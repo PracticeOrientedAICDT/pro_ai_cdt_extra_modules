@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  title: "Aditional Training"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: python.qmd
+        text: Python
+      - href: software_engineering.qmd
+        text: "Software Engineering"
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

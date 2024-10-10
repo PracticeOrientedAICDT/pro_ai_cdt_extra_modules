@@ -1,0 +1,5 @@
+---
+title: "Aditional Training"
+---
+
+We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language. 

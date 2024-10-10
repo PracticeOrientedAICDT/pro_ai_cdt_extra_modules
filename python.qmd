@@ -1,0 +1,37 @@
+---
+title: "Python"
+---
+
+Python Programing Language 
+
+### Special Methods (magic methods) 
+
+     Python magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python's built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., `__init__`, `__str__`, `__add__`). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, `__init__` is used for initializing objects, while `__add__` allows custom behavior when the `+` operator is used. By overriding these methods, you can make  
+
+     objects behave like native data types. 
+
+     
+
+### List comprehension and generator expressions 
+
+ List comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A **list comprehension** produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., `[x**2 for x in range(5)]` creates a list of squares). **Generator expressions** are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once. 
+
+### Tuples as Records 
+
+ Tuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple `(name, age, city)` could represent a person's record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format. 
+
+### Tuple Unpacking 
+
+ Unpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple `person = ("Alice", 30, "Engineer")`, you can unpack it with `name, age, profession = person`, which assigns `"Alice"` to `name`, `30` to `age`, and `"Engineer"` to `profession`. This makes code cleaner and more readable, especially when working with multiple values at once. 
+
+### First-class functions 
+
+ In Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like `len` to `map()` or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive. 
+
+### Decorators and Closures 
+
+     Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. 
+
+### Vectorization 
+
+ Code vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient.
