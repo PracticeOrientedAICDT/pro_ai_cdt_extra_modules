@@ -1,0 +1,177 @@
+---
+title: "CI/CD"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: ci_cd.html
+author: Daladier Sampaio Neto
+jupyter: python3
+---
+
+## CI/CD 
+
+- CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).
+- It is a key set of practices in modern software development.
+- Automates and streamlines the software delivery process.
+
+## CI/CD
+
+- Focuses on improving software quality and efficiency.
+- Enables teams to build, test, and release code frequently.
+- Reduces manual work and the potential for errors.
+
+## CI/CD - Continuous Integration (CI) 
+
+- Frequent code integration: Developers frequently merge code changes into a shared repository.
+- Automated testing: Every code commit triggers automated tests to detect bugs early.
+- Early bug detection: Small, incremental changes help identify and resolve issues faster.
+
+## CI/CD - Continuous Integration (CI)
+
+- Consistent build environment: Ensures consistency between development, testing, and production environments.
+- Improved code quality: Continuous feedback from tests leads to better code quality over time.
+- Faster iteration cycles: Developers receive quick feedback, allowing faster iterations.
+
+## CI/CD - Continuous Delivery (CD)
+
+- Automated release processes: After CI, code is automatically tested, validated, and prepared for deployment.
+- Frequent, reliable releases: Ensures code can be released to production anytime with confidence.
+- Manual approval option: Allows for a final manual verification step before releasing to production.
+
+## CI/CD - Continuous Delivery (CD)
+
+- Reduced release risk: Smaller, incremental updates lower the chances of major issues in production.
+- Quick user feedback: Regular releases make it easier to gather user feedback and adjust features.
+- Fully automated deployments: Every change that passes automated tests is automatically deployed to production.
+
+## CI/CD - Continuous Delivery (CD)
+
+- No manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.
+- Rapid iteration: New features, bug fixes, and updates are delivered to end users continuously.
+- Requires strong testing: Robust automated tests are critical to ensure no bugs reach production.
+- High-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues.
+
+## CI/CD - Benefits
+
+- Faster development cycles: Continuous integration and deployment reduce the time between coding and deployment.
+- Higher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.
+- Reduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity.
+
+## CI/CD - Benefits
+
+- Greater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.
+- Better user experience: Faster delivery of features and fixes leads to improved customer satisfaction.
+
+## Github Actions
+
+- CI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).
+- Workflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.
+- Event-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs).
+
+## Github Actions
+
+- Extensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.
+- Scalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).
+- Parallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency.
+
+## Github Actions
+
+- Secrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.
+- Matrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.
+- Integrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow.
+
+## Github Actions
+
+- Free tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.
+- Extensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors.
+
+## Github Actions
+
+- Customizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.
+- Supports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments.
+
+## Yml files
+
+- Human-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.
+- Data serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.
+- Indentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python.
+
+
+## Yml Files
+
+- Supports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.
+- Supports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.
+- No special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML.
+
+## Yml Files
+
+- Widely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.
+- Supports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.
+- Portable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages.
+
+## Yml Files - Structure
+
+- Key-Value Pairs
+
+```
+key: value
+name: John
+age: 30
+```
+
+- Indentation (Hierarchy)
+```
+person:
+  name: John
+  age: 30
+```
+
+## Yml Files - Structure
+
+- Lists (Sequences)
+
+```
+fruits:
+  - apple
+  - banana
+  - orange
+
+```
+
+- Indentation (Hierarchy)
+```
+person:
+  name: John
+  age: 30
+```
+
+## Yml Files - Structure
+
+
+- Nested Lists
+```
+fruits:
+  - apple
+  - banana
+  - orange
+```
+
+- Dictionaries (Mappings)
+```
+address:
+  street: 123 Main St
+  city: New York
+  zip: 10001
+
+```
+
+
+
+
+## Github Repo
+
+- Acess the github repo [here](https://github.com/PracticeOrientedAICDT/personal_page)
+- Fork the repo 
+- Clone the repo to your local machine
+- Open using your prefferd text editor

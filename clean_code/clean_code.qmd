@@ -1,0 +1,129 @@
+---
+title: "Clean Code"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: clean_code.html
+author: Daladier Sampaio Neto
+jupyter: python3
+---
+
+## Introduction
+
+- What is Clean Code?
+
+    - Code that is easy to understand, modify, and maintain
+    - Prioritizes readability, simplicity, and consistency
+
+- Why Clean Code Matters
+
+    - Reduces bugs and errors
+    - Improves team collaboration and onboarding
+    - Ensures scalability and longevity of projects
+
+## Key Principles of Clean Code
+
+- **Readability**: Code should be self-explanatory and easy to follow
+- **Simplicity**: Avoid unnecessary complexity
+- **Consistency**: Standardize formatting and naming conventions
+- **Single Responsibility**: Each function/class should have one purpose
+- **DRY Principle**: Don’t Repeat Yourself – avoid duplicate code
+
+## Naming Conventions
+
+- **Use Meaningful Names**
+
+    - Descriptive names for variables, functions, and classes
+
+- **Avoid Abbreviations**
+
+    - Shortcuts can confuse readers; use full words
+
+- **Be Consistent**
+
+    - Stick with established naming conventions across the codebase
+
+## Writing Clean Functions
+
+- Keep Functions Short and Focused
+
+    - Aim for functions with one purpose
+
+- Limit the Number of Parameters
+
+    - Avoid functions with too many arguments; use objects if needed
+
+- Use Clear Return Values
+
+    - Ensure functions return predictable, useful values
+
+## Effective Code Structuring
+
+- **Organize Code Logically**
+
+    Group related functions and classes
+
+- **Minimize Dependencies**
+
+    Reduce interdependence of modules
+
+- **Use Comments Wisely**
+
+    Comment on “why,” not “what” the code does
+
+## Error Handling and Exceptions
+
+- **Handle Errors Gracefully**
+
+    - Avoid crashing; provide fallback options where possible
+
+- **Use Exceptions Intelligently**
+
+    - Don’t overuse; handle expected errors explicitly
+
+- **Provide Clear Error Messages**
+
+    - Ensure errors are understandable and actionable
+
+## Code Reviews and Refactoring
+
+- **Importance of Regular Code Reviews**
+
+    Identify potential issues early
+    Learn and share knowledge among team members
+
+- **Refactor Often**
+
+    Improve structure without altering functionality
+    Keep the codebase clean and manageable
+
+## Testing for Clean Code
+
+- **Write Unit Tests for Functions**
+
+    - Ensure functions behave as expected
+
+- **Test Edge Cases**
+
+    - Cover unusual inputs and edge conditions
+
+- **Use Tests as Documentation**
+
+    - Tests reveal how code should be used and what to expect
+
+## Tools and Best Practices for Clean Code
+
+- **Linters and Formatters**
+    - Automatically enforce coding standards
+- **Version Control and Branching**
+    - Track changes and manage multiple code versions
+- **Documentation**
+    - Comment code, use README files, and create wikis for project structure
+
+## Benefits of Clean Code
+
+- **Higher Productivity**: Cleaner code saves time in debugging and development
+- **Improved Quality**: Reduces the likelihood of bugs and inconsistencies
+- **Better Collaboration**: Easier for teams to work on and scale projects
+- **Future-Proofing**: Clean code ensures adaptability and ease of modification

@@ -6,9 +6,9 @@ Python Programing Language
 
 ### Special Methods (magic methods) 
 
-     Python magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python's built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., `__init__`, `__str__`, `__add__`). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, `__init__` is used for initializing objects, while `__add__` allows custom behavior when the `+` operator is used. By overriding these methods, you can make  
+Python magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python's built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., '__init__', '__str__', '__add__'). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, '__init__' is used for initializing objects, while '__add__' allows custom behavior when the `+` operator is used. By overriding these methods, you can make  
 
-     objects behave like native data types. 
+objects behave like native data types. 
 
      
 
