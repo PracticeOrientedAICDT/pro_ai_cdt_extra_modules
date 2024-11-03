@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Daladier Sampaio Neto">
+
+<title>Aditional Training - CI/CD</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Aditional Training</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">CI/CD</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../software_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Software Engineering</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cicd" id="toc-cicd" class="nav-link active" data-scroll-target="#cicd">CI/CD</a></li>
+  <li><a href="#cicd-1" id="toc-cicd-1" class="nav-link" data-scroll-target="#cicd-1">CI/CD</a></li>
+  <li><a href="#cicd---continuous-integration-ci" id="toc-cicd---continuous-integration-ci" class="nav-link" data-scroll-target="#cicd---continuous-integration-ci">CI/CD - Continuous Integration (CI)</a></li>
+  <li><a href="#cicd---continuous-integration-ci-1" id="toc-cicd---continuous-integration-ci-1" class="nav-link" data-scroll-target="#cicd---continuous-integration-ci-1">CI/CD - Continuous Integration (CI)</a></li>
+  <li><a href="#cicd---continuous-delivery-cd" id="toc-cicd---continuous-delivery-cd" class="nav-link" data-scroll-target="#cicd---continuous-delivery-cd">CI/CD - Continuous Delivery (CD)</a></li>
+  <li><a href="#cicd---continuous-delivery-cd-1" id="toc-cicd---continuous-delivery-cd-1" class="nav-link" data-scroll-target="#cicd---continuous-delivery-cd-1">CI/CD - Continuous Delivery (CD)</a></li>
+  <li><a href="#cicd---continuous-delivery-cd-2" id="toc-cicd---continuous-delivery-cd-2" class="nav-link" data-scroll-target="#cicd---continuous-delivery-cd-2">CI/CD - Continuous Delivery (CD)</a></li>
+  <li><a href="#cicd---benefits" id="toc-cicd---benefits" class="nav-link" data-scroll-target="#cicd---benefits">CI/CD - Benefits</a></li>
+  <li><a href="#cicd---benefits-1" id="toc-cicd---benefits-1" class="nav-link" data-scroll-target="#cicd---benefits-1">CI/CD - Benefits</a></li>
+  <li><a href="#github-actions" id="toc-github-actions" class="nav-link" data-scroll-target="#github-actions">Github Actions</a></li>
+  <li><a href="#github-actions-1" id="toc-github-actions-1" class="nav-link" data-scroll-target="#github-actions-1">Github Actions</a></li>
+  <li><a href="#github-actions-2" id="toc-github-actions-2" class="nav-link" data-scroll-target="#github-actions-2">Github Actions</a></li>
+  <li><a href="#github-actions-3" id="toc-github-actions-3" class="nav-link" data-scroll-target="#github-actions-3">Github Actions</a></li>
+  <li><a href="#github-actions-4" id="toc-github-actions-4" class="nav-link" data-scroll-target="#github-actions-4">Github Actions</a></li>
+  <li><a href="#yml-files" id="toc-yml-files" class="nav-link" data-scroll-target="#yml-files">Yml files</a></li>
+  <li><a href="#yml-files-1" id="toc-yml-files-1" class="nav-link" data-scroll-target="#yml-files-1">Yml Files</a></li>
+  <li><a href="#yml-files-2" id="toc-yml-files-2" class="nav-link" data-scroll-target="#yml-files-2">Yml Files</a></li>
+  <li><a href="#yml-files---structure" id="toc-yml-files---structure" class="nav-link" data-scroll-target="#yml-files---structure">Yml Files - Structure</a></li>
+  <li><a href="#yml-files---structure-1" id="toc-yml-files---structure-1" class="nav-link" data-scroll-target="#yml-files---structure-1">Yml Files - Structure</a></li>
+  <li><a href="#yml-files---structure-2" id="toc-yml-files---structure-2" class="nav-link" data-scroll-target="#yml-files---structure-2">Yml Files - Structure</a></li>
+  <li><a href="#github-repo" id="toc-github-repo" class="nav-link" data-scroll-target="#github-repo">Github Repo</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="cicd.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CI/CD</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Daladier Sampaio Neto </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="cicd" class="level2">
+<h2 class="anchored" data-anchor-id="cicd">CI/CD</h2>
+<ul>
+<li>CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).</li>
+<li>It is a key set of practices in modern software development.</li>
+<li>Automates and streamlines the software delivery process.</li>
+</ul>
+</section>
+<section id="cicd-1" class="level2">
+<h2 class="anchored" data-anchor-id="cicd-1">CI/CD</h2>
+<ul>
+<li>Focuses on improving software quality and efficiency.</li>
+<li>Enables teams to build, test, and release code frequently.</li>
+<li>Reduces manual work and the potential for errors.</li>
+</ul>
+</section>
+<section id="cicd---continuous-integration-ci" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---continuous-integration-ci">CI/CD - Continuous Integration (CI)</h2>
+<ul>
+<li>Frequent code integration: Developers frequently merge code changes into a shared repository.</li>
+<li>Automated testing: Every code commit triggers automated tests to detect bugs early.</li>
+<li>Early bug detection: Small, incremental changes help identify and resolve issues faster.</li>
+</ul>
+</section>
+<section id="cicd---continuous-integration-ci-1" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---continuous-integration-ci-1">CI/CD - Continuous Integration (CI)</h2>
+<ul>
+<li>Consistent build environment: Ensures consistency between development, testing, and production environments.</li>
+<li>Improved code quality: Continuous feedback from tests leads to better code quality over time.</li>
+<li>Faster iteration cycles: Developers receive quick feedback, allowing faster iterations.</li>
+</ul>
+</section>
+<section id="cicd---continuous-delivery-cd" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---continuous-delivery-cd">CI/CD - Continuous Delivery (CD)</h2>
+<ul>
+<li>Automated release processes: After CI, code is automatically tested, validated, and prepared for deployment.</li>
+<li>Frequent, reliable releases: Ensures code can be released to production anytime with confidence.</li>
+<li>Manual approval option: Allows for a final manual verification step before releasing to production.</li>
+</ul>
+</section>
+<section id="cicd---continuous-delivery-cd-1" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---continuous-delivery-cd-1">CI/CD - Continuous Delivery (CD)</h2>
+<ul>
+<li>Reduced release risk: Smaller, incremental updates lower the chances of major issues in production.</li>
+<li>Quick user feedback: Regular releases make it easier to gather user feedback and adjust features.</li>
+<li>Fully automated deployments: Every change that passes automated tests is automatically deployed to production.</li>
+</ul>
+</section>
+<section id="cicd---continuous-delivery-cd-2" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---continuous-delivery-cd-2">CI/CD - Continuous Delivery (CD)</h2>
+<ul>
+<li>No manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.</li>
+<li>Rapid iteration: New features, bug fixes, and updates are delivered to end users continuously.</li>
+<li>Requires strong testing: Robust automated tests are critical to ensure no bugs reach production.</li>
+<li>High-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues.</li>
+</ul>
+</section>
+<section id="cicd---benefits" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---benefits">CI/CD - Benefits</h2>
+<ul>
+<li>Faster development cycles: Continuous integration and deployment reduce the time between coding and deployment.</li>
+<li>Higher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.</li>
+<li>Reduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity.</li>
+</ul>
+</section>
+<section id="cicd---benefits-1" class="level2">
+<h2 class="anchored" data-anchor-id="cicd---benefits-1">CI/CD - Benefits</h2>
+<ul>
+<li>Greater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.</li>
+<li>Better user experience: Faster delivery of features and fixes leads to improved customer satisfaction.</li>
+</ul>
+</section>
+<section id="github-actions" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions">Github Actions</h2>
+<ul>
+<li>CI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).</li>
+<li>Workflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.</li>
+<li>Event-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs).</li>
+</ul>
+</section>
+<section id="github-actions-1" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions-1">Github Actions</h2>
+<ul>
+<li>Extensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.</li>
+<li>Scalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).</li>
+<li>Parallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency.</li>
+</ul>
+</section>
+<section id="github-actions-2" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions-2">Github Actions</h2>
+<ul>
+<li>Secrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.</li>
+<li>Matrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.</li>
+<li>Integrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow.</li>
+</ul>
+</section>
+<section id="github-actions-3" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions-3">Github Actions</h2>
+<ul>
+<li>Free tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.</li>
+<li>Extensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors.</li>
+</ul>
+</section>
+<section id="github-actions-4" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions-4">Github Actions</h2>
+<ul>
+<li>Customizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.</li>
+<li>Supports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments.</li>
+</ul>
+</section>
+<section id="yml-files" class="level2">
+<h2 class="anchored" data-anchor-id="yml-files">Yml files</h2>
+<ul>
+<li>Human-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.</li>
+<li>Data serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.</li>
+<li>Indentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python.</li>
+</ul>
+</section>
+<section id="yml-files-1" class="level2">
+<h2 class="anchored" data-anchor-id="yml-files-1">Yml Files</h2>
+<ul>
+<li>Supports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.</li>
+<li>Supports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.</li>
+<li>No special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML.</li>
+</ul>
+</section>
+<section id="yml-files-2" class="level2">
+<h2 class="anchored" data-anchor-id="yml-files-2">Yml Files</h2>
+<ul>
+<li>Widely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.</li>
+<li>Supports anchors and aliases: Allows reusing values within the file using anchors (&amp;) and aliases (*), which help reduce redundancy.</li>
+<li>Portable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages.</li>
+</ul>
+</section>
+<section id="yml-files---structure" class="level2">
+<h2 class="anchored" data-anchor-id="yml-files---structure">Yml Files - Structure</h2>
+<ul>
+<li>Key-Value Pairs</li>
+</ul>
+<pre><code>key: value
+name: John
+age: 30</code></pre>
+<ul>
+<li>Indentation (Hierarchy)</li>
+</ul>
+<pre><code>person:
+  name: John
+  age: 30</code></pre>
+</section>
+<section id="yml-files---structure-1" class="level2">
+<h2 class="anchored" data-anchor-id="yml-files---structure-1">Yml Files - Structure</h2>
+<ul>
+<li>Lists (Sequences)</li>
+</ul>
+<pre><code>fruits:
+  - apple
+  - banana
+  - orange
+</code></pre>
+<ul>
+<li>Indentation (Hierarchy)</li>
+</ul>
+<pre><code>person:
+  name: John
+  age: 30</code></pre>
+</section>
+<section id="yml-files---structure-2" class="level2">
+<h2 class="anchored" data-anchor-id="yml-files---structure-2">Yml Files - Structure</h2>
+<ul>
+<li>Nested Lists</li>
+</ul>
+<pre><code>fruits:
+  - apple
+  - banana
+  - orange</code></pre>
+<ul>
+<li>Dictionaries (Mappings)</li>
+</ul>
+<pre><code>address:
+  street: 123 Main St
+  city: New York
+  zip: 10001
+</code></pre>
+</section>
+<section id="github-repo" class="level2">
+<h2 class="anchored" data-anchor-id="github-repo">Github Repo</h2>
+<ul>
+<li>Acess the github repo <a href="https://github.com/PracticeOrientedAICDT/personal_page">here</a></li>
+<li>Fork the repo</li>
+<li>Clone the repo to your local machine</li>
+<li>Open using your prefferd text editor</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

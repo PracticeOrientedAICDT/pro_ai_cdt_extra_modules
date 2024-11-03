@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Daladier Sampaio Neto">
 
-<title>Aditional Training - Software Engineering Best Practices</title>
+<title>Aditional Training - Clean Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Aditional Training</span>
     </a>
   </div>
@@ -81,11 +82,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -99,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./software_engineering.html">Software Engineering</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Clean Code</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -121,25 +122,25 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./python.html" class="sidebar-item-text sidebar-link">
+  <a href="../python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software_engineering.html" class="sidebar-item-text sidebar-link active">
+  <a href="../software_engineering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Engineering</span></a>
   </div>
 </li>
@@ -153,24 +154,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#clean-code" id="toc-clean-code" class="nav-link active" data-scroll-target="#clean-code">Clean Code</a></li>
-  <li><a href="#cicd" id="toc-cicd" class="nav-link" data-scroll-target="#cicd">CI/CD</a></li>
-  <li><a href="#machine-learning-design-patterns" id="toc-machine-learning-design-patterns" class="nav-link" data-scroll-target="#machine-learning-design-patterns">Machine Learning Design Patterns</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#key-principles-of-clean-code" id="toc-key-principles-of-clean-code" class="nav-link" data-scroll-target="#key-principles-of-clean-code">Key Principles of Clean Code</a></li>
+  <li><a href="#naming-conventions" id="toc-naming-conventions" class="nav-link" data-scroll-target="#naming-conventions">Naming Conventions</a></li>
+  <li><a href="#writing-clean-functions" id="toc-writing-clean-functions" class="nav-link" data-scroll-target="#writing-clean-functions">Writing Clean Functions</a></li>
+  <li><a href="#effective-code-structuring" id="toc-effective-code-structuring" class="nav-link" data-scroll-target="#effective-code-structuring">Effective Code Structuring</a></li>
+  <li><a href="#error-handling-and-exceptions" id="toc-error-handling-and-exceptions" class="nav-link" data-scroll-target="#error-handling-and-exceptions">Error Handling and Exceptions</a></li>
+  <li><a href="#code-reviews-and-refactoring" id="toc-code-reviews-and-refactoring" class="nav-link" data-scroll-target="#code-reviews-and-refactoring">Code Reviews and Refactoring</a></li>
+  <li><a href="#testing-for-clean-code" id="toc-testing-for-clean-code" class="nav-link" data-scroll-target="#testing-for-clean-code">Testing for Clean Code</a></li>
+  <li><a href="#tools-and-best-practices-for-clean-code" id="toc-tools-and-best-practices-for-clean-code" class="nav-link" data-scroll-target="#tools-and-best-practices-for-clean-code">Tools and Best Practices for Clean Code</a></li>
+  <li><a href="#benefits-of-clean-code" id="toc-benefits-of-clean-code" class="nav-link" data-scroll-target="#benefits-of-clean-code">Benefits of Clean Code</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="cc.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Software Engineering Best Practices</h1>
+<h1 class="title">Clean Code</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Daladier Sampaio Neto </p>
+          </div>
+  </div>
     
   
     
@@ -179,19 +193,145 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="clean-code" class="level3">
-<h3 class="anchored" data-anchor-id="clean-code">Clean Code</h3>
-<p>Clean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.</p>
-<p><a href="./clean_code/clean_code.html">Slides here</a></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li><p>What is Clean Code?</p>
+<ul>
+<li>Code that is easy to understand, modify, and maintain</li>
+<li>Prioritizes readability, simplicity, and consistency</li>
+</ul></li>
+<li><p>Why Clean Code Matters</p>
+<ul>
+<li>Reduces bugs and errors</li>
+<li>Improves team collaboration and onboarding</li>
+<li>Ensures scalability and longevity of projects</li>
+</ul></li>
+</ul>
 </section>
-<section id="cicd" class="level3">
-<h3 class="anchored" data-anchor-id="cicd">CI/CD</h3>
-<p>CI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.</p>
-<p><a href="./CI_CD/ci_cd.html">Slides here</a></p>
+<section id="key-principles-of-clean-code" class="level2">
+<h2 class="anchored" data-anchor-id="key-principles-of-clean-code">Key Principles of Clean Code</h2>
+<ul>
+<li><strong>Readability</strong>: Code should be self-explanatory and easy to follow</li>
+<li><strong>Simplicity</strong>: Avoid unnecessary complexity</li>
+<li><strong>Consistency</strong>: Standardize formatting and naming conventions</li>
+<li><strong>Single Responsibility</strong>: Each function/class should have one purpose</li>
+<li><strong>DRY Principle</strong>: Don’t Repeat Yourself – avoid duplicate code</li>
+</ul>
 </section>
-<section id="machine-learning-design-patterns" class="level3">
-<h3 class="anchored" data-anchor-id="machine-learning-design-patterns">Machine Learning Design Patterns</h3>
-<p>Machine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.</p>
+<section id="naming-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="naming-conventions">Naming Conventions</h2>
+<ul>
+<li><p><strong>Use Meaningful Names</strong></p>
+<ul>
+<li>Descriptive names for variables, functions, and classes</li>
+</ul></li>
+<li><p><strong>Avoid Abbreviations</strong></p>
+<ul>
+<li>Shortcuts can confuse readers; use full words</li>
+</ul></li>
+<li><p><strong>Be Consistent</strong></p>
+<ul>
+<li>Stick with established naming conventions across the codebase</li>
+</ul></li>
+</ul>
+</section>
+<section id="writing-clean-functions" class="level2">
+<h2 class="anchored" data-anchor-id="writing-clean-functions">Writing Clean Functions</h2>
+<ul>
+<li><p>Keep Functions Short and Focused</p>
+<ul>
+<li>Aim for functions with one purpose</li>
+</ul></li>
+<li><p>Limit the Number of Parameters</p>
+<ul>
+<li>Avoid functions with too many arguments; use objects if needed</li>
+</ul></li>
+<li><p>Use Clear Return Values</p>
+<ul>
+<li>Ensure functions return predictable, useful values</li>
+</ul></li>
+</ul>
+</section>
+<section id="effective-code-structuring" class="level2">
+<h2 class="anchored" data-anchor-id="effective-code-structuring">Effective Code Structuring</h2>
+<ul>
+<li><p><strong>Organize Code Logically</strong></p>
+<p>Group related functions and classes</p></li>
+<li><p><strong>Minimize Dependencies</strong></p>
+<p>Reduce interdependence of modules</p></li>
+<li><p><strong>Use Comments Wisely</strong></p>
+<p>Comment on “why,” not “what” the code does</p></li>
+</ul>
+</section>
+<section id="error-handling-and-exceptions" class="level2">
+<h2 class="anchored" data-anchor-id="error-handling-and-exceptions">Error Handling and Exceptions</h2>
+<ul>
+<li><p><strong>Handle Errors Gracefully</strong></p>
+<ul>
+<li>Avoid crashing; provide fallback options where possible</li>
+</ul></li>
+<li><p><strong>Use Exceptions Intelligently</strong></p>
+<ul>
+<li>Don’t overuse; handle expected errors explicitly</li>
+</ul></li>
+<li><p><strong>Provide Clear Error Messages</strong></p>
+<ul>
+<li>Ensure errors are understandable and actionable</li>
+</ul></li>
+</ul>
+</section>
+<section id="code-reviews-and-refactoring" class="level2">
+<h2 class="anchored" data-anchor-id="code-reviews-and-refactoring">Code Reviews and Refactoring</h2>
+<ul>
+<li><p><strong>Importance of Regular Code Reviews</strong></p>
+<p>Identify potential issues early Learn and share knowledge among team members</p></li>
+<li><p><strong>Refactor Often</strong></p>
+<p>Improve structure without altering functionality Keep the codebase clean and manageable</p></li>
+</ul>
+</section>
+<section id="testing-for-clean-code" class="level2">
+<h2 class="anchored" data-anchor-id="testing-for-clean-code">Testing for Clean Code</h2>
+<ul>
+<li><p><strong>Write Unit Tests for Functions</strong></p>
+<ul>
+<li>Ensure functions behave as expected</li>
+</ul></li>
+<li><p><strong>Test Edge Cases</strong></p>
+<ul>
+<li>Cover unusual inputs and edge conditions</li>
+</ul></li>
+<li><p><strong>Use Tests as Documentation</strong></p>
+<ul>
+<li>Tests reveal how code should be used and what to expect</li>
+</ul></li>
+</ul>
+</section>
+<section id="tools-and-best-practices-for-clean-code" class="level2">
+<h2 class="anchored" data-anchor-id="tools-and-best-practices-for-clean-code">Tools and Best Practices for Clean Code</h2>
+<ul>
+<li><strong>Linters and Formatters</strong>
+<ul>
+<li>Automatically enforce coding standards</li>
+</ul></li>
+<li><strong>Version Control and Branching</strong>
+<ul>
+<li>Track changes and manage multiple code versions</li>
+</ul></li>
+<li><strong>Documentation</strong>
+<ul>
+<li>Comment code, use README files, and create wikis for project structure</li>
+</ul></li>
+</ul>
+</section>
+<section id="benefits-of-clean-code" class="level2">
+<h2 class="anchored" data-anchor-id="benefits-of-clean-code">Benefits of Clean Code</h2>
+<ul>
+<li><strong>Higher Productivity</strong>: Cleaner code saves time in debugging and development</li>
+<li><strong>Improved Quality</strong>: Reduces the likelihood of bugs and inconsistencies</li>
+<li><strong>Better Collaboration</strong>: Easier for teams to work on and scale projects</li>
+<li><strong>Future-Proofing</strong>: Clean code ensures adaptability and ease of modification</li>
+</ul>
 
 
 </section>

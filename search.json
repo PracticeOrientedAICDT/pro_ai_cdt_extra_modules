@@ -14,17 +14,465 @@
     "text": "About this site"
   },
   {
+    "objectID": "clean_code/cc.html#introduction",
+    "href": "clean_code/cc.html#introduction",
+    "title": "Clean Code",
+    "section": "Introduction",
+    "text": "Introduction\n\nWhat is Clean Code?\n\nCode that is easy to understand, modify, and maintain\nPrioritizes readability, simplicity, and consistency\n\nWhy Clean Code Matters\n\nReduces bugs and errors\nImproves team collaboration and onboarding\nEnsures scalability and longevity of projects"
+  },
+  {
+    "objectID": "clean_code/cc.html#key-principles-of-clean-code",
+    "href": "clean_code/cc.html#key-principles-of-clean-code",
+    "title": "Clean Code",
+    "section": "Key Principles of Clean Code",
+    "text": "Key Principles of Clean Code\n\nReadability: Code should be self-explanatory and easy to follow\nSimplicity: Avoid unnecessary complexity\nConsistency: Standardize formatting and naming conventions\nSingle Responsibility: Each function/class should have one purpose\nDRY Principle: Don’t Repeat Yourself – avoid duplicate code"
+  },
+  {
+    "objectID": "clean_code/cc.html#naming-conventions",
+    "href": "clean_code/cc.html#naming-conventions",
+    "title": "Clean Code",
+    "section": "Naming Conventions",
+    "text": "Naming Conventions\n\nUse Meaningful Names\n\nDescriptive names for variables, functions, and classes\n\nAvoid Abbreviations\n\nShortcuts can confuse readers; use full words\n\nBe Consistent\n\nStick with established naming conventions across the codebase"
+  },
+  {
+    "objectID": "clean_code/cc.html#writing-clean-functions",
+    "href": "clean_code/cc.html#writing-clean-functions",
+    "title": "Clean Code",
+    "section": "Writing Clean Functions",
+    "text": "Writing Clean Functions\n\nKeep Functions Short and Focused\n\nAim for functions with one purpose\n\nLimit the Number of Parameters\n\nAvoid functions with too many arguments; use objects if needed\n\nUse Clear Return Values\n\nEnsure functions return predictable, useful values"
+  },
+  {
+    "objectID": "clean_code/cc.html#effective-code-structuring",
+    "href": "clean_code/cc.html#effective-code-structuring",
+    "title": "Clean Code",
+    "section": "Effective Code Structuring",
+    "text": "Effective Code Structuring\n\nOrganize Code Logically\nGroup related functions and classes\nMinimize Dependencies\nReduce interdependence of modules\nUse Comments Wisely\nComment on “why,” not “what” the code does"
+  },
+  {
+    "objectID": "clean_code/cc.html#error-handling-and-exceptions",
+    "href": "clean_code/cc.html#error-handling-and-exceptions",
+    "title": "Clean Code",
+    "section": "Error Handling and Exceptions",
+    "text": "Error Handling and Exceptions\n\nHandle Errors Gracefully\n\nAvoid crashing; provide fallback options where possible\n\nUse Exceptions Intelligently\n\nDon’t overuse; handle expected errors explicitly\n\nProvide Clear Error Messages\n\nEnsure errors are understandable and actionable"
+  },
+  {
+    "objectID": "clean_code/cc.html#code-reviews-and-refactoring",
+    "href": "clean_code/cc.html#code-reviews-and-refactoring",
+    "title": "Clean Code",
+    "section": "Code Reviews and Refactoring",
+    "text": "Code Reviews and Refactoring\n\nImportance of Regular Code Reviews\nIdentify potential issues early Learn and share knowledge among team members\nRefactor Often\nImprove structure without altering functionality Keep the codebase clean and manageable"
+  },
+  {
+    "objectID": "clean_code/cc.html#testing-for-clean-code",
+    "href": "clean_code/cc.html#testing-for-clean-code",
+    "title": "Clean Code",
+    "section": "Testing for Clean Code",
+    "text": "Testing for Clean Code\n\nWrite Unit Tests for Functions\n\nEnsure functions behave as expected\n\nTest Edge Cases\n\nCover unusual inputs and edge conditions\n\nUse Tests as Documentation\n\nTests reveal how code should be used and what to expect"
+  },
+  {
+    "objectID": "clean_code/cc.html#tools-and-best-practices-for-clean-code",
+    "href": "clean_code/cc.html#tools-and-best-practices-for-clean-code",
+    "title": "Clean Code",
+    "section": "Tools and Best Practices for Clean Code",
+    "text": "Tools and Best Practices for Clean Code\n\nLinters and Formatters\n\nAutomatically enforce coding standards\n\nVersion Control and Branching\n\nTrack changes and manage multiple code versions\n\nDocumentation\n\nComment code, use README files, and create wikis for project structure"
+  },
+  {
+    "objectID": "clean_code/cc.html#benefits-of-clean-code",
+    "href": "clean_code/cc.html#benefits-of-clean-code",
+    "title": "Clean Code",
+    "section": "Benefits of Clean Code",
+    "text": "Benefits of Clean Code\n\nHigher Productivity: Cleaner code saves time in debugging and development\nImproved Quality: Reduces the likelihood of bugs and inconsistencies\nBetter Collaboration: Easier for teams to work on and scale projects\nFuture-Proofing: Clean code ensures adaptability and ease of modification"
+  },
+  {
+    "objectID": "clean_code/clean_code.html",
+    "href": "clean_code/clean_code.html",
+    "title": "Clean Code",
+    "section": "",
+    "text": "What is Clean Code?\n\nCode that is easy to understand, modify, and maintain\nPrioritizes readability, simplicity, and consistency\n\nWhy Clean Code Matters\n\nReduces bugs and errors\nImproves team collaboration and onboarding\nEnsures scalability and longevity of projects"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#introduction",
+    "href": "clean_code/clean_code.html#introduction",
+    "title": "Clean Code",
+    "section": "",
+    "text": "What is Clean Code?\n\nCode that is easy to understand, modify, and maintain\nPrioritizes readability, simplicity, and consistency\n\nWhy Clean Code Matters\n\nReduces bugs and errors\nImproves team collaboration and onboarding\nEnsures scalability and longevity of projects"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#key-principles-of-clean-code",
+    "href": "clean_code/clean_code.html#key-principles-of-clean-code",
+    "title": "Clean Code",
+    "section": "Key Principles of Clean Code",
+    "text": "Key Principles of Clean Code\n\nReadability: Code should be self-explanatory and easy to follow\nSimplicity: Avoid unnecessary complexity\nConsistency: Standardize formatting and naming conventions\nSingle Responsibility: Each function/class should have one purpose\nDRY Principle: Don’t Repeat Yourself – avoid duplicate code"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#naming-conventions",
+    "href": "clean_code/clean_code.html#naming-conventions",
+    "title": "Clean Code",
+    "section": "Naming Conventions",
+    "text": "Naming Conventions\n\nUse Meaningful Names\n\nDescriptive names for variables, functions, and classes\n\nAvoid Abbreviations\n\nShortcuts can confuse readers; use full words\n\nBe Consistent\n\nStick with established naming conventions across the codebase"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#writing-clean-functions",
+    "href": "clean_code/clean_code.html#writing-clean-functions",
+    "title": "Clean Code",
+    "section": "Writing Clean Functions",
+    "text": "Writing Clean Functions\n\nKeep Functions Short and Focused\n\nAim for functions with one purpose\n\nLimit the Number of Parameters\n\nAvoid functions with too many arguments; use objects if needed\n\nUse Clear Return Values\n\nEnsure functions return predictable, useful values"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#effective-code-structuring",
+    "href": "clean_code/clean_code.html#effective-code-structuring",
+    "title": "Clean Code",
+    "section": "Effective Code Structuring",
+    "text": "Effective Code Structuring\n\nOrganize Code Logically\nGroup related functions and classes\nMinimize Dependencies\nReduce interdependence of modules\nUse Comments Wisely\nComment on “why,” not “what” the code does"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#error-handling-and-exceptions",
+    "href": "clean_code/clean_code.html#error-handling-and-exceptions",
+    "title": "Clean Code",
+    "section": "Error Handling and Exceptions",
+    "text": "Error Handling and Exceptions\n\nHandle Errors Gracefully\n\nAvoid crashing; provide fallback options where possible\n\nUse Exceptions Intelligently\n\nDon’t overuse; handle expected errors explicitly\n\nProvide Clear Error Messages\n\nEnsure errors are understandable and actionable"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#code-reviews-and-refactoring",
+    "href": "clean_code/clean_code.html#code-reviews-and-refactoring",
+    "title": "Clean Code",
+    "section": "Code Reviews and Refactoring",
+    "text": "Code Reviews and Refactoring\n\nImportance of Regular Code Reviews\nIdentify potential issues early Learn and share knowledge among team members\nRefactor Often\nImprove structure without altering functionality Keep the codebase clean and manageable"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#testing-for-clean-code",
+    "href": "clean_code/clean_code.html#testing-for-clean-code",
+    "title": "Clean Code",
+    "section": "Testing for Clean Code",
+    "text": "Testing for Clean Code\n\nWrite Unit Tests for Functions\n\nEnsure functions behave as expected\n\nTest Edge Cases\n\nCover unusual inputs and edge conditions\n\nUse Tests as Documentation\n\nTests reveal how code should be used and what to expect"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#tools-and-best-practices-for-clean-code",
+    "href": "clean_code/clean_code.html#tools-and-best-practices-for-clean-code",
+    "title": "Clean Code",
+    "section": "Tools and Best Practices for Clean Code",
+    "text": "Tools and Best Practices for Clean Code\n\nLinters and Formatters\n\nAutomatically enforce coding standards\n\nVersion Control and Branching\n\nTrack changes and manage multiple code versions\n\nDocumentation\n\nComment code, use README files, and create wikis for project structure"
+  },
+  {
+    "objectID": "clean_code/clean_code.html#benefits-of-clean-code",
+    "href": "clean_code/clean_code.html#benefits-of-clean-code",
+    "title": "Clean Code",
+    "section": "Benefits of Clean Code",
+    "text": "Benefits of Clean Code\n\nHigher Productivity: Cleaner code saves time in debugging and development\nImproved Quality: Reduces the likelihood of bugs and inconsistencies\nBetter Collaboration: Easier for teams to work on and scale projects\nFuture-Proofing: Clean code ensures adaptability and ease of modification"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd",
+    "href": "CI_CD/cicd.html#cicd",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd-1",
+    "href": "CI_CD/cicd.html#cicd-1",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits",
+    "href": "CI_CD/cicd.html#cicd---benefits",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
+    "href": "CI_CD/cicd.html#cicd---benefits-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions",
+    "href": "CI_CD/cicd.html#github-actions",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-1",
+    "href": "CI_CD/cicd.html#github-actions-1",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-2",
+    "href": "CI_CD/cicd.html#github-actions-2",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-3",
+    "href": "CI_CD/cicd.html#github-actions-3",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-4",
+    "href": "CI_CD/cicd.html#github-actions-4",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files",
+    "href": "CI_CD/cicd.html#yml-files",
+    "title": "CI/CD",
+    "section": "Yml files",
+    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-1",
+    "href": "CI_CD/cicd.html#yml-files-1",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-2",
+    "href": "CI_CD/cicd.html#yml-files-2",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure",
+    "href": "CI_CD/cicd.html#yml-files---structure",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
+    "href": "CI_CD/cicd.html#yml-files---structure-1",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
+    "href": "CI_CD/cicd.html#yml-files---structure-2",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-repo",
+    "href": "CI_CD/cicd.html#github-repo",
+    "title": "CI/CD",
+    "section": "Github Repo",
+    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html",
+    "href": "CI_CD/ci_cd.html",
+    "title": "CI/CD",
+    "section": "",
+    "text": "CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd",
+    "href": "CI_CD/ci_cd.html#cicd",
+    "title": "CI/CD",
+    "section": "",
+    "text": "CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd-1",
+    "href": "CI_CD/ci_cd.html#cicd-1",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-integration-ci",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-integration-ci",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-integration-ci-1",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-integration-ci-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-1",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-2",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-2",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---benefits",
+    "href": "CI_CD/ci_cd.html#cicd---benefits",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---benefits-1",
+    "href": "CI_CD/ci_cd.html#cicd---benefits-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions",
+    "href": "CI_CD/ci_cd.html#github-actions",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-1",
+    "href": "CI_CD/ci_cd.html#github-actions-1",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-2",
+    "href": "CI_CD/ci_cd.html#github-actions-2",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-3",
+    "href": "CI_CD/ci_cd.html#github-actions-3",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-4",
+    "href": "CI_CD/ci_cd.html#github-actions-4",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files",
+    "href": "CI_CD/ci_cd.html#yml-files",
+    "title": "CI/CD",
+    "section": "Yml files",
+    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files-1",
+    "href": "CI_CD/ci_cd.html#yml-files-1",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files-2",
+    "href": "CI_CD/ci_cd.html#yml-files-2",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files---structure",
+    "href": "CI_CD/ci_cd.html#yml-files---structure",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files---structure-1",
+    "href": "CI_CD/ci_cd.html#yml-files---structure-1",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files---structure-2",
+    "href": "CI_CD/ci_cd.html#yml-files---structure-2",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-repo",
+    "href": "CI_CD/ci_cd.html#github-repo",
+    "title": "CI/CD",
+    "section": "Github Repo",
+    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
+  },
+  {
     "objectID": "python.html",
     "href": "python.html",
     "title": "Python",
     "section": "",
-    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\n Python magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python's built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., `__init__`, `__str__`, `__add__`). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, `__init__` is used for initializing objects, while `__add__` allows custom behavior when the `+` operator is used. By overriding these methods, you can make  \n\n objects behave like native data types. \n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\n\n\nDecorators and Closures\n Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. \n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient."
+    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\n\n\nDecorators and Closures\n Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. \n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient."
   },
   {
     "objectID": "software_engineering.html",
     "href": "software_engineering.html",
     "title": "Software Engineering Best Practices",
     "section": "",
-    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently."
+    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels."
   }
 ]
