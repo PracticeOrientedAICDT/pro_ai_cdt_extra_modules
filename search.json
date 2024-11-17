@@ -7,6 +7,314 @@
     "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language."
   },
   {
+    "objectID": "machine_learning_design_patterns/mldp.html#design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Design Patterns",
+    "text": "Design Patterns\n\nWhat Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
+    "href": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
+    "title": "Machine Learning Design Patterns",
+    "section": "Why Design Patterns Matter in Machine Learning",
+    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Types of Machine Learning Design Patterns",
+    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Data Ingestion and Transformation Patterns",
+    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#model-training-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#model-training-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Training Patterns",
+    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Serving and Deployment Patterns",
+    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Monitoring and Retraining Patterns",
+    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Workflow and Pipeline Patterns",
+    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
+    "href": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
+    "title": "Machine Learning Design Patterns",
+    "section": "ML-Specific Design Challenges",
+    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Conclusion: Benefits of ML Design Patterns",
+    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html",
+    "title": "Machine Learning Design Patterns",
+    "section": "",
+    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "",
+    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
+    "title": "Machine Learning Design Patterns",
+    "section": "Why Design Patterns Matter in Machine Learning",
+    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Types of Machine Learning Design Patterns",
+    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Data Ingestion and Transformation Patterns",
+    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Training Patterns",
+    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Serving and Deployment Patterns",
+    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Monitoring and Retraining Patterns",
+    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Workflow and Pipeline Patterns",
+    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
+    "title": "Machine Learning Design Patterns",
+    "section": "ML-Specific Design Challenges",
+    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Conclusion: Benefits of ML Design Patterns",
+    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+  },
+  {
+    "objectID": "magic_methods/pmm.html#introduction",
+    "href": "magic_methods/pmm.html#introduction",
+    "title": "Python Magic Methods",
+    "section": "Introduction",
+    "text": "Introduction\n\nDefinition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
+  },
+  {
+    "objectID": "magic_methods/pmm.html#why-use-magic-methods",
+    "href": "magic_methods/pmm.html#why-use-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Why Use Magic Methods?",
+    "text": "Why Use Magic Methods?\n\nMake classes intuitive and Pythonic.\nEnable operator overloading.\nCustomize built-in function behavior.\nSimplify code while enhancing readability."
+  },
+  {
+    "objectID": "magic_methods/pmm.html#common-magic-methods",
+    "href": "magic_methods/pmm.html#common-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nInitialization and Representation\n\ninit: Initialize objects.\nrepr: Official string representation for debugging.\nstr: User-friendly string representation.\n\nComparison\n\neq: Equality comparison (==)."
+  },
+  {
+    "objectID": "magic_methods/pmm.html#common-magic-methods-1",
+    "href": "magic_methods/pmm.html#common-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nComparison\n\nlt: Less-than comparison (&lt;).\n\nArithmetic Operators\n\nadd: Overload addition (+).\nmul: Overload multiplication (*)."
+  },
+  {
+    "objectID": "magic_methods/pmm.html#example-custom-string-representation",
+    "href": "magic_methods/pmm.html#example-custom-string-representation",
+    "title": "Python Magic Methods",
+    "section": "Example: Custom String Representation",
+    "text": "Example: Custom String Representation\n\nCode example\n\n\n\n'1984' by George Orwell"
+  },
+  {
+    "objectID": "magic_methods/pmm.html#advanced-magic-methods",
+    "href": "magic_methods/pmm.html#advanced-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nItem Access and Length\n\ngetitem: Access elements using indexing ([]).\nlen: Define behavior of len().\n\nCallable Objects\n\ncall: Make objects callable.\n\nContext Management\n\nenter / exit: Support with statements."
+  },
+  {
+    "objectID": "magic_methods/pmm.html#advanced-magic-methods-1",
+    "href": "magic_methods/pmm.html#advanced-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nCode example\n\n\n\n1\n2"
+  },
+  {
+    "objectID": "magic_methods/pmm.html#operator-overloading",
+    "href": "magic_methods/pmm.html#operator-overloading",
+    "title": "Python Magic Methods",
+    "section": "Operator Overloading",
+    "text": "Operator Overloading\n\nRedefine operators for custom objects.\nCode Example: Adding two objects.\n\n\n\nVector(6, 8)"
+  },
+  {
+    "objectID": "magic_methods/pmm.html#magic-methods-for-context-management",
+    "href": "magic_methods/pmm.html#magic-methods-for-context-management",
+    "title": "Python Magic Methods",
+    "section": "Magic Methods for Context Management",
+    "text": "Magic Methods for Context Management\n\nEnable safe resource handling.\nUse enter and exit for with statements.\nCode example"
+  },
+  {
+    "objectID": "magic_methods/pmm.html#best-practices",
+    "href": "magic_methods/pmm.html#best-practices",
+    "title": "Python Magic Methods",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse magic methods only when intuitive and necessary.\nAvoid overloading operators where behavior is unclear.\nAlways provide meaningful repr for debugging.\nDocument custom behaviors thoroughly."
+  },
+  {
+    "objectID": "magic_methods/pmm.html#conclusion",
+    "href": "magic_methods/pmm.html#conclusion",
+    "title": "Python Magic Methods",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html",
+    "href": "magic_methods/magic_methods.html",
+    "title": "Python Magic Methods",
+    "section": "",
+    "text": "Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#introduction",
+    "href": "magic_methods/magic_methods.html#introduction",
+    "title": "Python Magic Methods",
+    "section": "",
+    "text": "Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#why-use-magic-methods",
+    "href": "magic_methods/magic_methods.html#why-use-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Why Use Magic Methods?",
+    "text": "Why Use Magic Methods?\n\nMake classes intuitive and Pythonic.\nEnable operator overloading.\nCustomize built-in function behavior.\nSimplify code while enhancing readability."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#common-magic-methods",
+    "href": "magic_methods/magic_methods.html#common-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nInitialization and Representation\n\ninit: Initialize objects.\nrepr: Official string representation for debugging.\nstr: User-friendly string representation.\n\nComparison\n\neq: Equality comparison (==)."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#common-magic-methods-1",
+    "href": "magic_methods/magic_methods.html#common-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nComparison\n\nlt: Less-than comparison (&lt;).\n\nArithmetic Operators\n\nadd: Overload addition (+).\nmul: Overload multiplication (*)."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#example-custom-string-representation",
+    "href": "magic_methods/magic_methods.html#example-custom-string-representation",
+    "title": "Python Magic Methods",
+    "section": "Example: Custom String Representation",
+    "text": "Example: Custom String Representation\n\nCode example\n\n\nclass Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    def __str__(self):\n        return f\"'{self.title}' by {self.author}\"\n    \n    def __repr__(self):\n        return f\"Book(title='{self.title}', author='{self.author}')\"\n\nbook = Book(\"1984\", \"George Orwell\")\nprint(book)  # Output: '1984' by George Orwell\n\n'1984' by George Orwell"
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#advanced-magic-methods",
+    "href": "magic_methods/magic_methods.html#advanced-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nItem Access and Length\n\ngetitem: Access elements using indexing ([]).\nlen: Define behavior of len().\n\nCallable Objects\n\ncall: Make objects callable.\n\nContext Management\n\nenter / exit: Support with statements."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#advanced-magic-methods-1",
+    "href": "magic_methods/magic_methods.html#advanced-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nCode example\n\n\nclass Counter:\n    def __init__(self):\n        self.count = 0\n    \n    def __call__(self):\n        self.count += 1\n        return self.count\n\ncounter = Counter()\nprint(counter())  # Output: 1\nprint(counter())  # Output: 2\n\n1\n2"
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#operator-overloading",
+    "href": "magic_methods/magic_methods.html#operator-overloading",
+    "title": "Python Magic Methods",
+    "section": "Operator Overloading",
+    "text": "Operator Overloading\n\nRedefine operators for custom objects.\nCode Example: Adding two objects.\n\n\nclass Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\n    \n    def __str__(self):\n        return f\"Vector({self.x}, {self.y})\"\n\nv1 = Vector(2, 3)\nv2 = Vector(4, 5)\nprint(v1 + v2)  # Output: Vector(6, 8)\n\nVector(6, 8)"
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#magic-methods-for-context-management",
+    "href": "magic_methods/magic_methods.html#magic-methods-for-context-management",
+    "title": "Python Magic Methods",
+    "section": "Magic Methods for Context Management",
+    "text": "Magic Methods for Context Management\n\nEnable safe resource handling.\nUse enter and exit for with statements.\nCode example\n\n\nclass FileManager:\n    def __init__(self, filename, mode):\n        self.file = open(filename, mode)\n    \n    def __enter__(self):\n        return self.file\n    \n    def __exit__(self, exc_type, exc_value, traceback):\n        self.file.close()\n\nwith FileManager(\"test.txt\", \"w\") as f:\n    f.write(\"Hello, World!\")"
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#best-practices",
+    "href": "magic_methods/magic_methods.html#best-practices",
+    "title": "Python Magic Methods",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse magic methods only when intuitive and necessary.\nAvoid overloading operators where behavior is unclear.\nAlways provide meaningful repr for debugging.\nDocument custom behaviors thoroughly."
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html#conclusion",
+    "href": "magic_methods/magic_methods.html#conclusion",
+    "title": "Python Magic Methods",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -466,13 +774,13 @@
     "href": "python.html",
     "title": "Python",
     "section": "",
-    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\n\n\nDecorators and Closures\n Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. \n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient."
+    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\nSlides here\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\n\n\nDecorators and Closures\n Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. \n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient."
   },
   {
     "objectID": "software_engineering.html",
     "href": "software_engineering.html",
     "title": "Software Engineering Best Practices",
     "section": "",
-    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels."
+    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here"
   }
 ]

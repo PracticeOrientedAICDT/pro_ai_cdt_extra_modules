@@ -2,34 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/index.html</loc>
-    <lastmod>2024-11-03T17:04:17.254Z</lastmod>
+    <lastmod>2024-11-17T21:13:20.829Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/machine_learning_design_patterns/mldp.html</loc>
+    <lastmod>2024-11-17T21:13:25.421Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/machine_learning_design_patterns/ml_design_patterns.html</loc>
+    <lastmod>2024-11-17T21:13:25.438Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/magic_methods/pmm.html</loc>
+    <lastmod>2024-11-17T21:13:29.675Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/magic_methods/magic_methods.html</loc>
+    <lastmod>2024-11-17T21:13:29.692Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/about.html</loc>
-    <lastmod>2024-11-03T17:04:17.405Z</lastmod>
+    <lastmod>2024-11-17T21:13:29.831Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/clean_code/cc.html</loc>
-    <lastmod>2024-11-03T17:04:21.869Z</lastmod>
+    <lastmod>2024-11-17T21:13:36.557Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/clean_code/clean_code.html</loc>
-    <lastmod>2024-11-03T17:04:21.880Z</lastmod>
+    <lastmod>2024-11-17T21:13:36.572Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/CI_CD/cicd.html</loc>
-    <lastmod>2024-11-03T17:04:26.573Z</lastmod>
+    <lastmod>2024-11-17T21:13:43.415Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/CI_CD/ci_cd.html</loc>
-    <lastmod>2024-11-03T17:04:26.592Z</lastmod>
+    <lastmod>2024-11-17T21:13:43.431Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/python.html</loc>
-    <lastmod>2024-11-03T17:04:26.808Z</lastmod>
+    <lastmod>2024-11-17T21:13:43.626Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/software_engineering.html</loc>
-    <lastmod>2024-11-03T17:04:26.988Z</lastmod>
+    <lastmod>2024-11-17T21:13:43.811Z</lastmod>
   </url>
 </urlset>

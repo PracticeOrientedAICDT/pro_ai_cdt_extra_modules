@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Daladier Sampaio Neto">
 
-<title>Aditional Training - Software Engineering Best Practices</title>
+<title>Aditional Training - Machine Learning Design Patterns</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Aditional Training</span>
     </a>
   </div>
@@ -81,11 +82,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -99,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./software_engineering.html">Software Engineering</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Machine Learning Design Patterns</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -121,25 +122,25 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./python.html" class="sidebar-item-text sidebar-link">
+  <a href="../python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./software_engineering.html" class="sidebar-item-text sidebar-link active">
+  <a href="../software_engineering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Engineering</span></a>
   </div>
 </li>
@@ -153,24 +154,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#clean-code" id="toc-clean-code" class="nav-link active" data-scroll-target="#clean-code">Clean Code</a></li>
-  <li><a href="#cicd" id="toc-cicd" class="nav-link" data-scroll-target="#cicd">CI/CD</a></li>
-  <li><a href="#machine-learning-design-patterns" id="toc-machine-learning-design-patterns" class="nav-link" data-scroll-target="#machine-learning-design-patterns">Machine Learning Design Patterns</a></li>
+  <li><a href="#design-patterns" id="toc-design-patterns" class="nav-link active" data-scroll-target="#design-patterns">Design Patterns</a></li>
+  <li><a href="#why-design-patterns-matter-in-machine-learning" id="toc-why-design-patterns-matter-in-machine-learning" class="nav-link" data-scroll-target="#why-design-patterns-matter-in-machine-learning">Why Design Patterns Matter in Machine Learning</a></li>
+  <li><a href="#types-of-machine-learning-design-patterns" id="toc-types-of-machine-learning-design-patterns" class="nav-link" data-scroll-target="#types-of-machine-learning-design-patterns">Types of Machine Learning Design Patterns</a></li>
+  <li><a href="#data-ingestion-and-transformation-patterns" id="toc-data-ingestion-and-transformation-patterns" class="nav-link" data-scroll-target="#data-ingestion-and-transformation-patterns">Data Ingestion and Transformation Patterns</a></li>
+  <li><a href="#model-training-patterns" id="toc-model-training-patterns" class="nav-link" data-scroll-target="#model-training-patterns">Model Training Patterns</a></li>
+  <li><a href="#model-serving-and-deployment-patterns" id="toc-model-serving-and-deployment-patterns" class="nav-link" data-scroll-target="#model-serving-and-deployment-patterns">Model Serving and Deployment Patterns</a></li>
+  <li><a href="#monitoring-and-retraining-patterns" id="toc-monitoring-and-retraining-patterns" class="nav-link" data-scroll-target="#monitoring-and-retraining-patterns">Monitoring and Retraining Patterns</a></li>
+  <li><a href="#workflow-and-pipeline-patterns" id="toc-workflow-and-pipeline-patterns" class="nav-link" data-scroll-target="#workflow-and-pipeline-patterns">Workflow and Pipeline Patterns</a></li>
+  <li><a href="#ml-specific-design-challenges" id="toc-ml-specific-design-challenges" class="nav-link" data-scroll-target="#ml-specific-design-challenges">ML-Specific Design Challenges</a></li>
+  <li><a href="#conclusion-benefits-of-ml-design-patterns" id="toc-conclusion-benefits-of-ml-design-patterns" class="nav-link" data-scroll-target="#conclusion-benefits-of-ml-design-patterns">Conclusion: Benefits of ML Design Patterns</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="mldp.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Software Engineering Best Practices</h1>
+<h1 class="title">Machine Learning Design Patterns</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Daladier Sampaio Neto </p>
+          </div>
+  </div>
     
   
     
@@ -179,20 +193,153 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="clean-code" class="level3">
-<h3 class="anchored" data-anchor-id="clean-code">Clean Code</h3>
-<p>Clean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.</p>
-<p><a href="./clean_code/clean_code.html">Slides here</a></p>
+<section id="design-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="design-patterns">Design Patterns</h2>
+<ul>
+<li><p><strong>What Are Design Patterns?</strong></p>
+<ul>
+<li>Reusable solutions to common problems in software and system design</li>
+</ul></li>
+<li><p><strong>Why Design Patterns Matter in ML</strong></p>
+<ul>
+<li>Streamline development, avoid reinventing the wheel</li>
+<li>Enable scalable, efficient, and maintainable ML systems</li>
+</ul></li>
+<li><p><strong>Types of ML Design Patterns</strong></p>
+<ul>
+<li>Patterns for data management, model training, deployment, and serving</li>
+</ul></li>
+</ul>
 </section>
-<section id="cicd" class="level3">
-<h3 class="anchored" data-anchor-id="cicd">CI/CD</h3>
-<p>CI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.</p>
-<p><a href="./CI_CD/ci_cd.html">Slides here</a></p>
+<section id="why-design-patterns-matter-in-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="why-design-patterns-matter-in-machine-learning">Why Design Patterns Matter in Machine Learning</h2>
+<ul>
+<li><strong>Address ML-Specific Challenges</strong>
+<ul>
+<li>Handle data transformations, training pipelines, and model deployment</li>
+</ul></li>
+<li><strong>Ensure Scalability and Reliability</strong>
+<ul>
+<li>Patterns help design robust ML systems for production</li>
+</ul></li>
+<li><strong>Facilitate Collaboration</strong>
+<ul>
+<li>Standard patterns provide a common language among ML teams</li>
+</ul></li>
+</ul>
 </section>
-<section id="machine-learning-design-patterns" class="level3">
-<h3 class="anchored" data-anchor-id="machine-learning-design-patterns">Machine Learning Design Patterns</h3>
-<p>Machine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.</p>
-<p><a href="./machine_learning_design_patterns/ml_design_patterns.html">Slides here</a></p>
+<section id="types-of-machine-learning-design-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-machine-learning-design-patterns">Types of Machine Learning Design Patterns</h2>
+<ul>
+<li><strong>Data Patterns</strong>: Handle data ingestion, cleaning, and processing</li>
+<li><strong>Model Patterns</strong>: Focus on model architecture, training, and tuning</li>
+<li><strong>Serving Patterns</strong>: Support model deployment, monitoring, and scaling</li>
+<li><strong>Workflow Patterns</strong>: Manage end-to-end ML pipelines efficiently</li>
+</ul>
+</section>
+<section id="data-ingestion-and-transformation-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="data-ingestion-and-transformation-patterns">Data Ingestion and Transformation Patterns</h2>
+<ul>
+<li><p><strong>Pattern: Feature Store</strong></p>
+<ul>
+<li>Centralize feature storage to standardize and reuse features across models</li>
+</ul></li>
+<li><p><strong>Pattern: Data Pipeline</strong></p>
+<ul>
+<li>Automate data cleaning, transformation, and preprocessing</li>
+</ul></li>
+<li><p><strong>Pattern: Data Versioning</strong></p>
+<ul>
+<li>Track data changes and ensure reproducibility in experiments</li>
+</ul></li>
+</ul>
+</section>
+<section id="model-training-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="model-training-patterns">Model Training Patterns</h2>
+<ul>
+<li><p><strong>Pattern: Transfer Learning</strong></p>
+<p>Use pre-trained models to reduce training time and improve performance</p></li>
+<li><p><strong>Pattern: Hyperparameter Tuning</strong></p>
+<p>Automate hyperparameter selection for optimal model performance</p></li>
+<li><p><strong>Pattern: Cross-Validation</strong></p>
+<p>Use multiple data splits to validate model robustness and reduce overfitting</p></li>
+</ul>
+</section>
+<section id="model-serving-and-deployment-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="model-serving-and-deployment-patterns">Model Serving and Deployment Patterns</h2>
+<ul>
+<li><strong>Pattern: Model Ensemble</strong>
+<ul>
+<li>Combine multiple models to improve accuracy and robustness</li>
+</ul></li>
+<li><strong>Pattern: Batch vs.&nbsp;Real-Time Serving</strong>
+<ul>
+<li>Choose serving patterns based on latency and processing needs</li>
+</ul></li>
+<li><strong>Pattern: Model Staging</strong>
+<ul>
+<li>Use stages (e.g., staging, production) for controlled deployment</li>
+</ul></li>
+</ul>
+</section>
+<section id="monitoring-and-retraining-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="monitoring-and-retraining-patterns">Monitoring and Retraining Patterns</h2>
+<ul>
+<li><strong>Pattern: Continuous Monitoring</strong>
+<ul>
+<li>Track model performance over time and detect issues (e.g., data drift)</li>
+</ul></li>
+<li><strong>Pattern: Model Retraining Trigger</strong>
+<ul>
+<li>Set conditions to automatically trigger retraining (e.g., data drift)</li>
+</ul></li>
+<li><strong>Pattern: A/B Testing</strong>
+<ul>
+<li>Compare models in production to evaluate new versions effectively</li>
+</ul></li>
+</ul>
+</section>
+<section id="workflow-and-pipeline-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-and-pipeline-patterns">Workflow and Pipeline Patterns</h2>
+<ul>
+<li><p><strong>Pattern: Pipeline Orchestration</strong></p>
+<ul>
+<li>Use tools (e.g., Airflow, Kubeflow) to manage complex ML workflows</li>
+</ul></li>
+<li><p><strong>Pattern: Metadata Tracking</strong></p>
+<ul>
+<li>Record experiment metadata for reproducibility and model lineage</li>
+</ul></li>
+<li><p><strong>Pattern: Experiment Tracking</strong></p>
+<ul>
+<li>Keep a log of experiments, configurations, and results to improve collaboration and model refinement</li>
+</ul></li>
+</ul>
+</section>
+<section id="ml-specific-design-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="ml-specific-design-challenges">ML-Specific Design Challenges</h2>
+<ul>
+<li><p><strong>Data Drift and Concept Drift</strong></p>
+<ul>
+<li>Changes in data that require model updates</li>
+</ul></li>
+<li><p><strong>Resource Optimization</strong></p>
+<ul>
+<li>Balancing computation costs with model performance</li>
+</ul></li>
+<li><p><strong>Maintaining Reproducibility</strong></p>
+<ul>
+<li>Ensure the same results with consistent data and configurations</li>
+</ul></li>
+</ul>
+</section>
+<section id="conclusion-benefits-of-ml-design-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-benefits-of-ml-design-patterns">Conclusion: Benefits of ML Design Patterns</h2>
+<ul>
+<li>Efficient Development: Patterns streamline and simplify ML project design</li>
+<li>Scalable and Maintainable Systems: Ready for production and growth</li>
+<li>Standardization Across Teams: Improve team collaboration and code quality</li>
+</ul>
 
 
 </section>
