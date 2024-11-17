@@ -1,0 +1,166 @@
+---
+title: "Python Magic Methods"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: pmm.html
+author: Daladier Sampaio Neto
+jupyter: python3
+---
+
+## Introduction 
+
+- Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).
+- Purpose:
+
+    Enable Python’s syntactic sugar (e.g., +, [], len()).
+    Customize class behavior for readability and flexibility.
+
+- Examples: __init__, __str__, __add__.
+
+## Why Use Magic Methods?
+
+- Make classes intuitive and Pythonic.
+- Enable operator overloading.
+- Customize built-in function behavior.
+- Simplify code while enhancing readability.
+
+## Common Magic Methods
+
+- Initialization and Representation
+    - __init__: Initialize objects.
+    - __repr__: Official string representation for debugging.
+    - __str__: User-friendly string representation.
+
+- Comparison
+    - __eq__: Equality comparison (==).
+   
+## Common Magic Methods
+
+- Comparison
+    - __lt__: Less-than comparison (<).
+
+- Arithmetic Operators
+    - __add__: Overload addition (+).
+    - __mul__: Overload multiplication (*).
+
+## Example: Custom String Representation
+
+- Code example
+
+```{python}
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+    
+    def __str__(self):
+        return f"'{self.title}' by {self.author}"
+    
+    def __repr__(self):
+        return f"Book(title='{self.title}', author='{self.author}')"
+
+book = Book("1984", "George Orwell")
+print(book)  # Output: '1984' by George Orwell
+
+```
+
+## Advanced Magic Methods
+
+- Item Access and Length
+
+    - __getitem__: Access elements using indexing ([]).
+    - __len__: Define behavior of len().
+
+- Callable Objects
+
+    - __call__: Make objects callable.
+
+- Context Management
+
+    - __enter__ / __exit__: Support with statements.
+
+## Advanced Magic Methods
+
+- Code example 
+
+```{python}
+class Counter:
+    def __init__(self):
+        self.count = 0
+    
+    def __call__(self):
+        self.count += 1
+        return self.count
+
+counter = Counter()
+print(counter())  # Output: 1
+print(counter())  # Output: 2
+
+```
+
+## Operator Overloading
+
+- Redefine operators for custom objects.
+- Code Example: Adding two objects.
+
+```{python}
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+    
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+
+v1 = Vector(2, 3)
+v2 = Vector(4, 5)
+print(v1 + v2)  # Output: Vector(6, 8)
+
+```
+
+## Magic Methods for Context Management
+
+- Enable safe resource handling.
+- Use __enter__ and __exit__ for with statements.
+
+- Code example
+
+```{python}
+class FileManager:
+    def __init__(self, filename, mode):
+        self.file = open(filename, mode)
+    
+    def __enter__(self):
+        return self.file
+    
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.file.close()
+
+with FileManager("test.txt", "w") as f:
+    f.write("Hello, World!")
+
+```
+
+## Best Practices 
+
+- Use magic methods only when intuitive and necessary.
+- Avoid overloading operators where behavior is unclear.
+- Always provide meaningful __repr__ for debugging.
+- Document custom behaviors thoroughly.
+
+## Conclusion
+
+- Recap
+    - Magic methods simplify and enhance Python code.
+    - Common use cases include initialization, representation, and operator overloading.
+    - Use them judiciously to maintain code clarity.
+
+- Call to Action:
+
+    - Explore Python’s official documentation on magic methods.
+    - Start integrating them into your projects for more Pythonic solutions.

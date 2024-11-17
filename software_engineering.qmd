@@ -17,3 +17,5 @@ CI/CD (Continuous Integration and Continuous Deployment/Delivery) is a developme
 ### Machine Learning Design Patterns 
 
 Machine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like "Feature Store," which centralizes reusable features across models, "Ensemble," which combines multiple models to improve predictive performance, and "Model Monitoring," which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.
+
+[Slides here](machine_learning_design_patterns/ml_design_patterns.qmd)

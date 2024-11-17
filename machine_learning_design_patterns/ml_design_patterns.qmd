@@ -1,0 +1,121 @@
+---
+title: "Machine Learning Design Patterns"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: mldp.html
+author: Daladier Sampaio Neto
+jupyter: python3
+---
+
+## Design Patterns
+
+- **What Are Design Patterns?**
+
+    - Reusable solutions to common problems in software and system design
+
+- **Why Design Patterns Matter in ML**
+
+    - Streamline development, avoid reinventing the wheel
+    - Enable scalable, efficient, and maintainable ML systems
+
+- **Types of ML Design Patterns**
+
+    - Patterns for data management, model training, deployment, and serving
+
+##  Why Design Patterns Matter in Machine Learning
+
+- **Address ML-Specific Challenges**
+    - Handle data transformations, training pipelines, and model deployment
+- **Ensure Scalability and Reliability**
+    - Patterns help design robust ML systems for production
+- **Facilitate Collaboration**
+    - Standard patterns provide a common language among ML teams
+
+## Types of Machine Learning Design Patterns
+
+- **Data Patterns**: Handle data ingestion, cleaning, and processing
+- **Model Patterns**: Focus on model architecture, training, and tuning
+- **Serving Patterns**: Support model deployment, monitoring, and scaling
+- **Workflow Patterns**: Manage end-to-end ML pipelines efficiently
+
+## Data Ingestion and Transformation Patterns
+
+- **Pattern: Feature Store**
+
+    - Centralize feature storage to standardize and reuse features across models
+
+- **Pattern: Data Pipeline**
+
+    - Automate data cleaning, transformation, and preprocessing
+
+- **Pattern: Data Versioning**
+
+    - Track data changes and ensure reproducibility in experiments
+
+## Model Training Patterns
+
+- **Pattern: Transfer Learning**
+
+    Use pre-trained models to reduce training time and improve performance
+
+- **Pattern: Hyperparameter Tuning**
+
+    Automate hyperparameter selection for optimal model performance
+
+- **Pattern: Cross-Validation**
+
+    Use multiple data splits to validate model robustness and reduce overfitting
+
+## Model Serving and Deployment Patterns
+
+- **Pattern: Model Ensemble**
+    - Combine multiple models to improve accuracy and robustness
+- **Pattern: Batch vs. Real-Time Serving**
+    - Choose serving patterns based on latency and processing needs
+- **Pattern: Model Staging**
+    - Use stages (e.g., staging, production) for controlled deployment
+
+## Monitoring and Retraining Patterns
+
+- **Pattern: Continuous Monitoring**
+    - Track model performance over time and detect issues (e.g., data drift)
+- **Pattern: Model Retraining Trigger**
+    - Set conditions to automatically trigger retraining (e.g., data drift)
+- **Pattern: A/B Testing**
+    - Compare models in production to evaluate new versions effectively
+
+## Workflow and Pipeline Patterns
+
+- **Pattern: Pipeline Orchestration**
+
+    - Use tools (e.g., Airflow, Kubeflow) to manage complex ML workflows
+
+- **Pattern: Metadata Tracking**
+
+    - Record experiment metadata for reproducibility and model lineage
+
+- **Pattern: Experiment Tracking**
+
+    - Keep a log of experiments, configurations, and results to improve collaboration and model refinement
+
+## ML-Specific Design Challenges
+
+- **Data Drift and Concept Drift**
+
+    - Changes in data that require model updates
+
+- **Resource Optimization**
+
+    - Balancing computation costs with model performance
+
+- **Maintaining Reproducibility**
+
+    - Ensure the same results with consistent data and configurations
+
+## Conclusion: Benefits of ML Design Patterns
+
+- Efficient Development: Patterns streamline and simplify ML project design
+- Scalable and Maintainable Systems: Ready for production and growth
+- Standardization Across Teams: Improve team collaboration and code quality

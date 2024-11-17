@@ -10,7 +10,7 @@ Python magic methods, also known as dunder (double underscore) methods, are spec
 
 objects behave like native data types. 
 
-     
+[Slides here](magic_methods/magic_methods.qmd)
 
 ### List comprehension and generator expressions 
 
