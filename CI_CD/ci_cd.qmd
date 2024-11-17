@@ -4,7 +4,7 @@ format:
     html: default
     revealjs:
         theme: simple
-        output-file: ci_cd.html
+        output-file: cicd.html
 author: Daladier Sampaio Neto
 jupyter: python3
 ---

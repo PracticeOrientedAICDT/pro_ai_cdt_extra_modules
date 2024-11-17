@@ -4,7 +4,7 @@ format:
     html: default
     revealjs:
         theme: simple
-        output-file: clean_code.html
+        output-file: cc.html
 author: Daladier Sampaio Neto
 jupyter: python3
 ---
