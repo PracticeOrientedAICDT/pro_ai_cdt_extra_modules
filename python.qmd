@@ -28,9 +28,13 @@ objects behave like native data types.
 
  In Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like `len` to `map()` or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive. 
 
+[Slides here](first_class_functions/first_class_functions.qmd)
+
 ### Decorators and Closures 
 
-     Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. 
+Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. 
+
+[Slides here](decorators_and_closures/decorators_and_closures.qmd)
 
 ### Vectorization 
 

@@ -1,0 +1,178 @@
+---
+title: "Decorators and Closures"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: mldp.html
+author: Daladier Sampaio Neto
+jupyter: python3
+---
+
+# Introduction
+## What Are Decorators and Closures?
+- **Closures** allow a function to retain access to its enclosing scope.
+- **Decorators** are functions that modify other functions dynamically.
+- Used for:
+  - Code reusability
+  - Logging, authentication, caching
+  - Extending function behavior
+
+---
+
+# Closures
+## What is a Closure?
+- A **closure** is a function that "remembers" the variables from its enclosing scope, even after the scope has finished executing.
+
+```{python}
+
+def outer_function(msg):
+    def inner_function():
+        print(f"Message: {msg}")
+    return inner_function
+
+closure = outer_function("Hello!")
+closure()  # Output: Message: Hello!
+
+```
+
+## Why Use Closures?
+
+    - Advantages
+
+        - Encapsulation: Keeps data hidden.
+        - Avoids global variables: Limits scope.
+        - Useful in decorators: Enables function modification.
+
+```{python}
+
+def multiplier(factor):
+    def multiply(n):
+        return n * factor
+    return multiply
+
+double = multiplier(2)
+print(double(5))  # Output: 10
+
+```
+
+# Decorators 
+## What is a Decorator?
+
+    - A decorator is a function that takes another function as input and modifies its behavior without changing its code.
+    - Uses closures to wrap a function.
+
+```{python}
+
+def decorator(func):
+    def wrapper():
+        print("Before the function call")
+        func()
+        print("After the function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+```
+
+## How Decorators Work
+
+    - The decorator function takes another function as an argument.
+    - It creates a wrapper function that modifies the behavior.
+    - It returns the wrapper function instead of the original.
+    - The @decorator syntax automatically applies the decorator.
+
+## Multiple Decorators
+
+   - **Stacking Decorators**
+    - Multiple decorators can be applied in sequence.
+
+```{python}
+
+def uppercase(func):
+    def wrapper():
+        return func().upper()
+    return wrapper
+
+def exclaim(func):
+    def wrapper():
+        return func() + "!!!"
+    return wrapper
+
+@uppercase
+@exclaim
+def greet():
+    return "hello"
+
+print(greet())  # Output: HELLO!!!
+
+```
+
+    - Execution order: exclaim → uppercase → greet()
+
+## Decorators with Arguments
+
+```{python}
+
+def repeat(n):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(n):
+                func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@repeat(3)
+def say_hello():
+    print("Hello!")
+
+say_hello()  
+# Output:
+# Hello!
+# Hello!
+# Hello!
+
+
+```
+
+- This decorator runs the function n times
+
+## Examples
+
+```{python}
+
+import time
+
+def log_time(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(f"{func.__name__} took {end - start:.4f} seconds")
+        return result
+    return wrapper
+
+@log_time
+def slow_function():
+    time.sleep(2)
+
+slow_function()  # Output: slow_function took 2.000X seconds
+
+```
+
+## Standard Decorators
+
+    - @staticmethod:	Defines a static method inside a class.
+    - @classmethod:	Defines a method that operates on the class itself.
+    - @property:	Converts a method into a read-only property.
+
+## When to Use Decorators?
+
+    - Logging (debugging and performance tracking)
+    - Access control (authentication, security)
+    - Caching (memoization)
+    - Code reuse (DRY principle)

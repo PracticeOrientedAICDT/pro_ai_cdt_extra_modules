@@ -1,0 +1,179 @@
+---
+title: "First Class Functions"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: mldp.html
+author: Daladier Sampaio Neto
+jupyter: python3
+---
+
+## First-Class Functions in Python
+
+
+- **What Are First-Class Functions?**
+
+    - In Python, functions are first-class objects.
+    - This means they can be:
+        - Assigned to variables
+        - Passed as arguments
+        - Returned from other functions
+        - Stored in data structures
+
+## First-Class Functions in Python
+
+- **Why does this matter?**
+
+    - It enables functional programming techniques.
+    - It makes code more flexible and reusable.
+
+## Functional Programming
+
+- **What is Functional Programming?**
+
+    - Functional Programming (FP) is a programming paradigm that:
+    - Focuses on immutability and pure functions
+    - Uses higher-order functions and function composition
+    - Avoids side effects and mutating state
+    - Goal: Write clear, predictable, and reusable code!
+
+## Key Principles of Functional Programing
+
+- **Core Concepts**
+
+    - Pure Functions – Functions that always return the same output for the same input.
+    - Immutability – Data cannot be modified after it's created.
+    - Higher-Order Functions – Functions that take other functions as arguments or return them.
+    - Function Composition – Combining simple functions to build complex behavior.
+    - Recursion – Replacing loops with recursive calls.
+
+## Functions as Objects
+
+- **In Python, functions are treated like any other object.**
+
+```{python}
+def greet(name):
+    return f"Hello, {name}!"
+
+# Assign function to a variable
+greeting = greet  
+print(greeting("Alice"))  # Output: Hello, Alice!
+
+
+```
+
+## Passing Functions as Arguments
+
+- **A function can accept another function as a parameter.**
+
+```{python}
+def apply_function(func, value):
+    return func(value)
+
+def square(n):
+    return n * n
+
+result = apply_function(square, 5)
+print(result)  # Output: 25
+```
+
+- The apply_function function takes a function (func) and a value, then applies the function to the value.
+
+## Returning Functions from Functions
+
+- **A function can return another function, creating closures.**
+
+```{python}
+def multiplier(factor):
+    def multiply(number):
+        return number * factor
+    return multiply
+
+double = multiplier(2)
+print(double(5))  # Output: 10
+
+```
+- The multiplier function returns a function that remembers the factor.
+
+## Storing Functions in Data Structures
+
+- **Functions can be stored in lists, dictionaries, and other data structures.**
+```{python}
+operations = {
+    "add": lambda x, y: x + y,
+    "multiply": lambda x, y: x * y
+}
+
+print(operations["add"](3, 4))  # Output: 7
+```
+
+- This allows dynamic selection of functions at runtime!
+
+## Practical Applications
+
+    - Where are first-class functions useful?
+    - Higher-order functions (e.g., map(), filter(), reduce())
+    - Decorators (modifying function behavior)
+    -Callbacks (event-driven programming)
+    -Custom function pipelines
+
+## Using First-Class Functions with map() and filter()
+
+```{python}
+numbers = [1, 2, 3, 4, 5]
+
+# Using map() to square numbers
+squared = list(map(lambda x: x ** 2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+
+# Using filter() to get even numbers
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # Output: [2, 4]
+
+```
+
+## Decorators - A Powerful Case 
+
+- **Decorators use first-class functions to modify behavior.**
+
+```{python}
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+```
+
+- Output 
+
+Before function call  
+Hello!  
+After function call  
+
+## Advantages of First-Class Functions
+
+    - Why Use First-Class Functions?
+    - Encourages modular code
+    - Reduces redundancy
+    - Enables functional programming
+    - Great for decorators, callbacks, and functional pipelines
+
+    - More flexibility → Better Code!
+
+## Summary 
+
+    - Key Takeaways:
+
+        - First-class functions allow functions to be treated as objects.
+        - You can assign, pass, return, and store functions dynamically.
+        - This enables powerful functional programming patterns.
+        - Used in higher-order functions, decorators, and more
