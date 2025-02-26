@@ -7,6 +7,342 @@
     "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language."
   },
   {
+    "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
+    "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
+    "title": "Decorators and Closures",
+    "section": "What Are Decorators and Closures?",
+    "text": "What Are Decorators and Closures?\n\nClosures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#what-is-a-closure",
+    "href": "decorators_and_closures/mldp.html#what-is-a-closure",
+    "title": "Decorators and Closures",
+    "section": "What is a Closure?",
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\n\nMessage: Hello!"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#why-use-closures",
+    "href": "decorators_and_closures/mldp.html#why-use-closures",
+    "title": "Decorators and Closures",
+    "section": "Why Use Closures?",
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\n\n10"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#what-is-a-decorator",
+    "href": "decorators_and_closures/mldp.html#what-is-a-decorator",
+    "title": "Decorators and Closures",
+    "section": "What is a Decorator?",
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\n\nBefore the function call\nHello!\nAfter the function call"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#how-decorators-work",
+    "href": "decorators_and_closures/mldp.html#how-decorators-work",
+    "title": "Decorators and Closures",
+    "section": "How Decorators Work",
+    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#multiple-decorators",
+    "href": "decorators_and_closures/mldp.html#multiple-decorators",
+    "title": "Decorators and Closures",
+    "section": "Multiple Decorators",
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#decorators-with-arguments",
+    "href": "decorators_and_closures/mldp.html#decorators-with-arguments",
+    "title": "Decorators and Closures",
+    "section": "Decorators with Arguments",
+    "text": "Decorators with Arguments\n\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#examples",
+    "href": "decorators_and_closures/mldp.html#examples",
+    "title": "Decorators and Closures",
+    "section": "Examples",
+    "text": "Examples\n\n\nslow_function took 2.0017 seconds"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#standard-decorators",
+    "href": "decorators_and_closures/mldp.html#standard-decorators",
+    "title": "Decorators and Closures",
+    "section": "Standard Decorators",
+    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#when-to-use-decorators",
+    "href": "decorators_and_closures/mldp.html#when-to-use-decorators",
+    "title": "Decorators and Closures",
+    "section": "When to Use Decorators?",
+    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html",
+    "href": "decorators_and_closures/decorators_and_closures.html",
+    "title": "Decorators and Closures",
+    "section": "",
+    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
+    "title": "Decorators and Closures",
+    "section": "",
+    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
+    "title": "Decorators and Closures",
+    "section": "What is a Closure?",
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\ndef outer_function(msg):\n    def inner_function():\n        print(f\"Message: {msg}\")\n    return inner_function\n\nclosure = outer_function(\"Hello!\")\nclosure()  # Output: Message: Hello!\n\nMessage: Hello!"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
+    "href": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
+    "title": "Decorators and Closures",
+    "section": "Why Use Closures?",
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\ndef multiplier(factor):\n    def multiply(n):\n        return n * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
+    "title": "Decorators and Closures",
+    "section": "What is a Decorator?",
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before the function call\")\n        func()\n        print(\"After the function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore the function call\nHello!\nAfter the function call"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
+    "href": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
+    "title": "Decorators and Closures",
+    "section": "How Decorators Work",
+    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
+    "title": "Decorators and Closures",
+    "section": "Multiple Decorators",
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\ndef uppercase(func):\n    def wrapper():\n        return func().upper()\n    return wrapper\n\ndef exclaim(func):\n    def wrapper():\n        return func() + \"!!!\"\n    return wrapper\n\n@uppercase\n@exclaim\ndef greet():\n    return \"hello\"\n\nprint(greet())  # Output: HELLO!!!\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
+    "href": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
+    "title": "Decorators and Closures",
+    "section": "Decorators with Arguments",
+    "text": "Decorators with Arguments\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()  \n# Output:\n# Hello!\n# Hello!\n# Hello!\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#examples",
+    "href": "decorators_and_closures/decorators_and_closures.html#examples",
+    "title": "Decorators and Closures",
+    "section": "Examples",
+    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0019 seconds"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
+    "title": "Decorators and Closures",
+    "section": "Standard Decorators",
+    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
+    "title": "Decorators and Closures",
+    "section": "When to Use Decorators?",
+    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python",
+    "href": "first_class_functions/mldp.html#first-class-functions-in-python",
+    "title": "First Class Functions",
+    "section": "First-Class Functions in Python",
+    "text": "First-Class Functions in Python\n\nWhat Are First-Class Functions?\n\nIn Python, functions are first-class objects.\nThis means they can be:\n\nAssigned to variables\nPassed as arguments\nReturned from other functions\nStored in data structures"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python-1",
+    "href": "first_class_functions/mldp.html#first-class-functions-in-python-1",
+    "title": "First Class Functions",
+    "section": "First-Class Functions in Python",
+    "text": "First-Class Functions in Python\n\nWhy does this matter?\n\nIt enables functional programming techniques.\nIt makes code more flexible and reusable."
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#functional-programming",
+    "href": "first_class_functions/mldp.html#functional-programming",
+    "title": "First Class Functions",
+    "section": "Functional Programming",
+    "text": "Functional Programming\n\nWhat is Functional Programming?\n\nFunctional Programming (FP) is a programming paradigm that:\nFocuses on immutability and pure functions\nUses higher-order functions and function composition\nAvoids side effects and mutating state\nGoal: Write clear, predictable, and reusable code!"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#key-principles-of-functional-programing",
+    "href": "first_class_functions/mldp.html#key-principles-of-functional-programing",
+    "title": "First Class Functions",
+    "section": "Key Principles of Functional Programing",
+    "text": "Key Principles of Functional Programing\n\nCore Concepts\n\nPure Functions – Functions that always return the same output for the same input.\nImmutability – Data cannot be modified after it’s created.\nHigher-Order Functions – Functions that take other functions as arguments or return them.\nFunction Composition – Combining simple functions to build complex behavior.\nRecursion – Replacing loops with recursive calls."
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#functions-as-objects",
+    "href": "first_class_functions/mldp.html#functions-as-objects",
+    "title": "First Class Functions",
+    "section": "Functions as Objects",
+    "text": "Functions as Objects\n\nIn Python, functions are treated like any other object.\n\n\n\nHello, Alice!"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#passing-functions-as-arguments",
+    "href": "first_class_functions/mldp.html#passing-functions-as-arguments",
+    "title": "First Class Functions",
+    "section": "Passing Functions as Arguments",
+    "text": "Passing Functions as Arguments\n\nA function can accept another function as a parameter.\n\n\n\n25\n\n\n\nThe apply_function function takes a function (func) and a value, then applies the function to the value."
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#returning-functions-from-functions",
+    "href": "first_class_functions/mldp.html#returning-functions-from-functions",
+    "title": "First Class Functions",
+    "section": "Returning Functions from Functions",
+    "text": "Returning Functions from Functions\n\nA function can return another function, creating closures.\n\n\n\n10\n\n\n\nThe multiplier function returns a function that remembers the factor."
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#storing-functions-in-data-structures",
+    "href": "first_class_functions/mldp.html#storing-functions-in-data-structures",
+    "title": "First Class Functions",
+    "section": "Storing Functions in Data Structures",
+    "text": "Storing Functions in Data Structures\n\nFunctions can be stored in lists, dictionaries, and other data structures.\n\n\n\n7\n\n\n\nThis allows dynamic selection of functions at runtime!"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#practical-applications",
+    "href": "first_class_functions/mldp.html#practical-applications",
+    "title": "First Class Functions",
+    "section": "Practical Applications",
+    "text": "Practical Applications\n- Where are first-class functions useful?\n- Higher-order functions (e.g., map(), filter(), reduce())\n- Decorators (modifying function behavior)\n-Callbacks (event-driven programming)\n-Custom function pipelines"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
+    "href": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
+    "title": "First Class Functions",
+    "section": "Using First-Class Functions with map() and filter()",
+    "text": "Using First-Class Functions with map() and filter()\n\n\n[1, 4, 9, 16, 25]\n[2, 4]"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#decorators---a-powerful-case",
+    "href": "first_class_functions/mldp.html#decorators---a-powerful-case",
+    "title": "First Class Functions",
+    "section": "Decorators - A Powerful Case",
+    "text": "Decorators - A Powerful Case\n\nDecorators use first-class functions to modify behavior.\n\n\n\nBefore function call\nHello!\nAfter function call\n\n\n\nOutput\n\nBefore function call\nHello!\nAfter function call"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#advantages-of-first-class-functions",
+    "href": "first_class_functions/mldp.html#advantages-of-first-class-functions",
+    "title": "First Class Functions",
+    "section": "Advantages of First-Class Functions",
+    "text": "Advantages of First-Class Functions\n- Why Use First-Class Functions?\n- Encourages modular code\n- Reduces redundancy\n- Enables functional programming\n- Great for decorators, callbacks, and functional pipelines\n\n- More flexibility → Better Code!"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#summary",
+    "href": "first_class_functions/mldp.html#summary",
+    "title": "First Class Functions",
+    "section": "Summary",
+    "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html",
+    "href": "first_class_functions/first_class_functions.html",
+    "title": "First Class Functions",
+    "section": "",
+    "text": "What Are First-Class Functions?\n\nIn Python, functions are first-class objects.\nThis means they can be:\n\nAssigned to variables\nPassed as arguments\nReturned from other functions\nStored in data structures"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#first-class-functions-in-python",
+    "href": "first_class_functions/first_class_functions.html#first-class-functions-in-python",
+    "title": "First Class Functions",
+    "section": "",
+    "text": "What Are First-Class Functions?\n\nIn Python, functions are first-class objects.\nThis means they can be:\n\nAssigned to variables\nPassed as arguments\nReturned from other functions\nStored in data structures"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#first-class-functions-in-python-1",
+    "href": "first_class_functions/first_class_functions.html#first-class-functions-in-python-1",
+    "title": "First Class Functions",
+    "section": "First-Class Functions in Python",
+    "text": "First-Class Functions in Python\n\nWhy does this matter?\n\nIt enables functional programming techniques.\nIt makes code more flexible and reusable."
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#functional-programming",
+    "href": "first_class_functions/first_class_functions.html#functional-programming",
+    "title": "First Class Functions",
+    "section": "Functional Programming",
+    "text": "Functional Programming\n\nWhat is Functional Programming?\n\nFunctional Programming (FP) is a programming paradigm that:\nFocuses on immutability and pure functions\nUses higher-order functions and function composition\nAvoids side effects and mutating state\nGoal: Write clear, predictable, and reusable code!"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#key-principles-of-functional-programing",
+    "href": "first_class_functions/first_class_functions.html#key-principles-of-functional-programing",
+    "title": "First Class Functions",
+    "section": "Key Principles of Functional Programing",
+    "text": "Key Principles of Functional Programing\n\nCore Concepts\n\nPure Functions – Functions that always return the same output for the same input.\nImmutability – Data cannot be modified after it’s created.\nHigher-Order Functions – Functions that take other functions as arguments or return them.\nFunction Composition – Combining simple functions to build complex behavior.\nRecursion – Replacing loops with recursive calls."
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#functions-as-objects",
+    "href": "first_class_functions/first_class_functions.html#functions-as-objects",
+    "title": "First Class Functions",
+    "section": "Functions as Objects",
+    "text": "Functions as Objects\n\nIn Python, functions are treated like any other object.\n\n\ndef greet(name):\n    return f\"Hello, {name}!\"\n\n# Assign function to a variable\ngreeting = greet  \nprint(greeting(\"Alice\"))  # Output: Hello, Alice!\n\nHello, Alice!"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#passing-functions-as-arguments",
+    "href": "first_class_functions/first_class_functions.html#passing-functions-as-arguments",
+    "title": "First Class Functions",
+    "section": "Passing Functions as Arguments",
+    "text": "Passing Functions as Arguments\n\nA function can accept another function as a parameter.\n\n\ndef apply_function(func, value):\n    return func(value)\n\ndef square(n):\n    return n * n\n\nresult = apply_function(square, 5)\nprint(result)  # Output: 25\n\n25\n\n\n\nThe apply_function function takes a function (func) and a value, then applies the function to the value."
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#returning-functions-from-functions",
+    "href": "first_class_functions/first_class_functions.html#returning-functions-from-functions",
+    "title": "First Class Functions",
+    "section": "Returning Functions from Functions",
+    "text": "Returning Functions from Functions\n\nA function can return another function, creating closures.\n\n\ndef multiplier(factor):\n    def multiply(number):\n        return number * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10\n\n\n\nThe multiplier function returns a function that remembers the factor."
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#storing-functions-in-data-structures",
+    "href": "first_class_functions/first_class_functions.html#storing-functions-in-data-structures",
+    "title": "First Class Functions",
+    "section": "Storing Functions in Data Structures",
+    "text": "Storing Functions in Data Structures\n\nFunctions can be stored in lists, dictionaries, and other data structures.\n\n\noperations = {\n    \"add\": lambda x, y: x + y,\n    \"multiply\": lambda x, y: x * y\n}\n\nprint(operations[\"add\"](3, 4))  # Output: 7\n\n7\n\n\n\nThis allows dynamic selection of functions at runtime!"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#practical-applications",
+    "href": "first_class_functions/first_class_functions.html#practical-applications",
+    "title": "First Class Functions",
+    "section": "Practical Applications",
+    "text": "Practical Applications\n- Where are first-class functions useful?\n- Higher-order functions (e.g., map(), filter(), reduce())\n- Decorators (modifying function behavior)\n-Callbacks (event-driven programming)\n-Custom function pipelines"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#using-first-class-functions-with-map-and-filter",
+    "href": "first_class_functions/first_class_functions.html#using-first-class-functions-with-map-and-filter",
+    "title": "First Class Functions",
+    "section": "Using First-Class Functions with map() and filter()",
+    "text": "Using First-Class Functions with map() and filter()\n\nnumbers = [1, 2, 3, 4, 5]\n\n# Using map() to square numbers\nsquared = list(map(lambda x: x ** 2, numbers))\nprint(squared)  # Output: [1, 4, 9, 16, 25]\n\n# Using filter() to get even numbers\nevens = list(filter(lambda x: x % 2 == 0, numbers))\nprint(evens)  # Output: [2, 4]\n\n[1, 4, 9, 16, 25]\n[2, 4]"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#decorators---a-powerful-case",
+    "href": "first_class_functions/first_class_functions.html#decorators---a-powerful-case",
+    "title": "First Class Functions",
+    "section": "Decorators - A Powerful Case",
+    "text": "Decorators - A Powerful Case\n\nDecorators use first-class functions to modify behavior.\n\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before function call\")\n        func()\n        print(\"After function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore function call\nHello!\nAfter function call\n\n\n\nOutput\n\nBefore function call\nHello!\nAfter function call"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#advantages-of-first-class-functions",
+    "href": "first_class_functions/first_class_functions.html#advantages-of-first-class-functions",
+    "title": "First Class Functions",
+    "section": "Advantages of First-Class Functions",
+    "text": "Advantages of First-Class Functions\n- Why Use First-Class Functions?\n- Encourages modular code\n- Reduces redundancy\n- Enables functional programming\n- Great for decorators, callbacks, and functional pipelines\n\n- More flexibility → Better Code!"
+  },
+  {
+    "objectID": "first_class_functions/first_class_functions.html#summary",
+    "href": "first_class_functions/first_class_functions.html#summary",
+    "title": "First Class Functions",
+    "section": "Summary",
+    "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
+  },
+  {
     "objectID": "machine_learning_design_patterns/mldp.html#design-patterns",
     "href": "machine_learning_design_patterns/mldp.html#design-patterns",
     "title": "Machine Learning Design Patterns",
@@ -774,7 +1110,7 @@
     "href": "python.html",
     "title": "Python",
     "section": "",
-    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\nSlides here\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\n\n\nDecorators and Closures\n Decorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A **closure** occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions. \n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient."
+    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\nSlides here\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\nSlides here\n\n\nDecorators and Closures\nDecorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A closure occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions.\nSlides here\n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient."
   },
   {
     "objectID": "software_engineering.html",
