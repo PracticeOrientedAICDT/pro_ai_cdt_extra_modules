@@ -60,7 +60,7 @@
     "href": "decorators_and_closures/mldp.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\n\nslow_function took 2.0017 seconds"
+    "text": "Examples\n\n\nslow_function took 2.0018 seconds"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#standard-decorators",
@@ -137,7 +137,7 @@
     "href": "decorators_and_closures/decorators_and_closures.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0019 seconds"
+    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0011 seconds"
   },
   {
     "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
