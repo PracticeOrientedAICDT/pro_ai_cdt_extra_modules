@@ -1,0 +1,158 @@
+---
+title: "Code Vectorization in Python"
+author: "Daladier Sampaio"
+date: "`r Sys.Date()`"
+format: revealjs
+---
+
+# What is Vectorization?
+
+- Vectorization refers to applying operations on entire arrays instead of using explicit loops.
+- It utilizes optimized C and Fortran implementations under the hood.
+- Commonly used in **NumPy**, **Pandas**, and **TensorFlow**.
+- Replaces slow `for` loops with efficient operations on entire arrays.
+
+---
+
+# Why Use Vectorization?
+
+- **Speed**: Optimized implementations outperform loops.
+- **Readability**: More concise and clear.
+- **Memory Efficiency**: Operates directly on arrays without extra overhead.
+- **Better CPU Utilization**: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.
+
+---
+
+# Vectorization with NumPy: Element-wise Operations
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+# Loop-based approach
+squared_loop = [x**2 for x in arr]
+
+# Vectorized approach
+squared_vectorized = arr ** 2
+
+print(squared_vectorized)
+```
+
+---
+
+# Vectorization with NumPy: Mathematical Functions
+
+```python
+arr = np.array([0, np.pi / 2, np.pi])
+
+# Loop-based approach
+sin_loop = [np.sin(x) for x in arr]
+
+# Vectorized approach
+sin_vectorized = np.sin(arr)
+
+print(sin_vectorized)
+```
+
+---
+
+# Vectorization with Pandas
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({'A': [1, 2, 3, 4]})
+
+# Using apply (slow)
+df['B'] = df['A'].apply(lambda x: x**2)
+
+# Vectorized (fast)
+df['B'] = df['A'] ** 2
+
+print(df)
+```
+
+---
+
+# Performance Comparison: NumPy vs Loop
+
+```python
+import time
+import numpy as np
+
+arr = np.random.rand(10**6)
+
+# Loop-based
+start = time.time()
+result_loop = [x**2 for x in arr]
+print("Loop time:", time.time() - start)
+
+# Vectorized
+start = time.time()
+result_vectorized = arr ** 2
+print("Vectorized time:", time.time() - start)
+```
+
+---
+
+# Performance Comparison: Pandas Apply vs Vectorized
+
+```python
+import pandas as pd
+import time
+
+df = pd.DataFrame({'A': np.random.rand(10**6)})
+
+# Using apply (slow)
+start = time.time()
+df['B'] = df['A'].apply(lambda x: x**2)
+print("Apply time:", time.time() - start)
+
+# Vectorized (fast)
+start = time.time()
+df['B'] = df['A'] ** 2
+print("Vectorized time:", time.time() - start)
+```
+
+---
+
+# Vectorization in NumPy: Broadcasting
+
+```python
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+scalar = 2
+
+# Broadcasting operation
+result = arr * scalar
+
+print(result)
+```
+
+---
+
+# Vectorization in NumPy: Dot Product
+
+```python
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Loop-based approach
+result_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]
+
+# Vectorized approach
+result_vectorized = np.dot(A, B)
+
+print(result_vectorized)
+```
+
+---
+
+# Conclusion
+
+- Use vectorization whenever possible.
+- NumPy and Pandas provide built-in vectorized operations.
+- Significant performance gains over loops.
+- Reduces memory overhead and improves efficiency.
+
+---

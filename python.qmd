@@ -39,3 +39,5 @@ Decorators and closures are closely related concepts in Python that enhance func
 ### Vectorization 
 
  Code vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient.
+
+ [Slides here](vectorization/vectorization.qmd)
