@@ -7,6 +7,13 @@
     "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language."
   },
   {
+    "objectID": "vectorization/vectorization.html",
+    "href": "vectorization/vectorization.html",
+    "title": "Code Vectorization in Python",
+    "section": "",
+    "text": "What is Vectorization?\n\nVectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays.\n\n\n\n\nWhy Use Vectorization?\n\nSpeed: Optimized implementations outperform loops.\nReadability: More concise and clear.\nMemory Efficiency: Operates directly on arrays without extra overhead.\nBetter CPU Utilization: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.\n\n\n\n\nVectorization with NumPy: Element-wise Operations\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Loop-based approach\nsquared_loop = [x**2 for x in arr]\n\n# Vectorized approach\nsquared_vectorized = arr ** 2\n\nprint(squared_vectorized)\n\n\n\nVectorization with NumPy: Mathematical Functions\narr = np.array([0, np.pi / 2, np.pi])\n\n# Loop-based approach\nsin_loop = [np.sin(x) for x in arr]\n\n# Vectorized approach\nsin_vectorized = np.sin(arr)\n\nprint(sin_vectorized)\n\n\n\nVectorization with Pandas\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3, 4]})\n\n# Using apply (slow)\ndf['B'] = df['A'].apply(lambda x: x**2)\n\n# Vectorized (fast)\ndf['B'] = df['A'] ** 2\n\nprint(df)\n\n\n\nPerformance Comparison: NumPy vs Loop\nimport time\nimport numpy as np\n\narr = np.random.rand(10**6)\n\n# Loop-based\nstart = time.time()\nresult_loop = [x**2 for x in arr]\nprint(\"Loop time:\", time.time() - start)\n\n# Vectorized\nstart = time.time()\nresult_vectorized = arr ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\n\n\nPerformance Comparison: Pandas Apply vs Vectorized\nimport pandas as pd\nimport time\n\ndf = pd.DataFrame({'A': np.random.rand(10**6)})\n\n# Using apply (slow)\nstart = time.time()\ndf['B'] = df['A'].apply(lambda x: x**2)\nprint(\"Apply time:\", time.time() - start)\n\n# Vectorized (fast)\nstart = time.time()\ndf['B'] = df['A'] ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\n\n\nVectorization in NumPy: Broadcasting\narr = np.array([[1, 2, 3], [4, 5, 6]])\nscalar = 2\n\n# Broadcasting operation\nresult = arr * scalar\n\nprint(result)\n\n\n\nVectorization in NumPy: Dot Product\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# Loop-based approach\nresult_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n\n# Vectorized approach\nresult_vectorized = np.dot(A, B)\n\nprint(result_vectorized)\n\n\n\nConclusion\n\nUse vectorization whenever possible.\nNumPy and Pandas provide built-in vectorized operations.\nSignificant performance gains over loops.\nReduces memory overhead and improves efficiency."
+  },
+  {
     "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
     "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
     "title": "Decorators and Closures",
@@ -60,7 +67,7 @@
     "href": "decorators_and_closures/mldp.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\n\nslow_function took 2.0021 seconds"
+    "text": "Examples\n\n\nslow_function took 2.0020 seconds"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#standard-decorators",
