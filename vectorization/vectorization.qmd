@@ -2,7 +2,11 @@
 title: "Code Vectorization in Python"
 author: "Daladier Sampaio"
 date: "`r Sys.Date()`"
-format: revealjs
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: mldp.html
 ---
 
 # What is Vectorization?
