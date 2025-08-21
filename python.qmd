@@ -16,11 +16,18 @@ objects behave like native data types.
 
  List comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A **list comprehension** produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., `[x**2 for x in range(5)]` creates a list of squares). **Generator expressions** are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once. 
 
-### Tuples as Records 
+### Tuples Data Structure
 
- Tuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple `(name, age, city)` could represent a person's record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format. 
+#### Tuples
 
-### Tuple Unpacking 
+ In Python, a tuple is an immutable, ordered collection of elements that can store items of any data type, including other tuples. Tuples are defined by placing elements inside parentheses () and separating them with commas, for example: my_tuple = (1, "apple", 3.14). Unlike lists, tuples cannot be modified after creation—meaning you cannot add, remove, or change elements—which makes them useful for storing fixed sets of data and ensuring data integrity. They are also faster than lists in terms of performance and can be used as keys in dictionaries if their elements are hashable.
+ 
+
+#### Tuples as Records
+
+ Tuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple `(name, age, city)` could represent a person's record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.  
+
+#### Tuple Unpacking
 
  Unpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple `person = ("Alice", 30, "Engineer")`, you can unpack it with `name, age, profession = person`, which assigns `"Alice"` to `name`, `30` to `age`, and `"Engineer"` to `profession`. This makes code cleaner and more readable, especially when working with multiple values at once. 
 
@@ -41,3 +48,9 @@ Decorators and closures are closely related concepts in Python that enhance func
  Code vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient.
 
  [Slides here](vectorization/vectorization.qmd)
+
+### Pytorch and Tensors
+
+ Python is a versatile, high-level programming language known for its simplicity, readability, and wide range of libraries, making it a popular choice in data science and machine learning. In the context of deep learning, one key concept is the **tensor**, a multi-dimensional data structure used to store and manipulate numerical data. Tensors are similar to arrays in Python’s NumPy library but come with additional capabilities, such as efficient computation on GPUs for faster processing. They can represent anything from a single number (0D tensor) to complex datasets with many dimensions, and form the backbone of frameworks like PyTorch, enabling efficient data handling and mathematical operations for training models.
+
+ [Slides here](pytorch_and_tensors/pytorch_and_tensors.qmd)
