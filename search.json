@@ -470,6 +470,153 @@
     "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
   },
   {
+    "objectID": "decorators_and_closures/decorators_and_closures.html",
+    "href": "decorators_and_closures/decorators_and_closures.html",
+    "title": "Decorators and Closures",
+    "section": "",
+    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
+    "title": "Decorators and Closures",
+    "section": "",
+    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
+    "title": "Decorators and Closures",
+    "section": "What is a Closure?",
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\ndef outer_function(msg):\n    def inner_function():\n        print(f\"Message: {msg}\")\n    return inner_function\n\nclosure = outer_function(\"Hello!\")\nclosure()  # Output: Message: Hello!\n\nMessage: Hello!"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
+    "href": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
+    "title": "Decorators and Closures",
+    "section": "Why Use Closures?",
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\ndef multiplier(factor):\n    def multiply(n):\n        return n * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
+    "title": "Decorators and Closures",
+    "section": "What is a Decorator?",
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before the function call\")\n        func()\n        print(\"After the function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore the function call\nHello!\nAfter the function call"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
+    "href": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
+    "title": "Decorators and Closures",
+    "section": "How Decorators Work",
+    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
+    "title": "Decorators and Closures",
+    "section": "Multiple Decorators",
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\ndef uppercase(func):\n    def wrapper():\n        return func().upper()\n    return wrapper\n\ndef exclaim(func):\n    def wrapper():\n        return func() + \"!!!\"\n    return wrapper\n\n@uppercase\n@exclaim\ndef greet():\n    return \"hello\"\n\nprint(greet())  # Output: HELLO!!!\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
+    "href": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
+    "title": "Decorators and Closures",
+    "section": "Decorators with Arguments",
+    "text": "Decorators with Arguments\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()  \n# Output:\n# Hello!\n# Hello!\n# Hello!\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#examples",
+    "href": "decorators_and_closures/decorators_and_closures.html#examples",
+    "title": "Decorators and Closures",
+    "section": "Examples",
+    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0013 seconds"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
+    "title": "Decorators and Closures",
+    "section": "Standard Decorators",
+    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
+    "title": "Decorators and Closures",
+    "section": "When to Use Decorators?",
+    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
+    "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
+    "title": "Decorators and Closures",
+    "section": "What Are Decorators and Closures?",
+    "text": "What Are Decorators and Closures?\n\nClosures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#what-is-a-closure",
+    "href": "decorators_and_closures/mldp.html#what-is-a-closure",
+    "title": "Decorators and Closures",
+    "section": "What is a Closure?",
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\n\nMessage: Hello!"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#why-use-closures",
+    "href": "decorators_and_closures/mldp.html#why-use-closures",
+    "title": "Decorators and Closures",
+    "section": "Why Use Closures?",
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\n\n10"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#what-is-a-decorator",
+    "href": "decorators_and_closures/mldp.html#what-is-a-decorator",
+    "title": "Decorators and Closures",
+    "section": "What is a Decorator?",
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\n\nBefore the function call\nHello!\nAfter the function call"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#how-decorators-work",
+    "href": "decorators_and_closures/mldp.html#how-decorators-work",
+    "title": "Decorators and Closures",
+    "section": "How Decorators Work",
+    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#multiple-decorators",
+    "href": "decorators_and_closures/mldp.html#multiple-decorators",
+    "title": "Decorators and Closures",
+    "section": "Multiple Decorators",
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#decorators-with-arguments",
+    "href": "decorators_and_closures/mldp.html#decorators-with-arguments",
+    "title": "Decorators and Closures",
+    "section": "Decorators with Arguments",
+    "text": "Decorators with Arguments\n\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#examples",
+    "href": "decorators_and_closures/mldp.html#examples",
+    "title": "Decorators and Closures",
+    "section": "Examples",
+    "text": "Examples\n\n\nslow_function took 2.0013 seconds"
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#standard-decorators",
+    "href": "decorators_and_closures/mldp.html#standard-decorators",
+    "title": "Decorators and Closures",
+    "section": "Standard Decorators",
+    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
+  },
+  {
+    "objectID": "decorators_and_closures/mldp.html#when-to-use-decorators",
+    "href": "decorators_and_closures/mldp.html#when-to-use-decorators",
+    "title": "Decorators and Closures",
+    "section": "When to Use Decorators?",
+    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Additional Training",
@@ -478,6 +625,62 @@
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "What is PyTorch?",
+    "text": "What is PyTorch?\n\nOpen-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Why PyTorch?",
+    "text": "Why PyTorch?\n\nPythonic: integrates naturally with Python syntax and libraries.\nFlexible: easy debugging and model customization.\nEcosystem: tools for vision, NLP, and more.\nSupported by popular cloud platforms and hardware accelerators."
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "What is a Tensor?",
+    "text": "What is a Tensor?\n\nA multi-dimensional array used to store and manipulate data.\nSimilar to NumPy arrays, but with:\n\nGPU support\nIntegration with deep learning workflows\n\nExamples:\n\n0D tensor: a single number\n1D tensor: a vector\n2D tensor: a matrix\n3D+ tensor: multi-dimensional datasets"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Creating Tensors in PyTorch",
+    "text": "Creating Tensors in PyTorch"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Inpecting Tensors",
+    "text": "Inpecting Tensors\n\n\nShape: torch.Size([3, 4])\nData type: torch.float32\nDevice: cpu"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Basic Tensors Operations",
+    "text": "Basic Tensors Operations"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Moving Tensors to GPU",
+    "text": "Moving Tensors to GPU\n\n\ncuda:0"
+  },
+  {
+    "objectID": "vectorization/vectorization.html",
+    "href": "vectorization/vectorization.html",
+    "title": "Code Vectorization",
+    "section": "",
+    "text": "What is Vectorization?\n\nVectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays.\n\n\n\n\nWhy Use Vectorization?\n\nSpeed: Optimized implementations outperform loops.\nReadability: More concise and clear.\nMemory Efficiency: Operates directly on arrays without extra overhead.\nBetter CPU Utilization: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.\n\n\n\n\nVectorization with NumPy: Element-wise Operations\n\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Loop-based approach\nsquared_loop = [x**2 for x in arr]\n\n# Vectorized approach\nsquared_vectorized = arr ** 2\n\nprint(squared_vectorized)\n\n[ 1  4  9 16 25]\n\n\n\n\n\nVectorization with NumPy: Mathematical Functions\n\narr = np.array([0, np.pi / 2, np.pi])\n\n# Loop-based approach\nsin_loop = [np.sin(x) for x in arr]\n\n# Vectorized approach\nsin_vectorized = np.sin(arr)\n\nprint(sin_vectorized)\n\n[0.0000000e+00 1.0000000e+00 1.2246468e-16]\n\n\n\n\n\nVectorization with Pandas\n\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3, 4]})\n\n# Using apply (slow)\ndf['B'] = df['A'].apply(lambda x: x**2)\n\n# Vectorized (fast)\ndf['B'] = df['A'] ** 2\n\nprint(df)\n\n   A   B\n0  1   1\n1  2   4\n2  3   9\n3  4  16\n\n\n\n\n\nPerformance Comparison: NumPy vs Loop\n\nimport time\nimport numpy as np\n\narr = np.random.rand(10**6)\n\n# Loop-based\nstart = time.time()\nresult_loop = [x**2 for x in arr]\nprint(\"Loop time:\", time.time() - start)\n\n# Vectorized\nstart = time.time()\nresult_vectorized = arr ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nLoop time: 0.18871665000915527\nVectorized time: 0.002410888671875\n\n\n\n\n\nPerformance Comparison: Pandas Apply vs Vectorized\n\nimport pandas as pd\nimport time\n\ndf = pd.DataFrame({'A': np.random.rand(10**6)})\n\n# Using apply (slow)\nstart = time.time()\ndf['B'] = df['A'].apply(lambda x: x**2)\nprint(\"Apply time:\", time.time() - start)\n\n# Vectorized (fast)\nstart = time.time()\ndf['B'] = df['A'] ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nApply time: 0.1834256649017334\nVectorized time: 0.00526118278503418\n\n\n\n\n\nVectorization in NumPy: Broadcasting\n\narr = np.array([[1, 2, 3], [4, 5, 6]])\nscalar = 2\n\n# Broadcasting operation\nresult = arr * scalar\n\nprint(result)\n\n[[ 2  4  6]\n [ 8 10 12]]\n\n\n\n\n\nVectorization in NumPy: Dot Product\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# Loop-based approach\nresult_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n\n# Vectorized approach\nresult_vectorized = np.dot(A, B)\n\nprint(result_vectorized)\n\n[[19 22]\n [43 50]]\n\n\n\n\n\nConclusion\n\nUse vectorization whenever possible.\nNumPy and Pandas provide built-in vectorized operations.\nSignificant performance gains over loops.\nReduces memory overhead and improves efficiency."
   },
   {
     "objectID": "first_class_functions/mldp.html#first-class-functions-in-python",
