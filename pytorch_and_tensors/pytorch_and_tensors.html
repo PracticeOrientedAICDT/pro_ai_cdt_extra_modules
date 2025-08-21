@@ -9,8 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <meta name="author" content="Daladier Sampaio Neto">
-  <title>Aditional Training – Machine Learning Design Patterns</title>
+  <title>Aditional Training – Introduction to PyTorch and Tensors</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -127,164 +126,75 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Machine Learning Design Patterns</h1>
+  <h1 class="title">Introduction to PyTorch and Tensors</h1>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Daladier Sampaio Neto 
-</div>
-</div>
 </div>
 
 </section>
-<section id="design-patterns" class="slide level2">
-<h2>Design Patterns</h2>
+<section id="what-is-pytorch" class="slide level2">
+<h2>What is PyTorch?</h2>
 <ul>
-<li><p><strong>What Are Design Patterns?</strong></p>
+<li><strong>Open-source deep learning framework</strong> developed by Facebook’s AI Research lab.</li>
+<li>Known for:
 <ul>
-<li>Reusable solutions to common problems in software and system design</li>
+<li><strong>Dynamic computation graphs</strong> (define-by-run)</li>
+<li>Strong <strong>GPU acceleration</strong></li>
+<li>Large, active community</li>
 </ul></li>
-<li><p><strong>Why Design Patterns Matter in ML</strong></p>
+<li>Widely used in research and production.</li>
+</ul>
+</section>
+<section id="why-pytorch" class="slide level2">
+<h2>Why PyTorch?</h2>
 <ul>
-<li>Streamline development, avoid reinventing the wheel</li>
-<li>Enable scalable, efficient, and maintainable ML systems</li>
+<li><strong>Pythonic</strong>: integrates naturally with Python syntax and libraries.</li>
+<li><strong>Flexible</strong>: easy debugging and model customization.</li>
+<li><strong>Ecosystem</strong>: tools for vision, NLP, and more.</li>
+<li>Supported by popular cloud platforms and hardware accelerators.</li>
+</ul>
+</section>
+<section id="what-is-a-tensor" class="slide level2">
+<h2>What is a Tensor?</h2>
+<ul>
+<li>A <strong>multi-dimensional array</strong> used to store and manipulate data.</li>
+<li>Similar to NumPy arrays, but with:
+<ul>
+<li><strong>GPU support</strong></li>
+<li>Integration with deep learning workflows</li>
 </ul></li>
-<li><p><strong>Types of ML Design Patterns</strong></p>
+<li>Examples:
 <ul>
-<li>Patterns for data management, model training, deployment, and serving</li>
+<li>0D tensor: a single number</li>
+<li>1D tensor: a vector</li>
+<li>2D tensor: a matrix</li>
+<li>3D+ tensor: multi-dimensional datasets</li>
 </ul></li>
 </ul>
 </section>
-<section id="why-design-patterns-matter-in-machine-learning" class="slide level2">
-<h2>Why Design Patterns Matter in Machine Learning</h2>
-<ul>
-<li><strong>Address ML-Specific Challenges</strong>
-<ul>
-<li>Handle data transformations, training pipelines, and model deployment</li>
-</ul></li>
-<li><strong>Ensure Scalability and Reliability</strong>
-<ul>
-<li>Patterns help design robust ML systems for production</li>
-</ul></li>
-<li><strong>Facilitate Collaboration</strong>
-<ul>
-<li>Standard patterns provide a common language among ML teams</li>
-</ul></li>
-</ul>
+<section id="creating-tensors-in-pytorch" class="slide level2">
+<h2>Creating Tensors in PyTorch</h2>
 </section>
-<section id="types-of-machine-learning-design-patterns" class="slide level2">
-<h2>Types of Machine Learning Design Patterns</h2>
-<ul>
-<li><strong>Data Patterns</strong>: Handle data ingestion, cleaning, and processing</li>
-<li><strong>Model Patterns</strong>: Focus on model architecture, training, and tuning</li>
-<li><strong>Serving Patterns</strong>: Support model deployment, monitoring, and scaling</li>
-<li><strong>Workflow Patterns</strong>: Manage end-to-end ML pipelines efficiently</li>
-</ul>
+<section id="inpecting-tensors" class="slide level2">
+<h2>Inpecting Tensors</h2>
+<div id="39796a17" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Shape: torch.Size([3, 4])
+Data type: torch.float32
+Device: cpu</code></pre>
+</div>
+</div>
 </section>
-<section id="data-ingestion-and-transformation-patterns" class="slide level2">
-<h2>Data Ingestion and Transformation Patterns</h2>
-<ul>
-<li><p><strong>Pattern: Feature Store</strong></p>
-<ul>
-<li>Centralize feature storage to standardize and reuse features across models</li>
-</ul></li>
-<li><p><strong>Pattern: Data Pipeline</strong></p>
-<ul>
-<li>Automate data cleaning, transformation, and preprocessing</li>
-</ul></li>
-<li><p><strong>Pattern: Data Versioning</strong></p>
-<ul>
-<li>Track data changes and ensure reproducibility in experiments</li>
-</ul></li>
-</ul>
+<section id="basic-tensors-operations" class="slide level2">
+<h2>Basic Tensors Operations</h2>
 </section>
-<section id="model-training-patterns" class="slide level2">
-<h2>Model Training Patterns</h2>
-<ul>
-<li><p><strong>Pattern: Transfer Learning</strong></p>
-<p>Use pre-trained models to reduce training time and improve performance</p></li>
-<li><p><strong>Pattern: Hyperparameter Tuning</strong></p>
-<p>Automate hyperparameter selection for optimal model performance</p></li>
-<li><p><strong>Pattern: Cross-Validation</strong></p>
-<p>Use multiple data splits to validate model robustness and reduce overfitting</p></li>
-</ul>
-</section>
-<section id="model-serving-and-deployment-patterns" class="slide level2">
-<h2>Model Serving and Deployment Patterns</h2>
-<ul>
-<li><strong>Pattern: Model Ensemble</strong>
-<ul>
-<li>Combine multiple models to improve accuracy and robustness</li>
-</ul></li>
-<li><strong>Pattern: Batch vs.&nbsp;Real-Time Serving</strong>
-<ul>
-<li>Choose serving patterns based on latency and processing needs</li>
-</ul></li>
-<li><strong>Pattern: Model Staging</strong>
-<ul>
-<li>Use stages (e.g., staging, production) for controlled deployment</li>
-</ul></li>
-</ul>
-</section>
-<section id="monitoring-and-retraining-patterns" class="slide level2">
-<h2>Monitoring and Retraining Patterns</h2>
-<ul>
-<li><strong>Pattern: Continuous Monitoring</strong>
-<ul>
-<li>Track model performance over time and detect issues (e.g., data drift)</li>
-</ul></li>
-<li><strong>Pattern: Model Retraining Trigger</strong>
-<ul>
-<li>Set conditions to automatically trigger retraining (e.g., data drift)</li>
-</ul></li>
-<li><strong>Pattern: A/B Testing</strong>
-<ul>
-<li>Compare models in production to evaluate new versions effectively</li>
-</ul></li>
-</ul>
-</section>
-<section id="workflow-and-pipeline-patterns" class="slide level2">
-<h2>Workflow and Pipeline Patterns</h2>
-<ul>
-<li><p><strong>Pattern: Pipeline Orchestration</strong></p>
-<ul>
-<li>Use tools (e.g., Airflow, Kubeflow) to manage complex ML workflows</li>
-</ul></li>
-<li><p><strong>Pattern: Metadata Tracking</strong></p>
-<ul>
-<li>Record experiment metadata for reproducibility and model lineage</li>
-</ul></li>
-<li><p><strong>Pattern: Experiment Tracking</strong></p>
-<ul>
-<li>Keep a log of experiments, configurations, and results to improve collaboration and model refinement</li>
-</ul></li>
-</ul>
-</section>
-<section id="ml-specific-design-challenges" class="slide level2">
-<h2>ML-Specific Design Challenges</h2>
-<ul>
-<li><p><strong>Data Drift and Concept Drift</strong></p>
-<ul>
-<li>Changes in data that require model updates</li>
-</ul></li>
-<li><p><strong>Resource Optimization</strong></p>
-<ul>
-<li>Balancing computation costs with model performance</li>
-</ul></li>
-<li><p><strong>Maintaining Reproducibility</strong></p>
-<ul>
-<li>Ensure the same results with consistent data and configurations</li>
-</ul></li>
-</ul>
-</section>
-<section id="conclusion-benefits-of-ml-design-patterns" class="slide level2">
-<h2>Conclusion: Benefits of ML Design Patterns</h2>
-<ul>
-<li>Efficient Development: Patterns streamline and simplify ML project design</li>
-<li>Scalable and Maintainable Systems: Ready for production and growth</li>
-<li>Standardization Across Teams: Improve team collaboration and code quality</li>
-</ul>
+<section id="moving-tensors-to-gpu" class="slide level2">
+<h2>Moving Tensors to GPU</h2>
+<div id="9f658915" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>cuda:0</code></pre>
+</div>
+</div>
 
 
 </section>

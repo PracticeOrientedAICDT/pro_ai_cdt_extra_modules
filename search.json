@@ -1,164 +1,483 @@
 [
   {
+    "objectID": "software_engineering.html",
+    "href": "software_engineering.html",
+    "title": "Software Engineering Best Practices",
+    "section": "",
+    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
+    "crumbs": [
+      "Home",
+      "Software Engineering"
+    ]
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html",
+    "href": "CI_CD/ci_cd.html",
+    "title": "CI/CD",
+    "section": "",
+    "text": "CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd",
+    "href": "CI_CD/ci_cd.html#cicd",
+    "title": "CI/CD",
+    "section": "",
+    "text": "CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd-1",
+    "href": "CI_CD/ci_cd.html#cicd-1",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-integration-ci",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-integration-ci",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-integration-ci-1",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-integration-ci-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-1",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-2",
+    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-2",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---benefits",
+    "href": "CI_CD/ci_cd.html#cicd---benefits",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#cicd---benefits-1",
+    "href": "CI_CD/ci_cd.html#cicd---benefits-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions",
+    "href": "CI_CD/ci_cd.html#github-actions",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-1",
+    "href": "CI_CD/ci_cd.html#github-actions-1",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-2",
+    "href": "CI_CD/ci_cd.html#github-actions-2",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-3",
+    "href": "CI_CD/ci_cd.html#github-actions-3",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-actions-4",
+    "href": "CI_CD/ci_cd.html#github-actions-4",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files",
+    "href": "CI_CD/ci_cd.html#yml-files",
+    "title": "CI/CD",
+    "section": "Yml files",
+    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files-1",
+    "href": "CI_CD/ci_cd.html#yml-files-1",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files-2",
+    "href": "CI_CD/ci_cd.html#yml-files-2",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files---structure",
+    "href": "CI_CD/ci_cd.html#yml-files---structure",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files---structure-1",
+    "href": "CI_CD/ci_cd.html#yml-files---structure-1",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#yml-files---structure-2",
+    "href": "CI_CD/ci_cd.html#yml-files---structure-2",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
+  },
+  {
+    "objectID": "CI_CD/ci_cd.html#github-repo",
+    "href": "CI_CD/ci_cd.html#github-repo",
+    "title": "CI/CD",
+    "section": "Github Repo",
+    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd",
+    "href": "CI_CD/cicd.html#cicd",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd-1",
+    "href": "CI_CD/cicd.html#cicd-1",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits",
+    "href": "CI_CD/cicd.html#cicd---benefits",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
+    "href": "CI_CD/cicd.html#cicd---benefits-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions",
+    "href": "CI_CD/cicd.html#github-actions",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-1",
+    "href": "CI_CD/cicd.html#github-actions-1",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-2",
+    "href": "CI_CD/cicd.html#github-actions-2",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-3",
+    "href": "CI_CD/cicd.html#github-actions-3",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-4",
+    "href": "CI_CD/cicd.html#github-actions-4",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files",
+    "href": "CI_CD/cicd.html#yml-files",
+    "title": "CI/CD",
+    "section": "Yml files",
+    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-1",
+    "href": "CI_CD/cicd.html#yml-files-1",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-2",
+    "href": "CI_CD/cicd.html#yml-files-2",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure",
+    "href": "CI_CD/cicd.html#yml-files---structure",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
+    "href": "CI_CD/cicd.html#yml-files---structure-1",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
+    "href": "CI_CD/cicd.html#yml-files---structure-2",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-repo",
+    "href": "CI_CD/cicd.html#github-repo",
+    "title": "CI/CD",
+    "section": "Github Repo",
+    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html",
+    "title": "Machine Learning Design Patterns",
+    "section": "",
+    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "",
+    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
+    "title": "Machine Learning Design Patterns",
+    "section": "Why Design Patterns Matter in Machine Learning",
+    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Types of Machine Learning Design Patterns",
+    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Data Ingestion and Transformation Patterns",
+    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Training Patterns",
+    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Serving and Deployment Patterns",
+    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Monitoring and Retraining Patterns",
+    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Workflow and Pipeline Patterns",
+    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
+    "title": "Machine Learning Design Patterns",
+    "section": "ML-Specific Design Challenges",
+    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Conclusion: Benefits of ML Design Patterns",
+    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Design Patterns",
+    "text": "Design Patterns\n\nWhat Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
+    "href": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
+    "title": "Machine Learning Design Patterns",
+    "section": "Why Design Patterns Matter in Machine Learning",
+    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Types of Machine Learning Design Patterns",
+    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Data Ingestion and Transformation Patterns",
+    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#model-training-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#model-training-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Training Patterns",
+    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Serving and Deployment Patterns",
+    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Monitoring and Retraining Patterns",
+    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Workflow and Pipeline Patterns",
+    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
+    "href": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
+    "title": "Machine Learning Design Patterns",
+    "section": "ML-Specific Design Challenges",
+    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Conclusion: Benefits of ML Design Patterns",
+    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Aditional Training",
+    "title": "Additional Training",
     "section": "",
-    "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language."
-  },
-  {
-    "objectID": "vectorization/vectorization.html",
-    "href": "vectorization/vectorization.html",
-    "title": "Code Vectorization",
-    "section": "",
-    "text": "What is Vectorization?\n\nVectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays.\n\n\n\n\nWhy Use Vectorization?\n\nSpeed: Optimized implementations outperform loops.\nReadability: More concise and clear.\nMemory Efficiency: Operates directly on arrays without extra overhead.\nBetter CPU Utilization: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.\n\n\n\n\nVectorization with NumPy: Element-wise Operations\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Loop-based approach\nsquared_loop = [x**2 for x in arr]\n\n# Vectorized approach\nsquared_vectorized = arr ** 2\n\nprint(squared_vectorized)\n\n\n\nVectorization with NumPy: Mathematical Functions\narr = np.array([0, np.pi / 2, np.pi])\n\n# Loop-based approach\nsin_loop = [np.sin(x) for x in arr]\n\n# Vectorized approach\nsin_vectorized = np.sin(arr)\n\nprint(sin_vectorized)\n\n\n\nVectorization with Pandas\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3, 4]})\n\n# Using apply (slow)\ndf['B'] = df['A'].apply(lambda x: x**2)\n\n# Vectorized (fast)\ndf['B'] = df['A'] ** 2\n\nprint(df)\n\n\n\nPerformance Comparison: NumPy vs Loop\nimport time\nimport numpy as np\n\narr = np.random.rand(10**6)\n\n# Loop-based\nstart = time.time()\nresult_loop = [x**2 for x in arr]\nprint(\"Loop time:\", time.time() - start)\n\n# Vectorized\nstart = time.time()\nresult_vectorized = arr ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\n\n\nPerformance Comparison: Pandas Apply vs Vectorized\nimport pandas as pd\nimport time\n\ndf = pd.DataFrame({'A': np.random.rand(10**6)})\n\n# Using apply (slow)\nstart = time.time()\ndf['B'] = df['A'].apply(lambda x: x**2)\nprint(\"Apply time:\", time.time() - start)\n\n# Vectorized (fast)\nstart = time.time()\ndf['B'] = df['A'] ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\n\n\nVectorization in NumPy: Broadcasting\narr = np.array([[1, 2, 3], [4, 5, 6]])\nscalar = 2\n\n# Broadcasting operation\nresult = arr * scalar\n\nprint(result)\n\n\n\nVectorization in NumPy: Dot Product\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# Loop-based approach\nresult_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n\n# Vectorized approach\nresult_vectorized = np.dot(A, B)\n\nprint(result_vectorized)\n\n\n\nConclusion\n\nUse vectorization whenever possible.\nNumPy and Pandas provide built-in vectorized operations.\nSignificant performance gains over loops.\nReduces memory overhead and improves efficiency."
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
-    "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
-    "title": "Decorators and Closures",
-    "section": "What Are Decorators and Closures?",
-    "text": "What Are Decorators and Closures?\n\nClosures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#what-is-a-closure",
-    "href": "decorators_and_closures/mldp.html#what-is-a-closure",
-    "title": "Decorators and Closures",
-    "section": "What is a Closure?",
-    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\n\nMessage: Hello!"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#why-use-closures",
-    "href": "decorators_and_closures/mldp.html#why-use-closures",
-    "title": "Decorators and Closures",
-    "section": "Why Use Closures?",
-    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\n\n10"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#what-is-a-decorator",
-    "href": "decorators_and_closures/mldp.html#what-is-a-decorator",
-    "title": "Decorators and Closures",
-    "section": "What is a Decorator?",
-    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\n\nBefore the function call\nHello!\nAfter the function call"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#how-decorators-work",
-    "href": "decorators_and_closures/mldp.html#how-decorators-work",
-    "title": "Decorators and Closures",
-    "section": "How Decorators Work",
-    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#multiple-decorators",
-    "href": "decorators_and_closures/mldp.html#multiple-decorators",
-    "title": "Decorators and Closures",
-    "section": "Multiple Decorators",
-    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#decorators-with-arguments",
-    "href": "decorators_and_closures/mldp.html#decorators-with-arguments",
-    "title": "Decorators and Closures",
-    "section": "Decorators with Arguments",
-    "text": "Decorators with Arguments\n\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#examples",
-    "href": "decorators_and_closures/mldp.html#examples",
-    "title": "Decorators and Closures",
-    "section": "Examples",
-    "text": "Examples\n\n\nslow_function took 2.0016 seconds"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#standard-decorators",
-    "href": "decorators_and_closures/mldp.html#standard-decorators",
-    "title": "Decorators and Closures",
-    "section": "Standard Decorators",
-    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#when-to-use-decorators",
-    "href": "decorators_and_closures/mldp.html#when-to-use-decorators",
-    "title": "Decorators and Closures",
-    "section": "When to Use Decorators?",
-    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html",
-    "href": "decorators_and_closures/decorators_and_closures.html",
-    "title": "Decorators and Closures",
-    "section": "",
-    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
-    "href": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
-    "title": "Decorators and Closures",
-    "section": "",
-    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
-    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
-    "title": "Decorators and Closures",
-    "section": "What is a Closure?",
-    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\ndef outer_function(msg):\n    def inner_function():\n        print(f\"Message: {msg}\")\n    return inner_function\n\nclosure = outer_function(\"Hello!\")\nclosure()  # Output: Message: Hello!\n\nMessage: Hello!"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
-    "href": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
-    "title": "Decorators and Closures",
-    "section": "Why Use Closures?",
-    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\ndef multiplier(factor):\n    def multiply(n):\n        return n * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
-    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
-    "title": "Decorators and Closures",
-    "section": "What is a Decorator?",
-    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before the function call\")\n        func()\n        print(\"After the function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore the function call\nHello!\nAfter the function call"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
-    "href": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
-    "title": "Decorators and Closures",
-    "section": "How Decorators Work",
-    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
-    "href": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
-    "title": "Decorators and Closures",
-    "section": "Multiple Decorators",
-    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\ndef uppercase(func):\n    def wrapper():\n        return func().upper()\n    return wrapper\n\ndef exclaim(func):\n    def wrapper():\n        return func() + \"!!!\"\n    return wrapper\n\n@uppercase\n@exclaim\ndef greet():\n    return \"hello\"\n\nprint(greet())  # Output: HELLO!!!\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
-    "href": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
-    "title": "Decorators and Closures",
-    "section": "Decorators with Arguments",
-    "text": "Decorators with Arguments\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()  \n# Output:\n# Hello!\n# Hello!\n# Hello!\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#examples",
-    "href": "decorators_and_closures/decorators_and_closures.html#examples",
-    "title": "Decorators and Closures",
-    "section": "Examples",
-    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0020 seconds"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
-    "href": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
-    "title": "Decorators and Closures",
-    "section": "Standard Decorators",
-    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
-    "href": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
-    "title": "Decorators and Closures",
-    "section": "When to Use Decorators?",
-    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+    "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "first_class_functions/mldp.html#first-class-functions-in-python",
@@ -350,153 +669,6 @@
     "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#design-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Design Patterns",
-    "text": "Design Patterns\n\nWhat Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
-    "href": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
-    "title": "Machine Learning Design Patterns",
-    "section": "Why Design Patterns Matter in Machine Learning",
-    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Types of Machine Learning Design Patterns",
-    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Data Ingestion and Transformation Patterns",
-    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#model-training-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#model-training-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Training Patterns",
-    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Serving and Deployment Patterns",
-    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Monitoring and Retraining Patterns",
-    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Workflow and Pipeline Patterns",
-    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
-    "href": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
-    "title": "Machine Learning Design Patterns",
-    "section": "ML-Specific Design Challenges",
-    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Conclusion: Benefits of ML Design Patterns",
-    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html",
-    "title": "Machine Learning Design Patterns",
-    "section": "",
-    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "",
-    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
-    "title": "Machine Learning Design Patterns",
-    "section": "Why Design Patterns Matter in Machine Learning",
-    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Types of Machine Learning Design Patterns",
-    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Data Ingestion and Transformation Patterns",
-    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Training Patterns",
-    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Serving and Deployment Patterns",
-    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Monitoring and Retraining Patterns",
-    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Workflow and Pipeline Patterns",
-    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
-    "title": "Machine Learning Design Patterns",
-    "section": "ML-Specific Design Challenges",
-    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
-  },
-  {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Conclusion: Benefits of ML Design Patterns",
-    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
-  },
-  {
     "objectID": "magic_methods/pmm.html#introduction",
     "href": "magic_methods/pmm.html#introduction",
     "title": "Python Magic Methods",
@@ -658,13 +830,6 @@
     "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "clean_code/cc.html#introduction",
     "href": "clean_code/cc.html#introduction",
     "title": "Clean Code",
@@ -812,318 +977,14 @@
     "text": "Benefits of Clean Code\n\nHigher Productivity: Cleaner code saves time in debugging and development\nImproved Quality: Reduces the likelihood of bugs and inconsistencies\nBetter Collaboration: Easier for teams to work on and scale projects\nFuture-Proofing: Clean code ensures adaptability and ease of modification"
   },
   {
-    "objectID": "CI_CD/cicd.html#cicd",
-    "href": "CI_CD/cicd.html#cicd",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd-1",
-    "href": "CI_CD/cicd.html#cicd-1",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
-    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
-    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---benefits",
-    "href": "CI_CD/cicd.html#cicd---benefits",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
-    "href": "CI_CD/cicd.html#cicd---benefits-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions",
-    "href": "CI_CD/cicd.html#github-actions",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-1",
-    "href": "CI_CD/cicd.html#github-actions-1",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-2",
-    "href": "CI_CD/cicd.html#github-actions-2",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-3",
-    "href": "CI_CD/cicd.html#github-actions-3",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-4",
-    "href": "CI_CD/cicd.html#github-actions-4",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files",
-    "href": "CI_CD/cicd.html#yml-files",
-    "title": "CI/CD",
-    "section": "Yml files",
-    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files-1",
-    "href": "CI_CD/cicd.html#yml-files-1",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files-2",
-    "href": "CI_CD/cicd.html#yml-files-2",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure",
-    "href": "CI_CD/cicd.html#yml-files---structure",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
-    "href": "CI_CD/cicd.html#yml-files---structure-1",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
-    "href": "CI_CD/cicd.html#yml-files---structure-2",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-repo",
-    "href": "CI_CD/cicd.html#github-repo",
-    "title": "CI/CD",
-    "section": "Github Repo",
-    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html",
-    "href": "CI_CD/ci_cd.html",
-    "title": "CI/CD",
-    "section": "",
-    "text": "CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd",
-    "href": "CI_CD/ci_cd.html#cicd",
-    "title": "CI/CD",
-    "section": "",
-    "text": "CI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd-1",
-    "href": "CI_CD/ci_cd.html#cicd-1",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---continuous-integration-ci",
-    "href": "CI_CD/ci_cd.html#cicd---continuous-integration-ci",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---continuous-integration-ci-1",
-    "href": "CI_CD/ci_cd.html#cicd---continuous-integration-ci-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd",
-    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-1",
-    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-2",
-    "href": "CI_CD/ci_cd.html#cicd---continuous-delivery-cd-2",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---benefits",
-    "href": "CI_CD/ci_cd.html#cicd---benefits",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#cicd---benefits-1",
-    "href": "CI_CD/ci_cd.html#cicd---benefits-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#github-actions",
-    "href": "CI_CD/ci_cd.html#github-actions",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#github-actions-1",
-    "href": "CI_CD/ci_cd.html#github-actions-1",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#github-actions-2",
-    "href": "CI_CD/ci_cd.html#github-actions-2",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#github-actions-3",
-    "href": "CI_CD/ci_cd.html#github-actions-3",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#github-actions-4",
-    "href": "CI_CD/ci_cd.html#github-actions-4",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#yml-files",
-    "href": "CI_CD/ci_cd.html#yml-files",
-    "title": "CI/CD",
-    "section": "Yml files",
-    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#yml-files-1",
-    "href": "CI_CD/ci_cd.html#yml-files-1",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#yml-files-2",
-    "href": "CI_CD/ci_cd.html#yml-files-2",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#yml-files---structure",
-    "href": "CI_CD/ci_cd.html#yml-files---structure",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#yml-files---structure-1",
-    "href": "CI_CD/ci_cd.html#yml-files---structure-1",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#yml-files---structure-2",
-    "href": "CI_CD/ci_cd.html#yml-files---structure-2",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
-  },
-  {
-    "objectID": "CI_CD/ci_cd.html#github-repo",
-    "href": "CI_CD/ci_cd.html#github-repo",
-    "title": "CI/CD",
-    "section": "Github Repo",
-    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
-  },
-  {
     "objectID": "python.html",
     "href": "python.html",
     "title": "Python",
     "section": "",
-    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\nSlides here\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\nSlides here\n\n\nDecorators and Closures\nDecorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A closure occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions.\nSlides here\n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient.\nSlides here"
-  },
-  {
-    "objectID": "software_engineering.html",
-    "href": "software_engineering.html",
-    "title": "Software Engineering Best Practices",
-    "section": "",
-    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here"
+    "text": "Python Programing Language\n\nSpecial Methods (magic methods)\nPython magic methods, also known as dunder (double underscore) methods, are special methods that allow objects to interact with Python’s built-in operations in a more intuitive and customized way. These methods are surrounded by double underscores (e.g., ‘init’, ‘str’, ‘add’). Magic methods enable customization of object behaviors, such as defining how objects are initialized, represented as strings, compared, or involved in mathematical operations. For example, ‘init’ is used for initializing objects, while ‘add’ allows custom behavior when the + operator is used. By overriding these methods, you can make\nobjects behave like native data types.\nSlides here\n\n\nList comprehension and generator expressions\nList comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A list comprehension produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., [x**2 for x in range(5)] creates a list of squares). Generator expressions are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once.\n\n\nTuples Data Structure\n\nTuples\nIn Python, a tuple is an immutable, ordered collection of elements that can store items of any data type, including other tuples. Tuples are defined by placing elements inside parentheses () and separating them with commas, for example: my_tuple = (1, “apple”, 3.14). Unlike lists, tuples cannot be modified after creation—meaning you cannot add, remove, or change elements—which makes them useful for storing fixed sets of data and ensuring data integrity. They are also faster than lists in terms of performance and can be used as keys in dictionaries if their elements are hashable.\n\n\nTuples as Records\nTuples can be used as records in programming to store related pieces of data that represent a single entity or entry, like a row in a database. Each element in the tuple corresponds to a specific attribute of the entity, and the order of elements is fixed, giving structure to the data. For example, a tuple (name, age, city) could represent a person’s record with fields for their name, age, and city. Though tuples lack field names like dictionaries or classes, they provide a lightweight and efficient way to group related data in a consistent format.\n\n\nTuple Unpacking\nUnpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple person = (\"Alice\", 30, \"Engineer\"), you can unpack it with name, age, profession = person, which assigns \"Alice\" to name, 30 to age, and \"Engineer\" to profession. This makes code cleaner and more readable, especially when working with multiple values at once.\n\n\n\nFirst-class functions\nIn Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like len to map() or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive.\nSlides here\n\n\nDecorators and Closures\nDecorators and closures are closely related concepts in Python that enhance function behavior. A decorator is a higher-order function that takes another function as input and extends or modifies its functionality without changing its code. It’s often used for tasks like logging, authentication, or timing. A closure occurs when an inner function captures variables from its enclosing scope, allowing those variables to be retained even after the outer function has finished executing. Decorators often rely on closures to wrap and extend the behavior of functions by preserving context and state across executions.\nSlides here\n\n\nVectorization\nCode vectorization in Python refers to the process of optimizing operations by applying them to entire arrays or matrices simultaneously, rather than using explicit loops. This is typically done using libraries like NumPy, which allow element-wise operations on large datasets to be executed in a single, efficient step. Vectorization speeds up computations significantly by leveraging low-level, highly optimized C or Fortran routines, reducing the overhead associated with Python loops and enabling parallel processing where possible. This makes code cleaner, faster, and more memory efficient.\nSlides here\n\n\nPytorch and Tensors\nPython is a versatile, high-level programming language known for its simplicity, readability, and wide range of libraries, making it a popular choice in data science and machine learning. In the context of deep learning, one key concept is the tensor, a multi-dimensional data structure used to store and manipulate numerical data. Tensors are similar to arrays in Python’s NumPy library but come with additional capabilities, such as efficient computation on GPUs for faster processing. They can represent anything from a single number (0D tensor) to complex datasets with many dimensions, and form the backbone of frameworks like PyTorch, enabling efficient data handling and mathematical operations for training models.\nSlides here",
+    "crumbs": [
+      "Home",
+      "Python"
+    ]
   }
 ]
