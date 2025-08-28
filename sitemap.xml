@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/software_engineering.html</loc>
-    <lastmod>2024-11-17T20:36:19.306Z</lastmod>
+    <lastmod>2025-08-28T10:27:38.977Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/CI_CD/ci_cd.html</loc>
@@ -13,56 +13,60 @@
     <lastmod>2025-08-21T10:25:48.532Z</lastmod>
   </url>
   <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/about.html</loc>
-    <lastmod>2024-10-10T12:23:07.510Z</lastmod>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/reproducible_machine_learning/reproducible_machine_learning.html</loc>
+    <lastmod>2025-08-28T10:37:28.232Z</lastmod>
   </url>
   <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/machine_learning_design_patterns/ml_design_patterns.html</loc>
-    <lastmod>2025-08-21T10:22:55.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/machine_learning_design_patterns/mldp.html</loc>
-    <lastmod>2025-08-21T10:22:55.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/decorators_and_closures/decorators_and_closures.html</loc>
-    <lastmod>2025-08-21T10:30:07.628Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/decorators_and_closures/mldp.html</loc>
-    <lastmod>2025-08-21T10:30:07.628Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/index.html</loc>
-    <lastmod>2025-08-12T11:31:06.723Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/pytorch_and_tensors/pytorch_and_tensors.html</loc>
-    <lastmod>2025-08-21T10:30:41.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/vectorization/mldp.html</loc>
-    <lastmod>2025-08-21T10:30:39.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/vectorization/vectorization.html</loc>
-    <lastmod>2025-08-21T10:30:39.371Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/first_class_functions/mldp.html</loc>
-    <lastmod>2025-08-21T10:22:17.781Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/first_class_functions/first_class_functions.html</loc>
-    <lastmod>2025-08-21T10:22:17.781Z</lastmod>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/magic_methods/magic_methods.html</loc>
+    <lastmod>2025-08-21T10:23:34.542Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/magic_methods/pmm.html</loc>
     <lastmod>2025-08-21T10:23:34.542Z</lastmod>
   </url>
   <url>
-    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/magic_methods/magic_methods.html</loc>
-    <lastmod>2025-08-21T10:23:34.542Z</lastmod>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/first_class_functions/first_class_functions.html</loc>
+    <lastmod>2025-08-21T10:22:17.781Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/first_class_functions/mldp.html</loc>
+    <lastmod>2025-08-21T10:22:17.781Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/vectorization/vectorization.html</loc>
+    <lastmod>2025-08-21T10:30:39.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/vectorization/mldp.html</loc>
+    <lastmod>2025-08-21T10:30:39.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/pytorch_and_tensors/pytorch_and_tensors.html</loc>
+    <lastmod>2025-08-21T10:30:41.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/index.html</loc>
+    <lastmod>2025-08-12T11:31:06.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/decorators_and_closures/mldp.html</loc>
+    <lastmod>2025-08-21T10:30:07.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/decorators_and_closures/decorators_and_closures.html</loc>
+    <lastmod>2025-08-21T10:30:07.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/machine_learning_design_patterns/mldp.html</loc>
+    <lastmod>2025-08-21T10:22:55.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/machine_learning_design_patterns/ml_design_patterns.html</loc>
+    <lastmod>2025-08-21T10:22:55.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/about.html</loc>
+    <lastmod>2024-10-10T12:23:07.510Z</lastmod>
   </url>
   <url>
     <loc>https://PracticeOrientedAICDT.github.io/pro_ai_cdt_extra_modules/clean_code/cc.html</loc>

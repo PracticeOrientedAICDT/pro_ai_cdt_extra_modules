@@ -4,7 +4,7 @@
     "href": "software_engineering.html",
     "title": "Software Engineering Best Practices",
     "section": "",
-    "text": "Clean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
+    "text": "Reproducible Machine Learning\nReproducible machine learning and MLOps focus on building reliable, consistent, and scalable ML systems that can be trained, deployed, and maintained across different environments. Reproducibility ensures that experiments can be repeated with the same data, code, and configuration to yield identical results, reducing uncertainty and improving trust in models. MLOps extends these principles by applying DevOps practices to ML, emphasizing automation, versioning, monitoring, and continuous delivery. Together, they enable teams to manage the full lifecycle of ML models—from data preparation to production monitoring—while minimizing errors, mitigating drift, and accelerating innovation.\nSlides here\n\n\nClean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
     "crumbs": [
       "Home",
       "Software Engineering"
@@ -312,466 +312,494 @@
     "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#introduction",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#introduction",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Introduction",
+    "text": "Introduction\n\nHow to replicate the results from a machine learning paper?\nWhat are the best practices when delivering machine learning based products?\nHow to go from a proof of concept to a production app ?\nHow to deal with the experimental nature of machine learning ?\nHow to track the experiments?\nHow to ensure that the same experiment has not already been run?\n\n\nApresentação.\nContinuing with the topic “good practices”, but now applied to machine learning. We can apply it both in research environments and in production environment.\nWe’ll understand how to structure and manage machine learning projects in production.\nWe’ll explore the best practices and tools that enable us to bridge the gap between research and production and deliver machine learning-based products efficiently and reliably.\nInitially, when we think of machine learning as a product, we must ask ourselves some critical questions."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#introduction-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#introduction-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Introduction",
+    "text": "Introduction\n\nHow does machine learning models behave in a production enviroment?\nDoes a machine learning model life cycle?\nHow to implement this life cycle?\nHow to deploy models faster?\n\n\nler as perguntas\nDeploying machine learning models in a production environment comes with its unique challenges.\nWe need to understand how these models behave in real-world scenarios, implement a model lifecycle, and find ways to deploy models faster.\nThe research and production environments are not totally separated."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#the-research-production-gap",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#the-research-production-gap",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "The Research-Production Gap",
+    "text": "The Research-Production Gap\n\nReffers to the disparity between the development of ML models during the research phase and their successful deployment.\nFor the adoption of machine learning by a company to deliver maximum value, it is necessary to carry out an efficient deployment.\nThe systematic planning of a machine learning project’s lifecycle serves as a crucial workflow for ensuring successful implementation.\n\n\nThe gap between research and production is a significant challenge.\nWe need to understand the differences between those environments. What are the actual targets, requirements and limitations."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#production-x-research-environments",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#production-x-research-environments",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Production x Research Environments",
+    "text": "Production x Research Environments\n\nDifferent focus\n\nResearch usually focus on models performance\nProduction focus on the model serving side\n\nDifferent performance requirements\nRun on different devices\nDistinct compute requirements\n\n\nProduction and research environments have different focuses, performance requirements, and run on different devices.\nThe production environment demands faster deployment, changes frequently, and deals with noisy data. Models are deployed on various devices, each with distinct compute requirements."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#production-x-research-environments-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#production-x-research-environments-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Production x Research Environments",
+    "text": "Production x Research Environments\n\nThe production environment requires a faster deployment\nThe production environment changes frequently\nModels are deployed in different devices\nData is usually noisy\n\n\nIn production enviroment we need to be aware of other software components in the system."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#production-environment",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#production-environment",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Production Environment",
+    "text": "Production Environment\n\nIn production, ML models are surrounded by software infrastructure.\nMachine Learning code is a small fraction of the overall system.\n\n\n\nIn the production environment, machine learning models are just a part of the larger software infrastructure.\nMachine learning code represents a small fraction of the overall system, surrounded by complex infrastructure.\nIt has a whole set of software components that are built to make the ml model available.\nexamples: Data Collector, Monitoring, Serving Infrastructure, User Interface…\nTo tackle the similar problem related to development, testing and continuous deployment, in the software engineering, field we have the Devops Culture."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#devops-solution",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#devops-solution",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "DevOps Solution",
+    "text": "DevOps Solution\n\nDevOps is called a “culture” because it represents a set of practices and principles that extend beyond just tools and technologies.\nThe “Devops Culture” is heavily applied in software development teams.\nDefinition: Set of practices for colaboration, developing, testing, deploying, and operating large-scale software systems.\nDevOps culture is not limited to specific industries or technologies. It is a mindset that can benefit any organization seeking to improve software development and delivery processes.\n\n\nIn software engineering, there is the devops solution…\nDevOps, which stands for Development and Operations, is a set of practices for collaboration, development, testing, deployment, and operation of large-scale software systems.\nThis culture can greatly benefit any organization looking to improve software development and delivery processes.\nBut what about machine learning systems? Can They be treated as software systems?"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#devops-solution-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#devops-solution-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "DevOps Solution",
+    "text": "DevOps Solution\n\nBut machine learning systems have some extra complexity due to randomness, hyperperameters, changes in data and experimentation.\nThe machine learning life-cycle envolves experimentation\n\n\nHowever, machine learning systems introduce additional complexity due to Randomness, hyperparameters, changing data, and experimentation.\nThe machine learning lifecycle involves ongoing experimentation. We have to “adapt” the solution."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps",
+    "text": "MLOps\n\nDefinition: MLOps, short for Machine Learning Operations, is a set of practices and tools that aim to streamline and automate the deployment, monitoring, and management of machine learning (ML) models in production.\nMLOps is a structured approach to manage the end-to-end developing, deploying and mantaining Machine learning models.\nImproves the model management, deployment speed and quality control.\n\n\nThis is where MLOps comes into play. MLOps, or Machine Learning Operations, encompasses a set of practices and tools that streamline and automate the deployment, monitoring, and management of machine learning models in production.\nMLOps provides a structured approach to manage the end-to-end development, deployment, and maintenance of machine learning models.\nMLOps can be classified also as a “culture” in the organization."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps",
+    "text": "MLOps\n\nThe MLOps lifecycle emphasizes collaboration between data scientists, machine learning engineers, DevOps teams, and domain experts.\nBy following this structured approach, companies can delivery the full potential of machine learning while minimizing risks and operational challenges.\nFrequently requires a set of open source software for the implementation.\n\n\nIt emphasizes collaboration between data scientists, machine learning engineers, DevOps teams, and domain experts. By following this structured approach, companies can unlock the full potential of machine learning while minimizing risks and operational challenges.\nDevOps and MLOps have a lot of similarities"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-x-devops",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-x-devops",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps x DevOps",
+    "text": "MLOps x DevOps\nSimilarities\n\nSource control\nHybrid teams\nUnit tests\nIntegration tests\nContinuous delivery\nDesign patterns\n\n\nDevOps and MLOps have some differences."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-x-devops-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-x-devops-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps x DevOps",
+    "text": "MLOps x DevOps\n\nMLOps is experimental by nature.\nTesting (software and models)\nAutomated Deploy (software and models)\n\n\nMLOps is inherently experimental, involving testing and automated deployment. This is where it shares common ground with DevOps, which emphasizes source control, hybrid teams, unit tests, integration tests, continuous delivery, and design patterns."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-x-devops-2",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-x-devops-2",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps x DevOps",
+    "text": "MLOps x DevOps\n\nMonitoring (software and model performance)\nModel Degradation\n\nDiscrepancy between training data and production environment data.\nChange of data between training and prediction.\n\n\n\nHowever, challenges like model degradation, concept drift, and data drift set MLOps apart. Model degradation refers to the discrepancy between training data and production environment data, and the changes that occur between the training and prediction phases. Effective monitoring is critical in addressing these issues.\nIts important to understand how to implement MLOps in one organization."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-2",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-2",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps",
+    "text": "MLOps\n\nMLOps is not a one-size-fits-all approach.\nIt can vary depending on the specific needs and requirements of an organization.\nIt helps bridge the gap between the development and operational aspects of machine learning.\nAllows companies to deploy and maintain models at scale effectively.\n\n\nIt’s essential to understand that MLOps is not a one-size-fits-all approach.\nIt’s necessary to understand the needs for each company.\nIt serves as a bridge between the development and operational aspects of machine learning, allowing companies to deploy and maintain models at scale effectively.\nThe MLOps implemented can vary depending on the level of automation."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-3",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-3",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps",
+    "text": "MLOps"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#levels-of-automation",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#levels-of-automation",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Levels of Automation",
+    "text": "Levels of Automation\n\nThe level of automation of the Data, ML Model, and Code pipelines reflects the maturity of the ML process\nThe target is to automate the ML-workflow steps without any intervention\nThe three levels of automation:\n\nManual process\nML pipeline automation\nCI/CD pipeline automation\n\n\n\nAutomation is a key aspect of MLOps, and the level of automation reflects the maturity of the machine learning process. The goal is to automate the ML workflow steps without manual intervention. This involves three levels of automation: manual processes, ML pipeline automation, and CI/CD pipeline automation.\nNow we know the formal definitions and benefits of MLOps. Let’s understand the continuous lifecycle."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-4",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops-4",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps",
+    "text": "MLOps\nMLOps life-cycle"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#mlops---phases",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#mlops---phases",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "MLOps - Phases",
+    "text": "MLOps - Phases\n\nMLOps practices can be divided in 4 bigger phases\n\nScoping\nData Collection\nModeling\nModel Serving and Monitoring\n\n\n\nMLOps can be divided into four major phases: Scoping, Data Collection, Modeling, and Model Serving and Monitoring."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#scoping",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#scoping",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Scoping",
+    "text": "Scoping\n\nBusiness Objectives and Problem Definition\nDo we really need Machine learning ?\nWho is the target audience ?\nBusiness understanding\nProject setup\n\n\nThe Scoping phase involves answering critical questions like “Do we really need machine learning?” and defining business objectives, project constraints, and timelines. We also assess data needs and required infrastructure."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#scoping-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#scoping-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Scoping",
+    "text": "Scoping\n\nData Assessment\nRequired Infrastructure\nPerformance constraints\nProject constraints\nProject Plan and Timeline"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-collection",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-collection",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Collection",
+    "text": "Data Collection\n\nPrivacy issues\nCollect, clean and annotate data\nPre-process raw data\nData pipeline definition\nReal world data is complex\n\n\nData Collection is a crucial phase where we address privacy issues, clean and annotate data, preprocess raw data, and define data pipelines. It often involves significant feature engineering to handle large and messy real-world data."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-collection-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-collection-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Collection",
+    "text": "Data Collection\n\nFeature engineering\nHandle a huge amount of data"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-collection---common-tools",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-collection---common-tools",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Collection - Common Tools",
+    "text": "Data Collection - Common Tools"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling",
+    "text": "Modeling\n\nModel Selection\nModel Training\nHyperparameter Tuning\nEvaluation and Validation\nDebugging\n\n\nThe Modeling phase covers model selection, hyperparameter tuning, training, evaluation, validation, and debugging. It’s where we define the problem category, task, baseline, and gradually increase complexity."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling",
+    "text": "Modeling\n\nFigure out the category of the problem\nDefine the task (Object detection, text summarization, Time series forecast…)\nDefine a baseline\nIncrease the complexity gradually\n\n\nWe emphasize the importance of robust baseline models and address potential issues like overfitting, underfitting, noisy data, and model explainability."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---baseline",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---baseline",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling - Baseline",
+    "text": "Modeling - Baseline\n\nRandom baseline\nHuman baseline\nSimple heuristic"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---training",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---training",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling - Training",
+    "text": "Modeling - Training\n\nData loading\nHyperparameters Tuning\nExplainability"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#training---eventual-problems",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#training---eventual-problems",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Training - Eventual Problems",
+    "text": "Training - Eventual Problems\n\nOverfit\nUnderfit\nNoisy data\nWrong labels"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---eventual-problems",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---eventual-problems",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling - Eventual Problems",
+    "text": "Modeling - Eventual Problems\n\nPoor feature engineering\nRedundant variables\nBlackbox models*\nLarge models\nTraining data doesn’t fit in memory"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---good-practices",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---good-practices",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling - Good Practices",
+    "text": "Modeling - Good Practices\n\nExperiment Tracking\nPerformance Benchmarking:\nIncrease the complexity gradually\nSet a random seed\nModel testing"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---tools",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---tools",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling - Tools",
+    "text": "Modeling - Tools"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---tools-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#modeling---tools-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Modeling - Tools",
+    "text": "Modeling - Tools"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#serving",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#serving",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Serving",
+    "text": "Serving\n\nHow the model will be accessible to the users?\nDoes the model need a previous infrastructure?\nDoes this application requires personalization?\nIs this the final task?\nDeployment strategies\n\n\nThis phase is more related to the model interactions.\nUser interaction and interaction with other software components."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#serving-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#serving-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Serving",
+    "text": "Serving\n\nScalability\nLoad Balancing\nHealth Checks\nRedundancy and Failover\nRollback and Version Control"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#serving---example",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#serving---example",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Serving - example",
+    "text": "Serving - example\n\nRecommendation Systems"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#serving---example-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#serving---example-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Serving - example",
+    "text": "Serving - example\n\nRecommendation Systems"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#monitoring",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#monitoring",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Monitoring",
+    "text": "Monitoring\n\nModel constraints\nWhen should we update the model in production?\nCheck model’s performance\nDefining alerts and logs"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#monitoring-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#monitoring-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Monitoring",
+    "text": "Monitoring\n\nHow to evaluate if the model is being successful?\nWhat are the performance expectations ?\nWhat are the Business metrics for success?\nWhat causes model to degrade?"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#concept-and-data-drift",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#concept-and-data-drift",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Concept and Data Drift",
+    "text": "Concept and Data Drift\n\nMain factors:\n\nConcept Drift\nData Drift\n\n\n\nModel degradation can result from concept drift, where the relationship between inputs and outputs changes over time, and data drift, which occurs when input data changes. Monitoring is crucial to address these issues."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#concept-drift",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#concept-drift",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Concept Drift",
+    "text": "Concept Drift\n\nThe relationship between the model inputs and outputs changes overtime\nThe model is not aware of this change\nUsually this change happens due to external factors"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Drift",
+    "text": "Data Drift\n\nThe change occurs when the model data input changes\nUsually happens due to an increased relevance of “under-learned” segments."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#concept-and-data-drift-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#concept-and-data-drift-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Concept and Data Drift",
+    "text": "Concept and Data Drift"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-1",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-1",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Drift",
+    "text": "Data Drift\n\nThe change occurs when the model data input changes\nUsually happens due to an increased relevance of “under-learned” segments."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-2",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-2",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Drift",
+    "text": "Data Drift\n\nStatistical statistical measures to compare past and current features:\n\nMean/median\nStandard deviation\nMinimum and maximum values\nCorrelations"
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-3",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-3",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Drift",
+    "text": "Data Drift\n\nFor continuous values, one can use distances and/or hypothesis tests such as:\n\nKullback–Leibler Distance\nKolmogorov-Smirnov Test\nPopulation Stability Index (PSI)\nHellinger Distance."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-4",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#data-drift-4",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Data Drift",
+    "text": "Data Drift\n\nFor categorical variables, you can use the chi-square test, entropy, cardinality or frequency of the feature.\nIf there are many features, we can use some dimensionality reduction technique."
+  },
+  {
+    "objectID": "reproducible_machine_learning/reproducible_machine_learning.html#recommended-readings",
+    "href": "reproducible_machine_learning/reproducible_machine_learning.html#recommended-readings",
+    "title": "MLOps - Machine Learning in Production",
+    "section": "Recommended Readings",
+    "text": "Recommended Readings"
+  },
+  {
+    "objectID": "magic_methods/magic_methods.html",
+    "href": "magic_methods/magic_methods.html",
+    "title": "Python Magic Methods",
     "section": "",
-    "text": "About this site",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
+    "text": "Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html",
-    "title": "Machine Learning Design Patterns",
+    "objectID": "magic_methods/magic_methods.html#introduction",
+    "href": "magic_methods/magic_methods.html#introduction",
+    "title": "Python Magic Methods",
     "section": "",
-    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+    "text": "Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "",
-    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+    "objectID": "magic_methods/magic_methods.html#why-use-magic-methods",
+    "href": "magic_methods/magic_methods.html#why-use-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Why Use Magic Methods?",
+    "text": "Why Use Magic Methods?\n\nMake classes intuitive and Pythonic.\nEnable operator overloading.\nCustomize built-in function behavior.\nSimplify code while enhancing readability."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
-    "title": "Machine Learning Design Patterns",
-    "section": "Why Design Patterns Matter in Machine Learning",
-    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+    "objectID": "magic_methods/magic_methods.html#common-magic-methods",
+    "href": "magic_methods/magic_methods.html#common-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nInitialization and Representation\n\ninit: Initialize objects.\nrepr: Official string representation for debugging.\nstr: User-friendly string representation.\n\nComparison\n\neq: Equality comparison (==)."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Types of Machine Learning Design Patterns",
-    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+    "objectID": "magic_methods/magic_methods.html#common-magic-methods-1",
+    "href": "magic_methods/magic_methods.html#common-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nComparison\n\nlt: Less-than comparison (&lt;).\n\nArithmetic Operators\n\nadd: Overload addition (+).\nmul: Overload multiplication (*)."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Data Ingestion and Transformation Patterns",
-    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+    "objectID": "magic_methods/magic_methods.html#example-custom-string-representation",
+    "href": "magic_methods/magic_methods.html#example-custom-string-representation",
+    "title": "Python Magic Methods",
+    "section": "Example: Custom String Representation",
+    "text": "Example: Custom String Representation\n\nCode example\n\n\nclass Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    def __str__(self):\n        return f\"'{self.title}' by {self.author}\"\n    \n    def __repr__(self):\n        return f\"Book(title='{self.title}', author='{self.author}')\"\n\nbook = Book(\"1984\", \"George Orwell\")\nprint(book)  # Output: '1984' by George Orwell\n\n'1984' by George Orwell"
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Training Patterns",
-    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+    "objectID": "magic_methods/magic_methods.html#advanced-magic-methods",
+    "href": "magic_methods/magic_methods.html#advanced-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nItem Access and Length\n\ngetitem: Access elements using indexing ([]).\nlen: Define behavior of len().\n\nCallable Objects\n\ncall: Make objects callable.\n\nContext Management\n\nenter / exit: Support with statements."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Serving and Deployment Patterns",
-    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+    "objectID": "magic_methods/magic_methods.html#advanced-magic-methods-1",
+    "href": "magic_methods/magic_methods.html#advanced-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nCode example\n\n\nclass Counter:\n    def __init__(self):\n        self.count = 0\n    \n    def __call__(self):\n        self.count += 1\n        return self.count\n\ncounter = Counter()\nprint(counter())  # Output: 1\nprint(counter())  # Output: 2\n\n1\n2"
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Monitoring and Retraining Patterns",
-    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+    "objectID": "magic_methods/magic_methods.html#operator-overloading",
+    "href": "magic_methods/magic_methods.html#operator-overloading",
+    "title": "Python Magic Methods",
+    "section": "Operator Overloading",
+    "text": "Operator Overloading\n\nRedefine operators for custom objects.\nCode Example: Adding two objects.\n\n\nclass Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\n    \n    def __str__(self):\n        return f\"Vector({self.x}, {self.y})\"\n\nv1 = Vector(2, 3)\nv2 = Vector(4, 5)\nprint(v1 + v2)  # Output: Vector(6, 8)\n\nVector(6, 8)"
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Workflow and Pipeline Patterns",
-    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+    "objectID": "magic_methods/magic_methods.html#magic-methods-for-context-management",
+    "href": "magic_methods/magic_methods.html#magic-methods-for-context-management",
+    "title": "Python Magic Methods",
+    "section": "Magic Methods for Context Management",
+    "text": "Magic Methods for Context Management\n\nEnable safe resource handling.\nUse enter and exit for with statements.\nCode example\n\n\nclass FileManager:\n    def __init__(self, filename, mode):\n        self.file = open(filename, mode)\n    \n    def __enter__(self):\n        return self.file\n    \n    def __exit__(self, exc_type, exc_value, traceback):\n        self.file.close()\n\nwith FileManager(\"test.txt\", \"w\") as f:\n    f.write(\"Hello, World!\")"
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
-    "title": "Machine Learning Design Patterns",
-    "section": "ML-Specific Design Challenges",
-    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+    "objectID": "magic_methods/magic_methods.html#best-practices",
+    "href": "magic_methods/magic_methods.html#best-practices",
+    "title": "Python Magic Methods",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse magic methods only when intuitive and necessary.\nAvoid overloading operators where behavior is unclear.\nAlways provide meaningful repr for debugging.\nDocument custom behaviors thoroughly."
   },
   {
-    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
-    "href": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Conclusion: Benefits of ML Design Patterns",
-    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+    "objectID": "magic_methods/magic_methods.html#conclusion",
+    "href": "magic_methods/magic_methods.html#conclusion",
+    "title": "Python Magic Methods",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#design-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Design Patterns",
-    "text": "Design Patterns\n\nWhat Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+    "objectID": "magic_methods/pmm.html#introduction",
+    "href": "magic_methods/pmm.html#introduction",
+    "title": "Python Magic Methods",
+    "section": "Introduction",
+    "text": "Introduction\n\nDefinition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
-    "href": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
-    "title": "Machine Learning Design Patterns",
-    "section": "Why Design Patterns Matter in Machine Learning",
-    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+    "objectID": "magic_methods/pmm.html#why-use-magic-methods",
+    "href": "magic_methods/pmm.html#why-use-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Why Use Magic Methods?",
+    "text": "Why Use Magic Methods?\n\nMake classes intuitive and Pythonic.\nEnable operator overloading.\nCustomize built-in function behavior.\nSimplify code while enhancing readability."
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Types of Machine Learning Design Patterns",
-    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+    "objectID": "magic_methods/pmm.html#common-magic-methods",
+    "href": "magic_methods/pmm.html#common-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nInitialization and Representation\n\ninit: Initialize objects.\nrepr: Official string representation for debugging.\nstr: User-friendly string representation.\n\nComparison\n\neq: Equality comparison (==)."
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Data Ingestion and Transformation Patterns",
-    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+    "objectID": "magic_methods/pmm.html#common-magic-methods-1",
+    "href": "magic_methods/pmm.html#common-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Common Magic Methods",
+    "text": "Common Magic Methods\n\nComparison\n\nlt: Less-than comparison (&lt;).\n\nArithmetic Operators\n\nadd: Overload addition (+).\nmul: Overload multiplication (*)."
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#model-training-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#model-training-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Training Patterns",
-    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+    "objectID": "magic_methods/pmm.html#example-custom-string-representation",
+    "href": "magic_methods/pmm.html#example-custom-string-representation",
+    "title": "Python Magic Methods",
+    "section": "Example: Custom String Representation",
+    "text": "Example: Custom String Representation\n\nCode example\n\n\n\n'1984' by George Orwell"
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Model Serving and Deployment Patterns",
-    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+    "objectID": "magic_methods/pmm.html#advanced-magic-methods",
+    "href": "magic_methods/pmm.html#advanced-magic-methods",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nItem Access and Length\n\ngetitem: Access elements using indexing ([]).\nlen: Define behavior of len().\n\nCallable Objects\n\ncall: Make objects callable.\n\nContext Management\n\nenter / exit: Support with statements."
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Monitoring and Retraining Patterns",
-    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+    "objectID": "magic_methods/pmm.html#advanced-magic-methods-1",
+    "href": "magic_methods/pmm.html#advanced-magic-methods-1",
+    "title": "Python Magic Methods",
+    "section": "Advanced Magic Methods",
+    "text": "Advanced Magic Methods\n\nCode example\n\n\n\n1\n2"
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Workflow and Pipeline Patterns",
-    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+    "objectID": "magic_methods/pmm.html#operator-overloading",
+    "href": "magic_methods/pmm.html#operator-overloading",
+    "title": "Python Magic Methods",
+    "section": "Operator Overloading",
+    "text": "Operator Overloading\n\nRedefine operators for custom objects.\nCode Example: Adding two objects.\n\n\n\nVector(6, 8)"
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
-    "href": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
-    "title": "Machine Learning Design Patterns",
-    "section": "ML-Specific Design Challenges",
-    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+    "objectID": "magic_methods/pmm.html#magic-methods-for-context-management",
+    "href": "magic_methods/pmm.html#magic-methods-for-context-management",
+    "title": "Python Magic Methods",
+    "section": "Magic Methods for Context Management",
+    "text": "Magic Methods for Context Management\n\nEnable safe resource handling.\nUse enter and exit for with statements.\nCode example"
   },
   {
-    "objectID": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
-    "href": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
-    "title": "Machine Learning Design Patterns",
-    "section": "Conclusion: Benefits of ML Design Patterns",
-    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+    "objectID": "magic_methods/pmm.html#best-practices",
+    "href": "magic_methods/pmm.html#best-practices",
+    "title": "Python Magic Methods",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUse magic methods only when intuitive and necessary.\nAvoid overloading operators where behavior is unclear.\nAlways provide meaningful repr for debugging.\nDocument custom behaviors thoroughly."
   },
   {
-    "objectID": "decorators_and_closures/decorators_and_closures.html",
-    "href": "decorators_and_closures/decorators_and_closures.html",
-    "title": "Decorators and Closures",
-    "section": "",
-    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
-    "href": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
-    "title": "Decorators and Closures",
-    "section": "",
-    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
-    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
-    "title": "Decorators and Closures",
-    "section": "What is a Closure?",
-    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\ndef outer_function(msg):\n    def inner_function():\n        print(f\"Message: {msg}\")\n    return inner_function\n\nclosure = outer_function(\"Hello!\")\nclosure()  # Output: Message: Hello!\n\nMessage: Hello!"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
-    "href": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
-    "title": "Decorators and Closures",
-    "section": "Why Use Closures?",
-    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\ndef multiplier(factor):\n    def multiply(n):\n        return n * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
-    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
-    "title": "Decorators and Closures",
-    "section": "What is a Decorator?",
-    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before the function call\")\n        func()\n        print(\"After the function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore the function call\nHello!\nAfter the function call"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
-    "href": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
-    "title": "Decorators and Closures",
-    "section": "How Decorators Work",
-    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
-    "href": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
-    "title": "Decorators and Closures",
-    "section": "Multiple Decorators",
-    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\ndef uppercase(func):\n    def wrapper():\n        return func().upper()\n    return wrapper\n\ndef exclaim(func):\n    def wrapper():\n        return func() + \"!!!\"\n    return wrapper\n\n@uppercase\n@exclaim\ndef greet():\n    return \"hello\"\n\nprint(greet())  # Output: HELLO!!!\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
-    "href": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
-    "title": "Decorators and Closures",
-    "section": "Decorators with Arguments",
-    "text": "Decorators with Arguments\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()  \n# Output:\n# Hello!\n# Hello!\n# Hello!\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#examples",
-    "href": "decorators_and_closures/decorators_and_closures.html#examples",
-    "title": "Decorators and Closures",
-    "section": "Examples",
-    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0013 seconds"
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
-    "href": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
-    "title": "Decorators and Closures",
-    "section": "Standard Decorators",
-    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
-  },
-  {
-    "objectID": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
-    "href": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
-    "title": "Decorators and Closures",
-    "section": "When to Use Decorators?",
-    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
-    "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
-    "title": "Decorators and Closures",
-    "section": "What Are Decorators and Closures?",
-    "text": "What Are Decorators and Closures?\n\nClosures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#what-is-a-closure",
-    "href": "decorators_and_closures/mldp.html#what-is-a-closure",
-    "title": "Decorators and Closures",
-    "section": "What is a Closure?",
-    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\n\nMessage: Hello!"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#why-use-closures",
-    "href": "decorators_and_closures/mldp.html#why-use-closures",
-    "title": "Decorators and Closures",
-    "section": "Why Use Closures?",
-    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\n\n10"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#what-is-a-decorator",
-    "href": "decorators_and_closures/mldp.html#what-is-a-decorator",
-    "title": "Decorators and Closures",
-    "section": "What is a Decorator?",
-    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\n\nBefore the function call\nHello!\nAfter the function call"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#how-decorators-work",
-    "href": "decorators_and_closures/mldp.html#how-decorators-work",
-    "title": "Decorators and Closures",
-    "section": "How Decorators Work",
-    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#multiple-decorators",
-    "href": "decorators_and_closures/mldp.html#multiple-decorators",
-    "title": "Decorators and Closures",
-    "section": "Multiple Decorators",
-    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#decorators-with-arguments",
-    "href": "decorators_and_closures/mldp.html#decorators-with-arguments",
-    "title": "Decorators and Closures",
-    "section": "Decorators with Arguments",
-    "text": "Decorators with Arguments\n\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#examples",
-    "href": "decorators_and_closures/mldp.html#examples",
-    "title": "Decorators and Closures",
-    "section": "Examples",
-    "text": "Examples\n\n\nslow_function took 2.0013 seconds"
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#standard-decorators",
-    "href": "decorators_and_closures/mldp.html#standard-decorators",
-    "title": "Decorators and Closures",
-    "section": "Standard Decorators",
-    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
-  },
-  {
-    "objectID": "decorators_and_closures/mldp.html#when-to-use-decorators",
-    "href": "decorators_and_closures/mldp.html#when-to-use-decorators",
-    "title": "Decorators and Closures",
-    "section": "When to Use Decorators?",
-    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Additional Training",
-    "section": "",
-    "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "What is PyTorch?",
-    "text": "What is PyTorch?\n\nOpen-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Why PyTorch?",
-    "text": "Why PyTorch?\n\nPythonic: integrates naturally with Python syntax and libraries.\nFlexible: easy debugging and model customization.\nEcosystem: tools for vision, NLP, and more.\nSupported by popular cloud platforms and hardware accelerators."
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "What is a Tensor?",
-    "text": "What is a Tensor?\n\nA multi-dimensional array used to store and manipulate data.\nSimilar to NumPy arrays, but with:\n\nGPU support\nIntegration with deep learning workflows\n\nExamples:\n\n0D tensor: a single number\n1D tensor: a vector\n2D tensor: a matrix\n3D+ tensor: multi-dimensional datasets"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Creating Tensors in PyTorch",
-    "text": "Creating Tensors in PyTorch"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Inpecting Tensors",
-    "text": "Inpecting Tensors\n\n\nShape: torch.Size([3, 4])\nData type: torch.float32\nDevice: cpu"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Basic Tensors Operations",
-    "text": "Basic Tensors Operations"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Moving Tensors to GPU",
-    "text": "Moving Tensors to GPU\n\n\ncuda:0"
-  },
-  {
-    "objectID": "vectorization/vectorization.html",
-    "href": "vectorization/vectorization.html",
-    "title": "Code Vectorization",
-    "section": "",
-    "text": "What is Vectorization?\n\nVectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays.\n\n\n\n\nWhy Use Vectorization?\n\nSpeed: Optimized implementations outperform loops.\nReadability: More concise and clear.\nMemory Efficiency: Operates directly on arrays without extra overhead.\nBetter CPU Utilization: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.\n\n\n\n\nVectorization with NumPy: Element-wise Operations\n\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Loop-based approach\nsquared_loop = [x**2 for x in arr]\n\n# Vectorized approach\nsquared_vectorized = arr ** 2\n\nprint(squared_vectorized)\n\n[ 1  4  9 16 25]\n\n\n\n\n\nVectorization with NumPy: Mathematical Functions\n\narr = np.array([0, np.pi / 2, np.pi])\n\n# Loop-based approach\nsin_loop = [np.sin(x) for x in arr]\n\n# Vectorized approach\nsin_vectorized = np.sin(arr)\n\nprint(sin_vectorized)\n\n[0.0000000e+00 1.0000000e+00 1.2246468e-16]\n\n\n\n\n\nVectorization with Pandas\n\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3, 4]})\n\n# Using apply (slow)\ndf['B'] = df['A'].apply(lambda x: x**2)\n\n# Vectorized (fast)\ndf['B'] = df['A'] ** 2\n\nprint(df)\n\n   A   B\n0  1   1\n1  2   4\n2  3   9\n3  4  16\n\n\n\n\n\nPerformance Comparison: NumPy vs Loop\n\nimport time\nimport numpy as np\n\narr = np.random.rand(10**6)\n\n# Loop-based\nstart = time.time()\nresult_loop = [x**2 for x in arr]\nprint(\"Loop time:\", time.time() - start)\n\n# Vectorized\nstart = time.time()\nresult_vectorized = arr ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nLoop time: 0.18871665000915527\nVectorized time: 0.002410888671875\n\n\n\n\n\nPerformance Comparison: Pandas Apply vs Vectorized\n\nimport pandas as pd\nimport time\n\ndf = pd.DataFrame({'A': np.random.rand(10**6)})\n\n# Using apply (slow)\nstart = time.time()\ndf['B'] = df['A'].apply(lambda x: x**2)\nprint(\"Apply time:\", time.time() - start)\n\n# Vectorized (fast)\nstart = time.time()\ndf['B'] = df['A'] ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nApply time: 0.1834256649017334\nVectorized time: 0.00526118278503418\n\n\n\n\n\nVectorization in NumPy: Broadcasting\n\narr = np.array([[1, 2, 3], [4, 5, 6]])\nscalar = 2\n\n# Broadcasting operation\nresult = arr * scalar\n\nprint(result)\n\n[[ 2  4  6]\n [ 8 10 12]]\n\n\n\n\n\nVectorization in NumPy: Dot Product\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# Loop-based approach\nresult_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n\n# Vectorized approach\nresult_vectorized = np.dot(A, B)\n\nprint(result_vectorized)\n\n[[19 22]\n [43 50]]\n\n\n\n\n\nConclusion\n\nUse vectorization whenever possible.\nNumPy and Pandas provide built-in vectorized operations.\nSignificant performance gains over loops.\nReduces memory overhead and improves efficiency."
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python",
-    "href": "first_class_functions/mldp.html#first-class-functions-in-python",
-    "title": "First Class Functions",
-    "section": "First-Class Functions in Python",
-    "text": "First-Class Functions in Python\n\nWhat Are First-Class Functions?\n\nIn Python, functions are first-class objects.\nThis means they can be:\n\nAssigned to variables\nPassed as arguments\nReturned from other functions\nStored in data structures"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python-1",
-    "href": "first_class_functions/mldp.html#first-class-functions-in-python-1",
-    "title": "First Class Functions",
-    "section": "First-Class Functions in Python",
-    "text": "First-Class Functions in Python\n\nWhy does this matter?\n\nIt enables functional programming techniques.\nIt makes code more flexible and reusable."
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#functional-programming",
-    "href": "first_class_functions/mldp.html#functional-programming",
-    "title": "First Class Functions",
-    "section": "Functional Programming",
-    "text": "Functional Programming\n\nWhat is Functional Programming?\n\nFunctional Programming (FP) is a programming paradigm that:\nFocuses on immutability and pure functions\nUses higher-order functions and function composition\nAvoids side effects and mutating state\nGoal: Write clear, predictable, and reusable code!"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#key-principles-of-functional-programing",
-    "href": "first_class_functions/mldp.html#key-principles-of-functional-programing",
-    "title": "First Class Functions",
-    "section": "Key Principles of Functional Programing",
-    "text": "Key Principles of Functional Programing\n\nCore Concepts\n\nPure Functions – Functions that always return the same output for the same input.\nImmutability – Data cannot be modified after it’s created.\nHigher-Order Functions – Functions that take other functions as arguments or return them.\nFunction Composition – Combining simple functions to build complex behavior.\nRecursion – Replacing loops with recursive calls."
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#functions-as-objects",
-    "href": "first_class_functions/mldp.html#functions-as-objects",
-    "title": "First Class Functions",
-    "section": "Functions as Objects",
-    "text": "Functions as Objects\n\nIn Python, functions are treated like any other object.\n\n\n\nHello, Alice!"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#passing-functions-as-arguments",
-    "href": "first_class_functions/mldp.html#passing-functions-as-arguments",
-    "title": "First Class Functions",
-    "section": "Passing Functions as Arguments",
-    "text": "Passing Functions as Arguments\n\nA function can accept another function as a parameter.\n\n\n\n25\n\n\n\nThe apply_function function takes a function (func) and a value, then applies the function to the value."
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#returning-functions-from-functions",
-    "href": "first_class_functions/mldp.html#returning-functions-from-functions",
-    "title": "First Class Functions",
-    "section": "Returning Functions from Functions",
-    "text": "Returning Functions from Functions\n\nA function can return another function, creating closures.\n\n\n\n10\n\n\n\nThe multiplier function returns a function that remembers the factor."
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#storing-functions-in-data-structures",
-    "href": "first_class_functions/mldp.html#storing-functions-in-data-structures",
-    "title": "First Class Functions",
-    "section": "Storing Functions in Data Structures",
-    "text": "Storing Functions in Data Structures\n\nFunctions can be stored in lists, dictionaries, and other data structures.\n\n\n\n7\n\n\n\nThis allows dynamic selection of functions at runtime!"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#practical-applications",
-    "href": "first_class_functions/mldp.html#practical-applications",
-    "title": "First Class Functions",
-    "section": "Practical Applications",
-    "text": "Practical Applications\n- Where are first-class functions useful?\n- Higher-order functions (e.g., map(), filter(), reduce())\n- Decorators (modifying function behavior)\n-Callbacks (event-driven programming)\n-Custom function pipelines"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
-    "href": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
-    "title": "First Class Functions",
-    "section": "Using First-Class Functions with map() and filter()",
-    "text": "Using First-Class Functions with map() and filter()\n\n\n[1, 4, 9, 16, 25]\n[2, 4]"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#decorators---a-powerful-case",
-    "href": "first_class_functions/mldp.html#decorators---a-powerful-case",
-    "title": "First Class Functions",
-    "section": "Decorators - A Powerful Case",
-    "text": "Decorators - A Powerful Case\n\nDecorators use first-class functions to modify behavior.\n\n\n\nBefore function call\nHello!\nAfter function call\n\n\n\nOutput\n\nBefore function call\nHello!\nAfter function call"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#advantages-of-first-class-functions",
-    "href": "first_class_functions/mldp.html#advantages-of-first-class-functions",
-    "title": "First Class Functions",
-    "section": "Advantages of First-Class Functions",
-    "text": "Advantages of First-Class Functions\n- Why Use First-Class Functions?\n- Encourages modular code\n- Reduces redundancy\n- Enables functional programming\n- Great for decorators, callbacks, and functional pipelines\n\n- More flexibility → Better Code!"
-  },
-  {
-    "objectID": "first_class_functions/mldp.html#summary",
-    "href": "first_class_functions/mldp.html#summary",
-    "title": "First Class Functions",
-    "section": "Summary",
-    "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
+    "objectID": "magic_methods/pmm.html#conclusion",
+    "href": "magic_methods/pmm.html#conclusion",
+    "title": "Python Magic Methods",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
   },
   {
     "objectID": "first_class_functions/first_class_functions.html",
@@ -872,165 +900,466 @@
     "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
   },
   {
-    "objectID": "magic_methods/pmm.html#introduction",
-    "href": "magic_methods/pmm.html#introduction",
-    "title": "Python Magic Methods",
-    "section": "Introduction",
-    "text": "Introduction\n\nDefinition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
+    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python",
+    "href": "first_class_functions/mldp.html#first-class-functions-in-python",
+    "title": "First Class Functions",
+    "section": "First-Class Functions in Python",
+    "text": "First-Class Functions in Python\n\nWhat Are First-Class Functions?\n\nIn Python, functions are first-class objects.\nThis means they can be:\n\nAssigned to variables\nPassed as arguments\nReturned from other functions\nStored in data structures"
   },
   {
-    "objectID": "magic_methods/pmm.html#why-use-magic-methods",
-    "href": "magic_methods/pmm.html#why-use-magic-methods",
-    "title": "Python Magic Methods",
-    "section": "Why Use Magic Methods?",
-    "text": "Why Use Magic Methods?\n\nMake classes intuitive and Pythonic.\nEnable operator overloading.\nCustomize built-in function behavior.\nSimplify code while enhancing readability."
+    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python-1",
+    "href": "first_class_functions/mldp.html#first-class-functions-in-python-1",
+    "title": "First Class Functions",
+    "section": "First-Class Functions in Python",
+    "text": "First-Class Functions in Python\n\nWhy does this matter?\n\nIt enables functional programming techniques.\nIt makes code more flexible and reusable."
   },
   {
-    "objectID": "magic_methods/pmm.html#common-magic-methods",
-    "href": "magic_methods/pmm.html#common-magic-methods",
-    "title": "Python Magic Methods",
-    "section": "Common Magic Methods",
-    "text": "Common Magic Methods\n\nInitialization and Representation\n\ninit: Initialize objects.\nrepr: Official string representation for debugging.\nstr: User-friendly string representation.\n\nComparison\n\neq: Equality comparison (==)."
+    "objectID": "first_class_functions/mldp.html#functional-programming",
+    "href": "first_class_functions/mldp.html#functional-programming",
+    "title": "First Class Functions",
+    "section": "Functional Programming",
+    "text": "Functional Programming\n\nWhat is Functional Programming?\n\nFunctional Programming (FP) is a programming paradigm that:\nFocuses on immutability and pure functions\nUses higher-order functions and function composition\nAvoids side effects and mutating state\nGoal: Write clear, predictable, and reusable code!"
   },
   {
-    "objectID": "magic_methods/pmm.html#common-magic-methods-1",
-    "href": "magic_methods/pmm.html#common-magic-methods-1",
-    "title": "Python Magic Methods",
-    "section": "Common Magic Methods",
-    "text": "Common Magic Methods\n\nComparison\n\nlt: Less-than comparison (&lt;).\n\nArithmetic Operators\n\nadd: Overload addition (+).\nmul: Overload multiplication (*)."
+    "objectID": "first_class_functions/mldp.html#key-principles-of-functional-programing",
+    "href": "first_class_functions/mldp.html#key-principles-of-functional-programing",
+    "title": "First Class Functions",
+    "section": "Key Principles of Functional Programing",
+    "text": "Key Principles of Functional Programing\n\nCore Concepts\n\nPure Functions – Functions that always return the same output for the same input.\nImmutability – Data cannot be modified after it’s created.\nHigher-Order Functions – Functions that take other functions as arguments or return them.\nFunction Composition – Combining simple functions to build complex behavior.\nRecursion – Replacing loops with recursive calls."
   },
   {
-    "objectID": "magic_methods/pmm.html#example-custom-string-representation",
-    "href": "magic_methods/pmm.html#example-custom-string-representation",
-    "title": "Python Magic Methods",
-    "section": "Example: Custom String Representation",
-    "text": "Example: Custom String Representation\n\nCode example\n\n\n\n'1984' by George Orwell"
+    "objectID": "first_class_functions/mldp.html#functions-as-objects",
+    "href": "first_class_functions/mldp.html#functions-as-objects",
+    "title": "First Class Functions",
+    "section": "Functions as Objects",
+    "text": "Functions as Objects\n\nIn Python, functions are treated like any other object.\n\n\n\nHello, Alice!"
   },
   {
-    "objectID": "magic_methods/pmm.html#advanced-magic-methods",
-    "href": "magic_methods/pmm.html#advanced-magic-methods",
-    "title": "Python Magic Methods",
-    "section": "Advanced Magic Methods",
-    "text": "Advanced Magic Methods\n\nItem Access and Length\n\ngetitem: Access elements using indexing ([]).\nlen: Define behavior of len().\n\nCallable Objects\n\ncall: Make objects callable.\n\nContext Management\n\nenter / exit: Support with statements."
+    "objectID": "first_class_functions/mldp.html#passing-functions-as-arguments",
+    "href": "first_class_functions/mldp.html#passing-functions-as-arguments",
+    "title": "First Class Functions",
+    "section": "Passing Functions as Arguments",
+    "text": "Passing Functions as Arguments\n\nA function can accept another function as a parameter.\n\n\n\n25\n\n\n\nThe apply_function function takes a function (func) and a value, then applies the function to the value."
   },
   {
-    "objectID": "magic_methods/pmm.html#advanced-magic-methods-1",
-    "href": "magic_methods/pmm.html#advanced-magic-methods-1",
-    "title": "Python Magic Methods",
-    "section": "Advanced Magic Methods",
-    "text": "Advanced Magic Methods\n\nCode example\n\n\n\n1\n2"
+    "objectID": "first_class_functions/mldp.html#returning-functions-from-functions",
+    "href": "first_class_functions/mldp.html#returning-functions-from-functions",
+    "title": "First Class Functions",
+    "section": "Returning Functions from Functions",
+    "text": "Returning Functions from Functions\n\nA function can return another function, creating closures.\n\n\n\n10\n\n\n\nThe multiplier function returns a function that remembers the factor."
   },
   {
-    "objectID": "magic_methods/pmm.html#operator-overloading",
-    "href": "magic_methods/pmm.html#operator-overloading",
-    "title": "Python Magic Methods",
-    "section": "Operator Overloading",
-    "text": "Operator Overloading\n\nRedefine operators for custom objects.\nCode Example: Adding two objects.\n\n\n\nVector(6, 8)"
+    "objectID": "first_class_functions/mldp.html#storing-functions-in-data-structures",
+    "href": "first_class_functions/mldp.html#storing-functions-in-data-structures",
+    "title": "First Class Functions",
+    "section": "Storing Functions in Data Structures",
+    "text": "Storing Functions in Data Structures\n\nFunctions can be stored in lists, dictionaries, and other data structures.\n\n\n\n7\n\n\n\nThis allows dynamic selection of functions at runtime!"
   },
   {
-    "objectID": "magic_methods/pmm.html#magic-methods-for-context-management",
-    "href": "magic_methods/pmm.html#magic-methods-for-context-management",
-    "title": "Python Magic Methods",
-    "section": "Magic Methods for Context Management",
-    "text": "Magic Methods for Context Management\n\nEnable safe resource handling.\nUse enter and exit for with statements.\nCode example"
+    "objectID": "first_class_functions/mldp.html#practical-applications",
+    "href": "first_class_functions/mldp.html#practical-applications",
+    "title": "First Class Functions",
+    "section": "Practical Applications",
+    "text": "Practical Applications\n- Where are first-class functions useful?\n- Higher-order functions (e.g., map(), filter(), reduce())\n- Decorators (modifying function behavior)\n-Callbacks (event-driven programming)\n-Custom function pipelines"
   },
   {
-    "objectID": "magic_methods/pmm.html#best-practices",
-    "href": "magic_methods/pmm.html#best-practices",
-    "title": "Python Magic Methods",
-    "section": "Best Practices",
-    "text": "Best Practices\n\nUse magic methods only when intuitive and necessary.\nAvoid overloading operators where behavior is unclear.\nAlways provide meaningful repr for debugging.\nDocument custom behaviors thoroughly."
+    "objectID": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
+    "href": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
+    "title": "First Class Functions",
+    "section": "Using First-Class Functions with map() and filter()",
+    "text": "Using First-Class Functions with map() and filter()\n\n\n[1, 4, 9, 16, 25]\n[2, 4]"
   },
   {
-    "objectID": "magic_methods/pmm.html#conclusion",
-    "href": "magic_methods/pmm.html#conclusion",
-    "title": "Python Magic Methods",
-    "section": "Conclusion",
-    "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
+    "objectID": "first_class_functions/mldp.html#decorators---a-powerful-case",
+    "href": "first_class_functions/mldp.html#decorators---a-powerful-case",
+    "title": "First Class Functions",
+    "section": "Decorators - A Powerful Case",
+    "text": "Decorators - A Powerful Case\n\nDecorators use first-class functions to modify behavior.\n\n\n\nBefore function call\nHello!\nAfter function call\n\n\n\nOutput\n\nBefore function call\nHello!\nAfter function call"
   },
   {
-    "objectID": "magic_methods/magic_methods.html",
-    "href": "magic_methods/magic_methods.html",
-    "title": "Python Magic Methods",
+    "objectID": "first_class_functions/mldp.html#advantages-of-first-class-functions",
+    "href": "first_class_functions/mldp.html#advantages-of-first-class-functions",
+    "title": "First Class Functions",
+    "section": "Advantages of First-Class Functions",
+    "text": "Advantages of First-Class Functions\n- Why Use First-Class Functions?\n- Encourages modular code\n- Reduces redundancy\n- Enables functional programming\n- Great for decorators, callbacks, and functional pipelines\n\n- More flexibility → Better Code!"
+  },
+  {
+    "objectID": "first_class_functions/mldp.html#summary",
+    "href": "first_class_functions/mldp.html#summary",
+    "title": "First Class Functions",
+    "section": "Summary",
+    "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
+  },
+  {
+    "objectID": "vectorization/vectorization.html",
+    "href": "vectorization/vectorization.html",
+    "title": "Code Vectorization",
     "section": "",
-    "text": "Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
+    "text": "What is Vectorization?\n\nVectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays.\n\n\n\n\nWhy Use Vectorization?\n\nSpeed: Optimized implementations outperform loops.\nReadability: More concise and clear.\nMemory Efficiency: Operates directly on arrays without extra overhead.\nBetter CPU Utilization: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.\n\n\n\n\nVectorization with NumPy: Element-wise Operations\n\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Loop-based approach\nsquared_loop = [x**2 for x in arr]\n\n# Vectorized approach\nsquared_vectorized = arr ** 2\n\nprint(squared_vectorized)\n\n[ 1  4  9 16 25]\n\n\n\n\n\nVectorization with NumPy: Mathematical Functions\n\narr = np.array([0, np.pi / 2, np.pi])\n\n# Loop-based approach\nsin_loop = [np.sin(x) for x in arr]\n\n# Vectorized approach\nsin_vectorized = np.sin(arr)\n\nprint(sin_vectorized)\n\n[0.0000000e+00 1.0000000e+00 1.2246468e-16]\n\n\n\n\n\nVectorization with Pandas\n\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3, 4]})\n\n# Using apply (slow)\ndf['B'] = df['A'].apply(lambda x: x**2)\n\n# Vectorized (fast)\ndf['B'] = df['A'] ** 2\n\nprint(df)\n\n   A   B\n0  1   1\n1  2   4\n2  3   9\n3  4  16\n\n\n\n\n\nPerformance Comparison: NumPy vs Loop\n\nimport time\nimport numpy as np\n\narr = np.random.rand(10**6)\n\n# Loop-based\nstart = time.time()\nresult_loop = [x**2 for x in arr]\nprint(\"Loop time:\", time.time() - start)\n\n# Vectorized\nstart = time.time()\nresult_vectorized = arr ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nLoop time: 0.15973210334777832\nVectorized time: 0.003326416015625\n\n\n\n\n\nPerformance Comparison: Pandas Apply vs Vectorized\n\nimport pandas as pd\nimport time\n\ndf = pd.DataFrame({'A': np.random.rand(10**6)})\n\n# Using apply (slow)\nstart = time.time()\ndf['B'] = df['A'].apply(lambda x: x**2)\nprint(\"Apply time:\", time.time() - start)\n\n# Vectorized (fast)\nstart = time.time()\ndf['B'] = df['A'] ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nApply time: 0.15789103507995605\nVectorized time: 0.005184650421142578\n\n\n\n\n\nVectorization in NumPy: Broadcasting\n\narr = np.array([[1, 2, 3], [4, 5, 6]])\nscalar = 2\n\n# Broadcasting operation\nresult = arr * scalar\n\nprint(result)\n\n[[ 2  4  6]\n [ 8 10 12]]\n\n\n\n\n\nVectorization in NumPy: Dot Product\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# Loop-based approach\nresult_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n\n# Vectorized approach\nresult_vectorized = np.dot(A, B)\n\nprint(result_vectorized)\n\n[[19 22]\n [43 50]]\n\n\n\n\n\nConclusion\n\nUse vectorization whenever possible.\nNumPy and Pandas provide built-in vectorized operations.\nSignificant performance gains over loops.\nReduces memory overhead and improves efficiency."
   },
   {
-    "objectID": "magic_methods/magic_methods.html#introduction",
-    "href": "magic_methods/magic_methods.html#introduction",
-    "title": "Python Magic Methods",
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "What is PyTorch?",
+    "text": "What is PyTorch?\n\nOpen-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Why PyTorch?",
+    "text": "Why PyTorch?\n\nPythonic: integrates naturally with Python syntax and libraries.\nFlexible: easy debugging and model customization.\nEcosystem: tools for vision, NLP, and more.\nSupported by popular cloud platforms and hardware accelerators."
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "What is a Tensor?",
+    "text": "What is a Tensor?\n\nA multi-dimensional array used to store and manipulate data.\nSimilar to NumPy arrays, but with:\n\nGPU support\nIntegration with deep learning workflows\n\nExamples:\n\n0D tensor: a single number\n1D tensor: a vector\n2D tensor: a matrix\n3D+ tensor: multi-dimensional datasets"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Creating Tensors in PyTorch",
+    "text": "Creating Tensors in PyTorch"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Inpecting Tensors",
+    "text": "Inpecting Tensors\n\n\nShape: torch.Size([3, 4])\nData type: torch.float32\nDevice: cpu"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Basic Tensors Operations",
+    "text": "Basic Tensors Operations"
+  },
+  {
+    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
+    "href": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
+    "title": "Introduction to PyTorch and Tensors",
+    "section": "Moving Tensors to GPU",
+    "text": "Moving Tensors to GPU\n\n\ncuda:0"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Additional Training",
     "section": "",
-    "text": "Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).\nPurpose:\nEnable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.\nExamples: init, str, add."
+    "text": "We want to propose a series of course additions for the Pro-AI CDT students, done by the Pro-AI CDT staff, aiming at the enhancement of their programming expertise and software engineering practices. These new offerings will delve into advanced Python concepts, such as magic methods (dunder methods), list comprehensions, generator expressions, and tuple handling, which are crucial for efficient and expressive code writing. The curriculum will also cover higher-level programming topics like first-class functions, decorators, closures, vectorization, and promoting performance optimization. Additionally, students will gain exposure to best practices in software engineering, such as clean code principles, ensuring they are well-equipped to write maintainable, scalable, and high-quality AI-driven applications. There are four additional modules related to the python programming language.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
-    "objectID": "magic_methods/magic_methods.html#why-use-magic-methods",
-    "href": "magic_methods/magic_methods.html#why-use-magic-methods",
-    "title": "Python Magic Methods",
-    "section": "Why Use Magic Methods?",
-    "text": "Why Use Magic Methods?\n\nMake classes intuitive and Pythonic.\nEnable operator overloading.\nCustomize built-in function behavior.\nSimplify code while enhancing readability."
+    "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
+    "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
+    "title": "Decorators and Closures",
+    "section": "What Are Decorators and Closures?",
+    "text": "What Are Decorators and Closures?\n\nClosures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#common-magic-methods",
-    "href": "magic_methods/magic_methods.html#common-magic-methods",
-    "title": "Python Magic Methods",
-    "section": "Common Magic Methods",
-    "text": "Common Magic Methods\n\nInitialization and Representation\n\ninit: Initialize objects.\nrepr: Official string representation for debugging.\nstr: User-friendly string representation.\n\nComparison\n\neq: Equality comparison (==)."
+    "objectID": "decorators_and_closures/mldp.html#what-is-a-closure",
+    "href": "decorators_and_closures/mldp.html#what-is-a-closure",
+    "title": "Decorators and Closures",
+    "section": "What is a Closure?",
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\n\nMessage: Hello!"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#common-magic-methods-1",
-    "href": "magic_methods/magic_methods.html#common-magic-methods-1",
-    "title": "Python Magic Methods",
-    "section": "Common Magic Methods",
-    "text": "Common Magic Methods\n\nComparison\n\nlt: Less-than comparison (&lt;).\n\nArithmetic Operators\n\nadd: Overload addition (+).\nmul: Overload multiplication (*)."
+    "objectID": "decorators_and_closures/mldp.html#why-use-closures",
+    "href": "decorators_and_closures/mldp.html#why-use-closures",
+    "title": "Decorators and Closures",
+    "section": "Why Use Closures?",
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\n\n10"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#example-custom-string-representation",
-    "href": "magic_methods/magic_methods.html#example-custom-string-representation",
-    "title": "Python Magic Methods",
-    "section": "Example: Custom String Representation",
-    "text": "Example: Custom String Representation\n\nCode example\n\n\nclass Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    def __str__(self):\n        return f\"'{self.title}' by {self.author}\"\n    \n    def __repr__(self):\n        return f\"Book(title='{self.title}', author='{self.author}')\"\n\nbook = Book(\"1984\", \"George Orwell\")\nprint(book)  # Output: '1984' by George Orwell\n\n'1984' by George Orwell"
+    "objectID": "decorators_and_closures/mldp.html#what-is-a-decorator",
+    "href": "decorators_and_closures/mldp.html#what-is-a-decorator",
+    "title": "Decorators and Closures",
+    "section": "What is a Decorator?",
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\n\nBefore the function call\nHello!\nAfter the function call"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#advanced-magic-methods",
-    "href": "magic_methods/magic_methods.html#advanced-magic-methods",
-    "title": "Python Magic Methods",
-    "section": "Advanced Magic Methods",
-    "text": "Advanced Magic Methods\n\nItem Access and Length\n\ngetitem: Access elements using indexing ([]).\nlen: Define behavior of len().\n\nCallable Objects\n\ncall: Make objects callable.\n\nContext Management\n\nenter / exit: Support with statements."
+    "objectID": "decorators_and_closures/mldp.html#how-decorators-work",
+    "href": "decorators_and_closures/mldp.html#how-decorators-work",
+    "title": "Decorators and Closures",
+    "section": "How Decorators Work",
+    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
   },
   {
-    "objectID": "magic_methods/magic_methods.html#advanced-magic-methods-1",
-    "href": "magic_methods/magic_methods.html#advanced-magic-methods-1",
-    "title": "Python Magic Methods",
-    "section": "Advanced Magic Methods",
-    "text": "Advanced Magic Methods\n\nCode example\n\n\nclass Counter:\n    def __init__(self):\n        self.count = 0\n    \n    def __call__(self):\n        self.count += 1\n        return self.count\n\ncounter = Counter()\nprint(counter())  # Output: 1\nprint(counter())  # Output: 2\n\n1\n2"
+    "objectID": "decorators_and_closures/mldp.html#multiple-decorators",
+    "href": "decorators_and_closures/mldp.html#multiple-decorators",
+    "title": "Decorators and Closures",
+    "section": "Multiple Decorators",
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#operator-overloading",
-    "href": "magic_methods/magic_methods.html#operator-overloading",
-    "title": "Python Magic Methods",
-    "section": "Operator Overloading",
-    "text": "Operator Overloading\n\nRedefine operators for custom objects.\nCode Example: Adding two objects.\n\n\nclass Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\n    \n    def __str__(self):\n        return f\"Vector({self.x}, {self.y})\"\n\nv1 = Vector(2, 3)\nv2 = Vector(4, 5)\nprint(v1 + v2)  # Output: Vector(6, 8)\n\nVector(6, 8)"
+    "objectID": "decorators_and_closures/mldp.html#decorators-with-arguments",
+    "href": "decorators_and_closures/mldp.html#decorators-with-arguments",
+    "title": "Decorators and Closures",
+    "section": "Decorators with Arguments",
+    "text": "Decorators with Arguments\n\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#magic-methods-for-context-management",
-    "href": "magic_methods/magic_methods.html#magic-methods-for-context-management",
-    "title": "Python Magic Methods",
-    "section": "Magic Methods for Context Management",
-    "text": "Magic Methods for Context Management\n\nEnable safe resource handling.\nUse enter and exit for with statements.\nCode example\n\n\nclass FileManager:\n    def __init__(self, filename, mode):\n        self.file = open(filename, mode)\n    \n    def __enter__(self):\n        return self.file\n    \n    def __exit__(self, exc_type, exc_value, traceback):\n        self.file.close()\n\nwith FileManager(\"test.txt\", \"w\") as f:\n    f.write(\"Hello, World!\")"
+    "objectID": "decorators_and_closures/mldp.html#examples",
+    "href": "decorators_and_closures/mldp.html#examples",
+    "title": "Decorators and Closures",
+    "section": "Examples",
+    "text": "Examples\n\n\nslow_function took 2.0017 seconds"
   },
   {
-    "objectID": "magic_methods/magic_methods.html#best-practices",
-    "href": "magic_methods/magic_methods.html#best-practices",
-    "title": "Python Magic Methods",
-    "section": "Best Practices",
-    "text": "Best Practices\n\nUse magic methods only when intuitive and necessary.\nAvoid overloading operators where behavior is unclear.\nAlways provide meaningful repr for debugging.\nDocument custom behaviors thoroughly."
+    "objectID": "decorators_and_closures/mldp.html#standard-decorators",
+    "href": "decorators_and_closures/mldp.html#standard-decorators",
+    "title": "Decorators and Closures",
+    "section": "Standard Decorators",
+    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
   },
   {
-    "objectID": "magic_methods/magic_methods.html#conclusion",
-    "href": "magic_methods/magic_methods.html#conclusion",
-    "title": "Python Magic Methods",
-    "section": "Conclusion",
-    "text": "Conclusion\n\nRecap\n\nMagic methods simplify and enhance Python code.\nCommon use cases include initialization, representation, and operator overloading.\nUse them judiciously to maintain code clarity.\n\nCall to Action:\n\nExplore Python’s official documentation on magic methods.\nStart integrating them into your projects for more Pythonic solutions."
+    "objectID": "decorators_and_closures/mldp.html#when-to-use-decorators",
+    "href": "decorators_and_closures/mldp.html#when-to-use-decorators",
+    "title": "Decorators and Closures",
+    "section": "When to Use Decorators?",
+    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html",
+    "href": "decorators_and_closures/decorators_and_closures.html",
+    "title": "Decorators and Closures",
+    "section": "",
+    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-are-decorators-and-closures",
+    "title": "Decorators and Closures",
+    "section": "",
+    "text": "Closures allow a function to retain access to its enclosing scope.\nDecorators are functions that modify other functions dynamically.\nUsed for:\n\nCode reusability\nLogging, authentication, caching\nExtending function behavior"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-closure",
+    "title": "Decorators and Closures",
+    "section": "What is a Closure?",
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\ndef outer_function(msg):\n    def inner_function():\n        print(f\"Message: {msg}\")\n    return inner_function\n\nclosure = outer_function(\"Hello!\")\nclosure()  # Output: Message: Hello!\n\nMessage: Hello!"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
+    "href": "decorators_and_closures/decorators_and_closures.html#why-use-closures",
+    "title": "Decorators and Closures",
+    "section": "Why Use Closures?",
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\ndef multiplier(factor):\n    def multiply(n):\n        return n * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
+    "href": "decorators_and_closures/decorators_and_closures.html#what-is-a-decorator",
+    "title": "Decorators and Closures",
+    "section": "What is a Decorator?",
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before the function call\")\n        func()\n        print(\"After the function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore the function call\nHello!\nAfter the function call"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
+    "href": "decorators_and_closures/decorators_and_closures.html#how-decorators-work",
+    "title": "Decorators and Closures",
+    "section": "How Decorators Work",
+    "text": "How Decorators Work\n- The decorator function takes another function as an argument.\n- It creates a wrapper function that modifies the behavior.\n- It returns the wrapper function instead of the original.\n- The @decorator syntax automatically applies the decorator."
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#multiple-decorators",
+    "title": "Decorators and Closures",
+    "section": "Multiple Decorators",
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\ndef uppercase(func):\n    def wrapper():\n        return func().upper()\n    return wrapper\n\ndef exclaim(func):\n    def wrapper():\n        return func() + \"!!!\"\n    return wrapper\n\n@uppercase\n@exclaim\ndef greet():\n    return \"hello\"\n\nprint(greet())  # Output: HELLO!!!\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
+    "href": "decorators_and_closures/decorators_and_closures.html#decorators-with-arguments",
+    "title": "Decorators and Closures",
+    "section": "Decorators with Arguments",
+    "text": "Decorators with Arguments\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()  \n# Output:\n# Hello!\n# Hello!\n# Hello!\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#examples",
+    "href": "decorators_and_closures/decorators_and_closures.html#examples",
+    "title": "Decorators and Closures",
+    "section": "Examples",
+    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0011 seconds"
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
+    "title": "Decorators and Closures",
+    "section": "Standard Decorators",
+    "text": "Standard Decorators\n- @staticmethod:    Defines a static method inside a class.\n- @classmethod: Defines a method that operates on the class itself.\n- @property:    Converts a method into a read-only property."
+  },
+  {
+    "objectID": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
+    "href": "decorators_and_closures/decorators_and_closures.html#when-to-use-decorators",
+    "title": "Decorators and Closures",
+    "section": "When to Use Decorators?",
+    "text": "When to Use Decorators?\n- Logging (debugging and performance tracking)\n- Access control (authentication, security)\n- Caching (memoization)\n- Code reuse (DRY principle)"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Design Patterns",
+    "text": "Design Patterns\n\nWhat Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
+    "href": "machine_learning_design_patterns/mldp.html#why-design-patterns-matter-in-machine-learning",
+    "title": "Machine Learning Design Patterns",
+    "section": "Why Design Patterns Matter in Machine Learning",
+    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#types-of-machine-learning-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Types of Machine Learning Design Patterns",
+    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#data-ingestion-and-transformation-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Data Ingestion and Transformation Patterns",
+    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#model-training-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#model-training-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Training Patterns",
+    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#model-serving-and-deployment-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Serving and Deployment Patterns",
+    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#monitoring-and-retraining-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Monitoring and Retraining Patterns",
+    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#workflow-and-pipeline-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Workflow and Pipeline Patterns",
+    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
+    "href": "machine_learning_design_patterns/mldp.html#ml-specific-design-challenges",
+    "title": "Machine Learning Design Patterns",
+    "section": "ML-Specific Design Challenges",
+    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
+    "href": "machine_learning_design_patterns/mldp.html#conclusion-benefits-of-ml-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Conclusion: Benefits of ML Design Patterns",
+    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html",
+    "title": "Machine Learning Design Patterns",
+    "section": "",
+    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "",
+    "text": "What Are Design Patterns?\n\nReusable solutions to common problems in software and system design\n\nWhy Design Patterns Matter in ML\n\nStreamline development, avoid reinventing the wheel\nEnable scalable, efficient, and maintainable ML systems\n\nTypes of ML Design Patterns\n\nPatterns for data management, model training, deployment, and serving"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#why-design-patterns-matter-in-machine-learning",
+    "title": "Machine Learning Design Patterns",
+    "section": "Why Design Patterns Matter in Machine Learning",
+    "text": "Why Design Patterns Matter in Machine Learning\n\nAddress ML-Specific Challenges\n\nHandle data transformations, training pipelines, and model deployment\n\nEnsure Scalability and Reliability\n\nPatterns help design robust ML systems for production\n\nFacilitate Collaboration\n\nStandard patterns provide a common language among ML teams"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#types-of-machine-learning-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Types of Machine Learning Design Patterns",
+    "text": "Types of Machine Learning Design Patterns\n\nData Patterns: Handle data ingestion, cleaning, and processing\nModel Patterns: Focus on model architecture, training, and tuning\nServing Patterns: Support model deployment, monitoring, and scaling\nWorkflow Patterns: Manage end-to-end ML pipelines efficiently"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#data-ingestion-and-transformation-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Data Ingestion and Transformation Patterns",
+    "text": "Data Ingestion and Transformation Patterns\n\nPattern: Feature Store\n\nCentralize feature storage to standardize and reuse features across models\n\nPattern: Data Pipeline\n\nAutomate data cleaning, transformation, and preprocessing\n\nPattern: Data Versioning\n\nTrack data changes and ensure reproducibility in experiments"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-training-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Training Patterns",
+    "text": "Model Training Patterns\n\nPattern: Transfer Learning\nUse pre-trained models to reduce training time and improve performance\nPattern: Hyperparameter Tuning\nAutomate hyperparameter selection for optimal model performance\nPattern: Cross-Validation\nUse multiple data splits to validate model robustness and reduce overfitting"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#model-serving-and-deployment-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Model Serving and Deployment Patterns",
+    "text": "Model Serving and Deployment Patterns\n\nPattern: Model Ensemble\n\nCombine multiple models to improve accuracy and robustness\n\nPattern: Batch vs. Real-Time Serving\n\nChoose serving patterns based on latency and processing needs\n\nPattern: Model Staging\n\nUse stages (e.g., staging, production) for controlled deployment"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#monitoring-and-retraining-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Monitoring and Retraining Patterns",
+    "text": "Monitoring and Retraining Patterns\n\nPattern: Continuous Monitoring\n\nTrack model performance over time and detect issues (e.g., data drift)\n\nPattern: Model Retraining Trigger\n\nSet conditions to automatically trigger retraining (e.g., data drift)\n\nPattern: A/B Testing\n\nCompare models in production to evaluate new versions effectively"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#workflow-and-pipeline-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Workflow and Pipeline Patterns",
+    "text": "Workflow and Pipeline Patterns\n\nPattern: Pipeline Orchestration\n\nUse tools (e.g., Airflow, Kubeflow) to manage complex ML workflows\n\nPattern: Metadata Tracking\n\nRecord experiment metadata for reproducibility and model lineage\n\nPattern: Experiment Tracking\n\nKeep a log of experiments, configurations, and results to improve collaboration and model refinement"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#ml-specific-design-challenges",
+    "title": "Machine Learning Design Patterns",
+    "section": "ML-Specific Design Challenges",
+    "text": "ML-Specific Design Challenges\n\nData Drift and Concept Drift\n\nChanges in data that require model updates\n\nResource Optimization\n\nBalancing computation costs with model performance\n\nMaintaining Reproducibility\n\nEnsure the same results with consistent data and configurations"
+  },
+  {
+    "objectID": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
+    "href": "machine_learning_design_patterns/ml_design_patterns.html#conclusion-benefits-of-ml-design-patterns",
+    "title": "Machine Learning Design Patterns",
+    "section": "Conclusion: Benefits of ML Design Patterns",
+    "text": "Conclusion: Benefits of ML Design Patterns\n\nEfficient Development: Patterns streamline and simplify ML project design\nScalable and Maintainable Systems: Ready for production and growth\nStandardization Across Teams: Improve team collaboration and code quality"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
   },
   {
     "objectID": "clean_code/cc.html#introduction",
