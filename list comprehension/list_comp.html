@@ -8,7 +8,7 @@
 
 <meta name="author" content="Daladier Sampaio Neto">
 
-<title>Python Magic Methods – Aditional Training</title>
+<title>List Comprehensions and Generator Expressions – Aditional Training</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Python Magic Methods</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">List Comprehensions and Generator Expressions</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -199,26 +199,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#why-use-magic-methods" id="toc-why-use-magic-methods" class="nav-link" data-scroll-target="#why-use-magic-methods">Why Use Magic Methods?</a></li>
-  <li><a href="#common-magic-methods" id="toc-common-magic-methods" class="nav-link" data-scroll-target="#common-magic-methods">Common Magic Methods</a></li>
-  <li><a href="#common-magic-methods-1" id="toc-common-magic-methods-1" class="nav-link" data-scroll-target="#common-magic-methods-1">Common Magic Methods</a></li>
-  <li><a href="#example-custom-string-representation" id="toc-example-custom-string-representation" class="nav-link" data-scroll-target="#example-custom-string-representation">Example: Custom String Representation</a></li>
-  <li><a href="#advanced-magic-methods" id="toc-advanced-magic-methods" class="nav-link" data-scroll-target="#advanced-magic-methods">Advanced Magic Methods</a></li>
-  <li><a href="#advanced-magic-methods-1" id="toc-advanced-magic-methods-1" class="nav-link" data-scroll-target="#advanced-magic-methods-1">Advanced Magic Methods</a></li>
-  <li><a href="#advanced-magic-methods-2" id="toc-advanced-magic-methods-2" class="nav-link" data-scroll-target="#advanced-magic-methods-2">Advanced Magic Methods</a></li>
-  <li><a href="#operator-overloading" id="toc-operator-overloading" class="nav-link" data-scroll-target="#operator-overloading">Operator Overloading</a></li>
-  <li><a href="#magic-methods-for-context-management" id="toc-magic-methods-for-context-management" class="nav-link" data-scroll-target="#magic-methods-for-context-management">Magic Methods for Context Management</a></li>
+  <li><a href="#why-use-them" id="toc-why-use-them" class="nav-link" data-scroll-target="#why-use-them">Why Use Them?</a></li>
+  <li><a href="#basic-syntax" id="toc-basic-syntax" class="nav-link" data-scroll-target="#basic-syntax">Basic Syntax</a></li>
+  <li><a href="#filtering-elements" id="toc-filtering-elements" class="nav-link" data-scroll-target="#filtering-elements">Filtering Elements</a></li>
+  <li><a href="#nested-comprehensions" id="toc-nested-comprehensions" class="nav-link" data-scroll-target="#nested-comprehensions">Nested Comprehensions</a></li>
+  <li><a href="#generator-expressions" id="toc-generator-expressions" class="nav-link" data-scroll-target="#generator-expressions">Generator Expressions</a></li>
+  <li><a href="#combining-with-built-ins" id="toc-combining-with-built-ins" class="nav-link" data-scroll-target="#combining-with-built-ins">Combining with built-ins</a></li>
+  <li><a href="#advanced-example" id="toc-advanced-example" class="nav-link" data-scroll-target="#advanced-example">Advanced Example</a></li>
   <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="pmm.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="listgen.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Python Magic Methods</h1>
+<h1 class="title">List Comprehensions and Generator Expressions</h1>
 </div>
 
 
@@ -244,221 +241,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <ul>
-<li><p>Definition: Magic methods, or dunder methods, are special methods surrounded by double underscores (__).</p></li>
-<li><p>Purpose:</p>
-<p>Enable Python’s syntactic sugar (e.g., +, [], len()). Customize class behavior for readability and flexibility.</p></li>
-<li><p>Examples: __init__, __str__, __add__.</p></li>
-</ul>
-</section>
-<section id="why-use-magic-methods" class="level2">
-<h2 class="anchored" data-anchor-id="why-use-magic-methods">Why Use Magic Methods?</h2>
+<li><strong>Definition:</strong>
 <ul>
-<li>Make classes intuitive and Pythonic.</li>
-<li>Enable operator overloading.</li>
-<li>Customize built-in function behavior.</li>
-<li>Simplify code while enhancing readability.</li>
-</ul>
-</section>
-<section id="common-magic-methods" class="level2">
-<h2 class="anchored" data-anchor-id="common-magic-methods">Common Magic Methods</h2>
-<ul>
-<li>Initialization and Representation
-<ul>
-<li>__init__: Initialize objects.</li>
-<li>__repr__: Official string representation for debugging.</li>
-<li>__str__: User-friendly string representation.</li>
+<li><strong>List Comprehension:</strong> A concise way to create lists from iterables.</li>
+<li><strong>Generator Expression:</strong> Similar to list comprehension but produces items lazily (on demand).</li>
 </ul></li>
-<li>Comparison
+<li><strong>Purpose:</strong>
 <ul>
-<li>__eq__: Equality comparison (==).</li>
+<li>Improve readability and efficiency.</li>
+<li>Reduce boilerplate loops.</li>
+<li>Encourage Pythonic programming practices.</li>
 </ul></li>
 </ul>
+<hr>
 </section>
-<section id="common-magic-methods-1" class="level2">
-<h2 class="anchored" data-anchor-id="common-magic-methods-1">Common Magic Methods</h2>
+<section id="why-use-them" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-them">Why Use Them?</h2>
 <ul>
-<li>Comparison
+<li><strong>Readable and expressive:</strong> Compact alternative to for-loops.</li>
+<li><strong>Memory-efficient:</strong> Generators handle large datasets gracefully.</li>
+<li><strong>Common Use Cases:</strong>
 <ul>
-<li>__lt__: Less-than comparison (&lt;).</li>
-</ul></li>
-<li>Arithmetic Operators
-<ul>
-<li>__add__: Overload addition (+).</li>
-<li>__mul__: Overload multiplication (*).</li>
+<li>Data transformation.</li>
+<li>Filtering.</li>
+<li>Lazy evaluation of sequences.</li>
 </ul></li>
 </ul>
+<hr>
 </section>
-<section id="example-custom-string-representation" class="level2">
-<h2 class="anchored" data-anchor-id="example-custom-string-representation">Example: Custom String Representation</h2>
+<section id="basic-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="basic-syntax">Basic Syntax</h2>
 <ul>
-<li>Code example</li>
+<li><strong>List Comprehension:</strong> [expression for item in iterable if condition]</li>
 </ul>
-<div id="2185b1ae" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Book:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, title, author):</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.title <span class="op">=</span> title</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.author <span class="op">=</span> author</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>title<span class="sc">}</span><span class="ss">' by </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>author<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>):</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Book(title='</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>title<span class="sc">}</span><span class="ss">', author='</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>author<span class="sc">}</span><span class="ss">')"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>book <span class="op">=</span> Book(<span class="st">"1984"</span>, <span class="st">"George Orwell"</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(book)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a92d9d80" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>squares <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">6</span>)]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(squares)  <span class="co"># Output: [0, 1, 4, 9, 16, 25]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>'1984' by George Orwell</code></pre>
+<pre><code>[0, 1, 4, 9, 16, 25]</code></pre>
 </div>
 </div>
 </section>
-<section id="advanced-magic-methods" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-magic-methods">Advanced Magic Methods</h2>
-<ul>
-<li><p>Item Access and Length</p>
-<ul>
-<li>__getitem__: Access elements using indexing ([]).</li>
-<li>__len__: Define behavior of len().</li>
-</ul></li>
-<li><p>Callable Objects</p>
-<ul>
-<li>__call__: Make objects callable.</li>
-</ul></li>
-<li><p>Context Management</p>
-<ul>
-<li>__enter__ / __exit__: Support with statements.</li>
-</ul></li>
-</ul>
-</section>
-<section id="advanced-magic-methods-1" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-magic-methods-1">Advanced Magic Methods</h2>
-<ul>
-<li>Code Example</li>
-</ul>
-<div id="e4172ab3" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Agenda:</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, contacts):</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.contacts <span class="op">=</span> contacts</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__getitem__</span>(<span class="va">self</span>, index):</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.contacts[index]</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">len</span>(<span class="va">self</span>.contacts)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Example</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>agenda <span class="op">=</span> Agenda([<span class="st">"Alice"</span>, <span class="st">"Bruno"</span>, <span class="st">"Carla"</span>])</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agenda[<span class="dv">0</span>])  <span class="co"># Output: Alice</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agenda[<span class="dv">1</span>])  <span class="co"># Output: Bruno</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agenda[<span class="dv">2</span>])  <span class="co"># Output: Carla</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Slicing</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agenda[<span class="dv">0</span>:<span class="dv">2</span>])  <span class="co"># Output: ['Alice', 'Bruno']</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="filtering-elements" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-elements">Filtering Elements</h2>
+<div id="e5b68bca" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>even_numbers <span class="op">=</span> [n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(even_numbers)  <span class="co"># Output: [0, 2, 4, 6, 8]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Alice
-Bruno
-Carla
-['Alice', 'Bruno']</code></pre>
+<pre><code>[0, 2, 4, 6, 8]</code></pre>
 </div>
 </div>
 </section>
-<section id="advanced-magic-methods-2" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-magic-methods-2">Advanced Magic Methods</h2>
-<ul>
-<li>Code example</li>
-</ul>
-<div id="7852eb64" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Counter:</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__call__</span>(<span class="va">self</span>):</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.count</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> Counter()</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter())  <span class="co"># Output: 1</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter())  <span class="co"># Output: 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="nested-comprehensions" class="level2">
+<h2 class="anchored" data-anchor-id="nested-comprehensions">Nested Comprehensions</h2>
+<div id="d02a8f85" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [(x, y) <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>] <span class="cf">if</span> x <span class="op">!=</span> y]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pairs)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Output: [(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5)]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1
-2</code></pre>
+<pre><code>[(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5)]</code></pre>
 </div>
 </div>
 </section>
-<section id="operator-overloading" class="level2">
-<h2 class="anchored" data-anchor-id="operator-overloading">Operator Overloading</h2>
-<ul>
-<li>Redefine operators for custom objects.</li>
-<li>Code Example: Adding two objects.</li>
-</ul>
-<div id="8a5972cc" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Vector:</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> x</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">=</span> y</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__add__</span>(<span class="va">self</span>, other):</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Vector(<span class="va">self</span>.x <span class="op">+</span> other.x, <span class="va">self</span>.y <span class="op">+</span> other.y)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Vector(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>x<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>y<span class="sc">}</span><span class="ss">)"</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>v1 <span class="op">=</span> Vector(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> Vector(<span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(v1 <span class="op">+</span> v2)  <span class="co"># Output: Vector(6, 8)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="generator-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="generator-expressions">Generator Expressions</h2>
+<div id="c6b0598f" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>list_comp <span class="op">=</span> [x <span class="op">*</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000000</span>)]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>gen_expr <span class="op">=</span> (x <span class="op">*</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000000</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"List comprehension size:"</span>, sys.getsizeof(list_comp))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Generator expression size:"</span>, sys.getsizeof(gen_expr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Vector(6, 8)</code></pre>
+<pre><code>List comprehension size: 8697472
+Generator expression size: 128</code></pre>
 </div>
 </div>
 </section>
-<section id="magic-methods-for-context-management" class="level2">
-<h2 class="anchored" data-anchor-id="magic-methods-for-context-management">Magic Methods for Context Management</h2>
-<ul>
-<li><p>Enable safe resource handling.</p></li>
-<li><p>Use __enter__ and __exit__ for with statements.</p></li>
-<li><p>Code example</p></li>
-</ul>
-<div id="129ca464" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> FileManager:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, filename, mode):</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.<span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(filename, mode)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__enter__</span>(<span class="va">self</span>):</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.<span class="bu">file</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__exit__</span>(<span class="va">self</span>, exc_type, exc_value, traceback):</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.<span class="bu">file</span>.close()</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> FileManager(<span class="st">"test.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    f.write(<span class="st">"Hello, World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="combining-with-built-ins" class="level2">
+<h2 class="anchored" data-anchor-id="combining-with-built-ins">Combining with built-ins</h2>
+<div id="f2687c42" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="bu">sum</span>(x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000</span>) <span class="cf">if</span> x <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>166833</code></pre>
+</div>
+</div>
+</section>
+<section id="advanced-example" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-example">Advanced Example</h2>
+<div id="ab728eca" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> <span class="bu">range</span>(<span class="dv">10</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>squares <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> numbers)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>even_squares <span class="op">=</span> (x <span class="cf">for</span> x <span class="kw">in</span> squares <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(even_squares))  <span class="co"># Output: [0, 4, 16, 36, 64]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[0, 4, 16, 36, 64]</code></pre>
+</div>
 </div>
 </section>
 <section id="best-practices" class="level2">
 <h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
 <ul>
-<li>Use magic methods only when intuitive and necessary.</li>
-<li>Avoid overloading operators where behavior is unclear.</li>
-<li>Always provide meaningful <strong>repr</strong> for debugging.</li>
-<li>Document custom behaviors thoroughly.</li>
-</ul>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<ul>
-<li><p>Recap</p>
-<ul>
-<li>Magic methods simplify and enhance Python code.</li>
-<li>Common use cases include initialization, representation, and operator overloading.</li>
-<li>Use them judiciously to maintain code clarity.</li>
-</ul></li>
-<li><p>Call to Action:</p>
-<ul>
-<li>Explore Python’s official documentation on magic methods.</li>
-<li>Start integrating them into your projects for more Pythonic solutions.</li>
-</ul></li>
+<li><p>Use list comprehensions for small, simple collections.</p></li>
+<li><p>Use generator expressions for large datasets or pipelines.</p></li>
+<li><p>Avoid overly nested comprehensions — they reduce readability.</p></li>
+<li><p>Prefer readability over cleverness.</p></li>
 </ul>
 
 
