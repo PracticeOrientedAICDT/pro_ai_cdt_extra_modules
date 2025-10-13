@@ -6,7 +6,6 @@ format:
         theme: simple
         output-file: pmm.html
 author: Daladier Sampaio Neto
-jupyter: python3
 ---
 
 ## Introduction 
@@ -17,7 +16,7 @@ jupyter: python3
     Enable Python’s syntactic sugar (e.g., +, [], len()).
     Customize class behavior for readability and flexibility.
 
-- Examples: __init__, __str__, __add__.
+- Examples: \__init__, \__str__, \__add__.
 
 ## Why Use Magic Methods?
 
@@ -29,27 +28,29 @@ jupyter: python3
 ## Common Magic Methods
 
 - Initialization and Representation
-    - __init__: Initialize objects.
-    - __repr__: Official string representation for debugging.
-    - __str__: User-friendly string representation.
+    - \__init__: Initialize objects.
+    - \__repr__: Official string representation for debugging.
+    - \__str__: User-friendly string representation.
 
 - Comparison
-    - __eq__: Equality comparison (==).
+    - \__eq__: Equality comparison (==).
    
 ## Common Magic Methods
 
 - Comparison
-    - __lt__: Less-than comparison (<).
+    - \__lt__: Less-than comparison (<).
 
 - Arithmetic Operators
-    - __add__: Overload addition (+).
-    - __mul__: Overload multiplication (*).
+    - \__add__: Overload addition (+).
+    - \__mul__: Overload multiplication (*).
 
 ## Example: Custom String Representation
 
 - Code example
 
 ```{python}
+#| echo: true
+
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -62,7 +63,7 @@ class Book:
         return f"Book(title='{self.title}', author='{self.author}')"
 
 book = Book("1984", "George Orwell")
-print(book)  # Output: '1984' by George Orwell
+print(book)
 
 ```
 
@@ -70,22 +71,54 @@ print(book)  # Output: '1984' by George Orwell
 
 - Item Access and Length
 
-    - __getitem__: Access elements using indexing ([]).
-    - __len__: Define behavior of len().
+    - \__getitem__: Access elements using indexing ([]).
+    - \__len__: Define behavior of len().
 
 - Callable Objects
 
-    - __call__: Make objects callable.
+    - \__call__: Make objects callable.
 
 - Context Management
 
-    - __enter__ / __exit__: Support with statements.
+    - \__enter__ / \__exit__: Support with statements.
+
+## Advanced Magic Methods
+
+- Code Example
+
+```{python}
+#| echo: true
+
+class Agenda:
+    def __init__(self, contacts):
+        self.contacts = contacts
+
+    def __getitem__(self, index):
+        return self.contacts[index]
+    
+    def __len__(self):
+        return len(self.contacts)
+
+
+# Example
+agenda = Agenda(["Alice", "Bruno", "Carla"])
+
+print(agenda[0])  # Output: Alice
+print(agenda[1])  # Output: Bruno
+print(agenda[2])  # Output: Carla
+
+# Slicing
+print(agenda[0:2])  # Output: ['Alice', 'Bruno']
+
+```
 
 ## Advanced Magic Methods
 
 - Code example 
 
 ```{python}
+#| echo: true
+
 class Counter:
     def __init__(self):
         self.count = 0
@@ -106,6 +139,8 @@ print(counter())  # Output: 2
 - Code Example: Adding two objects.
 
 ```{python}
+#| echo: true
+
 class Vector:
     def __init__(self, x, y):
         self.x = x
@@ -119,6 +154,7 @@ class Vector:
 
 v1 = Vector(2, 3)
 v2 = Vector(4, 5)
+
 print(v1 + v2)  # Output: Vector(6, 8)
 
 ```
@@ -126,11 +162,13 @@ print(v1 + v2)  # Output: Vector(6, 8)
 ## Magic Methods for Context Management
 
 - Enable safe resource handling.
-- Use __enter__ and __exit__ for with statements.
+- Use \__enter__ and \__exit__ for with statements.
 
 - Code example
 
 ```{python}
+#| echo: true
+
 class FileManager:
     def __init__(self, filename, mode):
         self.file = open(filename, mode)

@@ -6,7 +6,6 @@ format:
         theme: simple
         output-file: cicd.html
 author: Daladier Sampaio Neto
-jupyter: python3
 ---
 
 ## CI/CD 

@@ -2,6 +2,12 @@
 title: "Software Engineering Best Practices"
 ---
 
+### Reproducible Machine Learning 
+
+Reproducible machine learning and MLOps focus on building reliable, consistent, and scalable ML systems that can be trained, deployed, and maintained across different environments. Reproducibility ensures that experiments can be repeated with the same data, code, and configuration to yield identical results, reducing uncertainty and improving trust in models. MLOps extends these principles by applying DevOps practices to ML, emphasizing automation, versioning, monitoring, and continuous delivery. Together, they enable teams to manage the full lifecycle of ML models—from data preparation to production monitoring—while minimizing errors, mitigating drift, and accelerating innovation.
+
+[Slides here](reproducible_machine_learning/reproducible_machine_learning.qmd)
+
 ### Clean Code
 
  Clean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time. 

@@ -1,0 +1,641 @@
+---
+title: "MLOps - Machine Learning in Production"
+format:
+    revealjs:
+        theme: simple
+author: Daladier Sampaio Neto
+---
+
+## Introduction
+
+- How to replicate the results from a machine learning paper?
+
+- What are the best practices when delivering machine learning based products?
+
+- How to go from a proof of concept to a production app ?
+
+- How to deal with the experimental nature of machine learning ?
+
+- How to track the experiments?
+
+- How to ensure that the same experiment has not already been run?
+
+::: {.notes}
+
+Apresentação.
+
+Continuing with the topic "good practices", but now applied to machine learning.
+ We can apply it both in research environments and in production environment.
+
+We'll understand how to structure and manage machine learning projects in production. 
+
+We'll explore the best practices and tools that enable us to bridge the gap between research and production 
+and deliver machine learning-based products efficiently and reliably.
+
+Initially, when we think of machine learning as a product, we must ask ourselves some critical questions.
+:::
+
+
+## Introduction
+
+- How does machine learning models behave in a production enviroment?
+
+- Does a machine learning model life cycle?
+
+- How to implement this life cycle?
+
+- How to deploy models faster?
+
+::: {.notes}
+
+ler as perguntas
+
+Deploying machine learning models in a production environment comes with its unique challenges.
+
+We need to understand how these models behave in real-world scenarios, implement a model lifecycle, and find ways to deploy models faster.
+
+The research and production environments are not totally separated.
+
+:::
+
+## The Research-Production Gap
+
+- Reffers to the disparity between the development of ML models during the research phase and their successful deployment. 
+
+- For the adoption of machine learning by a company to deliver maximum value, it is necessary to carry out an efficient deployment.
+
+- The systematic planning of a machine learning project’s lifecycle serves as a crucial workflow for ensuring successful implementation.
+
+::: {.notes}
+The gap between research and production is a significant challenge. 
+
+We need to understand the differences between those environments. What are the actual targets, requirements and limitations.
+
+:::
+
+## Production x Research Environments
+
+- Different focus
+
+    - Research usually focus on models performance 
+
+    - Production focus on the model serving side
+
+- Different performance requirements
+
+- Run on different devices
+
+- Distinct compute requirements
+
+::: {.notes}
+Production and research environments have different focuses, performance requirements, 
+and run on different devices. 
+
+The production environment demands faster deployment, 
+changes frequently, and deals with noisy data. Models are deployed on various devices, 
+each with distinct compute requirements.
+:::
+
+## Production x Research Environments
+
+- The production environment requires a faster deployment
+
+- The production environment changes frequently
+
+- Models are deployed in different devices
+
+- Data is usually noisy 
+
+::: {.notes}
+In production enviroment we need to be aware of other software components in the system.
+:::
+
+## Production Environment
+
+- In production, ML models are surrounded by software infrastructure. 
+
+- Machine Learning code is a small fraction of the overall system.
+
+![](files/infrastructure.png){.absolute top=400 left=200}
+
+::: {.notes}
+In the production environment, machine learning models are just a 
+part of the larger software infrastructure. 
+
+Machine learning code  represents a small fraction of the overall system, surrounded by 
+complex infrastructure.
+
+It has a whole set of software components that are built to make the ml model available.
+
+examples:
+Data Collector, Monitoring, Serving Infrastructure, User Interface...
+
+To tackle the similar problem related to development, testing and continuous deployment, in the software engineering, field we have the Devops Culture. 
+
+:::
+
+##  DevOps Solution
+
+- DevOps is called a "culture" because it represents a set of practices and principles that extend beyond just tools and technologies.
+
+- The "Devops Culture" is heavily applied in software development teams.
+
+- Definition: Set of practices for colaboration, developing, testing, deploying, and operating large-scale software systems. 
+
+- DevOps culture is not limited to specific industries or technologies. It is a mindset that can benefit any organization seeking to improve software development and delivery processes. 
+
+::: {.notes}
+In software engineering, there is the devops solution... 
+
+DevOps, which stands for Development and Operations, is a set of practices for collaboration, development, 
+testing, deployment, and operation of large-scale software systems.
+
+This culture can greatly benefit any 
+organization looking to improve software development and delivery processes.
+
+But what about machine learning systems? Can They be treated as software systems? 
+:::
+
+## DevOps Solution
+
+- But machine learning systems have some extra complexity due to randomness, hyperperameters, changes in data and experimentation.
+
+- The machine learning life-cycle envolves experimentation
+
+::: {.notes}
+However, machine learning systems introduce additional complexity due to Randomness, hyperparameters, 
+changing data, and experimentation. 
+
+The machine learning lifecycle involves ongoing experimentation. We have to "adapt" the solution. 
+:::
+
+
+## MLOps
+
+- Definition: MLOps, short for Machine Learning Operations, is a set of practices and tools that aim to streamline and automate the deployment, monitoring, and management of machine learning (ML) models in production.
+
+- MLOps is a structured approach to manage the end-to-end developing, deploying and mantaining Machine learning models.
+
+- Improves the model management, deployment speed and quality control.
+
+::: {.notes}
+This is where MLOps comes into play. MLOps, or Machine Learning Operations, encompasses a set of practices 
+and tools that streamline and automate the deployment, monitoring, and management of machine learning models 
+in production. 
+
+MLOps provides a structured approach to manage the end-to-end development, deployment, and maintenance of 
+machine learning models.
+
+MLOps can be classified also as a "culture" in the organization.
+
+:::
+
+## MLOps
+
+- The MLOps lifecycle emphasizes collaboration between data scientists, machine learning engineers, DevOps teams, and domain experts. 
+
+- By following this structured approach, companies can delivery the full potential of machine learning while minimizing risks and operational challenges.
+
+- Frequently requires a set of open source software for the implementation.
+
+::: {.notes}
+
+It emphasizes collaboration between data scientists, machine learning engineers, 
+DevOps teams, and domain experts. By following this structured approach, companies can unlock the full 
+potential of machine learning while minimizing risks and operational challenges.
+
+DevOps and MLOps have a lot of similarities
+
+:::
+
+## MLOps x DevOps
+
+Similarities
+
+- Source control
+
+- Hybrid teams
+
+- Unit tests
+
+- Integration tests
+
+- Continuous delivery
+
+- Design patterns
+
+::: {.notes}
+
+DevOps and MLOps have some differences.
+
+:::
+
+## MLOps x DevOps 
+
+- MLOps is experimental by nature.
+
+- Testing (software and models)
+
+- Automated Deploy (software and models)
+
+::: {.notes}
+MLOps is inherently experimental, involving testing and automated deployment. This is where it 
+shares common ground with DevOps, which emphasizes source control, hybrid teams, unit tests, 
+integration tests, continuous delivery, and design patterns.
+:::
+
+## MLOps x DevOps
+
+- Monitoring (software and model performance)  
+
+- Model Degradation
+
+    - Discrepancy between training data and production environment data.
+
+    - Change of data between training and prediction.  
+
+::: {.notes}
+However, challenges like model degradation, concept drift, and data drift set MLOps apart. 
+Model degradation refers to the discrepancy between training data and production environment data, 
+and the changes that occur between the training and prediction phases. Effective monitoring is 
+critical in addressing these issues.
+
+Its important to understand how to implement MLOps in one organization.
+
+:::
+
+
+## MLOps
+
+- MLOps is not a one-size-fits-all approach.
+
+- It can vary depending on the specific needs and requirements of an organization. 
+
+- It helps bridge the gap between the development and operational aspects of machine learning.
+
+- Allows companies to deploy and maintain models at scale effectively.
+
+::: {.notes}
+It's essential to understand that MLOps is not a one-size-fits-all approach. 
+
+It's necessary to understand the needs for each company. 
+
+It serves as a bridge between the development and operational aspects of machine learning, allowing companies to deploy and maintain 
+models at scale effectively.
+
+The MLOps implemented can vary depending on the level of automation.
+
+:::
+
+## MLOps
+
+![](files/flow.png)
+
+
+## Levels of Automation
+
+- The level of automation of the Data, ML Model, and Code pipelines reflects the maturity of the ML process
+
+- The target is to automate the ML-workflow steps without any intervention
+
+- The three levels of automation:
+
+    - Manual process
+
+    - ML pipeline automation
+
+    - CI/CD pipeline automation
+
+::: {.notes}
+Automation is a key aspect of MLOps, and the level of automation reflects the maturity of 
+the machine learning process. The goal is to automate the ML workflow steps without manual 
+intervention. This involves three levels of automation: manual processes, ML pipeline automation, 
+and CI/CD pipeline automation.
+
+Now we know the formal definitions and benefits of MLOps. Let's understand the continuous lifecycle.
+:::
+
+## MLOps
+
+MLOps life-cycle
+
+![](files/life-cycle.png)
+
+## MLOps - Phases
+
+- MLOps practices can be divided in 4 bigger phases  
+
+    - Scoping 
+
+    - Data Collection
+    
+    - Modeling
+    
+    - Model Serving and Monitoring
+
+::: {.notes}
+MLOps can be divided into four major phases: Scoping, Data Collection, Modeling, and Model Serving and Monitoring.
+:::
+
+## Scoping
+
+- Business Objectives and Problem Definition
+
+- Do we really need Machine learning ?
+
+- Who is the target audience ?
+
+- Business understanding
+
+- Project setup
+
+::: {.notes}
+The Scoping phase involves answering critical questions like "Do we really need machine learning?" 
+and defining business objectives, project constraints, and timelines. We also assess data needs and 
+required infrastructure.
+:::
+
+## Scoping
+
+- Data Assessment
+
+- Required Infrastructure
+
+- Performance constraints
+
+- Project constraints
+
+- Project Plan and Timeline
+
+## Data Collection
+
+- Privacy issues
+
+- Collect, clean and annotate data 
+
+- Pre-process raw data 
+
+- Data pipeline definition 
+
+- Real world data is complex 
+
+::: {.notes}
+Data Collection is a crucial phase where we address privacy issues, clean and annotate data, 
+preprocess raw data, and define data pipelines. It often involves significant feature engineering 
+to handle large and messy real-world data.
+:::
+
+## Data Collection
+
+- Feature engineering
+
+- Handle a huge amount of data
+
+## Data Collection - Common Tools
+
+![](files/apache_spark.png){.absolute top=100 left=0}
+
+![](files/apache_airflow.png){.absolute top=120 left=400}
+
+![](files/apache_kafka.png){.absolute top=200 left=0}
+
+![](files/rabbit_mq.png){.absolute top=290 left=400}
+
+![](files/elastic_search.png){.absolute top=400 left=0}
+
+![](files/apache_hadoop.png){.absolute top=400 left=400}
+
+## Modeling
+
+- Model Selection
+
+- Model Training
+
+- Hyperparameter Tuning
+
+- Evaluation and Validation
+
+- Debugging
+
+::: {.notes}
+The Modeling phase covers model selection, hyperparameter tuning, training, evaluation, 
+validation, and debugging. It's where we define the problem category, task, baseline, 
+and gradually increase complexity.
+:::
+
+## Modeling
+
+- Figure out the category of the problem
+
+- Define the task (Object detection, text summarization, Time series forecast...)
+
+- Define a baseline 
+
+- Increase the complexity gradually
+
+::: {.notes}
+We emphasize the importance of robust baseline models and address potential issues like overfitting, 
+underfitting, noisy data, and model explainability.
+:::
+
+## Modeling - Baseline
+
+- Random baseline
+
+- Human baseline
+
+- Simple heuristic
+
+## Modeling - Training 
+
+- Data loading
+
+- Hyperparameters Tuning
+
+- Explainability 
+
+## Training - Eventual Problems
+
+- Overfit
+
+- Underfit
+
+- Noisy data
+
+- Wrong labels
+
+## Modeling - Eventual Problems
+
+- Poor feature engineering
+
+- Redundant variables
+
+- Blackbox models*
+
+- Large models
+
+- Training data doesn't fit in memory
+
+## Modeling - Good Practices
+
+- Experiment Tracking
+
+- Performance Benchmarking:
+
+- Increase the complexity gradually
+
+- Set a random seed
+
+- Model testing
+
+## Modeling - Tools
+
+![](files/shap-logo.png){.absolute top=100 left=0 width=300}
+
+![](files/optuna.png){.absolute top=300 left=0 width=300}
+
+![](files/ml_flow.png){.absolute top=400 left=0 width=300}
+
+## Modeling - Tools
+
+![](files/ml_flow_experiments.png){ top=75 left=250 width=700 height=350}
+
+
+## Serving
+
+- How the model will be accessible to the users?
+
+- Does the model need a previous infrastructure?
+
+- Does this application requires personalization?
+
+- Is this the final task?
+
+- Deployment strategies
+
+::: {.notes}
+This phase is more related to the model interactions. 
+
+User interaction and interaction with other software components. 
+
+:::
+
+## Serving 
+
+- Scalability
+
+- Load Balancing
+
+- Health Checks
+
+- Redundancy and Failover
+
+- Rollback and Version Control
+
+## Serving - example
+
+- Recommendation Systems
+
+![](files/recommendation_systems.png)
+
+## Serving - example
+
+- Recommendation Systems
+
+![](files/ltr_diagram.png)
+
+## Monitoring
+
+- Model constraints
+
+- When should we update the model in production?
+
+- Check model's performance
+
+- Defining alerts and logs
+ 
+
+## Monitoring
+
+- How to evaluate if the model is being successful? 
+
+- What are the performance expectations ?
+
+- What are the Business metrics for success?
+
+- What causes model to degrade?
+
+## Concept and Data Drift
+
+- Main factors:
+    - Concept Drift 
+
+    - Data Drift
+
+::: {.notes}
+Model degradation can result from concept drift, where the relationship between inputs 
+and outputs changes over time, and data drift, which occurs when input data changes. 
+Monitoring is crucial to address these issues.
+:::
+
+## Concept Drift
+
+- The relationship between the model inputs and outputs changes overtime
+
+- The model is not aware of this change
+
+- Usually this change happens due to external factors
+
+## Data Drift
+
+- The change occurs when the model data input changes
+
+- Usually happens due to an increased relevance of “under-learned” segments. 
+
+## Concept and Data Drift
+
+![](files/drift.png)
+
+## Data Drift
+
+- The change occurs when the model data input changes
+
+- Usually happens due to an increased relevance of “under-learned” segments. 
+
+## Data Drift 
+
+- Statistical statistical measures to compare past and current features: 
+    - Mean/median 
+
+    - Standard deviation
+    
+    - Minimum and maximum values
+    
+    - Correlations
+
+## Data Drift
+
+- For continuous values, one can use distances and/or hypothesis tests such as:
+    - Kullback–Leibler Distance
+
+    - Kolmogorov-Smirnov Test
+    
+    - Population Stability Index (PSI)
+    
+    - Hellinger Distance.
+
+## Data Drift 
+
+- For categorical variables, you can use the chi-square test, entropy, cardinality or frequency of the feature.
+
+- If there are many features, we can use some dimensionality reduction technique.
+
+## Recommended Readings
+
+![](files/ml_systems.jpg){.absolute top=100 left=0 width=300 height=350}
+
+![](files/ml_design_patterns.jpg){.absolute top=300 left=500 width=300}
+
+![](files/weights_and_biases.png){.absolute top=100 left=500 width=300}
+
+![](files/ml_flow.png){.absolute top=500 left=0 width=300}

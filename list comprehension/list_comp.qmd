@@ -1,0 +1,113 @@
+---
+title: "List Comprehensions and Generator Expressions"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: listgen.html
+author: Daladier Sampaio Neto
+---
+
+## Introduction
+
+- **Definition:**
+  - **List Comprehension:** A concise way to create lists from iterables.
+  - **Generator Expression:** Similar to list comprehension but produces items lazily (on demand).
+
+- **Purpose:**
+  - Improve readability and efficiency.
+  - Reduce boilerplate loops.
+  - Encourage Pythonic programming practices.
+
+---
+
+## Why Use Them?
+
+- **Readable and expressive:** Compact alternative to for-loops.
+- **Memory-efficient:** Generators handle large datasets gracefully.
+- **Common Use Cases:**
+  - Data transformation.
+  - Filtering.
+  - Lazy evaluation of sequences.
+
+---
+
+## Basic Syntax
+
+- **List Comprehension:**
+[expression for item in iterable if condition]
+```{python}
+#| echo: true
+
+
+squares = [x**2 for x in range(6)]
+print(squares)  # Output: [0, 1, 4, 9, 16, 25]
+```
+
+## Filtering Elements
+
+```{python}
+#| echo: true
+
+even_numbers = [n for n in range(10) if n % 2 == 0]
+print(even_numbers)  # Output: [0, 2, 4, 6, 8]
+
+```
+
+## Nested Comprehensions
+
+```{python}
+#| echo: true
+
+pairs = [(x, y) for x in [1, 2, 3] for y in [3, 4, 5] if x != y]
+print(pairs)
+# Output: [(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5)]
+
+```
+
+## Generator Expressions 
+
+```{python}
+#| echo: true
+
+import sys
+
+list_comp = [x * 2 for x in range(1000000)]
+gen_expr = (x * 2 for x in range(1000000))
+
+print("List comprehension size:", sys.getsizeof(list_comp))
+print("Generator expression size:", sys.getsizeof(gen_expr))
+```
+
+## Combining with built-ins
+
+```{python}
+#| echo: true
+
+total = sum(x for x in range(1000) if x % 3 == 0)
+print(total)
+
+```
+
+## Advanced Example 
+
+```{python}
+#| echo: true
+
+numbers = range(10)
+squares = (x**2 for x in numbers)
+even_squares = (x for x in squares if x % 2 == 0)
+
+print(list(even_squares))  # Output: [0, 4, 16, 36, 64]
+
+```
+
+## Best Practices
+
+- Use list comprehensions for small, simple collections.
+
+-  Use generator expressions for large datasets or pipelines.
+
+-  Avoid overly nested comprehensions — they reduce readability.
+
+-  Prefer readability over cleverness.

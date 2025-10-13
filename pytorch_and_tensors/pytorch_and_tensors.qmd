@@ -1,0 +1,107 @@
+---
+title: "Introduction to PyTorch and Tensors"
+format: revealjs
+---
+
+## What is PyTorch?
+
+- **Open-source deep learning framework** developed by Facebook’s AI Research lab.
+- Known for:
+  - **Dynamic computation graphs** (define-by-run)
+  - Strong **GPU acceleration**
+  - Large, active community
+- Widely used in research and production.
+
+---
+
+## Why PyTorch?
+
+- **Pythonic**: integrates naturally with Python syntax and libraries.
+- **Flexible**: easy debugging and model customization.
+- **Ecosystem**: tools for vision, NLP, and more.
+- Supported by popular cloud platforms and hardware accelerators.
+
+---
+
+## What is a Tensor?
+
+- A **multi-dimensional array** used to store and manipulate data.
+- Similar to NumPy arrays, but with:
+  - **GPU support**
+  - Integration with deep learning workflows
+- Examples:
+  - 0D tensor: a single number
+  - 1D tensor: a vector
+  - 2D tensor: a matrix
+  - 3D+ tensor: multi-dimensional datasets
+
+---
+
+## Creating Tensors in PyTorch
+
+```{python}
+import torch
+
+# From data
+data = [[1, 2], [3, 4]]
+x_data = torch.tensor(data)
+
+# From NumPy array
+import numpy as np
+np_array = np.array(data)
+x_np = torch.from_numpy(np_array)
+
+# With random values
+x_rand = torch.rand(2, 3)
+
+# With zeros
+x_zeros = torch.zeros(2, 3)
+```
+
+--- 
+
+## Inpecting Tensors 
+
+```{python}
+
+import torch
+
+x = torch.rand(3, 4)
+
+print("Shape:", x.shape)     # tensor dimensions
+print("Data type:", x.dtype) # float32, int64, etc.
+print("Device:", x.device)   # CPU or GPU
+
+
+```
+
+--- 
+
+## Basic Tensors Operations 
+
+```{python}
+
+x = torch.rand(2, 2)
+y = torch.rand(2, 2)
+
+z_add = x + y              # Addition
+z_mul = x * y              # Element-wise multiplication
+z_matmul = torch.matmul(x, y) # Matrix multiplication
+z_reshape = x.view(4)      # Reshape
+
+```
+
+--- 
+
+## Moving Tensors to GPU 
+
+```{python}
+
+# Check if GPU is available
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+x = torch.rand(2, 2).to(device)
+print(x.device)  # "cuda" if GPU is available
+
+
+```

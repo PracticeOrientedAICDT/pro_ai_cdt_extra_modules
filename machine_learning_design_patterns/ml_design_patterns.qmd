@@ -6,7 +6,6 @@ format:
         theme: simple
         output-file: mldp.html
 author: Daladier Sampaio Neto
-jupyter: python3
 ---
 
 ## Design Patterns

@@ -16,6 +16,8 @@ objects behave like native data types.
 
  List comprehensions and generator expressions are concise ways to create lists or generators in Python by using a more readable and compact syntax. A **list comprehension** produces a new list by iterating over an iterable, optionally filtering elements, and applying an expression to each item in a single line (e.g., `[x**2 for x in range(5)]` creates a list of squares). **Generator expressions** are similar, but instead of creating a list, they yield items one by one, using parentheses instead of brackets. This makes them more memory-efficient, especially for large datasets, as they generate values on demand rather than storing them all at once. 
 
+[Slides here](list%20comprehension/list_comp.qmd)
+
 ### Tuples Data Structure
 
 #### Tuples
