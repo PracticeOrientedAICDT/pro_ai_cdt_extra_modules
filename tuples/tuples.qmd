@@ -1,0 +1,309 @@
+---
+title: "Tuples Data Structure"
+format:
+    html: default
+    revealjs:
+        theme: simple
+        output-file: pmm.html
+author: Daladier Sampaio Neto
+---
+
+## Tuples in Python
+
+- **What are Tuples?**
+
+    - In Python, a tuple is an **immutable**, **ordered** collection of elements.
+    - Defined by placing elements inside parentheses `()` separated by commas.
+    - Example:
+
+```{python}
+my_tuple = (1, "apple", 3.14)
+
+print(my_tuple)
+```
+
+## Tuples in Python 
+
+- Tuples can contain any data type — even other tuples.
+- Once created, you **cannot add, remove, or modify** elements.
+
+## Tuples vs Lists
+
+- Key Differences
+
+    - Tuples are immutable, while lists are mutable.
+
+    - Tuples are generally faster and use less memory.
+
+    - Tuples can be used as keys in dictionaries (if all elements are hashable).
+
+```{python}
+#|echo : true  
+coordinates = (10, 20)
+numbers = [10, 20]
+
+# Tuples cannot be changed:
+
+# coordinates[0] = 15  ❌ -> Error
+
+```
+
+## Why Use Tuples?
+
+- Immutability ensures data integrity.
+- Faster access and lower memory usage.
+- Can be used as dictionary keys.
+- Ideal for representing **fixed** data that should not change.
+
+## Tuples as Records
+
+- Tuples as lightweight data structures
+
+    - A tuple can represent a single record — like a row in a database.
+
+    - Each position in the tuple corresponds to a specific field.
+
+```{python}
+#|echo : true
+person = ("Alice", 30, "New York")
+
+```
+
+## Tuples as Records
+
+- Representing multiple records
+
+```{python}
+#|echo : true
+
+person1 = ("Alice", 30, "New York")
+person2 = ("Bob", 25, "Chicago")
+
+people = [person1, person2]
+
+for name, age, city in people:
+    print(f"{name} ({age}) lives in {city}")
+
+```
+
+## Tuple Unpacking 
+
+- Assign multiple variables at once
+
+```{python}
+#| echo : true
+
+person = ("Alice", 30, "Engineer")
+
+name, age, profession = person
+print(name)       # Alice
+print(age)        # 30
+print(profession) # Engineer
+
+```
+
+- Each variable gets its value based on position.
+- Makes code cleaner and more readable.
+
+## Ignoring and Extended Unpacking
+
+- Ignoring Unpacking
+
+```{python}
+
+_, age, _ = ("Alice", 30, "Engineer")
+print(age)  # 30
+
+```
+
+- Extending the unpacking
+
+```{python}
+
+numbers = (1, 2, 3, 4, 5)
+first, *middle, last = numbers
+
+print(first)   # 1
+print(middle)  # [2, 3, 4]
+print(last)    # 5
+
+```
+
+## Nested Tuples
+
+```{python}
+#| echo : true 
+
+student = ("Alice", (90, 85, 88))
+print(student[0])       # Alice
+print(student[1][1])    # 85
+
+```
+
+## Tuples as Dictionary Keys
+
+- Tuples are hashable 
+
+```{python}
+#| echo : true
+
+
+locations = {
+(35.6895, 139.6917): "Tokyo",
+(40.7128, -74.0060): "New York"
+}
+
+print(locations[(40.7128, -74.0060)])
+
+
+```
+
+## Performance and Efficiency
+
+- Why tuples are faster than lists?
+
+    - Fixed size → no need to manage dynamic resizing.
+
+    - Stored in memory more efficiently.
+
+    - Ideal for fixed collections of data (e.g., coordinates, RGB values).
+
+## When to Use Tuples 
+
+- When you want to ensure data **cannot change**.
+- When using **dictionary keys**.
+- When representing **records or structured data**.
+- When you want **better performance** than lists.
+
+## Dictionaries
+
+## Dictionaries in Python
+
+- **What are Dictionaries?**
+
+    - A **dictionary** is an unordered, mutable collection of key-value pairs.
+    - Keys must be **unique** and **immutable** (e.g., strings, numbers, tuples).
+    - Values can be of any data type.
+
+```{python}
+#| echo : true
+
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person)
+
+```
+
+## Accessing Dictionary Elements
+
+- Access values using keys
+
+```{python}
+#| echo : true
+
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person["name"])   # Output: Alice
+print(person.get("age"))  # Output: 30
+
+```
+
+## Accessing Dictionary Elements
+
+- The method .get() is safer than direct access:
+
+    - Returns None (or a default value) if the key doesn’t exist instead of raising an error.
+
+```{python}
+#| echo : true
+
+
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person.get("profession", "Not specified"))
+
+# Output: Not specified
+
+```
+
+## Accessing Dictionary Elements
+
+- The .keys() method
+
+```{python}
+#| echo : true
+
+
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person.keys())
+
+if "name" in person.keys():
+    print("Key 'name' exists!")
+
+
+```
+
+## Accessing Dictionary Elements
+
+- The .items() method
+
+```{python}
+#| echo : true
+
+
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person.items())
+
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+
+```
+
+## Adding and Updating Data
+
+- Add or modify values
+
+```{python}
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+person["profession"] = "Engineer"
+person["age"] = 31
+
+```
+
+## Summary: Tuples + Dictionaries
+
+- Tuples → Immutable, ordered, store fixed data
+
+- Dictionaries → Mutable, unordered, store key-value mappings
+
+- .get(), .items(), and .keys() make dictionary access safe, readable, and powerful
+
+- Together they form efficient, expressive data models in Python

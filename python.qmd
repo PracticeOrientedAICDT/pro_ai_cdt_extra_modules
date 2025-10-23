@@ -33,6 +33,8 @@ objects behave like native data types.
 
  Unpacking tuples in Python allows you to assign the values of a tuple to multiple variables in a single, concise operation. This process breaks the tuple into individual components, which are then assigned to corresponding variables based on their position. For example, if you have a tuple `person = ("Alice", 30, "Engineer")`, you can unpack it with `name, age, profession = person`, which assigns `"Alice"` to `name`, `30` to `age`, and `"Engineer"` to `profession`. This makes code cleaner and more readable, especially when working with multiple values at once. 
 
+[Slides here](tuples/tuples.qmd)
+
 ### First-class functions 
 
  In Python, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, returned from functions, and stored in data structures like lists or dictionaries. This flexibility allows for powerful programming patterns such as higher-order functions, where functions can accept other functions as inputs or return them as outputs. For example, you can pass a function like `len` to `map()` or assign a custom function to a variable for later use, making Python’s functions highly versatile and expressive. 
