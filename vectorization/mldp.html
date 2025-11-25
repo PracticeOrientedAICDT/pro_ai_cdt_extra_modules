@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Daladier Sampaio Neto">
   <title>Aditional Training – Code Vectorization</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -167,7 +167,7 @@ Daladier Sampaio Neto
 <section>
 <section id="vectorization-with-numpy-element-wise-operations" class="title-slide slide level1 center">
 <h1>Vectorization with NumPy: Element-wise Operations</h1>
-<div id="fd1d8bd2" class="cell" data-execution_count="1">
+<div id="aa203ff6" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>[ 1  4  9 16 25]</code></pre>
 </div>
@@ -179,7 +179,7 @@ Daladier Sampaio Neto
 <section>
 <section id="vectorization-with-numpy-mathematical-functions" class="title-slide slide level1 center">
 <h1>Vectorization with NumPy: Mathematical Functions</h1>
-<div id="c1e8ab89" class="cell" data-execution_count="2">
+<div id="af39264d" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>[0.0000000e+00 1.0000000e+00 1.2246468e-16]</code></pre>
 </div>
@@ -191,7 +191,7 @@ Daladier Sampaio Neto
 <section>
 <section id="vectorization-with-pandas" class="title-slide slide level1 center">
 <h1>Vectorization with Pandas</h1>
-<div id="bc9b5e00" class="cell" data-execution_count="3">
+<div id="72652fb7" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>   A   B
 0  1   1
@@ -207,10 +207,10 @@ Daladier Sampaio Neto
 <section>
 <section id="performance-comparison-numpy-vs-loop" class="title-slide slide level1 center">
 <h1>Performance Comparison: NumPy vs Loop</h1>
-<div id="3bccab2d" class="cell" data-execution_count="4">
+<div id="9e39a99f" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
-<pre><code>Loop time: 0.19602680206298828
-Vectorized time: 0.0032935142517089844</code></pre>
+<pre><code>Loop time: 0.16780877113342285
+Vectorized time: 0.002663135528564453</code></pre>
 </div>
 </div>
 </section>
@@ -220,10 +220,10 @@ Vectorized time: 0.0032935142517089844</code></pre>
 <section>
 <section id="performance-comparison-pandas-apply-vs-vectorized" class="title-slide slide level1 center">
 <h1>Performance Comparison: Pandas Apply vs Vectorized</h1>
-<div id="36c0cf51" class="cell" data-execution_count="5">
+<div id="8a2484a5" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>Apply time: 0.17663097381591797
-Vectorized time: 0.008722782135009766</code></pre>
+<pre><code>Apply time: 0.22641420364379883
+Vectorized time: 0.0</code></pre>
 </div>
 </div>
 </section>
@@ -233,7 +233,7 @@ Vectorized time: 0.008722782135009766</code></pre>
 <section>
 <section id="vectorization-in-numpy-broadcasting" class="title-slide slide level1 center">
 <h1>Vectorization in NumPy: Broadcasting</h1>
-<div id="45af7a86" class="cell" data-execution_count="6">
+<div id="4ae012b3" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>[[ 2  4  6]
  [ 8 10 12]]</code></pre>
@@ -243,13 +243,103 @@ Vectorized time: 0.008722782135009766</code></pre>
 <section class="slide level2">
 
 </section></section>
-<section>
 <section id="vectorization-in-numpy-dot-product" class="title-slide slide level1 center">
 <h1>Vectorization in NumPy: Dot Product</h1>
-<div id="f2f89c3c" class="cell" data-execution_count="7">
+<div id="f532cc38" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>[[19 22]
  [43 50]]</code></pre>
+</div>
+</div>
+</section>
+
+<section>
+<section id="vectorization-vs-loops-visual-intuition" class="title-slide slide level1 center">
+<h1>Vectorization vs Loops: Visual Intuition</h1>
+<ul>
+<li><strong>Looping</strong> processes one element at a time.</li>
+<li><strong>Vectorization</strong> applies one operation to all elements at once.</li>
+<li>Think of:
+<ul>
+<li>Loop → preparing 100 sandwiches one by one<br>
+</li>
+<li>Vectorization → using a sandwich-making machine that does all 100 at once</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="vectorization-memory-layout-and-contiguity" class="title-slide slide level1 center">
+<h1>Vectorization: Memory Layout and Contiguity</h1>
+<ul>
+<li>NumPy arrays are stored in <strong>contiguous memory blocks</strong> (C or Fortran order).</li>
+<li>Vectorized operations exploit:
+<ul>
+<li>CPU vector registers (SSE, AVX)</li>
+<li>Efficient pointer arithmetic</li>
+<li>Optimized BLAS routines (OpenBLAS, MKL)</li>
+</ul></li>
+</ul>
+<div id="63a3a8bc" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stdout">
+<pre><code>  C_CONTIGUOUS : True
+  F_CONTIGUOUS : True
+  OWNDATA : True
+  WRITEABLE : True
+  ALIGNED : True
+  WRITEBACKIFCOPY : False
+</code></pre>
+</div>
+</div>
+</section>
+<section id="vectorization-with-boolean-masks" class="slide level2">
+<h2>Vectorization with Boolean Masks</h2>
+<ul>
+<li><p>Boolean arrays allow filtering without loops.</p></li>
+<li><p>Extremely fast due to C-level implementation.</p></li>
+</ul>
+<div id="ab2077f7" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>[ 5  8 10]</code></pre>
+</div>
+</div>
+</section>
+<section id="vectorized-conditional-logic-np.where" class="slide level2">
+<h2>Vectorized Conditional Logic (np.where)</h2>
+<div id="baf5ecd7" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-stdout">
+<pre><code>[0 0 3 4 5]</code></pre>
+</div>
+</div>
+</section>
+<section id="vectorization-with-aggregations" class="slide level2">
+<h2>Vectorization with Aggregations</h2>
+<p>Aggregations are inherently vectorized:</p>
+<p>sum</p>
+<p>mean</p>
+<p>min / max</p>
+<p>argmax / argmin</p>
+<div id="9c33d954" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean: 0.49822540441996455
+Sum: 49822.540441996454
+Max: 0.9999974506438698</code></pre>
+</div>
+</div>
+</section>
+<section id="vectorization-in-linear-algebra" class="slide level2">
+<h2>Vectorization in Linear Algebra</h2>
+<p>Many linear algebra operations are already vectorized:</p>
+<p>Matrix multiplication</p>
+<p>Transposition</p>
+<p>Inversion</p>
+<p>Norms</p>
+<p>Eigenvalues</p>
+<div id="15c02445" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-stdout">
+<pre><code>[247.85923037 239.43971269 246.77124139 238.77431828 251.19158518]</code></pre>
 </div>
 </div>
 </section>
@@ -460,7 +550,7 @@ Vectorized time: 0.008722782135009766</code></pre>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -534,13 +624,14 @@ Vectorized time: 0.008722782135009766</code></pre>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Daladier Sampaio Neto">
   <title>Aditional Training – Decorators and Closures</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -169,7 +169,7 @@ Daladier Sampaio Neto
 <ul>
 <li>A <strong>closure</strong> is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.</li>
 </ul>
-<div id="d6b606c9" class="cell" data-execution_count="1">
+<div id="5dca6f2c" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Message: Hello!</code></pre>
 </div>
@@ -182,7 +182,7 @@ Daladier Sampaio Neto
     - Encapsulation: Keeps data hidden.
     - Avoids global variables: Limits scope.
     - Useful in decorators: Enables function modification.</code></pre>
-<div id="981d6b81" class="cell" data-execution_count="2">
+<div id="9e188225" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>10</code></pre>
 </div>
@@ -197,7 +197,7 @@ Daladier Sampaio Neto
 <h2>What is a Decorator?</h2>
 <pre><code>- A decorator is a function that takes another function as input and modifies its behavior without changing its code.
 - Uses closures to wrap a function.</code></pre>
-<div id="febf84eb" class="cell" data-execution_count="3">
+<div id="131b2f52" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>Before the function call
 Hello!
@@ -217,7 +217,7 @@ After the function call</code></pre>
 <ul>
 <li><strong>Stacking Decorators</strong> - Multiple decorators can be applied in sequence.</li>
 </ul>
-<div id="f5ad8e44" class="cell" data-execution_count="4">
+<div id="0efd9fd6" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>HELLO!!!</code></pre>
 </div>
@@ -226,7 +226,7 @@ After the function call</code></pre>
 </section>
 <section id="decorators-with-arguments" class="slide level2">
 <h2>Decorators with Arguments</h2>
-<div id="325a52a2" class="cell" data-execution_count="5">
+<div id="662e44a7" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello!
 Hello!
@@ -239,9 +239,9 @@ Hello!</code></pre>
 </section>
 <section id="examples" class="slide level2">
 <h2>Examples</h2>
-<div id="f8eddcea" class="cell" data-execution_count="6">
+<div id="ac5f993b" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>slow_function took 2.0022 seconds</code></pre>
+<pre><code>slow_function took 2.0104 seconds</code></pre>
 </div>
 </div>
 </section>
@@ -449,7 +449,7 @@ Hello!</code></pre>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -523,13 +523,14 @@ Hello!</code></pre>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

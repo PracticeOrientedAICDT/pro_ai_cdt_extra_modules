@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Daladier Sampaio Neto">
   <title>Aditional Training – First Class Functions</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,7 +195,7 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>In Python, functions are treated like any other object.</strong></li>
 </ul>
-<div id="507bf433" class="cell" data-execution_count="1">
+<div id="2f354d4c" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello, Alice!</code></pre>
 </div>
@@ -206,7 +206,7 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>A function can accept another function as a parameter.</strong></li>
 </ul>
-<div id="260b50dd" class="cell" data-execution_count="2">
+<div id="9d6bd77b" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>25</code></pre>
 </div>
@@ -220,7 +220,7 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>A function can return another function, creating closures.</strong></li>
 </ul>
-<div id="531ddb3f" class="cell" data-execution_count="3">
+<div id="d21b0486" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>10</code></pre>
 </div>
@@ -234,7 +234,7 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>Functions can be stored in lists, dictionaries, and other data structures.</strong></li>
 </ul>
-<div id="07808c41" class="cell" data-execution_count="4">
+<div id="13b0ff06" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>7</code></pre>
 </div>
@@ -253,7 +253,7 @@ Daladier Sampaio Neto
 </section>
 <section id="using-first-class-functions-with-map-and-filter" class="slide level2">
 <h2>Using First-Class Functions with map() and filter()</h2>
-<div id="e7905e4b" class="cell" data-execution_count="5">
+<div id="10256ebf" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 4, 9, 16, 25]
 [2, 4]</code></pre>
@@ -265,7 +265,7 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>Decorators use first-class functions to modify behavior.</strong></li>
 </ul>
-<div id="485ad588" class="cell" data-execution_count="6">
+<div id="7f209eb3" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Before function call
 Hello!
@@ -489,7 +489,7 @@ After function call</p>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -563,13 +563,14 @@ After function call</p>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

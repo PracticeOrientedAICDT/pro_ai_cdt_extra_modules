@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Daladier Sampaio Neto">
-  <title>Aditional Training – Tuples Data Structure</title>
+  <title>Aditional Training – Introduction to PyTorch and Tensors</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Tuples Data Structure</h1>
+  <h1 class="title">Introduction to PyTorch and Tensors</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -204,311 +204,325 @@ Daladier Sampaio Neto
 </div>
 
 </section>
-<section id="tuples-in-python" class="slide level2">
-<h2>Tuples in Python</h2>
+<section id="what-is-pytorch" class="slide level2">
+<h2>What is PyTorch?</h2>
 <ul>
-<li><p><strong>What are Tuples?</strong></p>
+<li><strong>Open-source deep learning framework</strong> developed by Facebook’s AI Research lab.</li>
+<li>Known for:
 <ul>
-<li>In Python, a tuple is an <strong>immutable</strong>, <strong>ordered</strong> collection of elements.</li>
-<li>Defined by placing elements inside parentheses <code>()</code> separated by commas.</li>
-<li>Example:</li>
+<li><strong>Dynamic computation graphs</strong> (define-by-run)</li>
+<li>Strong <strong>GPU acceleration</strong></li>
+<li>Large, active community</li>
 </ul></li>
+<li>Widely used in research and production.</li>
 </ul>
-<div id="96428e5d" class="cell" data-execution_count="1">
+</section>
+<section id="why-pytorch" class="slide level2">
+<h2>Why PyTorch?</h2>
+<ul>
+<li><strong>Pythonic</strong>: integrates naturally with Python syntax and libraries.</li>
+<li><strong>Flexible</strong>: easy debugging and model customization.</li>
+<li><strong>Ecosystem</strong>: tools for vision, NLP, and more.</li>
+<li>Supported by popular cloud platforms and hardware accelerators.</li>
+</ul>
+</section>
+<section id="pytorch-ecosystem-overview" class="slide level2">
+<h2>PyTorch Ecosystem Overview</h2>
+<ul>
+<li><p>PyTorch offers domain-specific libraries:</p></li>
+<li><p>torchvision: computer vision</p></li>
+<li><p>torchtext: natural language processing</p></li>
+<li><p>torchaudio: audio/speech processing</p></li>
+<li><p>torch.nn: neural network modules</p></li>
+<li><p>torch.optim: optimization algorithms (SGD, Adam)</p></li>
+<li><p>torch.utils.data: dataset utilities and dataloaders</p></li>
+</ul>
+</section>
+<section id="torch.nn-building-neural-networks" class="slide level2">
+<h2>torch.nn: Building Neural Networks</h2>
+<p>Provides:</p>
+<p>Layers (Linear, Conv2d, LSTM)</p>
+<p>Activations (ReLU, Softmax)</p>
+<p>Loss functions (MSELoss, CrossEntropyLoss)</p>
+<p>Modular model design</p>
+<div id="dac741f0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>model <span class="op">=</span> nn.Sequential(</span>
+<span id="cb1-4"><a></a>nn.Linear(<span class="dv">4</span>, <span class="dv">16</span>),</span>
+<span id="cb1-5"><a></a>nn.ReLU(),</span>
+<span id="cb1-6"><a></a>nn.Linear(<span class="dv">16</span>, <span class="dv">2</span>)</span>
+<span id="cb1-7"><a></a>)</span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="bu">print</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>(1, 'apple', 3.14)</code></pre>
+<pre><code>Sequential(
+  (0): Linear(in_features=4, out_features=16, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=16, out_features=2, bias=True)
+)</code></pre>
 </div>
 </div>
 </section>
-<section id="tuples-in-python-1" class="slide level2">
-<h2>Tuples in Python</h2>
+<section id="torch.optim-optimization-algorithms" class="slide level2">
+<h2>torch.optim: Optimization Algorithms</h2>
 <ul>
-<li>Tuples can contain any data type — even other tuples.</li>
-<li>Once created, you <strong>cannot add, remove, or modify</strong> elements.</li>
-</ul>
-</section>
-<section id="tuples-vs-lists" class="slide level2">
-<h2>Tuples vs Lists</h2>
+<li><p>Popular optimizers:</p>
 <ul>
-<li><p>Key Differences</p>
-<ul>
-<li><p>Tuples are immutable, while lists are mutable.</p></li>
-<li><p>Tuples are generally faster and use less memory.</p></li>
-<li><p>Tuples can be used as keys in dictionaries (if all elements are hashable).</p></li>
+<li><p>SGD</p></li>
+<li><p>Adam / AdamW</p></li>
+<li><p>RMSprop</p></li>
 </ul></li>
 </ul>
-<div id="ab13b6f2" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>coordinates <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">20</span>)</span>
-<span id="cb2-2"><a></a>numbers <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>]</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="co"># Tuples cannot be changed:</span></span>
-<span id="cb2-5"><a></a></span>
-<span id="cb2-6"><a></a><span class="co"># coordinates[0] = 15  ❌ -&gt; Error</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Handles gradient updates internally.</p>
+<div id="28faf671" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> torch.optim <span class="im">as</span> optim</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>optimizer <span class="op">=</span> optim.Adam(model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="why-use-tuples" class="slide level2">
-<h2>Why Use Tuples?</h2>
+<section id="datasets-and-dataloaders" class="slide level2">
+<h2>Datasets and DataLoaders</h2>
 <ul>
-<li>Immutability ensures data integrity.</li>
-<li>Faster access and lower memory usage.</li>
-<li>Can be used as dictionary keys.</li>
-<li>Ideal for representing <strong>fixed</strong> data that should not change.</li>
+<li>PyTorch provides tools to load data efficiently.</li>
 </ul>
-</section>
-<section id="tuples-as-records" class="slide level2">
-<h2>Tuples as Records</h2>
-<ul>
-<li><p>Tuples as lightweight data structures</p>
-<ul>
-<li><p>A tuple can represent a single record — like a row in a database.</p></li>
-<li><p>Each position in the tuple corresponds to a specific field.</p></li>
-</ul></li>
-</ul>
-<div id="4681c722" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>person <span class="op">=</span> (<span class="st">"Alice"</span>, <span class="dv">30</span>, <span class="st">"New York"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="tuples-as-records-1" class="slide level2">
-<h2>Tuples as Records</h2>
-<ul>
-<li>Representing multiple records</li>
-</ul>
-<div id="e73a20cd" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>person1 <span class="op">=</span> (<span class="st">"Alice"</span>, <span class="dv">30</span>, <span class="st">"New York"</span>)</span>
-<span id="cb4-2"><a></a>person2 <span class="op">=</span> (<span class="st">"Bob"</span>, <span class="dv">25</span>, <span class="st">"Chicago"</span>)</span>
+<div id="b3b54334" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader, TensorDataset</span>
+<span id="cb4-2"><a></a><span class="im">import</span> torch</span>
 <span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a>people <span class="op">=</span> [person1, person2]</span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="cf">for</span> name, age, city <span class="kw">in</span> people:</span>
-<span id="cb4-7"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>age<span class="sc">}</span><span class="ss">) lives in </span><span class="sc">{</span>city<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-4"><a></a>X <span class="op">=</span> torch.rand(<span class="dv">100</span>, <span class="dv">4</span>)</span>
+<span id="cb4-5"><a></a>y <span class="op">=</span> torch.randint(<span class="dv">0</span>, <span class="dv">2</span>, (<span class="dv">100</span>,))</span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a>dataset <span class="op">=</span> TensorDataset(X, y)</span>
+<span id="cb4-8"><a></a>loader <span class="op">=</span> DataLoader(dataset, batch_size<span class="op">=</span><span class="dv">16</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a><span class="cf">for</span> batch_x, batch_y <span class="kw">in</span> loader:</span>
+<span id="cb4-11"><a></a>  <span class="bu">print</span>(batch_x.shape, batch_y.shape)</span>
+<span id="cb4-12"><a></a>  <span class="cf">break</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Alice (30) lives in New York
-Bob (25) lives in Chicago</code></pre>
+<pre><code>torch.Size([16, 4]) torch.Size([16])</code></pre>
 </div>
 </div>
 </section>
-<section id="tuple-unpacking" class="slide level2">
-<h2>Tuple Unpacking</h2>
+<section id="pytorch-for-computer-vision-torchvision" class="slide level2">
+<h2>PyTorch for Computer Vision (torchvision)</h2>
 <ul>
-<li>Assign multiple variables at once</li>
+<li><p>Includes:</p>
+<ul>
+<li><p>Pretrained models (ResNet, EfficientNet, ViT)</p></li>
+<li><p>Image transforms</p></li>
+<li><p>Vision datasets (CIFAR-10, ImageNet)</p></li>
+</ul></li>
 </ul>
-<div id="49bcd0d6" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>person <span class="op">=</span> (<span class="st">"Alice"</span>, <span class="dv">30</span>, <span class="st">"Engineer"</span>)</span>
+<div id="b3964bd3" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">from</span> torchvision <span class="im">import</span> models</span>
 <span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>name, age, profession <span class="op">=</span> person</span>
-<span id="cb6-4"><a></a><span class="bu">print</span>(name)       <span class="co"># Alice</span></span>
-<span id="cb6-5"><a></a><span class="bu">print</span>(age)        <span class="co"># 30</span></span>
-<span id="cb6-6"><a></a><span class="bu">print</span>(profession) <span class="co"># Engineer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Alice
-30
-Engineer</code></pre>
+<span id="cb6-3"><a></a>model <span class="op">=</span> models.resnet18(weights<span class="op">=</span><span class="st">"IMAGENET1K_V1"</span>)</span>
+<span id="cb6-4"><a></a>model.<span class="bu">eval</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=1000, bias=True)
+)</code></pre>
 </div>
 </div>
-<ul>
-<li>Each variable gets its value based on position.</li>
-<li>Makes code cleaner and more readable.</li>
-</ul>
 </section>
-<section id="ignoring-and-extended-unpacking" class="slide level2">
-<h2>Ignoring and Extended Unpacking</h2>
+<section id="pytorch-capabilities" class="slide level2">
+<h2>Pytorch capabilities</h2>
 <ul>
-<li>Ignoring Unpacking</li>
-</ul>
-<div id="348c239b" class="cell" data-execution_count="6">
-<div class="cell-output cell-output-stdout">
-<pre><code>30</code></pre>
-</div>
-</div>
+<li><p>PyTorch provides:</p>
 <ul>
-<li>Extending the unpacking</li>
-</ul>
-<div id="fe61a85c" class="cell" data-execution_count="7">
-<div class="cell-output cell-output-stdout">
-<pre><code>1
-[2, 3, 4]
-5</code></pre>
-</div>
-</div>
-</section>
-<section id="nested-tuples" class="slide level2">
-<h2>Nested Tuples</h2>
-<div id="d167defa" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>student <span class="op">=</span> (<span class="st">"Alice"</span>, (<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">88</span>))</span>
-<span id="cb10-2"><a></a><span class="bu">print</span>(student[<span class="dv">0</span>])       <span class="co"># Alice</span></span>
-<span id="cb10-3"><a></a><span class="bu">print</span>(student[<span class="dv">1</span>][<span class="dv">1</span>])    <span class="co"># 85</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Alice
-85</code></pre>
-</div>
-</div>
-</section>
-<section id="tuples-as-dictionary-keys" class="slide level2">
-<h2>Tuples as Dictionary Keys</h2>
-<ul>
-<li>Tuples are hashable</li>
-</ul>
-<div id="84cf5880" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>locations <span class="op">=</span> {</span>
-<span id="cb12-2"><a></a>(<span class="fl">35.6895</span>, <span class="fl">139.6917</span>): <span class="st">"Tokyo"</span>,</span>
-<span id="cb12-3"><a></a>(<span class="fl">40.7128</span>, <span class="op">-</span><span class="fl">74.0060</span>): <span class="st">"New York"</span></span>
-<span id="cb12-4"><a></a>}</span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a><span class="bu">print</span>(locations[(<span class="fl">40.7128</span>, <span class="op">-</span><span class="fl">74.0060</span>)])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>New York</code></pre>
-</div>
-</div>
-</section>
-<section id="performance-and-efficiency" class="slide level2">
-<h2>Performance and Efficiency</h2>
-<ul>
-<li><p>Why tuples are faster than lists?</p>
-<ul>
-<li><p>Fixed size → no need to manage dynamic resizing.</p></li>
-<li><p>Stored in memory more efficiently.</p></li>
-<li><p>Ideal for fixed collections of data (e.g., coordinates, RGB values).</p></li>
+<li><p>Tensors + GPU acceleration</p></li>
+<li><p>Autograd for gradients</p></li>
+<li><p>Tools for deep learning (nn, optim)</p></li>
+<li><p>Libraries for vision, NLP, audio</p></li>
+<li><p>A complete ecosystem for building AI systems.</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="when-to-use-tuples" class="slide level2">
-<h2>When to Use Tuples</h2>
+<section id="what-is-a-tensor" class="slide level2">
+<h2>What is a Tensor?</h2>
 <ul>
-<li>When you want to ensure data <strong>cannot change</strong>.</li>
-<li>When using <strong>dictionary keys</strong>.</li>
-<li>When representing <strong>records or structured data</strong>.</li>
-<li>When you want <strong>better performance</strong> than lists.</li>
+<li>A tensor is a generalization of vectors and matrices to potentially higher dimensions.</li>
+<li>Primary data structures in PyTorch.</li>
+<li>Efficient Computation: Optimized for high-performance mathematical operations, especially on GPUs.</li>
+<li>Supports automatic differentiation, crucial for training neural networks.</li>
 </ul>
 </section>
-<section id="dictionaries" class="slide level2">
-<h2>Dictionaries</h2>
-</section>
-<section id="dictionaries-in-python" class="slide level2">
-<h2>Dictionaries in Python</h2>
+<section id="what-is-a-tensor-1" class="slide level2">
+<h2>What is a Tensor?</h2>
 <ul>
-<li><p><strong>What are Dictionaries?</strong></p>
+<li><strong>multi-dimensional array</strong> used to store and manipulate data.</li>
+<li>Similar to NumPy arrays, but with:
 <ul>
-<li>A <strong>dictionary</strong> is an unordered, mutable collection of key-value pairs.</li>
-<li>Keys must be <strong>unique</strong> and <strong>immutable</strong> (e.g., strings, numbers, tuples).</li>
-<li>Values can be of any data type.</li>
+<li><strong>GPU support</strong></li>
+<li>Integration with deep learning workflows</li>
+</ul></li>
+<li>Examples:
+<ul>
+<li>0D tensor: a single number</li>
+<li>1D tensor: a vector</li>
+<li>2D tensor: a matrix</li>
+<li>3D+ tensor: multi-dimensional datasets</li>
 </ul></li>
 </ul>
-<div id="356a31e9" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>person <span class="op">=</span> {</span>
-<span id="cb14-2"><a></a>    <span class="st">"name"</span>: <span class="st">"Alice"</span>,</span>
-<span id="cb14-3"><a></a>    <span class="st">"age"</span>: <span class="dv">30</span>,</span>
-<span id="cb14-4"><a></a>    <span class="st">"city"</span>: <span class="st">"New York"</span></span>
-<span id="cb14-5"><a></a>}</span>
-<span id="cb14-6"><a></a></span>
-<span id="cb14-7"><a></a><span class="bu">print</span>(person)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="tensor-attributes" class="slide level2">
+<h2>Tensor Attributes</h2>
+<ul>
+<li>shape</li>
+</ul>
+<div id="c168ca5e" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> torch</span>
+<span id="cb8-2"><a></a></span>
+<span id="cb8-3"><a></a>tensor <span class="op">=</span> torch.randn(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb8-4"><a></a><span class="bu">print</span>(<span class="st">"Tensor Shape:"</span>, tensor.shape)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>{'name': 'Alice', 'age': 30, 'city': 'New York'}</code></pre>
+<pre><code>Tensor Shape: torch.Size([3, 4, 5])</code></pre>
 </div>
 </div>
 </section>
-<section id="accessing-dictionary-elements" class="slide level2">
-<h2>Accessing Dictionary Elements</h2>
-<ul>
-<li>Access values using keys</li>
-</ul>
-<div id="eccf272a" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>person <span class="op">=</span> {</span>
-<span id="cb16-2"><a></a>    <span class="st">"name"</span>: <span class="st">"Alice"</span>,</span>
-<span id="cb16-3"><a></a>    <span class="st">"age"</span>: <span class="dv">30</span>,</span>
-<span id="cb16-4"><a></a>    <span class="st">"city"</span>: <span class="st">"New York"</span></span>
-<span id="cb16-5"><a></a>}</span>
-<span id="cb16-6"><a></a></span>
-<span id="cb16-7"><a></a><span class="bu">print</span>(person[<span class="st">"name"</span>])   <span class="co"># Output: Alice</span></span>
-<span id="cb16-8"><a></a><span class="bu">print</span>(person.get(<span class="st">"age"</span>))  <span class="co"># Output: 30</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="creating-tensors-in-pytorch" class="slide level2">
+<h2>Creating Tensors in PyTorch</h2>
+<div id="57c60932" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> torch</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>data <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]]</span>
+<span id="cb10-4"><a></a>x_data <span class="op">=</span> torch.tensor(data)</span>
+<span id="cb10-5"><a></a></span>
+<span id="cb10-6"><a></a><span class="co"># From NumPy array</span></span>
+<span id="cb10-7"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-8"><a></a>np_array <span class="op">=</span> np.array(data)</span>
+<span id="cb10-9"><a></a>x_np <span class="op">=</span> torch.from_numpy(np_array)</span>
+<span id="cb10-10"><a></a></span>
+<span id="cb10-11"><a></a><span class="co"># With random values</span></span>
+<span id="cb10-12"><a></a>x_rand <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb10-13"><a></a></span>
+<span id="cb10-14"><a></a><span class="co"># With zeros</span></span>
+<span id="cb10-15"><a></a>x_zeros <span class="op">=</span> torch.zeros(<span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="inpecting-tensors" class="slide level2">
+<h2>Inpecting Tensors</h2>
+<div id="7d8834ae" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">import</span> torch</span>
+<span id="cb11-2"><a></a></span>
+<span id="cb11-3"><a></a>x <span class="op">=</span> torch.rand(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb11-4"><a></a></span>
+<span id="cb11-5"><a></a><span class="bu">print</span>(<span class="st">"Shape:"</span>, x.shape)     <span class="co"># tensor dimensions</span></span>
+<span id="cb11-6"><a></a><span class="bu">print</span>(<span class="st">"Data type:"</span>, x.dtype) <span class="co"># float32, int64, etc.</span></span>
+<span id="cb11-7"><a></a><span class="bu">print</span>(<span class="st">"Device:"</span>, x.device)   <span class="co"># CPU or GPU</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Alice
-30</code></pre>
+<pre><code>Shape: torch.Size([3, 4])
+Data type: torch.float32
+Device: cpu</code></pre>
 </div>
 </div>
 </section>
-<section id="accessing-dictionary-elements-1" class="slide level2">
-<h2>Accessing Dictionary Elements</h2>
-<ul>
-<li><p>The method .get() is safer than direct access:</p>
-<ul>
-<li>Returns None (or a default value) if the key doesn’t exist instead of raising an error.</li>
-</ul></li>
-</ul>
-<div id="fdecee2c" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>person <span class="op">=</span> {</span>
-<span id="cb18-2"><a></a>    <span class="st">"name"</span>: <span class="st">"Alice"</span>,</span>
-<span id="cb18-3"><a></a>    <span class="st">"age"</span>: <span class="dv">30</span>,</span>
-<span id="cb18-4"><a></a>    <span class="st">"city"</span>: <span class="st">"New York"</span></span>
-<span id="cb18-5"><a></a>}</span>
-<span id="cb18-6"><a></a></span>
-<span id="cb18-7"><a></a><span class="bu">print</span>(person.get(<span class="st">"profession"</span>, <span class="st">"Not specified"</span>))</span>
-<span id="cb18-8"><a></a></span>
-<span id="cb18-9"><a></a><span class="co"># Output: Not specified</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="basic-tensors-operations" class="slide level2">
+<h2>Basic Tensors Operations</h2>
+<div id="1a9541a8" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>x <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb13-2"><a></a>y <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>z_add <span class="op">=</span> x <span class="op">+</span> y              <span class="co"># Addition</span></span>
+<span id="cb13-5"><a></a>z_mul <span class="op">=</span> x <span class="op">*</span> y              <span class="co"># Element-wise multiplication</span></span>
+<span id="cb13-6"><a></a>z_matmul <span class="op">=</span> torch.matmul(x, y) <span class="co"># Matrix multiplication</span></span>
+<span id="cb13-7"><a></a>z_reshape <span class="op">=</span> x.view(<span class="dv">4</span>)      <span class="co"># Reshape</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="moving-tensors-to-gpu" class="slide level2">
+<h2>Moving Tensors to GPU</h2>
+<div id="05da3960" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># Check if GPU is available</span></span>
+<span id="cb14-2"><a></a>device <span class="op">=</span> <span class="st">"cuda"</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">"cpu"</span></span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a>x <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">2</span>).to(device)</span>
+<span id="cb14-5"><a></a><span class="bu">print</span>(x.device)  <span class="co"># "cuda" if GPU is available</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Not specified</code></pre>
+<pre><code>cpu</code></pre>
 </div>
 </div>
-</section>
-<section id="accessing-dictionary-elements-2" class="slide level2">
-<h2>Accessing Dictionary Elements</h2>
-<ul>
-<li>The .keys() method</li>
-</ul>
-<div id="cb8dbe65" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>person <span class="op">=</span> {</span>
-<span id="cb20-2"><a></a>    <span class="st">"name"</span>: <span class="st">"Alice"</span>,</span>
-<span id="cb20-3"><a></a>    <span class="st">"age"</span>: <span class="dv">30</span>,</span>
-<span id="cb20-4"><a></a>    <span class="st">"city"</span>: <span class="st">"New York"</span></span>
-<span id="cb20-5"><a></a>}</span>
-<span id="cb20-6"><a></a></span>
-<span id="cb20-7"><a></a><span class="bu">print</span>(person.keys())</span>
-<span id="cb20-8"><a></a></span>
-<span id="cb20-9"><a></a><span class="cf">if</span> <span class="st">"name"</span> <span class="kw">in</span> person.keys():</span>
-<span id="cb20-10"><a></a>    <span class="bu">print</span>(<span class="st">"Key 'name' exists!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>dict_keys(['name', 'age', 'city'])
-Key 'name' exists!</code></pre>
-</div>
-</div>
-</section>
-<section id="accessing-dictionary-elements-3" class="slide level2">
-<h2>Accessing Dictionary Elements</h2>
-<ul>
-<li>The .items() method</li>
-</ul>
-<div id="71b8b25e" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>person <span class="op">=</span> {</span>
-<span id="cb22-2"><a></a>    <span class="st">"name"</span>: <span class="st">"Alice"</span>,</span>
-<span id="cb22-3"><a></a>    <span class="st">"age"</span>: <span class="dv">30</span>,</span>
-<span id="cb22-4"><a></a>    <span class="st">"city"</span>: <span class="st">"New York"</span></span>
-<span id="cb22-5"><a></a>}</span>
-<span id="cb22-6"><a></a></span>
-<span id="cb22-7"><a></a><span class="bu">print</span>(person.items())</span>
-<span id="cb22-8"><a></a></span>
-<span id="cb22-9"><a></a><span class="cf">for</span> key, value <span class="kw">in</span> person.items():</span>
-<span id="cb22-10"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>dict_items([('name', 'Alice'), ('age', 30), ('city', 'New York')])
-name: Alice
-age: 30
-city: New York</code></pre>
-</div>
-</div>
-</section>
-<section id="adding-and-updating-data" class="slide level2">
-<h2>Adding and Updating Data</h2>
-<ul>
-<li>Add or modify values</li>
-</ul>
-</section>
-<section id="summary-tuples-dictionaries" class="slide level2">
-<h2>Summary: Tuples + Dictionaries</h2>
-<ul>
-<li><p>Tuples → Immutable, ordered, store fixed data</p></li>
-<li><p>Dictionaries → Mutable, unordered, store key-value mappings</p></li>
-<li><p>.get(), .items(), and .keys() make dictionary access safe, readable, and powerful</p></li>
-<li><p>Together they form efficient, expressive data models in Python</p></li>
-</ul>
 
 
 </section>
