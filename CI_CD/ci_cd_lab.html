@@ -8,7 +8,7 @@
 
 <meta name="author" content="Daladier Sampaio Neto">
 
-<title>Decorators and Closures – Additional Training</title>
+<title>CI/CD Lab – Additional Training</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -147,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Decorators and Closures</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">CI/CD Lab</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -205,34 +170,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-you-will-learn" id="toc-what-you-will-learn" class="nav-link" data-scroll-target="#what-you-will-learn">What You Will Learn</a></li>
+  <li><a href="#why-cicd-for-machine-learning" id="toc-why-cicd-for-machine-learning" class="nav-link" data-scroll-target="#why-cicd-for-machine-learning">Why CI/CD for Machine Learning?</a>
   <ul class="collapse">
-  <li><a href="#what-are-decorators-and-closures" id="toc-what-are-decorators-and-closures" class="nav-link" data-scroll-target="#what-are-decorators-and-closures">What Are Decorators and Closures?</a></li>
+  <li><a href="#automated-training-pipelines" id="toc-automated-training-pipelines" class="nav-link" data-scroll-target="#automated-training-pipelines">1. Automated Training Pipelines</a></li>
+  <li><a href="#early-error-detection" id="toc-early-error-detection" class="nav-link" data-scroll-target="#early-error-detection">2. Early Error Detection</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">3. Reproducibility</a></li>
+  <li><a href="#testing-and-monitoring" id="toc-testing-and-monitoring" class="nav-link" data-scroll-target="#testing-and-monitoring">4. Testing and Monitoring</a></li>
+  <li><a href="#faster-iteration-cycles" id="toc-faster-iteration-cycles" class="nav-link" data-scroll-target="#faster-iteration-cycles">5. Faster Iteration Cycles</a></li>
+  <li><a href="#scalability" id="toc-scalability" class="nav-link" data-scroll-target="#scalability">6. Scalability</a></li>
   </ul></li>
-  <li><a href="#closures" id="toc-closures" class="nav-link" data-scroll-target="#closures">Closures</a>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#cicd-pipeline" id="toc-cicd-pipeline" class="nav-link" data-scroll-target="#cicd-pipeline">CI/CD Pipeline</a></li>
+  <li><a href="#project-diagram" id="toc-project-diagram" class="nav-link" data-scroll-target="#project-diagram">Project Diagram</a></li>
+  <li><a href="#setting-up" id="toc-setting-up" class="nav-link" data-scroll-target="#setting-up">Setting up</a>
   <ul class="collapse">
-  <li><a href="#what-is-a-closure" id="toc-what-is-a-closure" class="nav-link" data-scroll-target="#what-is-a-closure">What is a Closure?</a></li>
-  <li><a href="#why-use-closures" id="toc-why-use-closures" class="nav-link" data-scroll-target="#why-use-closures">Why Use Closures?</a></li>
-  </ul></li>
-  <li><a href="#decorators" id="toc-decorators" class="nav-link" data-scroll-target="#decorators">Decorators</a>
-  <ul class="collapse">
-  <li><a href="#what-is-a-decorator" id="toc-what-is-a-decorator" class="nav-link" data-scroll-target="#what-is-a-decorator">What is a Decorator?</a></li>
-  <li><a href="#how-decorators-work" id="toc-how-decorators-work" class="nav-link" data-scroll-target="#how-decorators-work">How Decorators Work</a></li>
-  <li><a href="#multiple-decorators" id="toc-multiple-decorators" class="nav-link" data-scroll-target="#multiple-decorators">Multiple Decorators</a></li>
-  <li><a href="#decorators-with-arguments" id="toc-decorators-with-arguments" class="nav-link" data-scroll-target="#decorators-with-arguments">Decorators with Arguments</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
-  <li><a href="#standard-decorators" id="toc-standard-decorators" class="nav-link" data-scroll-target="#standard-decorators">Standard Decorators</a></li>
-  <li><a href="#when-to-use-decorators" id="toc-when-to-use-decorators" class="nav-link" data-scroll-target="#when-to-use-decorators">When to Use Decorators?</a></li>
+  <li><a href="#github-repository" id="toc-github-repository" class="nav-link" data-scroll-target="#github-repository">Github Repository</a></li>
+  <li><a href="#hugging-face-spaces" id="toc-hugging-face-spaces" class="nav-link" data-scroll-target="#hugging-face-spaces">Hugging Face spaces</a></li>
+  <li><a href="#cml" id="toc-cml" class="nav-link" data-scroll-target="#cml">CML</a></li>
+  <li><a href="#makefile" id="toc-makefile" class="nav-link" data-scroll-target="#makefile">Makefile</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="mldp.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="cicd_lab.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Decorators and Closures</h1>
+<h1 class="title">CI/CD Lab</h1>
 </div>
 
 
@@ -255,191 +222,115 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<section id="what-are-decorators-and-closures" class="level2">
-<h2 class="anchored" data-anchor-id="what-are-decorators-and-closures">What Are Decorators and Closures?</h2>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Continuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.</p>
+<p>In this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention.</p>
+</section>
+<section id="what-you-will-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-learn">What You Will Learn</h2>
+<p>This tutorial demonstrates a lightweight yet complete ML project powered entirely by <strong>GitHub Actions</strong>. The concepts covered will be familiar to most machine learning engineers and data scientists. The primary focus is on learning how to integrate the following tools into an automated workflow:</p>
 <ul>
-<li><strong>Closures</strong> allow a function to retain access to its enclosing scope.</li>
-<li><strong>Decorators</strong> are functions that modify other functions dynamically.</li>
-<li>Used for:
+<li>GitHub Actions<br>
+</li>
+<li>Makefile<br>
+</li>
+<li>Continuous Machine Learning (CML)<br>
+</li>
+<li>Hugging Face CLI</li>
+</ul>
+<p>If you want to deepen your understanding of production-ready ML systems, consider enrolling in the <strong>MLOps Concepts</strong> course, which covers the journey from local notebooks to deployed models that create real business impact.</p>
+</section>
+<section id="why-cicd-for-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="why-cicd-for-machine-learning">Why CI/CD for Machine Learning?</h2>
+<p>CI/CD plays a crucial role in transforming experimental models into reliable, production-grade systems. By automating repetitive and error-prone tasks, CI/CD enables faster development cycles, higher reliability, and improved scalability.</p>
+<p>Specifically, CI/CD for machine learning offers the following benefits:</p>
+<section id="automated-training-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="automated-training-pipelines">1. Automated Training Pipelines</h3>
+<p>CI/CD pipelines allow models to be retrained automatically as new data becomes available or on a predefined schedule, eliminating the need for manual retraining.</p>
+</section>
+<section id="early-error-detection" class="level3">
+<h3 class="anchored" data-anchor-id="early-error-detection">2. Early Error Detection</h3>
+<p>Each code change triggers automated tests and validation steps, helping identify bugs, integration problems, or performance regressions early in the development process.</p>
+</section>
+<section id="reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="reproducibility">3. Reproducibility</h3>
+<p>By codifying environments, configurations, and versioning of data and models, CI/CD ensures that experiments and results can be reproduced consistently.</p>
+</section>
+<section id="testing-and-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="testing-and-monitoring">4. Testing and Monitoring</h3>
+<p>Automated evaluation checks verify model quality before deployment, while integrations with monitoring tools support post-deployment performance tracking.</p>
+</section>
+<section id="faster-iteration-cycles" class="level3">
+<h3 class="anchored" data-anchor-id="faster-iteration-cycles">5. Faster Iteration Cycles</h3>
+<p>New experiments and model versions can be trained, tested, and deployed quickly, enabling rapid experimentation and continuous improvement.</p>
+</section>
+<section id="scalability" class="level3">
+<h3 class="anchored" data-anchor-id="scalability">6. Scalability</h3>
+<p>As projects grow in complexity, manual lifecycle management becomes unsustainable. CI/CD pipelines scale efficiently to handle larger datasets, multiple models, and diverse dependencies.</p>
+</section>
+</section>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>In this guide, you will be guided through:</p>
 <ul>
-<li>Code reusability</li>
-<li>Logging, authentication, caching</li>
-<li>Extending function behavior</li>
+<li>Setting up accounts and development environments<br>
+</li>
+<li>Designing and implementing a CI/CD pipeline<br>
+</li>
+<li>Optimizing the end-to-end automation process</li>
+</ul>
+<p>We will use <strong>scikit-learn pipelines</strong> to train a <strong>random forest model</strong> for drug classification. Model evaluation will be automated using <strong>CML</strong>, and the final web application will be built and deployed to the <strong>Hugging Face Hub</strong>.</p>
+<p>The entire workflow—from training to evaluation and deployment—is fully automated using GitHub Actions. Simply pushing new code to the repository triggers the pipeline, and within minutes, the updated model, application, and results are published on Hugging Face.</p>
+</section>
+<section id="cicd-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="cicd-pipeline">CI/CD Pipeline</h2>
+<p>The CI/CD pipeline orchestrates all stages of the machine learning lifecycle, ensuring consistent, reliable, and automated delivery of models to production.</p>
+</section>
+<section id="project-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="project-diagram">Project Diagram</h2>
+<ul>
+<li>TO DO</li>
+</ul>
+</section>
+<section id="setting-up" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up">Setting up</h2>
+<section id="github-repository" class="level3">
+<h3 class="anchored" data-anchor-id="github-repository">Github Repository</h3>
+<ul>
+<li>TO DO:
+<ul>
+<li>Example repository</li>
+<li>Screenshots for repository creation process</li>
+<li>Students set up their projects</li>
 </ul></li>
 </ul>
-<hr>
 </section>
-</section>
-<section id="closures" class="level1">
-<h1>Closures</h1>
-<section id="what-is-a-closure" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-closure">What is a Closure?</h2>
+<section id="hugging-face-spaces" class="level3">
+<h3 class="anchored" data-anchor-id="hugging-face-spaces">Hugging Face spaces</h3>
 <ul>
-<li>A <strong>closure</strong> is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.</li>
+<li>TO DO:</li>
 </ul>
-<div id="c3ff48f6" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> outer_function(msg):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> inner_function():</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Message: </span><span class="sc">{</span>msg<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> inner_function</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>closure <span class="op">=</span> outer_function(<span class="st">"Hello!"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>closure()  <span class="co"># Output: Message: Hello!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Message: Hello!</code></pre>
-</div>
-</div>
+<p>Hugging Face Spaces is a platform for hosting and sharing interactive machine learning applications, such as demos built with Gradio or Streamlit. It allows practitioners to showcase models through web-based interfaces without managing infrastructure.</p>
+<p>When integrated with CI/CD, Hugging Face Spaces becomes a powerful deployment target for machine learning workflows. Automated pipelines can retrain models, perform evaluations, and continuously deploy updated applications to a Space whenever changes are pushed to a repository.</p>
+<pre><code>- Setup Hugging Face Spaces</code></pre>
 </section>
-<section id="why-use-closures" class="level2">
-<h2 class="anchored" data-anchor-id="why-use-closures">Why Use Closures?</h2>
-<pre><code>- Advantages
-
-    - Encapsulation: Keeps data hidden.
-    - Avoids global variables: Limits scope.
-    - Useful in decorators: Enables function modification.</code></pre>
-<div id="4d53ff58" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiplier(factor):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> multiply(n):</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> factor</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> multiply</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>double <span class="op">=</span> multiplier(<span class="dv">2</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(double(<span class="dv">5</span>))  <span class="co"># Output: 10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>10</code></pre>
-</div>
-</div>
+<section id="cml" class="level3">
+<h3 class="anchored" data-anchor-id="cml">CML</h3>
+<p>Continuous Machine Learning (CML) is an open-source library designed to bring CI/CD best practices to machine learning projects. It enables automated model training, evaluation, and reporting directly within continuous integration workflows.</p>
+<p>By integrating CML into CI/CD pipelines, teams can automatically generate and publish model metrics, visualizations, and comparison reports as part of each code change. This creates a transparent feedback loop that helps practitioners track performance, validate improvements, and make informed deployment decisions before models are promoted to production.</p>
+<p><a href="https://cml.dev/">CML website</a></p>
+<section id="installing-cml" class="level4">
+<h4 class="anchored" data-anchor-id="installing-cml">Installing CML</h4>
+<p>[Installing as a Package] (https://cml.dev/doc/install)</p>
+<p>Install Node.js</p>
+<p><a href="https://cml.dev/doc/self-hosted-runners#docker-images">Docker images</a></p>
 </section>
 </section>
-<section id="decorators" class="level1">
-<h1>Decorators</h1>
-<section id="what-is-a-decorator" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-decorator">What is a Decorator?</h2>
-<pre><code>- A decorator is a function that takes another function as input and modifies its behavior without changing its code.
-- Uses closures to wrap a function.</code></pre>
-<div id="49ad2012" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decorator(func):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper():</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Before the function call"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        func()</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"After the function call"</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">@decorator</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hello!"</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>say_hello()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Before the function call
-Hello!
-After the function call</code></pre>
-</div>
-</div>
-</section>
-<section id="how-decorators-work" class="level2">
-<h2 class="anchored" data-anchor-id="how-decorators-work">How Decorators Work</h2>
-<pre><code>- The decorator function takes another function as an argument.
-- It creates a wrapper function that modifies the behavior.
-- It returns the wrapper function instead of the original.
-- The @decorator syntax automatically applies the decorator.</code></pre>
-</section>
-<section id="multiple-decorators" class="level2">
-<h2 class="anchored" data-anchor-id="multiple-decorators">Multiple Decorators</h2>
-<ul>
-<li><strong>Stacking Decorators</strong> - Multiple decorators can be applied in sequence.</li>
-</ul>
-<div id="e6abeeda" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> uppercase(func):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper():</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> func().upper()</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> exclaim(func):</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper():</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> func() <span class="op">+</span> <span class="st">"!!!"</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="at">@uppercase</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="at">@exclaim</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet():</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"hello"</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greet())  <span class="co"># Output: HELLO!!!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>HELLO!!!</code></pre>
-</div>
-</div>
-<pre><code>- Execution order: exclaim → uppercase → greet()</code></pre>
-</section>
-<section id="decorators-with-arguments" class="level2">
-<h2 class="anchored" data-anchor-id="decorators-with-arguments">Decorators with Arguments</h2>
-<div id="be25a584" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> repeat(n):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> decorator(func):</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> wrapper</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> decorator</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="at">@repeat</span>(<span class="dv">3</span>)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> say_hello():</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hello!"</span>)</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>say_hello()  </span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Output:</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Hello!</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Hello!</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Hello!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello!
-Hello!
-Hello!</code></pre>
-</div>
-</div>
-<ul>
-<li>This decorator runs the function n times</li>
-</ul>
-</section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<div id="221be38f" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_time(func):</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        start <span class="op">=</span> time.time()</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> func(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        end <span class="op">=</span> time.time()</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>func<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss"> took </span><span class="sc">{</span>end <span class="op">-</span> start<span class="sc">:.4f}</span><span class="ss"> seconds"</span>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> wrapper</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="at">@log_time</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> slow_function():</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    time.sleep(<span class="dv">2</span>)</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>slow_function()  <span class="co"># Output: slow_function took 2.000X seconds</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>slow_function took 2.0100 seconds</code></pre>
-</div>
-</div>
-</section>
-<section id="standard-decorators" class="level2">
-<h2 class="anchored" data-anchor-id="standard-decorators">Standard Decorators</h2>
-<pre><code>- @staticmethod:    Defines a static method inside a class.
-- @classmethod: Defines a method that operates on the class itself.
-- @property:    Converts a method into a read-only property.</code></pre>
-</section>
-<section id="when-to-use-decorators" class="level2">
-<h2 class="anchored" data-anchor-id="when-to-use-decorators">When to Use Decorators?</h2>
-<pre><code>- Logging (debugging and performance tracking)
-- Access control (authentication, security)
-- Caching (memoization)
-- Code reuse (DRY principle)</code></pre>
+<section id="makefile" class="level3">
+<h3 class="anchored" data-anchor-id="makefile">Makefile</h3>
+<p>A Makefile is a simple yet powerful tool for defining and automating repetitive tasks using declarative rules. In machine learning projects, it is commonly used to standardize commands for data preparation, model training, evaluation, and deployment.</p>
+<p>When used within a CI/CD pipeline, a Makefile ensures consistency between local development and automated workflows. The same commands executed by developers on their machines can be reused by CI systems, reducing configuration duplication and minimizing environment-related errors. This makes Makefile an effective bridge between experimentation and production-ready automation.</p>
 
 
 </section>

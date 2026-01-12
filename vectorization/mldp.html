@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Daladier Sampaio Neto">
-  <title>Aditional Training – Code Vectorization</title>
+  <title>Additional Training – Code Vectorization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -167,7 +167,7 @@ Daladier Sampaio Neto
 <section>
 <section id="vectorization-with-numpy-element-wise-operations" class="title-slide slide level1 center">
 <h1>Vectorization with NumPy: Element-wise Operations</h1>
-<div id="aa203ff6" class="cell" data-execution_count="1">
+<div id="b6d48d7f" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>[ 1  4  9 16 25]</code></pre>
 </div>
@@ -179,7 +179,7 @@ Daladier Sampaio Neto
 <section>
 <section id="vectorization-with-numpy-mathematical-functions" class="title-slide slide level1 center">
 <h1>Vectorization with NumPy: Mathematical Functions</h1>
-<div id="af39264d" class="cell" data-execution_count="2">
+<div id="83132d7f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>[0.0000000e+00 1.0000000e+00 1.2246468e-16]</code></pre>
 </div>
@@ -191,7 +191,7 @@ Daladier Sampaio Neto
 <section>
 <section id="vectorization-with-pandas" class="title-slide slide level1 center">
 <h1>Vectorization with Pandas</h1>
-<div id="72652fb7" class="cell" data-execution_count="3">
+<div id="dcd2aee3" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>   A   B
 0  1   1
@@ -207,10 +207,10 @@ Daladier Sampaio Neto
 <section>
 <section id="performance-comparison-numpy-vs-loop" class="title-slide slide level1 center">
 <h1>Performance Comparison: NumPy vs Loop</h1>
-<div id="9e39a99f" class="cell" data-execution_count="4">
+<div id="eb1ccafa" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
-<pre><code>Loop time: 0.16780877113342285
-Vectorized time: 0.002663135528564453</code></pre>
+<pre><code>Loop time: 0.28317785263061523
+Vectorized time: 0.004036664962768555</code></pre>
 </div>
 </div>
 </section>
@@ -220,10 +220,10 @@ Vectorized time: 0.002663135528564453</code></pre>
 <section>
 <section id="performance-comparison-pandas-apply-vs-vectorized" class="title-slide slide level1 center">
 <h1>Performance Comparison: Pandas Apply vs Vectorized</h1>
-<div id="8a2484a5" class="cell" data-execution_count="5">
+<div id="b6e8bf5b" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>Apply time: 0.22641420364379883
-Vectorized time: 0.0</code></pre>
+<pre><code>Apply time: 0.41593194007873535
+Vectorized time: 0.010158300399780273</code></pre>
 </div>
 </div>
 </section>
@@ -233,7 +233,7 @@ Vectorized time: 0.0</code></pre>
 <section>
 <section id="vectorization-in-numpy-broadcasting" class="title-slide slide level1 center">
 <h1>Vectorization in NumPy: Broadcasting</h1>
-<div id="4ae012b3" class="cell" data-execution_count="6">
+<div id="66ed6747" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>[[ 2  4  6]
  [ 8 10 12]]</code></pre>
@@ -245,7 +245,7 @@ Vectorized time: 0.0</code></pre>
 </section></section>
 <section id="vectorization-in-numpy-dot-product" class="title-slide slide level1 center">
 <h1>Vectorization in NumPy: Dot Product</h1>
-<div id="f532cc38" class="cell" data-execution_count="7">
+<div id="b8b5ba1e" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>[[19 22]
  [43 50]]</code></pre>
@@ -282,7 +282,7 @@ Vectorized time: 0.0</code></pre>
 <li>Optimized BLAS routines (OpenBLAS, MKL)</li>
 </ul></li>
 </ul>
-<div id="63a3a8bc" class="cell" data-execution_count="8">
+<div id="df654c9a" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>  C_CONTIGUOUS : True
   F_CONTIGUOUS : True
@@ -300,7 +300,7 @@ Vectorized time: 0.0</code></pre>
 <li><p>Boolean arrays allow filtering without loops.</p></li>
 <li><p>Extremely fast due to C-level implementation.</p></li>
 </ul>
-<div id="ab2077f7" class="cell" data-execution_count="9">
+<div id="43bdc9ad" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>[ 5  8 10]</code></pre>
 </div>
@@ -308,7 +308,7 @@ Vectorized time: 0.0</code></pre>
 </section>
 <section id="vectorized-conditional-logic-np.where" class="slide level2">
 <h2>Vectorized Conditional Logic (np.where)</h2>
-<div id="baf5ecd7" class="cell" data-execution_count="10">
+<div id="125c4564" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>[0 0 3 4 5]</code></pre>
 </div>
@@ -321,11 +321,11 @@ Vectorized time: 0.0</code></pre>
 <p>mean</p>
 <p>min / max</p>
 <p>argmax / argmin</p>
-<div id="9c33d954" class="cell" data-execution_count="11">
+<div id="e2ba8e00" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
-<pre><code>Mean: 0.49822540441996455
-Sum: 49822.540441996454
-Max: 0.9999974506438698</code></pre>
+<pre><code>Mean: 0.49940036723484316
+Sum: 49940.036723484314
+Max: 0.9999976592329263</code></pre>
 </div>
 </div>
 </section>
@@ -337,9 +337,9 @@ Max: 0.9999974506438698</code></pre>
 <p>Inversion</p>
 <p>Norms</p>
 <p>Eigenvalues</p>
-<div id="15c02445" class="cell" data-execution_count="12">
+<div id="045b28d7" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
-<pre><code>[247.85923037 239.43971269 246.77124139 238.77431828 251.19158518]</code></pre>
+<pre><code>[243.02795699 251.63231736 244.68276925 248.55286261 243.03954631]</code></pre>
 </div>
 </div>
 </section>

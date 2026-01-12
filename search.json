@@ -25,14 +25,14 @@
     "href": "vectorization/vectorization.html#vectorization-with-aggregations",
     "title": "Code Vectorization",
     "section": "Vectorization with Aggregations",
-    "text": "Vectorization with Aggregations\nAggregations are inherently vectorized:\nsum\nmean\nmin / max\nargmax / argmin\n\narr = np.random.rand(100000)\n\nprint(\"Mean:\", arr.mean())\nprint(\"Sum:\", arr.sum())\nprint(\"Max:\", arr.max())\n\nMean: 0.4992138577305542\nSum: 49921.38577305542\nMax: 0.9999264638404508"
+    "text": "Vectorization with Aggregations\nAggregations are inherently vectorized:\nsum\nmean\nmin / max\nargmax / argmin\n\narr = np.random.rand(100000)\n\nprint(\"Mean:\", arr.mean())\nprint(\"Sum:\", arr.sum())\nprint(\"Max:\", arr.max())\n\nMean: 0.5004501554390648\nSum: 50045.01554390648\nMax: 0.9999878309668493"
   },
   {
     "objectID": "vectorization/vectorization.html#vectorization-in-linear-algebra",
     "href": "vectorization/vectorization.html#vectorization-in-linear-algebra",
     "title": "Code Vectorization",
     "section": "Vectorization in Linear Algebra",
-    "text": "Vectorization in Linear Algebra\nMany linear algebra operations are already vectorized:\nMatrix multiplication\nTransposition\nInversion\nNorms\nEigenvalues\n\nimport numpy as np\n\nA = np.random.rand(1000, 1000)\nv = np.random.rand(1000)\n\nresult = A @ v   # Vectorized matrix-vector product\nprint(result[:5])\n\n[253.61472127 247.13160121 252.64917111 247.57315328 251.64369119]"
+    "text": "Vectorization in Linear Algebra\nMany linear algebra operations are already vectorized:\nMatrix multiplication\nTransposition\nInversion\nNorms\nEigenvalues\n\nimport numpy as np\n\nA = np.random.rand(1000, 1000)\nv = np.random.rand(1000)\n\nresult = A @ v   # Vectorized matrix-vector product\nprint(result[:5])\n\n[237.10334041 243.757837   242.90322529 237.79158983 238.60961728]"
   },
   {
     "objectID": "vectorization/mldp.html#vectorization-with-boolean-masks",
@@ -53,21 +53,21 @@
     "href": "vectorization/mldp.html#vectorization-with-aggregations",
     "title": "Code Vectorization",
     "section": "Vectorization with Aggregations",
-    "text": "Vectorization with Aggregations\nAggregations are inherently vectorized:\nsum\nmean\nmin / max\nargmax / argmin\n\n\nMean: 0.49822540441996455\nSum: 49822.540441996454\nMax: 0.9999974506438698"
+    "text": "Vectorization with Aggregations\nAggregations are inherently vectorized:\nsum\nmean\nmin / max\nargmax / argmin\n\n\nMean: 0.49940036723484316\nSum: 49940.036723484314\nMax: 0.9999976592329263"
   },
   {
     "objectID": "vectorization/mldp.html#vectorization-in-linear-algebra",
     "href": "vectorization/mldp.html#vectorization-in-linear-algebra",
     "title": "Code Vectorization",
     "section": "Vectorization in Linear Algebra",
-    "text": "Vectorization in Linear Algebra\nMany linear algebra operations are already vectorized:\nMatrix multiplication\nTransposition\nInversion\nNorms\nEigenvalues\n\n\n[247.85923037 239.43971269 246.77124139 238.77431828 251.19158518]"
+    "text": "Vectorization in Linear Algebra\nMany linear algebra operations are already vectorized:\nMatrix multiplication\nTransposition\nInversion\nNorms\nEigenvalues\n\n\n[243.02795699 251.63231736 244.68276925 248.55286261 243.03954631]"
   },
   {
     "objectID": "software_engineering.html",
     "href": "software_engineering.html",
     "title": "Software Engineering Best Practices",
     "section": "",
-    "text": "Reproducible Machine Learning\nReproducible machine learning and MLOps focus on building reliable, consistent, and scalable ML systems that can be trained, deployed, and maintained across different environments. Reproducibility ensures that experiments can be repeated with the same data, code, and configuration to yield identical results, reducing uncertainty and improving trust in models. MLOps extends these principles by applying DevOps practices to ML, emphasizing automation, versioning, monitoring, and continuous delivery. Together, they enable teams to manage the full lifecycle of ML models—from data preparation to production monitoring—while minimizing errors, mitigating drift, and accelerating innovation.\nSlides here\n\n\nClean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
+    "text": "Reproducible Machine Learning\nReproducible machine learning and MLOps focus on building reliable, consistent, and scalable ML systems that can be trained, deployed, and maintained across different environments. Reproducibility ensures that experiments can be repeated with the same data, code, and configuration to yield identical results, reducing uncertainty and improving trust in models. MLOps extends these principles by applying DevOps practices to ML, emphasizing automation, versioning, monitoring, and continuous delivery. Together, they enable teams to manage the full lifecycle of ML models—from data preparation to production monitoring—while minimizing errors, mitigating drift, and accelerating innovation.\nSlides here\n\n\nClean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\nLab here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
     "crumbs": [
       "Home",
       "Software Engineering"
@@ -935,164 +935,6 @@
     "text": "Benefits of Clean Code\n\nHigher Productivity: Cleaner code saves time in debugging and development\nImproved Quality: Reduces the likelihood of bugs and inconsistencies\nBetter Collaboration: Easier for teams to work on and scale projects\nFuture-Proofing: Clean code ensures adaptability and ease of modification"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd",
-    "href": "CI_CD/cicd.html#cicd",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd-1",
-    "href": "CI_CD/cicd.html#cicd-1",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
-    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
-    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---benefits",
-    "href": "CI_CD/cicd.html#cicd---benefits",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
-    "href": "CI_CD/cicd.html#cicd---benefits-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions",
-    "href": "CI_CD/cicd.html#github-actions",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-1",
-    "href": "CI_CD/cicd.html#github-actions-1",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-2",
-    "href": "CI_CD/cicd.html#github-actions-2",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-3",
-    "href": "CI_CD/cicd.html#github-actions-3",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-4",
-    "href": "CI_CD/cicd.html#github-actions-4",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files",
-    "href": "CI_CD/cicd.html#yml-files",
-    "title": "CI/CD",
-    "section": "Yml files",
-    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files-1",
-    "href": "CI_CD/cicd.html#yml-files-1",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files-2",
-    "href": "CI_CD/cicd.html#yml-files-2",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure",
-    "href": "CI_CD/cicd.html#yml-files---structure",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
-    "href": "CI_CD/cicd.html#yml-files---structure-1",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
-    "href": "CI_CD/cicd.html#yml-files---structure-2",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-repo",
-    "href": "CI_CD/cicd.html#github-repo",
-    "title": "CI/CD",
-    "section": "Github Repo",
-    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
-  },
-  {
     "objectID": "CI_CD/ci_cd.html",
     "href": "CI_CD/ci_cd.html",
     "title": "CI/CD",
@@ -1247,6 +1089,269 @@
     "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
   },
   {
+    "objectID": "CI_CD/cicd.html#cicd",
+    "href": "CI_CD/cicd.html#cicd",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd-1",
+    "href": "CI_CD/cicd.html#cicd-1",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits",
+    "href": "CI_CD/cicd.html#cicd---benefits",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
+    "href": "CI_CD/cicd.html#cicd---benefits-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions",
+    "href": "CI_CD/cicd.html#github-actions",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-1",
+    "href": "CI_CD/cicd.html#github-actions-1",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-2",
+    "href": "CI_CD/cicd.html#github-actions-2",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-3",
+    "href": "CI_CD/cicd.html#github-actions-3",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-4",
+    "href": "CI_CD/cicd.html#github-actions-4",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files",
+    "href": "CI_CD/cicd.html#yml-files",
+    "title": "CI/CD",
+    "section": "Yml files",
+    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-1",
+    "href": "CI_CD/cicd.html#yml-files-1",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-2",
+    "href": "CI_CD/cicd.html#yml-files-2",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure",
+    "href": "CI_CD/cicd.html#yml-files---structure",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
+    "href": "CI_CD/cicd.html#yml-files---structure-1",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
+    "href": "CI_CD/cicd.html#yml-files---structure-2",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-repo",
+    "href": "CI_CD/cicd.html#github-repo",
+    "title": "CI/CD",
+    "section": "Github Repo",
+    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#introduction",
+    "href": "CI_CD/cicd_lab.html#introduction",
+    "title": "CI/CD Lab",
+    "section": "Introduction",
+    "text": "Introduction\nContinuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.\nIn this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention."
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#what-you-will-learn",
+    "href": "CI_CD/cicd_lab.html#what-you-will-learn",
+    "title": "CI/CD Lab",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nThis tutorial demonstrates a lightweight yet complete ML project powered entirely by GitHub Actions. The concepts covered will be familiar to most machine learning engineers and data scientists. The primary focus is on learning how to integrate the following tools into an automated workflow:\n\nGitHub Actions\n\nMakefile\n\nContinuous Machine Learning (CML)\n\nHugging Face CLI\n\nIf you want to deepen your understanding of production-ready ML systems, consider enrolling in the MLOps Concepts course, which covers the journey from local notebooks to deployed models that create real business impact."
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#why-cicd-for-machine-learning",
+    "href": "CI_CD/cicd_lab.html#why-cicd-for-machine-learning",
+    "title": "CI/CD Lab",
+    "section": "Why CI/CD for Machine Learning?",
+    "text": "Why CI/CD for Machine Learning?\nCI/CD plays a crucial role in transforming experimental models into reliable, production-grade systems. By automating repetitive and error-prone tasks, CI/CD enables faster development cycles, higher reliability, and improved scalability.\nSpecifically, CI/CD for machine learning offers the following benefits:\n1. Automated Training Pipelines\nCI/CD pipelines allow models to be retrained automatically as new data becomes available or on a predefined schedule, eliminating the need for manual retraining.\n2. Early Error Detection\nEach code change triggers automated tests and validation steps, helping identify bugs, integration problems, or performance regressions early in the development process.\n3. Reproducibility\nBy codifying environments, configurations, and versioning of data and models, CI/CD ensures that experiments and results can be reproduced consistently.\n4. Testing and Monitoring\nAutomated evaluation checks verify model quality before deployment, while integrations with monitoring tools support post-deployment performance tracking.\n5. Faster Iteration Cycles\nNew experiments and model versions can be trained, tested, and deployed quickly, enabling rapid experimentation and continuous improvement.\n6. Scalability\nAs projects grow in complexity, manual lifecycle management becomes unsustainable. CI/CD pipelines scale efficiently to handle larger datasets, multiple models, and diverse dependencies."
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#project-overview",
+    "href": "CI_CD/cicd_lab.html#project-overview",
+    "title": "CI/CD Lab",
+    "section": "Project Overview",
+    "text": "Project Overview\nIn this guide, you will be guided through:\n\nSetting up accounts and development environments\n\nDesigning and implementing a CI/CD pipeline\n\nOptimizing the end-to-end automation process\n\nWe will use scikit-learn pipelines to train a random forest model for drug classification. Model evaluation will be automated using CML, and the final web application will be built and deployed to the Hugging Face Hub.\nThe entire workflow—from training to evaluation and deployment—is fully automated using GitHub Actions. Simply pushing new code to the repository triggers the pipeline, and within minutes, the updated model, application, and results are published on Hugging Face."
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#cicd-pipeline",
+    "href": "CI_CD/cicd_lab.html#cicd-pipeline",
+    "title": "CI/CD Lab",
+    "section": "CI/CD Pipeline",
+    "text": "CI/CD Pipeline\nThe CI/CD pipeline orchestrates all stages of the machine learning lifecycle, ensuring consistent, reliable, and automated delivery of models to production."
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#project-diagram",
+    "href": "CI_CD/cicd_lab.html#project-diagram",
+    "title": "CI/CD Lab",
+    "section": "Project Diagram",
+    "text": "Project Diagram\n\nTO DO"
+  },
+  {
+    "objectID": "CI_CD/cicd_lab.html#setting-up",
+    "href": "CI_CD/cicd_lab.html#setting-up",
+    "title": "CI/CD Lab",
+    "section": "Setting up",
+    "text": "Setting up\nGithub Repository\n\nTO DO:\n\nExample repository\nScreenshots for repository creation process\nStudents set up their projects\n\n\nHugging Face spaces\n\nTO DO:\n\nHugging Face Spaces is a platform for hosting and sharing interactive machine learning applications, such as demos built with Gradio or Streamlit. It allows practitioners to showcase models through web-based interfaces without managing infrastructure.\nWhen integrated with CI/CD, Hugging Face Spaces becomes a powerful deployment target for machine learning workflows. Automated pipelines can retrain models, perform evaluations, and continuously deploy updated applications to a Space whenever changes are pushed to a repository.\n- Setup Hugging Face Spaces\nCML\nContinuous Machine Learning (CML) is an open-source library designed to bring CI/CD best practices to machine learning projects. It enables automated model training, evaluation, and reporting directly within continuous integration workflows.\nBy integrating CML into CI/CD pipelines, teams can automatically generate and publish model metrics, visualizations, and comparison reports as part of each code change. This creates a transparent feedback loop that helps practitioners track performance, validate improvements, and make informed deployment decisions before models are promoted to production.\nCML website\nInstalling CML\n[Installing as a Package] (https://cml.dev/doc/install)\nInstall Node.js\nDocker images\nMakefile\nA Makefile is a simple yet powerful tool for defining and automating repetitive tasks using declarative rules. In machine learning projects, it is commonly used to standardize commands for data preparation, model training, evaluation, and deployment.\nWhen used within a CI/CD pipeline, a Makefile ensures consistency between local development and automated workflows. The same commands executed by developers on their machines can be reused by CI systems, reducing configuration duplication and minimizing environment-related errors. This makes Makefile an effective bridge between experimentation and production-ready automation."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html",
+    "href": "CI_CD/ci_cd_lab.html",
+    "title": "CI/CD Lab",
+    "section": "",
+    "text": "Continuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.\nIn this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#introduction",
+    "href": "CI_CD/ci_cd_lab.html#introduction",
+    "title": "CI/CD Lab",
+    "section": "",
+    "text": "Continuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.\nIn this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#what-you-will-learn",
+    "href": "CI_CD/ci_cd_lab.html#what-you-will-learn",
+    "title": "CI/CD Lab",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\nThis tutorial demonstrates a lightweight yet complete ML project powered entirely by GitHub Actions. The concepts covered will be familiar to most machine learning engineers and data scientists. The primary focus is on learning how to integrate the following tools into an automated workflow:\n\nGitHub Actions\n\nMakefile\n\nContinuous Machine Learning (CML)\n\nHugging Face CLI\n\nIf you want to deepen your understanding of production-ready ML systems, consider enrolling in the MLOps Concepts course, which covers the journey from local notebooks to deployed models that create real business impact."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#why-cicd-for-machine-learning",
+    "href": "CI_CD/ci_cd_lab.html#why-cicd-for-machine-learning",
+    "title": "CI/CD Lab",
+    "section": "Why CI/CD for Machine Learning?",
+    "text": "Why CI/CD for Machine Learning?\nCI/CD plays a crucial role in transforming experimental models into reliable, production-grade systems. By automating repetitive and error-prone tasks, CI/CD enables faster development cycles, higher reliability, and improved scalability.\nSpecifically, CI/CD for machine learning offers the following benefits:\n\n1. Automated Training Pipelines\nCI/CD pipelines allow models to be retrained automatically as new data becomes available or on a predefined schedule, eliminating the need for manual retraining.\n\n\n2. Early Error Detection\nEach code change triggers automated tests and validation steps, helping identify bugs, integration problems, or performance regressions early in the development process.\n\n\n3. Reproducibility\nBy codifying environments, configurations, and versioning of data and models, CI/CD ensures that experiments and results can be reproduced consistently.\n\n\n4. Testing and Monitoring\nAutomated evaluation checks verify model quality before deployment, while integrations with monitoring tools support post-deployment performance tracking.\n\n\n5. Faster Iteration Cycles\nNew experiments and model versions can be trained, tested, and deployed quickly, enabling rapid experimentation and continuous improvement.\n\n\n6. Scalability\nAs projects grow in complexity, manual lifecycle management becomes unsustainable. CI/CD pipelines scale efficiently to handle larger datasets, multiple models, and diverse dependencies."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#project-overview",
+    "href": "CI_CD/ci_cd_lab.html#project-overview",
+    "title": "CI/CD Lab",
+    "section": "Project Overview",
+    "text": "Project Overview\nIn this guide, you will be guided through:\n\nSetting up accounts and development environments\n\nDesigning and implementing a CI/CD pipeline\n\nOptimizing the end-to-end automation process\n\nWe will use scikit-learn pipelines to train a random forest model for drug classification. Model evaluation will be automated using CML, and the final web application will be built and deployed to the Hugging Face Hub.\nThe entire workflow—from training to evaluation and deployment—is fully automated using GitHub Actions. Simply pushing new code to the repository triggers the pipeline, and within minutes, the updated model, application, and results are published on Hugging Face."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#cicd-pipeline",
+    "href": "CI_CD/ci_cd_lab.html#cicd-pipeline",
+    "title": "CI/CD Lab",
+    "section": "CI/CD Pipeline",
+    "text": "CI/CD Pipeline\nThe CI/CD pipeline orchestrates all stages of the machine learning lifecycle, ensuring consistent, reliable, and automated delivery of models to production."
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#project-diagram",
+    "href": "CI_CD/ci_cd_lab.html#project-diagram",
+    "title": "CI/CD Lab",
+    "section": "Project Diagram",
+    "text": "Project Diagram\n\nTO DO"
+  },
+  {
+    "objectID": "CI_CD/ci_cd_lab.html#setting-up",
+    "href": "CI_CD/ci_cd_lab.html#setting-up",
+    "title": "CI/CD Lab",
+    "section": "Setting up",
+    "text": "Setting up\n\nGithub Repository\n\nTO DO:\n\nExample repository\nScreenshots for repository creation process\nStudents set up their projects\n\n\n\n\nHugging Face spaces\n\nTO DO:\n\nHugging Face Spaces is a platform for hosting and sharing interactive machine learning applications, such as demos built with Gradio or Streamlit. It allows practitioners to showcase models through web-based interfaces without managing infrastructure.\nWhen integrated with CI/CD, Hugging Face Spaces becomes a powerful deployment target for machine learning workflows. Automated pipelines can retrain models, perform evaluations, and continuously deploy updated applications to a Space whenever changes are pushed to a repository.\n- Setup Hugging Face Spaces\n\n\nCML\nContinuous Machine Learning (CML) is an open-source library designed to bring CI/CD best practices to machine learning projects. It enables automated model training, evaluation, and reporting directly within continuous integration workflows.\nBy integrating CML into CI/CD pipelines, teams can automatically generate and publish model metrics, visualizations, and comparison reports as part of each code change. This creates a transparent feedback loop that helps practitioners track performance, validate improvements, and make informed deployment decisions before models are promoted to production.\nCML website\n\nInstalling CML\n[Installing as a Package] (https://cml.dev/doc/install)\nInstall Node.js\nDocker images\n\n\n\nMakefile\nA Makefile is a simple yet powerful tool for defining and automating repetitive tasks using declarative rules. In machine learning projects, it is commonly used to standardize commands for data preparation, model training, evaluation, and deployment.\nWhen used within a CI/CD pipeline, a Makefile ensures consistency between local development and automated workflows. The same commands executed by developers on their machines can be reused by CI systems, reducing configuration duplication and minimizing environment-related errors. This makes Makefile an effective bridge between experimentation and production-ready automation."
+  },
+  {
     "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
     "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
     "title": "Decorators and Closures",
@@ -1300,7 +1405,7 @@
     "href": "decorators_and_closures/mldp.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\n\nslow_function took 2.0104 seconds"
+    "text": "Examples\n\n\nslow_function took 2.0101 seconds"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#standard-decorators",
@@ -1377,7 +1482,7 @@
     "href": "decorators_and_closures/decorators_and_closures.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0055 seconds"
+    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0100 seconds"
   },
   {
     "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Daladier Sampaio Neto">
 
-<title>Code Vectorization – Aditional Training</title>
+<title>Code Vectorization – Additional Training</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Aditional Training</span>
+    <span class="navbar-title">Additional Training</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="vectorization-with-numpy-element-wise-operations" class="level1">
 <h1>Vectorization with NumPy: Element-wise Operations</h1>
-<div id="aa203ff6" class="cell" data-execution_count="1">
+<div id="b6d48d7f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
@@ -296,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="vectorization-with-numpy-mathematical-functions" class="level1">
 <h1>Vectorization with NumPy: Mathematical Functions</h1>
-<div id="af39264d" class="cell" data-execution_count="2">
+<div id="83132d7f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">0</span>, np.pi <span class="op">/</span> <span class="dv">2</span>, np.pi])</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop-based approach</span></span>
@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="vectorization-with-pandas" class="level1">
 <h1>Vectorization with Pandas</h1>
-<div id="72652fb7" class="cell" data-execution_count="3">
+<div id="dcd2aee3" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'A'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]})</span>
@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="performance-comparison-numpy-vs-loop" class="level1">
 <h1>Performance Comparison: NumPy vs Loop</h1>
-<div id="9e39a99f" class="cell" data-execution_count="4">
+<div id="eb1ccafa" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -354,15 +354,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>result_vectorized <span class="op">=</span> arr <span class="op">**</span> <span class="dv">2</span></span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Vectorized time:"</span>, time.time() <span class="op">-</span> start)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Loop time: 0.12875771522521973
-Vectorized time: 0.0</code></pre>
+<pre><code>Loop time: 0.17764520645141602
+Vectorized time: 0.006069660186767578</code></pre>
 </div>
 </div>
 <hr>
 </section>
 <section id="performance-comparison-pandas-apply-vs-vectorized" class="level1">
 <h1>Performance Comparison: Pandas Apply vs Vectorized</h1>
-<div id="8a2484a5" class="cell" data-execution_count="5">
+<div id="b6e8bf5b" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -378,15 +378,15 @@ Vectorized time: 0.0</code></pre>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'B'</span>] <span class="op">=</span> df[<span class="st">'A'</span>] <span class="op">**</span> <span class="dv">2</span></span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Vectorized time:"</span>, time.time() <span class="op">-</span> start)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Apply time: 0.2855212688446045
-Vectorized time: 0.008062362670898438</code></pre>
+<pre><code>Apply time: 0.37385988235473633
+Vectorized time: 0.008173465728759766</code></pre>
 </div>
 </div>
 <hr>
 </section>
 <section id="vectorization-in-numpy-broadcasting" class="level1">
 <h1>Vectorization in NumPy: Broadcasting</h1>
-<div id="4ae012b3" class="cell" data-execution_count="6">
+<div id="66ed6747" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>scalar <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -403,7 +403,7 @@ Vectorized time: 0.008062362670898438</code></pre>
 </section>
 <section id="vectorization-in-numpy-dot-product" class="level1">
 <h1>Vectorization in NumPy: Dot Product</h1>
-<div id="f532cc38" class="cell" data-execution_count="7">
+<div id="b8b5ba1e" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> np.array([[<span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -445,7 +445,7 @@ Vectorized time: 0.008062362670898438</code></pre>
 <li>Optimized BLAS routines (OpenBLAS, MKL)</li>
 </ul></li>
 </ul>
-<div id="63a3a8bc" class="cell" data-execution_count="8">
+<div id="df654c9a" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
@@ -467,7 +467,7 @@ Vectorized time: 0.008062362670898438</code></pre>
 <li><p>Boolean arrays allow filtering without loops.</p></li>
 <li><p>Extremely fast due to C-level implementation.</p></li>
 </ul>
-<div id="ab2077f7" class="cell" data-execution_count="9">
+<div id="43bdc9ad" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">10</span>])</span>
@@ -489,7 +489,7 @@ Vectorized time: 0.008062362670898438</code></pre>
 </section>
 <section id="vectorized-conditional-logic-np.where" class="level2">
 <h2 class="anchored" data-anchor-id="vectorized-conditional-logic-np.where">Vectorized Conditional Logic (np.where)</h2>
-<div id="baf5ecd7" class="cell" data-execution_count="10">
+<div id="125c4564" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
@@ -512,16 +512,16 @@ Vectorized time: 0.008062362670898438</code></pre>
 <p>mean</p>
 <p>min / max</p>
 <p>argmax / argmin</p>
-<div id="9c33d954" class="cell" data-execution_count="11">
+<div id="e2ba8e00" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.random.rand(<span class="dv">100000</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean:"</span>, arr.mean())</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sum:"</span>, arr.<span class="bu">sum</span>())</span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Max:"</span>, arr.<span class="bu">max</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Mean: 0.4992138577305542
-Sum: 49921.38577305542
-Max: 0.9999264638404508</code></pre>
+<pre><code>Mean: 0.5004501554390648
+Sum: 50045.01554390648
+Max: 0.9999878309668493</code></pre>
 </div>
 </div>
 <hr>
@@ -534,7 +534,7 @@ Max: 0.9999264638404508</code></pre>
 <p>Inversion</p>
 <p>Norms</p>
 <p>Eigenvalues</p>
-<div id="15c02445" class="cell" data-execution_count="12">
+<div id="045b28d7" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.random.rand(<span class="dv">1000</span>, <span class="dv">1000</span>)</span>
@@ -543,7 +543,7 @@ Max: 0.9999264638404508</code></pre>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> A <span class="op">@</span> v   <span class="co"># Vectorized matrix-vector product</span></span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result[:<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[253.61472127 247.13160121 252.64917111 247.57315328 251.64369119]</code></pre>
+<pre><code>[237.10334041 243.757837   242.90322529 237.79158983 238.60961728]</code></pre>
 </div>
 </div>
 <hr>

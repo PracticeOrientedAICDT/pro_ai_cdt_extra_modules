@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Daladier Sampaio Neto">
-  <title>Aditional Training – Introduction to PyTorch and Tensors</title>
+  <title>Additional Training – Introduction to PyTorch and Tensors</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -245,7 +245,7 @@ Daladier Sampaio Neto
 <p>Activations (ReLU, Softmax)</p>
 <p>Loss functions (MSELoss, CrossEntropyLoss)</p>
 <p>Modular model design</p>
-<div id="dac741f0" class="cell" data-execution_count="1">
+<div id="a5153fad" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a>model <span class="op">=</span> nn.Sequential(</span>
@@ -275,7 +275,7 @@ Daladier Sampaio Neto
 </ul></li>
 </ul>
 <p>Handles gradient updates internally.</p>
-<div id="28faf671" class="cell" data-execution_count="2">
+<div id="c7a94ae1" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> torch.optim <span class="im">as</span> optim</span>
 <span id="cb3-2"><a></a></span>
 <span id="cb3-3"><a></a>optimizer <span class="op">=</span> optim.Adam(model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -286,7 +286,7 @@ Daladier Sampaio Neto
 <ul>
 <li>PyTorch provides tools to load data efficiently.</li>
 </ul>
-<div id="b3b54334" class="cell" data-execution_count="3">
+<div id="3313f523" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader, TensorDataset</span>
 <span id="cb4-2"><a></a><span class="im">import</span> torch</span>
 <span id="cb4-3"><a></a></span>
@@ -314,7 +314,7 @@ Daladier Sampaio Neto
 <li><p>Vision datasets (CIFAR-10, ImageNet)</p></li>
 </ul></li>
 </ul>
-<div id="b3964bd3" class="cell" data-execution_count="4">
+<div id="10a8da93" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">from</span> torchvision <span class="im">import</span> models</span>
 <span id="cb6-2"><a></a></span>
 <span id="cb6-3"><a></a>model <span class="op">=</span> models.resnet18(weights<span class="op">=</span><span class="st">"IMAGENET1K_V1"</span>)</span>
@@ -452,7 +452,7 @@ Daladier Sampaio Neto
 <ul>
 <li>shape</li>
 </ul>
-<div id="c168ca5e" class="cell" data-execution_count="5">
+<div id="9e695543" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> torch</span>
 <span id="cb8-2"><a></a></span>
 <span id="cb8-3"><a></a>tensor <span class="op">=</span> torch.randn(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
@@ -464,7 +464,7 @@ Daladier Sampaio Neto
 </section>
 <section id="creating-tensors-in-pytorch" class="slide level2">
 <h2>Creating Tensors in PyTorch</h2>
-<div id="57c60932" class="cell" data-execution_count="6">
+<div id="4a138b5b" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> torch</span>
 <span id="cb10-2"><a></a></span>
 <span id="cb10-3"><a></a>data <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]]</span>
@@ -484,7 +484,7 @@ Daladier Sampaio Neto
 </section>
 <section id="inpecting-tensors" class="slide level2">
 <h2>Inpecting Tensors</h2>
-<div id="7d8834ae" class="cell" data-execution_count="7">
+<div id="f3518abe" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">import</span> torch</span>
 <span id="cb11-2"><a></a></span>
 <span id="cb11-3"><a></a>x <span class="op">=</span> torch.rand(<span class="dv">3</span>, <span class="dv">4</span>)</span>
@@ -501,7 +501,7 @@ Device: cpu</code></pre>
 </section>
 <section id="basic-tensors-operations" class="slide level2">
 <h2>Basic Tensors Operations</h2>
-<div id="1a9541a8" class="cell" data-execution_count="8">
+<div id="cb2803e6" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>x <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">2</span>)</span>
 <span id="cb13-2"><a></a>y <span class="op">=</span> torch.rand(<span class="dv">2</span>, <span class="dv">2</span>)</span>
 <span id="cb13-3"><a></a></span>
@@ -513,7 +513,7 @@ Device: cpu</code></pre>
 </section>
 <section id="moving-tensors-to-gpu" class="slide level2">
 <h2>Moving Tensors to GPU</h2>
-<div id="05da3960" class="cell" data-execution_count="9">
+<div id="dfdd094f" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># Check if GPU is available</span></span>
 <span id="cb14-2"><a></a>device <span class="op">=</span> <span class="st">"cuda"</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">"cpu"</span></span>
 <span id="cb14-3"><a></a></span>
