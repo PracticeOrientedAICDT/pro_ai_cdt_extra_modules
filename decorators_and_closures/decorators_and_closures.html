@@ -279,7 +279,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>A <strong>closure</strong> is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.</li>
 </ul>
-<div id="c3ff48f6" class="cell" data-execution_count="1">
+<div id="181dfb5f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> outer_function(msg):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> inner_function():</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Message: </span><span class="sc">{</span>msg<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -299,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     - Encapsulation: Keeps data hidden.
     - Avoids global variables: Limits scope.
     - Useful in decorators: Enables function modification.</code></pre>
-<div id="4d53ff58" class="cell" data-execution_count="2">
+<div id="a229b881" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiplier(factor):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> multiply(n):</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> factor</span>
@@ -319,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="what-is-a-decorator">What is a Decorator?</h2>
 <pre><code>- A decorator is a function that takes another function as input and modifies its behavior without changing its code.
 - Uses closures to wrap a function.</code></pre>
-<div id="49ad2012" class="cell" data-execution_count="3">
+<div id="1ded0695" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decorator(func):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper():</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Before the function call"</span>)</span>
@@ -351,7 +351,7 @@ After the function call</code></pre>
 <ul>
 <li><strong>Stacking Decorators</strong> - Multiple decorators can be applied in sequence.</li>
 </ul>
-<div id="e6abeeda" class="cell" data-execution_count="4">
+<div id="76639cde" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> uppercase(func):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> wrapper():</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> func().upper()</span>
@@ -376,7 +376,7 @@ After the function call</code></pre>
 </section>
 <section id="decorators-with-arguments" class="level2">
 <h2 class="anchored" data-anchor-id="decorators-with-arguments">Decorators with Arguments</h2>
-<div id="be25a584" class="cell" data-execution_count="5">
+<div id="cf9b5237" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> repeat(n):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> decorator(func):</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> wrapper(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
@@ -406,7 +406,7 @@ Hello!</code></pre>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<div id="221be38f" class="cell" data-execution_count="6">
+<div id="9dda5032" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_time(func):</span>
@@ -424,7 +424,7 @@ Hello!</code></pre>
 <span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>slow_function()  <span class="co"># Output: slow_function took 2.000X seconds</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>slow_function took 2.0100 seconds</code></pre>
+<pre><code>slow_function took 2.0156 seconds</code></pre>
 </div>
 </div>
 </section>

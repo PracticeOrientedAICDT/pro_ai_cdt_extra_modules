@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -195,7 +261,13 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>In Python, functions are treated like any other object.</strong></li>
 </ul>
-<div id="726a474f" class="cell" data-execution_count="1">
+<div id="49e2cdf7" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> greet(name):</span>
+<span id="cb1-2"><a></a>    <span class="cf">return</span> <span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span></span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="co"># Assign function to a variable</span></span>
+<span id="cb1-5"><a></a>greeting <span class="op">=</span> greet  </span>
+<span id="cb1-6"><a></a><span class="bu">print</span>(greeting(<span class="st">"Alice"</span>))  <span class="co"># Output: Hello, Alice!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello, Alice!</code></pre>
 </div>
@@ -206,7 +278,15 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>A function can accept another function as a parameter.</strong></li>
 </ul>
-<div id="84ee990f" class="cell" data-execution_count="2">
+<div id="aae708fd" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> apply_function(func, value):</span>
+<span id="cb3-2"><a></a>    <span class="cf">return</span> func(value)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="kw">def</span> square(n):</span>
+<span id="cb3-5"><a></a>    <span class="cf">return</span> n <span class="op">*</span> n</span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a>result <span class="op">=</span> apply_function(square, <span class="dv">5</span>)</span>
+<span id="cb3-8"><a></a><span class="bu">print</span>(result)  <span class="co"># Output: 25</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>25</code></pre>
 </div>
@@ -220,7 +300,14 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>A function can return another function, creating closures.</strong></li>
 </ul>
-<div id="cb7ec3b5" class="cell" data-execution_count="3">
+<div id="62d98bc6" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> multiplier(factor):</span>
+<span id="cb5-2"><a></a>    <span class="kw">def</span> multiply(number):</span>
+<span id="cb5-3"><a></a>        <span class="cf">return</span> number <span class="op">*</span> factor</span>
+<span id="cb5-4"><a></a>    <span class="cf">return</span> multiply</span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a>double <span class="op">=</span> multiplier(<span class="dv">2</span>)</span>
+<span id="cb5-7"><a></a><span class="bu">print</span>(double(<span class="dv">5</span>))  <span class="co"># Output: 10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>10</code></pre>
 </div>
@@ -234,7 +321,13 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>Functions can be stored in lists, dictionaries, and other data structures.</strong></li>
 </ul>
-<div id="4b8caf76" class="cell" data-execution_count="4">
+<div id="8e21228a" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>operations <span class="op">=</span> {</span>
+<span id="cb7-2"><a></a>    <span class="st">"add"</span>: <span class="kw">lambda</span> x, y: x <span class="op">+</span> y,</span>
+<span id="cb7-3"><a></a>    <span class="st">"multiply"</span>: <span class="kw">lambda</span> x, y: x <span class="op">*</span> y</span>
+<span id="cb7-4"><a></a>}</span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a><span class="bu">print</span>(operations[<span class="st">"add"</span>](<span class="dv">3</span>, <span class="dv">4</span>))  <span class="co"># Output: 7</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>7</code></pre>
 </div>
@@ -253,7 +346,16 @@ Daladier Sampaio Neto
 </section>
 <section id="using-first-class-functions-with-map-and-filter" class="slide level2">
 <h2>Using First-Class Functions with map() and filter()</h2>
-<div id="2b440cf0" class="cell" data-execution_count="5">
+<div id="95e70a34" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a><span class="co"># Using map() to square numbers</span></span>
+<span id="cb10-4"><a></a>squared <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span>, numbers))</span>
+<span id="cb10-5"><a></a><span class="bu">print</span>(squared)  <span class="co"># Output: [1, 4, 9, 16, 25]</span></span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a><span class="co"># Using filter() to get even numbers</span></span>
+<span id="cb10-8"><a></a>evens <span class="op">=</span> <span class="bu">list</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>, numbers))</span>
+<span id="cb10-9"><a></a><span class="bu">print</span>(evens)  <span class="co"># Output: [2, 4]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 4, 9, 16, 25]
 [2, 4]</code></pre>
@@ -265,7 +367,19 @@ Daladier Sampaio Neto
 <ul>
 <li><strong>Decorators use first-class functions to modify behavior.</strong></li>
 </ul>
-<div id="0fabef7c" class="cell" data-execution_count="6">
+<div id="fe20213c" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> decorator(func):</span>
+<span id="cb12-2"><a></a>    <span class="kw">def</span> wrapper():</span>
+<span id="cb12-3"><a></a>        <span class="bu">print</span>(<span class="st">"Before function call"</span>)</span>
+<span id="cb12-4"><a></a>        func()</span>
+<span id="cb12-5"><a></a>        <span class="bu">print</span>(<span class="st">"After function call"</span>)</span>
+<span id="cb12-6"><a></a>    <span class="cf">return</span> wrapper</span>
+<span id="cb12-7"><a></a></span>
+<span id="cb12-8"><a></a><span class="at">@decorator</span></span>
+<span id="cb12-9"><a></a><span class="kw">def</span> say_hello():</span>
+<span id="cb12-10"><a></a>    <span class="bu">print</span>(<span class="st">"Hello!"</span>)</span>
+<span id="cb12-11"><a></a></span>
+<span id="cb12-12"><a></a>say_hello()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Before function call
 Hello!
