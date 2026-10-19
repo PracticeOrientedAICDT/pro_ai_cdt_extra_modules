@@ -4,88 +4,25 @@
     "href": "vectorization/vectorization.html",
     "title": "Code Vectorization",
     "section": "",
-    "text": "Vectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays."
-  },
-  {
-    "objectID": "vectorization/vectorization.html#vectorization-with-boolean-masks",
-    "href": "vectorization/vectorization.html#vectorization-with-boolean-masks",
-    "title": "Code Vectorization",
-    "section": "Vectorization with Boolean Masks",
-    "text": "Vectorization with Boolean Masks\n\nBoolean arrays allow filtering without loops.\nExtremely fast due to C-level implementation.\n\n\nimport numpy as np\n\narr = np.array([1, 5, 2, 8, 3, 10])\n\n# Loop-based\n\nfiltered_loop = [x for x in arr if x &gt; 4]\n\n# Vectorized\n\nfiltered_vec = arr[arr &gt; 4]\n\nprint(filtered_vec)\n\n[ 5  8 10]"
-  },
-  {
-    "objectID": "vectorization/vectorization.html#vectorized-conditional-logic-np.where",
-    "href": "vectorization/vectorization.html#vectorized-conditional-logic-np.where",
-    "title": "Code Vectorization",
-    "section": "Vectorized Conditional Logic (np.where)",
-    "text": "Vectorized Conditional Logic (np.where)\n\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Replace elements &lt; 3 with 0, else keep them\n\nresult = np.where(arr &lt; 3, 0, arr)\n\nprint(result)\n\n[0 0 3 4 5]"
-  },
-  {
-    "objectID": "vectorization/vectorization.html#vectorization-with-aggregations",
-    "href": "vectorization/vectorization.html#vectorization-with-aggregations",
-    "title": "Code Vectorization",
-    "section": "Vectorization with Aggregations",
-    "text": "Vectorization with Aggregations\nAggregations are inherently vectorized:\nsum\nmean\nmin / max\nargmax / argmin\n\narr = np.random.rand(100000)\n\nprint(\"Mean:\", arr.mean())\nprint(\"Sum:\", arr.sum())\nprint(\"Max:\", arr.max())\n\nMean: 0.49956417056318164\nSum: 49956.41705631816\nMax: 0.9999995738308961"
-  },
-  {
-    "objectID": "vectorization/vectorization.html#vectorization-in-linear-algebra",
-    "href": "vectorization/vectorization.html#vectorization-in-linear-algebra",
-    "title": "Code Vectorization",
-    "section": "Vectorization in Linear Algebra",
-    "text": "Vectorization in Linear Algebra\nMany linear algebra operations are already vectorized:\nMatrix multiplication\nTransposition\nInversion\nNorms\nEigenvalues\n\nimport numpy as np\n\nA = np.random.rand(1000, 1000)\nv = np.random.rand(1000)\n\nresult = A @ v   # Vectorized matrix-vector product\nprint(result[:5])\n\n[265.22580242 249.03406117 257.29735987 253.44608303 240.47597699]"
-  },
-  {
-    "objectID": "vectorization/mldp.html#vectorization-with-boolean-masks",
-    "href": "vectorization/mldp.html#vectorization-with-boolean-masks",
-    "title": "Code Vectorization",
-    "section": "Vectorization with Boolean Masks",
-    "text": "Vectorization with Boolean Masks\n\nBoolean arrays allow filtering without loops.\nExtremely fast due to C-level implementation.\n\n\n\n[ 5  8 10]"
-  },
-  {
-    "objectID": "vectorization/mldp.html#vectorized-conditional-logic-np.where",
-    "href": "vectorization/mldp.html#vectorized-conditional-logic-np.where",
-    "title": "Code Vectorization",
-    "section": "Vectorized Conditional Logic (np.where)",
-    "text": "Vectorized Conditional Logic (np.where)\n\n\n[0 0 3 4 5]"
-  },
-  {
-    "objectID": "vectorization/mldp.html#vectorization-with-aggregations",
-    "href": "vectorization/mldp.html#vectorization-with-aggregations",
-    "title": "Code Vectorization",
-    "section": "Vectorization with Aggregations",
-    "text": "Vectorization with Aggregations\nAggregations are inherently vectorized:\nsum\nmean\nmin / max\nargmax / argmin\n\n\nMean: 0.49910196418174996\nSum: 49910.19641817499\nMax: 0.999999644921095"
-  },
-  {
-    "objectID": "vectorization/mldp.html#vectorization-in-linear-algebra",
-    "href": "vectorization/mldp.html#vectorization-in-linear-algebra",
-    "title": "Code Vectorization",
-    "section": "Vectorization in Linear Algebra",
-    "text": "Vectorization in Linear Algebra\nMany linear algebra operations are already vectorized:\nMatrix multiplication\nTransposition\nInversion\nNorms\nEigenvalues\n\n\n[258.40978416 247.54922711 247.26157733 253.23916923 247.36062709]"
+    "text": "What is Vectorization?\n\nVectorization refers to applying operations on entire arrays instead of using explicit loops.\nIt utilizes optimized C and Fortran implementations under the hood.\nCommonly used in NumPy, Pandas, and TensorFlow.\nReplaces slow for loops with efficient operations on entire arrays.\n\n\n\n\nWhy Use Vectorization?\n\nSpeed: Optimized implementations outperform loops.\nReadability: More concise and clear.\nMemory Efficiency: Operates directly on arrays without extra overhead.\nBetter CPU Utilization: Takes advantage of SIMD (Single Instruction, Multiple Data) operations.\n\n\n\n\nVectorization with NumPy: Element-wise Operations\n\nimport numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\n\n# Loop-based approach\nsquared_loop = [x**2 for x in arr]\n\n# Vectorized approach\nsquared_vectorized = arr ** 2\n\nprint(squared_vectorized)\n\n[ 1  4  9 16 25]\n\n\n\n\n\nVectorization with NumPy: Mathematical Functions\n\narr = np.array([0, np.pi / 2, np.pi])\n\n# Loop-based approach\nsin_loop = [np.sin(x) for x in arr]\n\n# Vectorized approach\nsin_vectorized = np.sin(arr)\n\nprint(sin_vectorized)\n\n[0.0000000e+00 1.0000000e+00 1.2246468e-16]\n\n\n\n\n\nVectorization Example - Z-score\n\nimport numpy as np\nimport time \n\nN=10**7\narr = np.random.rand(N)\n\nstart = time.perf_counter()\nmean = sum(arr) / N \nstd = (sum((x - mean)**2 for x in arr)/ N) ** 0.5\nz_loop = [(x - mean) / std for x in arr]\ntime_loop = time.perf_counter() - start\n\nstart = time.perf_counter()\nz_vec = (arr - arr.mean()) / arr.std()\ntime_vec = time.perf_counter() - start\n\n\nprint(f'Results:\\n')\nprint(f\"Vectorized: {time_vec:.4f} s\")\nprint(f\"Loop:    {time_loop} s\")\nprint(f\"Improvement: {time_loop / time_vec:.1f}x\")\nprint(np.allclose(z_loop, z_vec))\n\nResults:\n\nVectorized: 0.3886 s\nLoop:    16.214687799976673 s\nImprovement: 41.7x\nTrue\n\n\n\n\n\nVectorization with Pandas\n\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3, 4]})\n\n# Using apply (slow)\ndf['B'] = df['A'].apply(lambda x: x**2)\n\n# Vectorized (fast)\ndf['B'] = df['A'] ** 2\n\nprint(df)\n\n   A   B\n0  1   1\n1  2   4\n2  3   9\n3  4  16\n\n\n\n\n\nPerformance Comparison: NumPy vs Loop\n\nimport time\nimport numpy as np\n\narr = np.random.rand(10**6)\n\n# Loop-based\nstart = time.time()\nresult_loop = [x**2 for x in arr]\nprint(\"Loop time:\", time.time() - start)\n\n# Vectorized\nstart = time.time()\nresult_vectorized = arr ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nLoop time: 0.42186784744262695\nVectorized time: 0.004901885986328125\n\n\n\n\n\nPerformance Comparison: Pandas Apply vs Vectorized\n\nimport pandas as pd\nimport time\n\ndf = pd.DataFrame({'A': np.random.rand(10**6)})\n\n# Using apply (slow)\nstart = time.time()\ndf['B'] = df['A'].apply(lambda x: x**2)\nprint(\"Apply time:\", time.time() - start)\n\n# Vectorized (fast)\nstart = time.time()\ndf['B'] = df['A'] ** 2\nprint(\"Vectorized time:\", time.time() - start)\n\nApply time: 0.8224492073059082\nVectorized time: 0.013555765151977539\n\n\n\n\n\nVectorization in NumPy: Broadcasting\n\narr = np.array([[1, 2, 3], [4, 5, 6]])\nscalar = 2\n\n# Broadcasting operation\nresult = arr * scalar\n\nprint(result)\n\n[[ 2  4  6]\n [ 8 10 12]]\n\n\n\n\n\nVectorization in NumPy: Dot Product\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# Loop-based approach\nresult_loop = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n\n# Vectorized approach\nresult_vectorized = np.dot(A, B)\n\nprint(result_vectorized)\n\n[[19 22]\n [43 50]]\n\n\n\n\n\nConclusion\n\nUse vectorization whenever possible.\nNumPy and Pandas provide built-in vectorized operations.\nSignificant performance gains over loops.\nReduces memory overhead and improves efficiency."
   },
   {
     "objectID": "software_engineering.html",
     "href": "software_engineering.html",
     "title": "Software Engineering Best Practices",
     "section": "",
-    "text": "Reproducible Machine Learning\nReproducible machine learning and MLOps focus on building reliable, consistent, and scalable ML systems that can be trained, deployed, and maintained across different environments. Reproducibility ensures that experiments can be repeated with the same data, code, and configuration to yield identical results, reducing uncertainty and improving trust in models. MLOps extends these principles by applying DevOps practices to ML, emphasizing automation, versioning, monitoring, and continuous delivery. Together, they enable teams to manage the full lifecycle of ML models—from data preparation to production monitoring—while minimizing errors, mitigating drift, and accelerating innovation.\nSlides here\n\n\nClean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\nLab here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
+    "text": "Reproducible Machine Learning\nReproducible machine learning and MLOps focus on building reliable, consistent, and scalable ML systems that can be trained, deployed, and maintained across different environments. Reproducibility ensures that experiments can be repeated with the same data, code, and configuration to yield identical results, reducing uncertainty and improving trust in models. MLOps extends these principles by applying DevOps practices to ML, emphasizing automation, versioning, monitoring, and continuous delivery. Together, they enable teams to manage the full lifecycle of ML models—from data preparation to production monitoring—while minimizing errors, mitigating drift, and accelerating innovation.\nSlides here\n\n\nClean Code\nClean Code refers to a programming philosophy that emphasizes writing code that is easy to read, maintain, and understand. It promotes practices like meaningful naming conventions, modular design, simple logic, and minimizing code duplication. Clean code aims to be self-explanatory, reducing the need for excessive comments and making it easier for others (or your future self) to debug, test, and extend. Following clean code principles leads to higher-quality software, improved collaboration, and lower technical debt, making it easier to adapt and maintain the codebase over time.\nSlides here\n\n\nCI/CD\nCI/CD (Continuous Integration and Continuous Deployment/Delivery) is a development practice that automates the process of integrating code changes, testing, and deploying applications. In CI, developers frequently merge their code into a shared repository where automated tests are run to detect errors early. CD extends this by automating the deployment process, either by continuously delivering updates to a staging environment (Continuous Delivery) or automatically deploying to production (Continuous Deployment). This approach enhances software quality, speeds up development cycles, and allows teams to deliver features more reliably and efficiently.\nSlides here\n\n\nMachine Learning Design Patterns\nMachine learning design patterns are proven, reusable solutions to common challenges that arise in the development, deployment, and maintenance of machine learning (ML) systems. These patterns offer structured guidance on handling issues like data preprocessing, feature engineering, model selection, and operational scalability, helping streamline the often complex and iterative ML workflow. Examples include patterns like “Feature Store,” which centralizes reusable features across models, “Ensemble,” which combines multiple models to improve predictive performance, and “Model Monitoring,” which enables ongoing model evaluation to detect issues such as data drift. By encapsulating best practices, ML design patterns support efficient development, ensure robustness, and reduce technical debt, making them valuable tools for practitioners at all levels.\nSlides here",
     "crumbs": [
       "Home",
       "Software Engineering"
     ]
   },
   {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "",
-    "text": "Open-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
-  },
-  {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
     "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-pytorch",
     "title": "Introduction to PyTorch and Tensors",
-    "section": "",
-    "text": "Open-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
+    "section": "What is PyTorch?",
+    "text": "What is PyTorch?\n\nOpen-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
   },
   {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#why-pytorch",
@@ -95,200 +32,39 @@
     "text": "Why PyTorch?\n\nPythonic: integrates naturally with Python syntax and libraries.\nFlexible: easy debugging and model customization.\nEcosystem: tools for vision, NLP, and more.\nSupported by popular cloud platforms and hardware accelerators."
   },
   {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#pytorch-ecosystem-overview",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#pytorch-ecosystem-overview",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "PyTorch Ecosystem Overview",
-    "text": "PyTorch Ecosystem Overview\n\nPyTorch offers domain-specific libraries:\ntorchvision: computer vision\ntorchtext: natural language processing\ntorchaudio: audio/speech processing\ntorch.nn: neural network modules\ntorch.optim: optimization algorithms (SGD, Adam)\ntorch.utils.data: dataset utilities and dataloaders"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#torch.nn-building-neural-networks",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#torch.nn-building-neural-networks",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "torch.nn: Building Neural Networks",
-    "text": "torch.nn: Building Neural Networks\nProvides:\nLayers (Linear, Conv2d, LSTM)\nActivations (ReLU, Softmax)\nLoss functions (MSELoss, CrossEntropyLoss)\nModular model design\n\nimport torch.nn as nn\n\nmodel = nn.Sequential(\nnn.Linear(4, 16),\nnn.ReLU(),\nnn.Linear(16, 2)\n)\n\nprint(model)\n\nSequential(\n  (0): Linear(in_features=4, out_features=16, bias=True)\n  (1): ReLU()\n  (2): Linear(in_features=16, out_features=2, bias=True)\n)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#torch.optim-optimization-algorithms",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#torch.optim-optimization-algorithms",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "torch.optim: Optimization Algorithms",
-    "text": "torch.optim: Optimization Algorithms\n\nPopular optimizers:\n\nSGD\nAdam / AdamW\nRMSprop\n\n\nHandles gradient updates internally.\n\nimport torch.optim as optim\n\noptimizer = optim.Adam(model.parameters(), lr=0.001)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#datasets-and-dataloaders",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#datasets-and-dataloaders",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Datasets and DataLoaders",
-    "text": "Datasets and DataLoaders\n\nPyTorch provides tools to load data efficiently.\n\n\nfrom torch.utils.data import DataLoader, TensorDataset\nimport torch\n\nX = torch.rand(100, 4)\ny = torch.randint(0, 2, (100,))\n\ndataset = TensorDataset(X, y)\nloader = DataLoader(dataset, batch_size=16, shuffle=True)\n\nfor batch_x, batch_y in loader:\n  print(batch_x.shape, batch_y.shape)\n  break\n\ntorch.Size([16, 4]) torch.Size([16])"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#pytorch-for-computer-vision-torchvision",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#pytorch-for-computer-vision-torchvision",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "PyTorch for Computer Vision (torchvision)",
-    "text": "PyTorch for Computer Vision (torchvision)\n\nIncludes:\n\nPretrained models (ResNet, EfficientNet, ViT)\nImage transforms\nVision datasets (CIFAR-10, ImageNet)\n\n\n\nfrom torchvision import models\n\nmodel = models.resnet18(weights=\"IMAGENET1K_V1\")\nmodel.eval()\n\nResNet(\n  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)\n  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (relu): ReLU(inplace=True)\n  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)\n  (layer1): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (layer2): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (downsample): Sequential(\n        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)\n        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      )\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (layer3): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (downsample): Sequential(\n        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)\n        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      )\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (layer4): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (downsample): Sequential(\n        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)\n        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      )\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))\n  (fc): Linear(in_features=512, out_features=1000, bias=True)\n)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#pytorch-capabilities",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#pytorch-capabilities",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Pytorch capabilities",
-    "text": "Pytorch capabilities\n\nPyTorch provides:\n\nTensors + GPU acceleration\nAutograd for gradients\nTools for deep learning (nn, optim)\nLibraries for vision, NLP, audio\nA complete ecosystem for building AI systems."
-  },
-  {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
     "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor",
     "title": "Introduction to PyTorch and Tensors",
     "section": "What is a Tensor?",
-    "text": "What is a Tensor?\n\nA tensor is a generalization of vectors and matrices to potentially higher dimensions.\nPrimary data structures in PyTorch.\nEfficient Computation: Optimized for high-performance mathematical operations, especially on GPUs.\nSupports automatic differentiation, crucial for training neural networks."
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor-1",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#what-is-a-tensor-1",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "What is a Tensor?",
-    "text": "What is a Tensor?\n\nmulti-dimensional array used to store and manipulate data.\nSimilar to NumPy arrays, but with:\n\nGPU support\nIntegration with deep learning workflows\n\nExamples:\n\n0D tensor: a single number\n1D tensor: a vector\n2D tensor: a matrix\n3D+ tensor: multi-dimensional datasets"
-  },
-  {
-    "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#tensor-attributes",
-    "href": "pytorch_and_tensors/pytorch_and_tensors.html#tensor-attributes",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Tensor Attributes",
-    "text": "Tensor Attributes\n\nshape\n\n\nimport torch\n\ntensor = torch.randn(3, 4, 5)\nprint(\"Tensor Shape:\", tensor.shape)\n\nTensor Shape: torch.Size([3, 4, 5])"
+    "text": "What is a Tensor?\n\nA multi-dimensional array used to store and manipulate data.\nSimilar to NumPy arrays, but with:\n\nGPU support\nIntegration with deep learning workflows\n\nExamples:\n\n0D tensor: a single number\n1D tensor: a vector\n2D tensor: a matrix\n3D+ tensor: multi-dimensional datasets"
   },
   {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
     "href": "pytorch_and_tensors/pytorch_and_tensors.html#creating-tensors-in-pytorch",
     "title": "Introduction to PyTorch and Tensors",
     "section": "Creating Tensors in PyTorch",
-    "text": "Creating Tensors in PyTorch\n\nimport torch\n\ndata = [[1, 2], [3, 4]]\nx_data = torch.tensor(data)\n\n# From NumPy array\nimport numpy as np\nnp_array = np.array(data)\nx_np = torch.from_numpy(np_array)\n\n# With random values\nx_rand = torch.rand(2, 3)\n\n# With zeros\nx_zeros = torch.zeros(2, 3)"
+    "text": "Creating Tensors in PyTorch"
   },
   {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
     "href": "pytorch_and_tensors/pytorch_and_tensors.html#inpecting-tensors",
     "title": "Introduction to PyTorch and Tensors",
     "section": "Inpecting Tensors",
-    "text": "Inpecting Tensors\n\nimport torch\n\nx = torch.rand(3, 4)\n\nprint(\"Shape:\", x.shape)     # tensor dimensions\nprint(\"Data type:\", x.dtype) # float32, int64, etc.\nprint(\"Device:\", x.device)   # CPU or GPU\n\nShape: torch.Size([3, 4])\nData type: torch.float32\nDevice: cpu"
+    "text": "Inpecting Tensors\n\n\nShape: torch.Size([3, 4])\nData type: torch.float32\nDevice: cpu"
   },
   {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
     "href": "pytorch_and_tensors/pytorch_and_tensors.html#basic-tensors-operations",
     "title": "Introduction to PyTorch and Tensors",
     "section": "Basic Tensors Operations",
-    "text": "Basic Tensors Operations\n\nx = torch.rand(2, 2)\ny = torch.rand(2, 2)\n\nz_add = x + y              # Addition\nz_mul = x * y              # Element-wise multiplication\nz_matmul = torch.matmul(x, y) # Matrix multiplication\nz_reshape = x.view(4)      # Reshape"
+    "text": "Basic Tensors Operations"
   },
   {
     "objectID": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
     "href": "pytorch_and_tensors/pytorch_and_tensors.html#moving-tensors-to-gpu",
     "title": "Introduction to PyTorch and Tensors",
     "section": "Moving Tensors to GPU",
-    "text": "Moving Tensors to GPU\n\n# Check if GPU is available\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n\nx = torch.rand(2, 2).to(device)\nprint(x.device)  # \"cuda\" if GPU is available\n\ncpu"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#what-is-pytorch",
-    "href": "pytorch_and_tensors/ipt.html#what-is-pytorch",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "What is PyTorch?",
-    "text": "What is PyTorch?\n\nOpen-source deep learning framework developed by Facebook’s AI Research lab.\nKnown for:\n\nDynamic computation graphs (define-by-run)\nStrong GPU acceleration\nLarge, active community\n\nWidely used in research and production."
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#why-pytorch",
-    "href": "pytorch_and_tensors/ipt.html#why-pytorch",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Why PyTorch?",
-    "text": "Why PyTorch?\n\nPythonic: integrates naturally with Python syntax and libraries.\nFlexible: easy debugging and model customization.\nEcosystem: tools for vision, NLP, and more.\nSupported by popular cloud platforms and hardware accelerators."
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#pytorch-ecosystem-overview",
-    "href": "pytorch_and_tensors/ipt.html#pytorch-ecosystem-overview",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "PyTorch Ecosystem Overview",
-    "text": "PyTorch Ecosystem Overview\n\nPyTorch offers domain-specific libraries:\ntorchvision: computer vision\ntorchtext: natural language processing\ntorchaudio: audio/speech processing\ntorch.nn: neural network modules\ntorch.optim: optimization algorithms (SGD, Adam)\ntorch.utils.data: dataset utilities and dataloaders"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#torch.nn-building-neural-networks",
-    "href": "pytorch_and_tensors/ipt.html#torch.nn-building-neural-networks",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "torch.nn: Building Neural Networks",
-    "text": "torch.nn: Building Neural Networks\nProvides:\nLayers (Linear, Conv2d, LSTM)\nActivations (ReLU, Softmax)\nLoss functions (MSELoss, CrossEntropyLoss)\nModular model design\n\nimport torch.nn as nn\n\nmodel = nn.Sequential(\nnn.Linear(4, 16),\nnn.ReLU(),\nnn.Linear(16, 2)\n)\n\nprint(model)\n\nSequential(\n  (0): Linear(in_features=4, out_features=16, bias=True)\n  (1): ReLU()\n  (2): Linear(in_features=16, out_features=2, bias=True)\n)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#torch.optim-optimization-algorithms",
-    "href": "pytorch_and_tensors/ipt.html#torch.optim-optimization-algorithms",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "torch.optim: Optimization Algorithms",
-    "text": "torch.optim: Optimization Algorithms\n\nPopular optimizers:\n\nSGD\nAdam / AdamW\nRMSprop\n\n\nHandles gradient updates internally.\n\nimport torch.optim as optim\n\noptimizer = optim.Adam(model.parameters(), lr=0.001)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#datasets-and-dataloaders",
-    "href": "pytorch_and_tensors/ipt.html#datasets-and-dataloaders",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Datasets and DataLoaders",
-    "text": "Datasets and DataLoaders\n\nPyTorch provides tools to load data efficiently.\n\n\nfrom torch.utils.data import DataLoader, TensorDataset\nimport torch\n\nX = torch.rand(100, 4)\ny = torch.randint(0, 2, (100,))\n\ndataset = TensorDataset(X, y)\nloader = DataLoader(dataset, batch_size=16, shuffle=True)\n\nfor batch_x, batch_y in loader:\n  print(batch_x.shape, batch_y.shape)\n  break\n\ntorch.Size([16, 4]) torch.Size([16])"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#pytorch-for-computer-vision-torchvision",
-    "href": "pytorch_and_tensors/ipt.html#pytorch-for-computer-vision-torchvision",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "PyTorch for Computer Vision (torchvision)",
-    "text": "PyTorch for Computer Vision (torchvision)\n\nIncludes:\n\nPretrained models (ResNet, EfficientNet, ViT)\nImage transforms\nVision datasets (CIFAR-10, ImageNet)\n\n\n\nfrom torchvision import models\n\nmodel = models.resnet18(weights=\"IMAGENET1K_V1\")\nmodel.eval()\n\nResNet(\n  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)\n  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n  (relu): ReLU(inplace=True)\n  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)\n  (layer1): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (layer2): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (downsample): Sequential(\n        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)\n        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      )\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (layer3): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (downsample): Sequential(\n        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)\n        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      )\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (layer4): Sequential(\n    (0): BasicBlock(\n      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (downsample): Sequential(\n        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)\n        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      )\n    )\n    (1): BasicBlock(\n      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n      (relu): ReLU(inplace=True)\n      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n    )\n  )\n  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))\n  (fc): Linear(in_features=512, out_features=1000, bias=True)\n)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#pytorch-capabilities",
-    "href": "pytorch_and_tensors/ipt.html#pytorch-capabilities",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Pytorch capabilities",
-    "text": "Pytorch capabilities\n\nPyTorch provides:\n\nTensors + GPU acceleration\nAutograd for gradients\nTools for deep learning (nn, optim)\nLibraries for vision, NLP, audio\nA complete ecosystem for building AI systems."
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#what-is-a-tensor",
-    "href": "pytorch_and_tensors/ipt.html#what-is-a-tensor",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "What is a Tensor?",
-    "text": "What is a Tensor?\n\nA tensor is a generalization of vectors and matrices to potentially higher dimensions.\nPrimary data structures in PyTorch.\nEfficient Computation: Optimized for high-performance mathematical operations, especially on GPUs.\nSupports automatic differentiation, crucial for training neural networks."
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#what-is-a-tensor-1",
-    "href": "pytorch_and_tensors/ipt.html#what-is-a-tensor-1",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "What is a Tensor?",
-    "text": "What is a Tensor?\n\nmulti-dimensional array used to store and manipulate data.\nSimilar to NumPy arrays, but with:\n\nGPU support\nIntegration with deep learning workflows\n\nExamples:\n\n0D tensor: a single number\n1D tensor: a vector\n2D tensor: a matrix\n3D+ tensor: multi-dimensional datasets"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#tensor-attributes",
-    "href": "pytorch_and_tensors/ipt.html#tensor-attributes",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Tensor Attributes",
-    "text": "Tensor Attributes\n\nshape\n\n\nimport torch\n\ntensor = torch.randn(3, 4, 5)\nprint(\"Tensor Shape:\", tensor.shape)\n\nTensor Shape: torch.Size([3, 4, 5])"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#creating-tensors-in-pytorch",
-    "href": "pytorch_and_tensors/ipt.html#creating-tensors-in-pytorch",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Creating Tensors in PyTorch",
-    "text": "Creating Tensors in PyTorch\n\nimport torch\n\ndata = [[1, 2], [3, 4]]\nx_data = torch.tensor(data)\n\n# From NumPy array\nimport numpy as np\nnp_array = np.array(data)\nx_np = torch.from_numpy(np_array)\n\n# With random values\nx_rand = torch.rand(2, 3)\n\n# With zeros\nx_zeros = torch.zeros(2, 3)"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#inpecting-tensors",
-    "href": "pytorch_and_tensors/ipt.html#inpecting-tensors",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Inpecting Tensors",
-    "text": "Inpecting Tensors\n\nimport torch\n\nx = torch.rand(3, 4)\n\nprint(\"Shape:\", x.shape)     # tensor dimensions\nprint(\"Data type:\", x.dtype) # float32, int64, etc.\nprint(\"Device:\", x.device)   # CPU or GPU\n\nShape: torch.Size([3, 4])\nData type: torch.float32\nDevice: cpu"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#basic-tensors-operations",
-    "href": "pytorch_and_tensors/ipt.html#basic-tensors-operations",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Basic Tensors Operations",
-    "text": "Basic Tensors Operations\n\nx = torch.rand(2, 2)\ny = torch.rand(2, 2)\n\nz_add = x + y              # Addition\nz_mul = x * y              # Element-wise multiplication\nz_matmul = torch.matmul(x, y) # Matrix multiplication\nz_reshape = x.view(4)      # Reshape"
-  },
-  {
-    "objectID": "pytorch_and_tensors/ipt.html#moving-tensors-to-gpu",
-    "href": "pytorch_and_tensors/ipt.html#moving-tensors-to-gpu",
-    "title": "Introduction to PyTorch and Tensors",
-    "section": "Moving Tensors to GPU",
-    "text": "Moving Tensors to GPU\n\n# Check if GPU is available\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\n\nx = torch.rand(2, 2).to(device)\nprint(x.device)  # \"cuda\" if GPU is available\n\ncpu"
+    "text": "Moving Tensors to GPU\n\n\ncpu"
   },
   {
     "objectID": "magic_methods/magic_methods.html",
@@ -697,92 +473,92 @@
     "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
   },
   {
-    "objectID": "first_class_functions/fcf.html#first-class-functions-in-python",
-    "href": "first_class_functions/fcf.html#first-class-functions-in-python",
+    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python",
+    "href": "first_class_functions/mldp.html#first-class-functions-in-python",
     "title": "First Class Functions",
     "section": "First-Class Functions in Python",
     "text": "First-Class Functions in Python\n\nWhat Are First-Class Functions?\n\nIn Python, functions are first-class objects.\nThis means they can be:\n\nAssigned to variables\nPassed as arguments\nReturned from other functions\nStored in data structures"
   },
   {
-    "objectID": "first_class_functions/fcf.html#first-class-functions-in-python-1",
-    "href": "first_class_functions/fcf.html#first-class-functions-in-python-1",
+    "objectID": "first_class_functions/mldp.html#first-class-functions-in-python-1",
+    "href": "first_class_functions/mldp.html#first-class-functions-in-python-1",
     "title": "First Class Functions",
     "section": "First-Class Functions in Python",
     "text": "First-Class Functions in Python\n\nWhy does this matter?\n\nIt enables functional programming techniques.\nIt makes code more flexible and reusable."
   },
   {
-    "objectID": "first_class_functions/fcf.html#functional-programming",
-    "href": "first_class_functions/fcf.html#functional-programming",
+    "objectID": "first_class_functions/mldp.html#functional-programming",
+    "href": "first_class_functions/mldp.html#functional-programming",
     "title": "First Class Functions",
     "section": "Functional Programming",
     "text": "Functional Programming\n\nWhat is Functional Programming?\n\nFunctional Programming (FP) is a programming paradigm that:\nFocuses on immutability and pure functions\nUses higher-order functions and function composition\nAvoids side effects and mutating state\nGoal: Write clear, predictable, and reusable code!"
   },
   {
-    "objectID": "first_class_functions/fcf.html#key-principles-of-functional-programing",
-    "href": "first_class_functions/fcf.html#key-principles-of-functional-programing",
+    "objectID": "first_class_functions/mldp.html#key-principles-of-functional-programing",
+    "href": "first_class_functions/mldp.html#key-principles-of-functional-programing",
     "title": "First Class Functions",
     "section": "Key Principles of Functional Programing",
     "text": "Key Principles of Functional Programing\n\nCore Concepts\n\nPure Functions – Functions that always return the same output for the same input.\nImmutability – Data cannot be modified after it’s created.\nHigher-Order Functions – Functions that take other functions as arguments or return them.\nFunction Composition – Combining simple functions to build complex behavior.\nRecursion – Replacing loops with recursive calls."
   },
   {
-    "objectID": "first_class_functions/fcf.html#functions-as-objects",
-    "href": "first_class_functions/fcf.html#functions-as-objects",
+    "objectID": "first_class_functions/mldp.html#functions-as-objects",
+    "href": "first_class_functions/mldp.html#functions-as-objects",
     "title": "First Class Functions",
     "section": "Functions as Objects",
-    "text": "Functions as Objects\n\nIn Python, functions are treated like any other object.\n\n\ndef greet(name):\n    return f\"Hello, {name}!\"\n\n# Assign function to a variable\ngreeting = greet  \nprint(greeting(\"Alice\"))  # Output: Hello, Alice!\n\nHello, Alice!"
+    "text": "Functions as Objects\n\nIn Python, functions are treated like any other object.\n\n\n\nHello, Alice!"
   },
   {
-    "objectID": "first_class_functions/fcf.html#passing-functions-as-arguments",
-    "href": "first_class_functions/fcf.html#passing-functions-as-arguments",
+    "objectID": "first_class_functions/mldp.html#passing-functions-as-arguments",
+    "href": "first_class_functions/mldp.html#passing-functions-as-arguments",
     "title": "First Class Functions",
     "section": "Passing Functions as Arguments",
-    "text": "Passing Functions as Arguments\n\nA function can accept another function as a parameter.\n\n\ndef apply_function(func, value):\n    return func(value)\n\ndef square(n):\n    return n * n\n\nresult = apply_function(square, 5)\nprint(result)  # Output: 25\n\n25\n\n\n\nThe apply_function function takes a function (func) and a value, then applies the function to the value."
+    "text": "Passing Functions as Arguments\n\nA function can accept another function as a parameter.\n\n\n\n25\n\n\n\nThe apply_function function takes a function (func) and a value, then applies the function to the value."
   },
   {
-    "objectID": "first_class_functions/fcf.html#returning-functions-from-functions",
-    "href": "first_class_functions/fcf.html#returning-functions-from-functions",
+    "objectID": "first_class_functions/mldp.html#returning-functions-from-functions",
+    "href": "first_class_functions/mldp.html#returning-functions-from-functions",
     "title": "First Class Functions",
     "section": "Returning Functions from Functions",
-    "text": "Returning Functions from Functions\n\nA function can return another function, creating closures.\n\n\ndef multiplier(factor):\n    def multiply(number):\n        return number * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10\n\n\n\nThe multiplier function returns a function that remembers the factor."
+    "text": "Returning Functions from Functions\n\nA function can return another function, creating closures.\n\n\n\n10\n\n\n\nThe multiplier function returns a function that remembers the factor."
   },
   {
-    "objectID": "first_class_functions/fcf.html#storing-functions-in-data-structures",
-    "href": "first_class_functions/fcf.html#storing-functions-in-data-structures",
+    "objectID": "first_class_functions/mldp.html#storing-functions-in-data-structures",
+    "href": "first_class_functions/mldp.html#storing-functions-in-data-structures",
     "title": "First Class Functions",
     "section": "Storing Functions in Data Structures",
-    "text": "Storing Functions in Data Structures\n\nFunctions can be stored in lists, dictionaries, and other data structures.\n\n\noperations = {\n    \"add\": lambda x, y: x + y,\n    \"multiply\": lambda x, y: x * y\n}\n\nprint(operations[\"add\"](3, 4))  # Output: 7\n\n7\n\n\n\nThis allows dynamic selection of functions at runtime!"
+    "text": "Storing Functions in Data Structures\n\nFunctions can be stored in lists, dictionaries, and other data structures.\n\n\n\n7\n\n\n\nThis allows dynamic selection of functions at runtime!"
   },
   {
-    "objectID": "first_class_functions/fcf.html#practical-applications",
-    "href": "first_class_functions/fcf.html#practical-applications",
+    "objectID": "first_class_functions/mldp.html#practical-applications",
+    "href": "first_class_functions/mldp.html#practical-applications",
     "title": "First Class Functions",
     "section": "Practical Applications",
     "text": "Practical Applications\n- Where are first-class functions useful?\n- Higher-order functions (e.g., map(), filter(), reduce())\n- Decorators (modifying function behavior)\n-Callbacks (event-driven programming)\n-Custom function pipelines"
   },
   {
-    "objectID": "first_class_functions/fcf.html#using-first-class-functions-with-map-and-filter",
-    "href": "first_class_functions/fcf.html#using-first-class-functions-with-map-and-filter",
+    "objectID": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
+    "href": "first_class_functions/mldp.html#using-first-class-functions-with-map-and-filter",
     "title": "First Class Functions",
     "section": "Using First-Class Functions with map() and filter()",
-    "text": "Using First-Class Functions with map() and filter()\n\nnumbers = [1, 2, 3, 4, 5]\n\n# Using map() to square numbers\nsquared = list(map(lambda x: x ** 2, numbers))\nprint(squared)  # Output: [1, 4, 9, 16, 25]\n\n# Using filter() to get even numbers\nevens = list(filter(lambda x: x % 2 == 0, numbers))\nprint(evens)  # Output: [2, 4]\n\n[1, 4, 9, 16, 25]\n[2, 4]"
+    "text": "Using First-Class Functions with map() and filter()\n\n\n[1, 4, 9, 16, 25]\n[2, 4]"
   },
   {
-    "objectID": "first_class_functions/fcf.html#decorators---a-powerful-case",
-    "href": "first_class_functions/fcf.html#decorators---a-powerful-case",
+    "objectID": "first_class_functions/mldp.html#decorators---a-powerful-case",
+    "href": "first_class_functions/mldp.html#decorators---a-powerful-case",
     "title": "First Class Functions",
     "section": "Decorators - A Powerful Case",
-    "text": "Decorators - A Powerful Case\n\nDecorators use first-class functions to modify behavior.\n\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before function call\")\n        func()\n        print(\"After function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore function call\nHello!\nAfter function call\n\n\n\nOutput\n\nBefore function call\nHello!\nAfter function call"
+    "text": "Decorators - A Powerful Case\n\nDecorators use first-class functions to modify behavior.\n\n\n\nBefore function call\nHello!\nAfter function call\n\n\n\nOutput\n\nBefore function call\nHello!\nAfter function call"
   },
   {
-    "objectID": "first_class_functions/fcf.html#advantages-of-first-class-functions",
-    "href": "first_class_functions/fcf.html#advantages-of-first-class-functions",
+    "objectID": "first_class_functions/mldp.html#advantages-of-first-class-functions",
+    "href": "first_class_functions/mldp.html#advantages-of-first-class-functions",
     "title": "First Class Functions",
     "section": "Advantages of First-Class Functions",
     "text": "Advantages of First-Class Functions\n- Why Use First-Class Functions?\n- Encourages modular code\n- Reduces redundancy\n- Enables functional programming\n- Great for decorators, callbacks, and functional pipelines\n\n- More flexibility → Better Code!"
   },
   {
-    "objectID": "first_class_functions/fcf.html#summary",
-    "href": "first_class_functions/fcf.html#summary",
+    "objectID": "first_class_functions/mldp.html#summary",
+    "href": "first_class_functions/mldp.html#summary",
     "title": "First Class Functions",
     "section": "Summary",
     "text": "Summary\n- Key Takeaways:\n\n    - First-class functions allow functions to be treated as objects.\n    - You can assign, pass, return, and store functions dynamically.\n    - This enables powerful functional programming patterns.\n    - Used in higher-order functions, decorators, and more"
@@ -933,6 +709,164 @@
     "title": "Clean Code",
     "section": "Benefits of Clean Code",
     "text": "Benefits of Clean Code\n\nHigher Productivity: Cleaner code saves time in debugging and development\nImproved Quality: Reduces the likelihood of bugs and inconsistencies\nBetter Collaboration: Easier for teams to work on and scale projects\nFuture-Proofing: Clean code ensures adaptability and ease of modification"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd",
+    "href": "CI_CD/cicd.html#cicd",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd-1",
+    "href": "CI_CD/cicd.html#cicd-1",
+    "title": "CI/CD",
+    "section": "CI/CD",
+    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Integration (CI)",
+    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
+    "title": "CI/CD",
+    "section": "CI/CD - Continuous Delivery (CD)",
+    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits",
+    "href": "CI_CD/cicd.html#cicd---benefits",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
+    "href": "CI_CD/cicd.html#cicd---benefits-1",
+    "title": "CI/CD",
+    "section": "CI/CD - Benefits",
+    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions",
+    "href": "CI_CD/cicd.html#github-actions",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-1",
+    "href": "CI_CD/cicd.html#github-actions-1",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-2",
+    "href": "CI_CD/cicd.html#github-actions-2",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-3",
+    "href": "CI_CD/cicd.html#github-actions-3",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-actions-4",
+    "href": "CI_CD/cicd.html#github-actions-4",
+    "title": "CI/CD",
+    "section": "Github Actions",
+    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files",
+    "href": "CI_CD/cicd.html#yml-files",
+    "title": "CI/CD",
+    "section": "Yml files",
+    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-1",
+    "href": "CI_CD/cicd.html#yml-files-1",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files-2",
+    "href": "CI_CD/cicd.html#yml-files-2",
+    "title": "CI/CD",
+    "section": "Yml Files",
+    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure",
+    "href": "CI_CD/cicd.html#yml-files---structure",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
+    "href": "CI_CD/cicd.html#yml-files---structure-1",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
+    "href": "CI_CD/cicd.html#yml-files---structure-2",
+    "title": "CI/CD",
+    "section": "Yml Files - Structure",
+    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
+  },
+  {
+    "objectID": "CI_CD/cicd.html#github-repo",
+    "href": "CI_CD/cicd.html#github-repo",
+    "title": "CI/CD",
+    "section": "Github Repo",
+    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
   },
   {
     "objectID": "CI_CD/ci_cd.html",
@@ -1089,269 +1023,6 @@
     "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
   },
   {
-    "objectID": "CI_CD/cicd.html#cicd",
-    "href": "CI_CD/cicd.html#cicd",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nCI/CD stands for Continuous Integration (CI) and Continuous Delivery/Deployment (CD).\nIt is a key set of practices in modern software development.\nAutomates and streamlines the software delivery process."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd-1",
-    "href": "CI_CD/cicd.html#cicd-1",
-    "title": "CI/CD",
-    "section": "CI/CD",
-    "text": "CI/CD\n\nFocuses on improving software quality and efficiency.\nEnables teams to build, test, and release code frequently.\nReduces manual work and the potential for errors."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci",
-    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nFrequent code integration: Developers frequently merge code changes into a shared repository.\nAutomated testing: Every code commit triggers automated tests to detect bugs early.\nEarly bug detection: Small, incremental changes help identify and resolve issues faster."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
-    "href": "CI_CD/cicd.html#cicd---continuous-integration-ci-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Integration (CI)",
-    "text": "CI/CD - Continuous Integration (CI)\n\nConsistent build environment: Ensures consistency between development, testing, and production environments.\nImproved code quality: Continuous feedback from tests leads to better code quality over time.\nFaster iteration cycles: Developers receive quick feedback, allowing faster iterations."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nAutomated release processes: After CI, code is automatically tested, validated, and prepared for deployment.\nFrequent, reliable releases: Ensures code can be released to production anytime with confidence.\nManual approval option: Allows for a final manual verification step before releasing to production."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nReduced release risk: Smaller, incremental updates lower the chances of major issues in production.\nQuick user feedback: Regular releases make it easier to gather user feedback and adjust features.\nFully automated deployments: Every change that passes automated tests is automatically deployed to production."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
-    "href": "CI_CD/cicd.html#cicd---continuous-delivery-cd-2",
-    "title": "CI/CD",
-    "section": "CI/CD - Continuous Delivery (CD)",
-    "text": "CI/CD - Continuous Delivery (CD)\n\nNo manual intervention: Removes manual approval steps, ensuring fast, frequent deployments.\nRapid iteration: New features, bug fixes, and updates are delivered to end users continuously.\nRequires strong testing: Robust automated tests are critical to ensure no bugs reach production.\nHigh-quality monitoring: Real-time monitoring systems are essential to detect and respond to any production issues."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---benefits",
-    "href": "CI_CD/cicd.html#cicd---benefits",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nFaster development cycles: Continuous integration and deployment reduce the time between coding and deployment.\nHigher quality software: Continuous testing, feedback loops, and automated checks ensure higher reliability.\nReduced manual effort: Automation reduces manual testing, builds, and deployments, improving productivity."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#cicd---benefits-1",
-    "href": "CI_CD/cicd.html#cicd---benefits-1",
-    "title": "CI/CD",
-    "section": "CI/CD - Benefits",
-    "text": "CI/CD - Benefits\n\nGreater collaboration: Developers, testers, and operations teams work in sync, fostering a DevOps culture.\nBetter user experience: Faster delivery of features and fixes leads to improved customer satisfaction."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions",
-    "href": "CI_CD/cicd.html#github-actions",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCI/CD automation platform: GitHub Actions allows developers to automate software development workflows, including Continuous Integration and Continuous Delivery (CI/CD).\nWorkflow as code: Workflows are defined in YAML files, stored in the .github/workflows/ directory of the repository.\nEvent-driven workflows: Actions can be triggered by events like pushes, pull requests, issues, or scheduled events (cron jobs)."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-1",
-    "href": "CI_CD/cicd.html#github-actions-1",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nExtensive ecosystem: Provides a marketplace for reusable actions, enabling easy integration with third-party services or creating custom actions.\nScalable environments: Supports both GitHub-hosted and self-hosted runners for executing workflows across different platforms (Linux, macOS, Windows).\nParallel job execution: Allows running jobs in parallel or defining dependencies between jobs to optimize workflow efficiency."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-2",
-    "href": "CI_CD/cicd.html#github-actions-2",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nSecrets management: Securely stores sensitive information like API keys or credentials using GitHub Secrets, available within workflows.\nMatrix builds: Supports testing across multiple environments, versions, and configurations in parallel using matrix configurations.\nIntegrated with GitHub ecosystem: Deep integration with GitHub’s pull requests, issues, and code reviews, enabling a seamless development workflow."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-3",
-    "href": "CI_CD/cicd.html#github-actions-3",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nFree tier: Provides a generous free tier with included minutes for GitHub-hosted runners, with additional minutes available through paid plans.\nExtensive logging and monitoring: Offers detailed logs for each step in a workflow to help diagnose and troubleshoot errors."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-actions-4",
-    "href": "CI_CD/cicd.html#github-actions-4",
-    "title": "CI/CD",
-    "section": "Github Actions",
-    "text": "Github Actions\n\nCustomizable triggers: Developers can create custom workflows that respond to nearly any GitHub event, such as commits, new issues, or pull requests.\nSupports container-based workflows: Allows developers to use Docker containers for isolated, consistent build environments."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files",
-    "href": "CI_CD/cicd.html#yml-files",
-    "title": "CI/CD",
-    "section": "Yml files",
-    "text": "Yml files\n\nHuman-readable format: YAML (YAML Ain’t Markup Language) is designed to be simple and easy to read, with a clean and minimal syntax.\nData serialization language: Commonly used for configuration files, it represents complex data structures such as lists, dictionaries, and scalars.\nIndentation-based structure: Uses whitespace indentation (usually spaces) to define structure and hierarchy, similar to Python."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files-1",
-    "href": "CI_CD/cicd.html#yml-files-1",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nSupports key-value pairs: YAML files store data in key-value pairs, making it intuitive for configuration purposes.\nSupports lists and arrays: Allows the creation of lists using dashes (-) for unordered sequences.\nNo special characters: Avoids the need for quotation marks, curly braces, or other delimiters common in other formats like JSON or XML."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files-2",
-    "href": "CI_CD/cicd.html#yml-files-2",
-    "title": "CI/CD",
-    "section": "Yml Files",
-    "text": "Yml Files\n\nWidely used in DevOps and CI/CD: Popular in tools like Docker Compose, GitHub Actions, Kubernetes, and Ansible for defining workflows and infrastructure.\nSupports anchors and aliases: Allows reusing values within the file using anchors (&) and aliases (*), which help reduce redundancy.\nPortable and flexible: Works well across different languages and platforms, and can be easily parsed by various programming languages."
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure",
-    "href": "CI_CD/cicd.html#yml-files---structure",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nKey-Value Pairs\n\nkey: value\nname: John\nage: 30\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure-1",
-    "href": "CI_CD/cicd.html#yml-files---structure-1",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nLists (Sequences)\n\nfruits:\n  - apple\n  - banana\n  - orange\n\n\nIndentation (Hierarchy)\n\nperson:\n  name: John\n  age: 30"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#yml-files---structure-2",
-    "href": "CI_CD/cicd.html#yml-files---structure-2",
-    "title": "CI/CD",
-    "section": "Yml Files - Structure",
-    "text": "Yml Files - Structure\n\nNested Lists\n\nfruits:\n  - apple\n  - banana\n  - orange\n\nDictionaries (Mappings)\n\naddress:\n  street: 123 Main St\n  city: New York\n  zip: 10001"
-  },
-  {
-    "objectID": "CI_CD/cicd.html#github-repo",
-    "href": "CI_CD/cicd.html#github-repo",
-    "title": "CI/CD",
-    "section": "Github Repo",
-    "text": "Github Repo\n\nAcess the github repo here\nFork the repo\nClone the repo to your local machine\nOpen using your prefferd text editor"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#introduction",
-    "href": "CI_CD/cicd_lab.html#introduction",
-    "title": "CI/CD Lab",
-    "section": "Introduction",
-    "text": "Introduction\nContinuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.\nIn this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention."
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#what-you-will-learn",
-    "href": "CI_CD/cicd_lab.html#what-you-will-learn",
-    "title": "CI/CD Lab",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nThis tutorial demonstrates a lightweight yet complete ML project powered entirely by GitHub Actions. The concepts covered will be familiar to most machine learning engineers and data scientists. The primary focus is on learning how to integrate the following tools into an automated workflow:\n\nGitHub Actions\n\nMakefile\n\nContinuous Machine Learning (CML)\n\nHugging Face CLI\n\nIf you want to deepen your understanding of production-ready ML systems, consider enrolling in the MLOps Concepts course, which covers the journey from local notebooks to deployed models that create real business impact."
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#why-cicd-for-machine-learning",
-    "href": "CI_CD/cicd_lab.html#why-cicd-for-machine-learning",
-    "title": "CI/CD Lab",
-    "section": "Why CI/CD for Machine Learning?",
-    "text": "Why CI/CD for Machine Learning?\nCI/CD plays a crucial role in transforming experimental models into reliable, production-grade systems. By automating repetitive and error-prone tasks, CI/CD enables faster development cycles, higher reliability, and improved scalability.\nSpecifically, CI/CD for machine learning offers the following benefits:\n1. Automated Training Pipelines\nCI/CD pipelines allow models to be retrained automatically as new data becomes available or on a predefined schedule, eliminating the need for manual retraining.\n2. Early Error Detection\nEach code change triggers automated tests and validation steps, helping identify bugs, integration problems, or performance regressions early in the development process.\n3. Reproducibility\nBy codifying environments, configurations, and versioning of data and models, CI/CD ensures that experiments and results can be reproduced consistently.\n4. Testing and Monitoring\nAutomated evaluation checks verify model quality before deployment, while integrations with monitoring tools support post-deployment performance tracking.\n5. Faster Iteration Cycles\nNew experiments and model versions can be trained, tested, and deployed quickly, enabling rapid experimentation and continuous improvement.\n6. Scalability\nAs projects grow in complexity, manual lifecycle management becomes unsustainable. CI/CD pipelines scale efficiently to handle larger datasets, multiple models, and diverse dependencies."
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#project-overview",
-    "href": "CI_CD/cicd_lab.html#project-overview",
-    "title": "CI/CD Lab",
-    "section": "Project Overview",
-    "text": "Project Overview\nIn this guide, you will be guided through:\n\nSetting up accounts and development environments\n\nDesigning and implementing a CI/CD pipeline\n\nOptimizing the end-to-end automation process\n\nWe will use scikit-learn pipelines to train a random forest model for drug classification. Model evaluation will be automated using CML, and the final web application will be built and deployed to the Hugging Face Hub.\nThe entire workflow—from training to evaluation and deployment—is fully automated using GitHub Actions. Simply pushing new code to the repository triggers the pipeline, and within minutes, the updated model, application, and results are published on Hugging Face."
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#cicd-pipeline",
-    "href": "CI_CD/cicd_lab.html#cicd-pipeline",
-    "title": "CI/CD Lab",
-    "section": "CI/CD Pipeline",
-    "text": "CI/CD Pipeline\nThe CI/CD pipeline orchestrates all stages of the machine learning lifecycle, ensuring consistent, reliable, and automated delivery of models to production."
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#project-diagram",
-    "href": "CI_CD/cicd_lab.html#project-diagram",
-    "title": "CI/CD Lab",
-    "section": "Project Diagram",
-    "text": "Project Diagram\n\nTO DO"
-  },
-  {
-    "objectID": "CI_CD/cicd_lab.html#setting-up",
-    "href": "CI_CD/cicd_lab.html#setting-up",
-    "title": "CI/CD Lab",
-    "section": "Setting up",
-    "text": "Setting up\nGithub Repository\n\nTO DO:\n\nExample repository\nScreenshots for repository creation process\nStudents set up their projects\n\n\nHugging Face spaces\n\nTO DO:\n\nHugging Face Spaces is a platform for hosting and sharing interactive machine learning applications, such as demos built with Gradio or Streamlit. It allows practitioners to showcase models through web-based interfaces without managing infrastructure.\nWhen integrated with CI/CD, Hugging Face Spaces becomes a powerful deployment target for machine learning workflows. Automated pipelines can retrain models, perform evaluations, and continuously deploy updated applications to a Space whenever changes are pushed to a repository.\n- Setup Hugging Face Spaces\nCML\nContinuous Machine Learning (CML) is an open-source library designed to bring CI/CD best practices to machine learning projects. It enables automated model training, evaluation, and reporting directly within continuous integration workflows.\nBy integrating CML into CI/CD pipelines, teams can automatically generate and publish model metrics, visualizations, and comparison reports as part of each code change. This creates a transparent feedback loop that helps practitioners track performance, validate improvements, and make informed deployment decisions before models are promoted to production.\nCML website\nInstalling CML\n[Installing as a Package] (https://cml.dev/doc/install)\nInstall Node.js\nDocker images\nMakefile\nA Makefile is a simple yet powerful tool for defining and automating repetitive tasks using declarative rules. In machine learning projects, it is commonly used to standardize commands for data preparation, model training, evaluation, and deployment.\nWhen used within a CI/CD pipeline, a Makefile ensures consistency between local development and automated workflows. The same commands executed by developers on their machines can be reused by CI systems, reducing configuration duplication and minimizing environment-related errors. This makes Makefile an effective bridge between experimentation and production-ready automation."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html",
-    "href": "CI_CD/ci_cd_lab.html",
-    "title": "CI/CD Lab",
-    "section": "",
-    "text": "Continuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.\nIn this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#introduction",
-    "href": "CI_CD/ci_cd_lab.html#introduction",
-    "title": "CI/CD Lab",
-    "section": "",
-    "text": "Continuous Integration (CI) and Continuous Deployment (CD) are well-established practices in software engineering that automate code integration, testing, and deployment. While originally designed for traditional software systems, these practices have become increasingly important for machine learning (ML) workflows.\nIn this guide, we explore how CI/CD can be applied to machine learning projects. You will learn how to design and implement an automated ML pipeline that handles model training, evaluation, and deployment with minimal manual intervention."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#what-you-will-learn",
-    "href": "CI_CD/ci_cd_lab.html#what-you-will-learn",
-    "title": "CI/CD Lab",
-    "section": "What You Will Learn",
-    "text": "What You Will Learn\nThis tutorial demonstrates a lightweight yet complete ML project powered entirely by GitHub Actions. The concepts covered will be familiar to most machine learning engineers and data scientists. The primary focus is on learning how to integrate the following tools into an automated workflow:\n\nGitHub Actions\n\nMakefile\n\nContinuous Machine Learning (CML)\n\nHugging Face CLI\n\nIf you want to deepen your understanding of production-ready ML systems, consider enrolling in the MLOps Concepts course, which covers the journey from local notebooks to deployed models that create real business impact."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#why-cicd-for-machine-learning",
-    "href": "CI_CD/ci_cd_lab.html#why-cicd-for-machine-learning",
-    "title": "CI/CD Lab",
-    "section": "Why CI/CD for Machine Learning?",
-    "text": "Why CI/CD for Machine Learning?\nCI/CD plays a crucial role in transforming experimental models into reliable, production-grade systems. By automating repetitive and error-prone tasks, CI/CD enables faster development cycles, higher reliability, and improved scalability.\nSpecifically, CI/CD for machine learning offers the following benefits:\n\n1. Automated Training Pipelines\nCI/CD pipelines allow models to be retrained automatically as new data becomes available or on a predefined schedule, eliminating the need for manual retraining.\n\n\n2. Early Error Detection\nEach code change triggers automated tests and validation steps, helping identify bugs, integration problems, or performance regressions early in the development process.\n\n\n3. Reproducibility\nBy codifying environments, configurations, and versioning of data and models, CI/CD ensures that experiments and results can be reproduced consistently.\n\n\n4. Testing and Monitoring\nAutomated evaluation checks verify model quality before deployment, while integrations with monitoring tools support post-deployment performance tracking.\n\n\n5. Faster Iteration Cycles\nNew experiments and model versions can be trained, tested, and deployed quickly, enabling rapid experimentation and continuous improvement.\n\n\n6. Scalability\nAs projects grow in complexity, manual lifecycle management becomes unsustainable. CI/CD pipelines scale efficiently to handle larger datasets, multiple models, and diverse dependencies."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#project-overview",
-    "href": "CI_CD/ci_cd_lab.html#project-overview",
-    "title": "CI/CD Lab",
-    "section": "Project Overview",
-    "text": "Project Overview\nIn this guide, you will be guided through:\n\nSetting up accounts and development environments\n\nDesigning and implementing a CI/CD pipeline\n\nOptimizing the end-to-end automation process\n\nWe will use scikit-learn pipelines to train a random forest model for drug classification. Model evaluation will be automated using CML, and the final web application will be built and deployed to the Hugging Face Hub.\nThe entire workflow—from training to evaluation and deployment—is fully automated using GitHub Actions. Simply pushing new code to the repository triggers the pipeline, and within minutes, the updated model, application, and results are published on Hugging Face."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#cicd-pipeline",
-    "href": "CI_CD/ci_cd_lab.html#cicd-pipeline",
-    "title": "CI/CD Lab",
-    "section": "CI/CD Pipeline",
-    "text": "CI/CD Pipeline\nThe CI/CD pipeline orchestrates all stages of the machine learning lifecycle, ensuring consistent, reliable, and automated delivery of models to production."
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#project-diagram",
-    "href": "CI_CD/ci_cd_lab.html#project-diagram",
-    "title": "CI/CD Lab",
-    "section": "Project Diagram",
-    "text": "Project Diagram\n\nTO DO"
-  },
-  {
-    "objectID": "CI_CD/ci_cd_lab.html#setting-up",
-    "href": "CI_CD/ci_cd_lab.html#setting-up",
-    "title": "CI/CD Lab",
-    "section": "Setting up",
-    "text": "Setting up\n\nGithub Repository\n\nTO DO:\n\nExample repository\nScreenshots for repository creation process\nStudents set up their projects\n\n\n\n\nHugging Face spaces\n\nTO DO:\n\nHugging Face Spaces is a platform for hosting and sharing interactive machine learning applications, such as demos built with Gradio or Streamlit. It allows practitioners to showcase models through web-based interfaces without managing infrastructure.\nWhen integrated with CI/CD, Hugging Face Spaces becomes a powerful deployment target for machine learning workflows. Automated pipelines can retrain models, perform evaluations, and continuously deploy updated applications to a Space whenever changes are pushed to a repository.\n- Setup Hugging Face Spaces\n\n\nCML\nContinuous Machine Learning (CML) is an open-source library designed to bring CI/CD best practices to machine learning projects. It enables automated model training, evaluation, and reporting directly within continuous integration workflows.\nBy integrating CML into CI/CD pipelines, teams can automatically generate and publish model metrics, visualizations, and comparison reports as part of each code change. This creates a transparent feedback loop that helps practitioners track performance, validate improvements, and make informed deployment decisions before models are promoted to production.\nCML website\n\nInstalling CML\n[Installing as a Package] (https://cml.dev/doc/install)\nInstall Node.js\nDocker images\n\n\n\nMakefile\nA Makefile is a simple yet powerful tool for defining and automating repetitive tasks using declarative rules. In machine learning projects, it is commonly used to standardize commands for data preparation, model training, evaluation, and deployment.\nWhen used within a CI/CD pipeline, a Makefile ensures consistency between local development and automated workflows. The same commands executed by developers on their machines can be reused by CI systems, reducing configuration duplication and minimizing environment-related errors. This makes Makefile an effective bridge between experimentation and production-ready automation."
-  },
-  {
     "objectID": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
     "href": "decorators_and_closures/mldp.html#what-are-decorators-and-closures",
     "title": "Decorators and Closures",
@@ -1363,21 +1034,21 @@
     "href": "decorators_and_closures/mldp.html#what-is-a-closure",
     "title": "Decorators and Closures",
     "section": "What is a Closure?",
-    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\ndef outer_function(msg):\n    def inner_function():\n        print(f\"Message: {msg}\")\n    return inner_function\n\nclosure = outer_function(\"Hello!\")\nclosure()  # Output: Message: Hello!\n\nMessage: Hello!"
+    "text": "What is a Closure?\n\nA closure is a function that “remembers” the variables from its enclosing scope, even after the scope has finished executing.\n\n\n\nMessage: Hello!"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#why-use-closures",
     "href": "decorators_and_closures/mldp.html#why-use-closures",
     "title": "Decorators and Closures",
     "section": "Why Use Closures?",
-    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\ndef multiplier(factor):\n    def multiply(n):\n        return n * factor\n    return multiply\n\ndouble = multiplier(2)\nprint(double(5))  # Output: 10\n\n10"
+    "text": "Why Use Closures?\n- Advantages\n\n    - Encapsulation: Keeps data hidden.\n    - Avoids global variables: Limits scope.\n    - Useful in decorators: Enables function modification.\n\n\n10"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#what-is-a-decorator",
     "href": "decorators_and_closures/mldp.html#what-is-a-decorator",
     "title": "Decorators and Closures",
     "section": "What is a Decorator?",
-    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\ndef decorator(func):\n    def wrapper():\n        print(\"Before the function call\")\n        func()\n        print(\"After the function call\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n\nBefore the function call\nHello!\nAfter the function call"
+    "text": "What is a Decorator?\n- A decorator is a function that takes another function as input and modifies its behavior without changing its code.\n- Uses closures to wrap a function.\n\n\nBefore the function call\nHello!\nAfter the function call"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#how-decorators-work",
@@ -1391,21 +1062,21 @@
     "href": "decorators_and_closures/mldp.html#multiple-decorators",
     "title": "Decorators and Closures",
     "section": "Multiple Decorators",
-    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\ndef uppercase(func):\n    def wrapper():\n        return func().upper()\n    return wrapper\n\ndef exclaim(func):\n    def wrapper():\n        return func() + \"!!!\"\n    return wrapper\n\n@uppercase\n@exclaim\ndef greet():\n    return \"hello\"\n\nprint(greet())  # Output: HELLO!!!\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
+    "text": "Multiple Decorators\n\nStacking Decorators - Multiple decorators can be applied in sequence.\n\n\n\nHELLO!!!\n\n\n- Execution order: exclaim → uppercase → greet()"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#decorators-with-arguments",
     "href": "decorators_and_closures/mldp.html#decorators-with-arguments",
     "title": "Decorators and Closures",
     "section": "Decorators with Arguments",
-    "text": "Decorators with Arguments\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()  \n# Output:\n# Hello!\n# Hello!\n# Hello!\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
+    "text": "Decorators with Arguments\n\n\nHello!\nHello!\nHello!\n\n\n\nThis decorator runs the function n times"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#examples",
     "href": "decorators_and_closures/mldp.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0065 seconds"
+    "text": "Examples\n\n\nslow_function took 2.0084 seconds"
   },
   {
     "objectID": "decorators_and_closures/mldp.html#standard-decorators",
@@ -1482,7 +1153,7 @@
     "href": "decorators_and_closures/decorators_and_closures.html#examples",
     "title": "Decorators and Closures",
     "section": "Examples",
-    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0156 seconds"
+    "text": "Examples\n\nimport time\n\ndef log_time(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end - start:.4f} seconds\")\n        return result\n    return wrapper\n\n@log_time\ndef slow_function():\n    time.sleep(2)\n\nslow_function()  # Output: slow_function took 2.000X seconds\n\nslow_function took 2.0110 seconds"
   },
   {
     "objectID": "decorators_and_closures/decorators_and_closures.html#standard-decorators",
